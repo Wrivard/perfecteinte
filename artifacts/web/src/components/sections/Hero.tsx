@@ -9,9 +9,9 @@ export function Hero() {
         <img
           src={bgImage}
           alt="Esthétique Automobile"
-          className="w-full h-full object-cover object-center"
+          className="w-full h-full object-cover object-[center_30%]"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40"></div>
       </div>
 
       <div className="max-w-7xl mx-auto px-6 relative z-10 pb-12 sm:pb-16 md:pb-20 lg:pb-24 w-full">
