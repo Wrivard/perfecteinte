@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { motion } from "framer-motion";
 import { AccordionItem } from "@/components/ui/accordion-custom";
 
 const faqs = [
@@ -28,16 +29,23 @@ export function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section id="faq" className="py-20 bg-white">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-[900px]">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-[40px] font-display font-bold text-[#1a1a1a] leading-tight">
-            FOIRE AUX <span className="text-accent">QUESTIONS</span>
+    <section className="py-20 md:py-24 bg-white">
+      <div className="max-w-4xl mx-auto px-6">
+        <motion.div
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.6 }}
+        >
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6 leading-tight">
+            <span className="text-[#1a1a1a]">FOIRE AUX </span>
+            <span className="text-accent">QUESTIONS</span>
           </h2>
-          <p className="text-lg text-gray-500 mt-4">
+          <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Découvrez les réponses aux questions fréquentes sur nos services de rénovation.
           </p>
-        </div>
+        </motion.div>
 
         <div>
           {faqs.map((faq, index) => (
@@ -57,7 +65,7 @@ export function FAQ() {
           </h3>
           <p className="text-gray-500 mt-3">Nous sommes là pour vous aider.</p>
           <a
-            href="#contact"
+            href="tel:4186655871"
             className="inline-block mt-6 border-2 border-gray-300 text-[#1a1a1a] px-8 py-3 rounded-md font-semibold hover:border-accent hover:text-accent transition-colors"
           >
             Contact

@@ -1,25 +1,26 @@
 import { useState, useEffect } from "react";
+import { Link, useLocation } from "wouter";
 import { Menu, X, Phone, MapPin, ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 import logo from "@assets/425261687_389413763697862_6688968440363193968_n-removebg-previ_1774531438969.png";
 
 const navLinks = [
-  { name: "Accueil", href: "#home" },
-  { name: "À Propos", href: "#stats" },
-  { name: "Services", href: "#services", hasDropdown: true },
-  { name: "Galerie", href: "#gallery" },
+  { name: "Accueil", href: "/" },
+  { name: "À Propos", href: "/a-propos" },
+  { name: "Services", href: "/services", hasDropdown: true },
+  { name: "Galerie", href: "/galerie" },
 ];
 
 const serviceLinks = [
-  { name: "Lavage & Entretien esthétique", href: "#services" },
-  { name: "Protection de peinture (PPF)", href: "#services" },
-  { name: "Polissage & Nano-céramique", href: "#services" },
+  { name: "Lavage & Entretien esthétique", href: "/services" },
+  { name: "Protection de peinture (PPF)", href: "/services" },
+  { name: "Polissage & Nano-céramique", href: "/services" },
 ];
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [servicesOpen, setServicesOpen] = useState(false);
+  const [location] = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -29,10 +30,15 @@ export function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    setMobileMenuOpen(false);
+    window.scrollTo(0, 0);
+  }, [location]);
+
   return (
     <header className="fixed top-0 left-0 right-0 z-50">
       <div className="bg-[#1a1a1a] h-10 hidden md:block">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-6 h-full flex items-center justify-between">
           <div className="flex items-center gap-6 text-white text-sm">
             <a href="tel:4186655871" className="flex items-center gap-2 hover:text-accent transition-colors">
               <Phone className="w-4 h-4" />
@@ -71,52 +77,57 @@ export function Navbar() {
             : "bg-white py-4"
         )}
       >
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-6">
           <div className="flex items-center justify-between">
-            <a href="#home" className="flex items-center gap-2 z-50">
-              <img 
-                src={logo} 
-                alt="Esthétique Auto Pascal Pilote" 
+            <Link href="/" className="flex items-center gap-2 z-50">
+              <img
+                src={logo}
+                alt="Esthétique Auto Pascal Pilote"
                 className={cn(
                   "transition-all duration-300",
                   isScrolled ? "h-12 sm:h-14" : "h-14 sm:h-16"
-                )} 
+                )}
               />
-            </a>
+            </Link>
 
             <nav className="hidden lg:flex items-center gap-8">
               {navLinks.map((link) => (
                 <div key={link.name} className="relative group">
-                  <a
+                  <Link
                     href={link.href}
-                    className="text-[15px] font-medium text-[#1a1a1a] hover:text-accent transition-colors flex items-center gap-1"
+                    className={cn(
+                      "text-[15px] font-medium transition-colors flex items-center gap-1 relative",
+                      location === link.href ? "text-accent" : "text-[#1a1a1a] hover:text-accent",
+                      "after:content-[''] after:absolute after:-bottom-1 after:left-0 after:h-[2px] after:bg-accent after:transition-all after:duration-300",
+                      location === link.href ? "after:w-full" : "after:w-0 hover:after:w-full"
+                    )}
                   >
                     {link.name}
                     {link.hasDropdown && <ChevronDown className="w-4 h-4" />}
-                  </a>
+                  </Link>
                   {link.hasDropdown && (
                     <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-md shadow-lg border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                       <div className="py-2">
                         {serviceLinks.map((sl) => (
-                          <a
+                          <Link
                             key={sl.name}
                             href={sl.href}
-                            className="block px-4 py-3 text-sm text-gray-700 hover:bg-light hover:text-accent transition-colors"
+                            className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-accent transition-colors"
                           >
                             {sl.name}
-                          </a>
+                          </Link>
                         ))}
                       </div>
                     </div>
                   )}
                 </div>
               ))}
-              <a
-                href="#contact"
+              <Link
+                href="/rendez-vous"
                 className="bg-accent text-white px-6 py-3 rounded-md font-semibold text-sm hover:bg-accent-hover transition-colors"
               >
                 Prendre un rendez-vous
-              </a>
+              </Link>
             </nav>
 
             <button
@@ -137,29 +148,31 @@ export function Navbar() {
       >
         <nav className="flex flex-col items-center gap-6">
           {navLinks.map((link) => (
-            <a
+            <Link
               key={link.name}
               href={link.href}
-              className="text-2xl font-display font-bold text-[#1a1a1a] hover:text-accent transition-colors"
+              className={cn(
+                "text-2xl font-display font-bold transition-colors",
+                location === link.href ? "text-accent" : "text-[#1a1a1a] hover:text-accent"
+              )}
               onClick={() => setMobileMenuOpen(false)}
             >
               {link.name}
-            </a>
+            </Link>
           ))}
           <a
             href="tel:4186655871"
             className="text-lg text-accent font-semibold"
-            onClick={() => setMobileMenuOpen(false)}
           >
             (418) 665-5871
           </a>
-          <a
-            href="#contact"
+          <Link
+            href="/rendez-vous"
             className="mt-4 bg-accent text-white px-8 py-3 rounded-md font-semibold text-lg hover:bg-accent-hover transition-colors"
             onClick={() => setMobileMenuOpen(false)}
           >
             Prendre un rendez-vous
-          </a>
+          </Link>
         </nav>
       </div>
     </header>

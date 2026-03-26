@@ -98,12 +98,14 @@ Frontend-only React + Vite website for **Esthétique Auto Pascal Pilote Inc.**, 
 - **Stack**: React, Vite, Tailwind CSS v4, Framer Motion, Lucide Icons
 - **Brand Colors**: Blue accent (#3b82f6), Dark (#1a1a1a), White (#ffffff), Light (#f9fafb)
 - **Fonts**: Inter (body), Montserrat (headings)
-- **Sections**: Double-bar Sticky Navbar (top info bar + main nav), Hero, Stats (15+ years, 100% quality, 350+ washes), Services (3 image-background cards), Testimonials (paginated image-background cards), Gallery (masonry grid with 9 car photos), CTA, FAQ (5 accordion items), Contact ("PRÊT À BRILLER" + Google Maps), Footer (white, 4-column)
+- **Routing**: wouter — multi-page SPA (`/`, `/a-propos`, `/services`, `/galerie`, `/rendez-vous`)
+- **Home Sections**: Double-bar Sticky Navbar (top info bar + main nav), Hero, Stats, Services (3 image-background cards), Testimonials (paginated), Gallery (masonry + lightbox), CTA, FAQ (5 accordion items), Contact ("PRÊT À BRILLER" + Google Maps), Footer (white, 4-column)
+- **Pages**: À Propos (history + values + stats), Services (detailed 3-service layout with features), Galerie (all 17 photos + lightbox), Rendez-vous (Google Calendar embed placeholder + contact sidebar)
 - **Phone**: (418) 665-5871
 - **Email**: Pascal.1993@live.ca / info@esthetiqueautopascalpilote.ca
 - **Address**: 2535 boulevard Comporté, La Malbaie, Québec
 - **Social**: Facebook, Instagram, X, LinkedIn, YouTube
-- **Design rules**: border-radius 6px, no gradients on backgrounds (only on image overlays), max-width 1200px container
+- **Design rules**: border-radius 6px, no gradients on backgrounds (only on image overlays), max-width 1280px container, consistent visual hierarchy (H2: 60px, taglines: 24px, mb-16 section headers)
 - **Images**: All imported from `attached_assets/` via `@assets/` alias
 - **No backend**: All content is static/hardcoded
 

@@ -21,57 +21,69 @@ const services = [
   },
 ];
 
+const containerVariants = {
+  hidden: {},
+  visible: { transition: { staggerChildren: 0.15 } },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+};
+
 export function Services() {
   return (
-    <section id="services" className="py-24 bg-[#1a1a1a]">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <motion.h2
-            className="text-3xl md:text-[42px] font-display font-bold text-white leading-tight"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
-            NOS <span className="text-accent">SOLUTIONS</span>
-          </motion.h2>
-          <motion.p
-            className="text-lg text-white/80 mt-4 max-w-[700px] mx-auto"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
-          >
+    <section className="py-24 bg-[#1a1a1a]">
+      <div className="max-w-7xl mx-auto px-6">
+        <motion.div
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.6 }}
+        >
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6 leading-tight">
+            <span className="text-white">NOS </span>
+            <span className="text-accent">SOLUTIONS</span>
+          </h2>
+          <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
             Des solutions techniques qui transforment et préservent l'intégrité de votre automobile.
-          </motion.p>
-        </div>
+          </p>
+        </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <motion.div
+          className="grid grid-cols-1 md:grid-cols-3 gap-6"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+        >
           {services.map((service, index) => (
             <motion.div
               key={index}
-              className="relative h-[450px] md:h-[550px] rounded-md overflow-hidden group cursor-pointer"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
+              variants={itemVariants}
+              whileHover={{ y: -12, scale: 1.02, transition: { duration: 0.4, ease: "easeOut" } }}
+              className="relative h-[450px] md:h-[550px] rounded-md overflow-hidden cursor-pointer group"
             >
-              <img
-                src={service.image}
-                alt={service.title}
-                className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
-              <div className="absolute bottom-0 left-0 right-0 p-8">
-                <span className="text-xs uppercase tracking-widest text-white/70 mb-2 block">
+              <div className="absolute inset-0">
+                <img
+                  src={service.image}
+                  alt={service.title}
+                  className="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent group-hover:from-black/95 transition-colors duration-300"></div>
+              </div>
+              <div className="relative h-full flex flex-col justify-end p-8">
+                <p className="text-sm uppercase tracking-wider text-accent/80 mb-3 font-semibold">
                   {service.label}
-                </span>
-                <h3 className="text-2xl md:text-[28px] font-bold text-white leading-tight whitespace-pre-line">
+                </p>
+                <h3 className="text-2xl md:text-3xl font-bold text-white leading-tight whitespace-pre-line">
                   {service.title}
                 </h3>
               </div>
             </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

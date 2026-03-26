@@ -1,10 +1,11 @@
+import { Link } from "wouter";
 import { Facebook, Instagram, Linkedin, Youtube } from "lucide-react";
 import logo from "@assets/425261687_389413763697862_6688968440363193968_n-removebg-previ_1774531438969.png";
 
 export function Footer() {
   return (
     <footer className="bg-white pt-16 pb-8">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16 mb-12">
           <div className="space-y-4">
             <img src={logo} alt="Esthétique Auto PP" className="h-20" />
@@ -31,19 +32,19 @@ export function Footer() {
           <div>
             <h3 className="text-sm font-semibold text-[#1a1a1a] mb-4 uppercase">Navigation</h3>
             <ul className="space-y-3">
-              <li><a href="#home" className="text-sm text-gray-500 hover:text-accent transition-colors">Accueil</a></li>
-              <li><a href="#stats" className="text-sm text-gray-500 hover:text-accent transition-colors">À Propos</a></li>
-              <li><a href="#gallery" className="text-sm text-gray-500 hover:text-accent transition-colors">Galerie</a></li>
-              <li><a href="#contact" className="text-sm text-gray-500 hover:text-accent transition-colors">Prendre un rendez-vous</a></li>
+              <li><Link href="/" className="text-sm text-gray-500 hover:text-accent transition-colors">Accueil</Link></li>
+              <li><Link href="/a-propos" className="text-sm text-gray-500 hover:text-accent transition-colors">À Propos</Link></li>
+              <li><Link href="/galerie" className="text-sm text-gray-500 hover:text-accent transition-colors">Galerie</Link></li>
+              <li><Link href="/rendez-vous" className="text-sm text-gray-500 hover:text-accent transition-colors">Prendre un rendez-vous</Link></li>
             </ul>
           </div>
 
           <div>
             <h3 className="text-sm font-semibold text-[#1a1a1a] mb-4 uppercase">Services</h3>
             <ul className="space-y-3">
-              <li><a href="#services" className="text-sm text-gray-500 hover:text-accent transition-colors">Lavage & Entretien esthétique</a></li>
-              <li><a href="#services" className="text-sm text-gray-500 hover:text-accent transition-colors">Protection de peinture (PPF)</a></li>
-              <li><a href="#services" className="text-sm text-gray-500 hover:text-accent transition-colors">Polissage & Nano-céramique</a></li>
+              <li><Link href="/services" className="text-sm text-gray-500 hover:text-accent transition-colors">Lavage & Entretien esthétique</Link></li>
+              <li><Link href="/services" className="text-sm text-gray-500 hover:text-accent transition-colors">Protection de peinture (PPF)</Link></li>
+              <li><Link href="/services" className="text-sm text-gray-500 hover:text-accent transition-colors">Polissage & Nano-céramique</Link></li>
             </ul>
           </div>
 

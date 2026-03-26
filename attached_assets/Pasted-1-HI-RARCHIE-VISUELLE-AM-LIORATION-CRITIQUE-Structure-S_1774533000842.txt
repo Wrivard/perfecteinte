@@ -1,0 +1,564 @@
+1. HIÉRARCHIE VISUELLE - AMÉLIORATION CRITIQUE
+Structure Standard pour TOUTES les Sections
+Chaque section doit suivre cette hiérarchie visuelle CLAIRE et CONSISTENTE:
+typescript<section className="py-20 md:py-24">
+  <div className="container max-w-7xl mx-auto px-6">
+    
+    {/* NIVEAU 1: TITRE PRINCIPAL - IMPOSANT */}
+    <div className="text-center mb-16">
+      <h2 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+        {/* Mot en bleu + reste en noir/blanc selon bg */}
+        <span className="text-black">NOS </span>
+        <span className="text-blue-500">SOLUTIONS</span>
+      </h2>
+      
+      {/* NIVEAU 2: TAGLINE - CLAIR ET LISIBLE */}
+      <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+        Des solutions techniques qui transforment et préservent l'intégrité de votre automobile.
+      </p>
+    </div>
+    
+    {/* NIVEAU 3: CONTENU - Grids, Cards, Images */}
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {/* Cards ou contenu ici */}
+    </div>
+    
+  </div>
+</section>
+Spécifications Typographiques PRÉCISES
+Titres H2 (Principaux):
+
+Desktop: text-6xl (60px)
+Tablet: text-5xl (48px)
+Mobile: text-4xl (36px)
+Font weight: font-bold (700)
+Line height: leading-tight (1.25)
+Margin bottom: mb-6 (24px)
+
+Taglines/Sous-titres:
+
+Desktop: text-2xl (24px)
+Tablet: text-xl (20px)
+Mobile: text-lg (18px)
+Font weight: font-normal (400)
+Color: text-gray-600 (sur fond blanc) ou text-gray-300 (sur fond noir)
+Max width: max-w-3xl centré
+Line height: leading-relaxed (1.625)
+Margin bottom section header: mb-16 (64px)
+
+Titres H3 (Cards):
+
+Font size: text-3xl (30px)
+Font weight: font-bold (700)
+
+
+2. SECTION PAR SECTION - AJUSTEMENTS
+SECTION STATISTIQUES
+tsx<section className="py-20 bg-gray-50">
+  <div className="container max-w-7xl mx-auto px-6">
+    
+    {/* Header */}
+    <div className="text-center mb-16">
+      <h2 className="text-5xl md:text-6xl font-bold text-black mb-6 leading-tight">
+        PERFORMANCE ET PRÉCISION EN<br/>
+        DÉTAIL AUTOMOBILE
+      </h2>
+    </div>
+    
+    {/* Stats Grid */}
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+      <div className="text-center">
+        <div className="text-7xl md:text-8xl font-bold text-blue-500 mb-4">
+          {/* Counter animé */}
+          15+
+        </div>
+        <p className="text-xl font-semibold text-black uppercase tracking-wide">
+          Années d'expertise
+        </p>
+      </div>
+      {/* Répéter pour 100% et 350+ */}
+    </div>
+    
+  </div>
+</section>
+Changements:
+
+Titre: 60px → très imposant
+Pas de tagline (section simple)
+Stats numbers: 80px (desktop)
+Espacement vertical: 20px (py-20)
+
+
+SECTION NOS SOLUTIONS
+tsx<section className="py-24 bg-black">
+  <div className="container max-w-7xl mx-auto px-6">
+    
+    {/* Header */}
+    <div className="text-center mb-16">
+      <h2 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+        <span className="text-white">NOS </span>
+        <span className="text-blue-500">SOLUTIONS</span>
+      </h2>
+      <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+        Des solutions techniques qui transforment et préservent l'intégrité de votre automobile.
+      </p>
+    </div>
+    
+    {/* Cards Grid avec HOVER ANIMATIONS */}
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      
+      <motion.div
+        whileHover={{ y: -12, scale: 1.02 }}
+        transition={{ duration: 0.4, ease: "easeOut" }}
+        className="relative h-[550px] rounded-lg overflow-hidden cursor-pointer group"
+      >
+        {/* Image Background */}
+        <div className="absolute inset-0">
+          <Image 
+            src="/service-1.jpg" 
+            fill 
+            className="object-cover transition-transform duration-500 group-hover:scale-110"
+          />
+          {/* Overlay Gradient */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
+        </div>
+        
+        {/* Content */}
+        <div className="relative h-full flex flex-col justify-end p-8">
+          <p className="text-sm uppercase tracking-wider text-blue-400 mb-3 font-semibold">
+            Expertise
+          </p>
+          <h3 className="text-3xl font-bold text-white leading-tight">
+            LAVAGE &<br/>
+            ENTRETIEN<br/>
+            ESTHÉTIQUE
+          </h3>
+        </div>
+      </motion.div>
+      
+      {/* Répéter pour les 2 autres cards */}
+      
+    </div>
+    
+  </div>
+</section>
+Hover Animation Sur Les Cards:
+
+Lift: y: -12px (monter la card)
+Scale: 1.02 (légère augmentation)
+Image zoom: scale(1.1) à l'intérieur
+Durée: 0.4s
+Easing: ease-out
+Shadow augmenté au hover (via Tailwind ou CSS)
+
+
+SECTION TÉMOIGNAGES
+tsx<section className="py-24 bg-gray-50">
+  <div className="container max-w-7xl mx-auto px-6">
+    
+    {/* Header */}
+    <div className="text-center mb-16">
+      <h2 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+        <span className="text-blue-500">TÉMOIGNAGES </span>
+        <span className="text-black">DE NOS CLIENTS</span>
+      </h2>
+      <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+        L'excellence de notre travail racontée par ceux qui nous font confiance
+      </p>
+    </div>
+    
+    {/* Carousel Cards */}
+    {/* ... */}
+    
+  </div>
+</section>
+
+SECTION TRANSFORMATION VISUELLE
+tsx<section className="py-24 bg-black">
+  <div className="container max-w-7xl mx-auto px-6">
+    
+    {/* Header */}
+    <div className="text-center mb-16">
+      <h2 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+        <span className="text-blue-500">TRANSFORMATION </span>
+        <span className="text-white">VISUELLE</span>
+      </h2>
+      <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+        Chaque véhicule raconte une histoire de renaissance et de précision
+      </p>
+    </div>
+    
+    {/* Gallery Grid - PAS de before/after slider */}
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+      {/* Images simples avec hover zoom */}
+    </div>
+    
+  </div>
+</section>
+
+SECTION CTA - AUGMENTER LA HAUTEUR
+tsx<section 
+  className="relative h-[400px] md:h-[450px] flex items-center"
+  style={{
+    backgroundImage: 'url(/cta-bg.jpg)',
+    backgroundSize: 'cover',
+    backgroundPosition: 'center'
+  }}
+>
+  {/* Overlay */}
+  <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/50 to-black/30" />
+  
+  <div className="container max-w-7xl mx-auto px-6 relative z-10">
+    <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+      
+      {/* Left: Text */}
+      <div className="flex-1">
+        <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 leading-tight">
+          VOTRE VÉHICULE MÉRITE<br/>
+          L'EXCELLENCE
+        </h2>
+        <p className="text-lg md:text-xl text-white/90 leading-relaxed max-w-2xl">
+          Transformez l'apparence et la protection de votre automobile avec un service sur mesure et professionnel.
+        </p>
+      </div>
+      
+      {/* Right: Buttons */}
+      <div className="flex gap-4">
+        <motion.button
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          className="bg-blue-500 hover:bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors"
+        >
+          Réserver
+        </motion.button>
+        <motion.button
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          className="bg-transparent border-2 border-white hover:bg-white/10 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all"
+        >
+          Contactez-nous
+        </motion.button>
+      </div>
+      
+    </div>
+  </div>
+</section>
+Changements CTA:
+
+Hauteur: 400px desktop (au lieu de ~300px)
+Hauteur mobile: 450px (plus d'espace)
+Titre: text-5xl (48px desktop)
+Overlay gradient amélioré pour mieux voir le texte
+Buttons plus gros: px-8 py-4 avec text-lg
+
+
+SECTION FAQ
+tsx<section className="py-24 bg-white">
+  <div className="container max-w-4xl mx-auto px-6">
+    
+    {/* Header */}
+    <div className="text-center mb-16">
+      <h2 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+        <span className="text-black">FOIRE AUX </span>
+        <span className="text-blue-500">QUESTIONS</span>
+      </h2>
+      <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+        Découvrez les réponses aux questions fréquentes sur nos services de rénovation.
+      </p>
+    </div>
+    
+    {/* Accordion */}
+    {/* ... */}
+    
+  </div>
+</section>
+
+3. NAVIGATION - PAGES SÉPARÉES
+RETIRER le smooth scroll vers sections. La navigation doit utiliser Next.js Links vers des pages réelles:
+tsx// Navbar.tsx
+import Link from 'next/link';
+
+<nav className="flex items-center gap-8">
+  <Link href="/" className="nav-link">
+    Accueil
+  </Link>
+  <Link href="/a-propos" className="nav-link">
+    À Propos
+  </Link>
+  <Link href="/services" className="nav-link">
+    Services
+  </Link>
+  <Link href="/galerie" className="nav-link">
+    Galerie
+  </Link>
+</nav>
+CSS pour nav-link:
+css.nav-link {
+  @apply text-gray-700 hover:text-blue-500 font-medium transition-colors relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #3b82f6;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+```
+
+**Pages à créer** (structure):
+```
+app/
+├── page.tsx (Home)
+├── a-propos/
+│   └── page.tsx
+├── services/
+│   └── page.tsx
+├── galerie/
+│   └── page.tsx
+└── contact/
+    └── page.tsx
+
+4. RÉCAPITULATIF DES SPACINGS CONSISTENTS
+Sections padding vertical:
+
+Standard: py-20 (80px)
+Sections importantes: py-24 (96px)
+
+Headers margin bottom:
+
+Toujours: mb-16 (64px)
+
+Titre margin bottom:
+
+Toujours: mb-6 (24px)
+
+Container:
+
+Max-width: max-w-7xl (1280px)
+Padding horizontal: px-6 (24px)
+
+Grids gap:
+
+Services/Testimonials: gap-6 (24px)
+Stats: gap-12 (48px)
+Gallery: gap-4 (16px)
+
+
+5. ANIMATIONS FINALES À IMPLÉMENTER
+A) Counter Animation (Stats)
+tsximport { useInView } from 'react-intersection-observer';
+import CountUp from 'react-countup';
+
+const StatsSection = () => {
+  const { ref, inView } = useInView({
+    threshold: 0.3,
+    triggerOnce: true
+  });
+  
+  return (
+    <div ref={ref} className="text-center">
+      {inView && (
+        <CountUp
+          end={15}
+          duration={2.5}
+          suffix="+"
+          className="text-7xl md:text-8xl font-bold text-blue-500"
+        />
+      )}
+    </div>
+  );
+};
+
+B) Scroll Fade-In (Tous les Headers)
+tsximport { motion } from 'framer-motion';
+
+<motion.div
+  initial={{ opacity: 0, y: 30 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true, amount: 0.3 }}
+  transition={{ duration: 0.6, ease: "easeOut" }}
+  className="text-center mb-16"
+>
+  <h2>{/* Titre */}</h2>
+  <p>{/* Tagline */}</p>
+</motion.div>
+
+C) Stagger sur Grids
+tsxconst containerVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.15
+    }
+  }
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { 
+    opacity: 1, 
+    y: 0,
+    transition: { duration: 0.5 }
+  }
+};
+
+<motion.div
+  variants={containerVariants}
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true, amount: 0.2 }}
+  className="grid grid-cols-3 gap-6"
+>
+  {items.map(item => (
+    <motion.div key={item.id} variants={itemVariants}>
+      {/* Card */}
+    </motion.div>
+  ))}
+</motion.div>
+
+D) Hover sur Solutions Cards (IMPORTANT)
+tsx<motion.div
+  whileHover={{ 
+    y: -12, 
+    scale: 1.02,
+    transition: { duration: 0.4, ease: "easeOut" }
+  }}
+  className="relative h-[550px] rounded-lg overflow-hidden cursor-pointer group"
+>
+  <div className="absolute inset-0">
+    <Image 
+      src={image}
+      fill
+      className="object-cover transition-transform duration-500 ease-out group-hover:scale-110"
+    />
+    <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent group-hover:from-black/95 transition-colors duration-300" />
+  </div>
+  
+  <div className="relative h-full flex flex-col justify-end p-8">
+    {/* Content */}
+  </div>
+</motion.div>
+Effets hover sur Solutions:
+
+Card monte de 12px
+Scale 1.02 (légère augmentation)
+Image zoom 1.1x à l'intérieur
+Overlay devient un peu plus sombre
+Shadow augmente (ajouter via Tailwind hover:shadow-2xl)
+
+
+E) Gallery Images Hover
+tsx<motion.div
+  whileHover={{ scale: 1.02 }}
+  className="relative aspect-square rounded-lg overflow-hidden cursor-pointer"
+  onClick={() => setLightboxImage(image)}
+>
+  <Image
+    src={image}
+    fill
+    className="object-cover transition-transform duration-500 hover:scale-105"
+  />
+</motion.div>
+
+F) Lightbox (Gallery)
+tsxconst [lightboxImage, setLightboxImage] = useState<string | null>(null);
+
+<AnimatePresence>
+  {lightboxImage && (
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      onClick={() => setLightboxImage(null)}
+      className="fixed inset-0 bg-black/95 z-50 flex items-center justify-center p-8 cursor-zoom-out"
+    >
+      <motion.img
+        initial={{ scale: 0.9 }}
+        animate={{ scale: 1 }}
+        exit={{ scale: 0.9 }}
+        src={lightboxImage}
+        className="max-w-full max-h-full object-contain"
+      />
+      <button 
+        className="absolute top-8 right-8 text-white hover:text-blue-500 transition-colors"
+        onClick={() => setLightboxImage(null)}
+      >
+        <X size={40} strokeWidth={2} />
+      </button>
+    </motion.div>
+  )}
+</AnimatePresence>
+```
+
+---
+
+## **6. PROMPT FINAL POUR REPLIT**
+```
+AMÉLIORATIONS CRITIQUES pour Esthétique Auto Pascal Pilote:
+
+1. HIÉRARCHIE VISUELLE - AUGMENTER LES TAILLES:
+   - Tous les H2: text-6xl (60px desktop), text-5xl (48px tablet), text-4xl (36px mobile)
+   - Tous les taglines: text-2xl (24px desktop), text-xl (20px tablet)
+   - Margin bottom header: mb-16 (64px) - TOUJOURS
+   - Margin bottom titre: mb-6 (24px) - TOUJOURS
+   - Stats numbers: text-8xl (96px desktop)
+   
+2. SECTION CTA - AUGMENTER LA HAUTEUR:
+   - Passer de h-[300px] à h-[400px] desktop
+   - Mobile: h-[450px]
+   - Titre: text-5xl au lieu de text-4xl
+   - Buttons: px-8 py-4 avec text-lg
+   - Overlay gradient amélioré: from-black/75 via-black/50 to-black/30
+
+3. HOVER ANIMATIONS SUR SOLUTIONS CARDS:
+   - whileHover: y: -12, scale: 1.02
+   - Image zoom: group-hover:scale-110
+   - Overlay darker: group-hover:from-black/95
+   - Durée: 0.4s ease-out
+   - Ajouter hover:shadow-2xl
+
+4. NAVIGATION - PAGES SÉPARÉES:
+   - RETIRER smooth scroll vers sections
+   - Utiliser Next.js Link pour navigation
+   - Créer structure pages: /a-propos, /services, /galerie, /contact
+   - Underline animation au hover sur nav links
+
+5. GALLERY - PAS DE BEFORE/AFTER SLIDER:
+   - Images simples avec hover zoom (scale 1.05)
+   - Lightbox au clic: fond noir 95%, image centrée, bouton X
+   - Scale animation à l'ouverture/fermeture
+
+6. ANIMATIONS ESSENTIELLES:
+   - Stats counter animé (react-countup) au scroll
+   - Fade-in + slide-up sur tous les headers (opacity 0→1, y: 30→0)
+   - Stagger sur grids (0.15s delay entre items)
+   - Tous les boutons: whileHover scale 1.05, whileTap 0.95
+
+7. STRUCTURE CONSISTENTE CHAQUE SECTION:
+   <div className="text-center mb-16">
+     <h2 className="text-6xl font-bold mb-6">Titre</h2>
+     <p className="text-2xl text-gray-600 max-w-3xl mx-auto">Tagline</p>
+   </div>
+
+8. ESPACEMENTS CONSISTENTS:
+   - Sections: py-24
+   - Container: max-w-7xl px-6
+   - Grids services: gap-6
+   - Grids stats: gap-12
+
+Packages requis:
+- framer-motion
+- react-countup
+- react-intersection-observer
+- lucide-react (pour icônes)
+
+La hiérarchie visuelle doit être ÉVIDENTE: énorme titre → tagline clair → contenu.
+Chaque section doit respirer avec beaucoup d'espace blanc.
