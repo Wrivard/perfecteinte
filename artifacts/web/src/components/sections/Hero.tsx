@@ -4,7 +4,7 @@ import bgImage from "@assets/570606844_804977075474860_4894531562783451229_n_177
 
 export function Hero() {
   return (
-    <section id="home" className="relative min-h-[80vh] md:min-h-[85vh] lg:min-h-[90vh] flex items-center overflow-hidden">
+    <section id="home" className="relative min-h-[600px] h-[calc(100vh-40px)] flex items-end overflow-hidden">
       <div className="absolute inset-0 z-0">
         <img
           src={bgImage}
@@ -14,7 +14,7 @@ export function Hero() {
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30"></div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 relative z-10 pt-24 md:pt-28 lg:pt-32 pb-12 md:pb-16 w-full">
+      <div className="max-w-7xl mx-auto px-6 relative z-10 pb-12 sm:pb-16 md:pb-20 lg:pb-24 w-full">
         <motion.div
           className="max-w-3xl"
           initial={{ opacity: 0, y: 30 }}
