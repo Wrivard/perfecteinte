@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "wouter";
-import bgImage from "@assets/570606844_804977075474860_4894531562783451229_n_1774531645512.jpg";
+import bgImage from "@assets/549622930_774716085167626_5203293323068967961_n_1774535371736.jpg";
 
 export function Hero() {
   return (
