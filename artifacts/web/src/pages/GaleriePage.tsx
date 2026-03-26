@@ -32,7 +32,7 @@ export default function GaleriePage() {
 
   return (
     <PageLayout>
-      <section className="relative h-[50vh] min-h-[350px] flex items-center overflow-hidden">
+      <section className="relative h-[50vh] min-h-[350px] flex items-center overflow-hidden -mt-[120px] pt-[120px]">
         <div className="absolute inset-0">
           <img src={heroImg} alt="" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30" />
@@ -43,10 +43,10 @@ export default function GaleriePage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-extrabold text-white uppercase leading-tight">
-              <span className="text-accent">GALERIE</span> PHOTO
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-display font-extrabold text-white uppercase leading-tight">
+              <span className="text-blue-400">GALERIE</span> PHOTO
             </h1>
-            <p className="text-xl text-white/80 mt-4 max-w-xl">
+            <p className="text-xl text-gray-100 mt-4 max-w-xl">
               Découvrez nos réalisations et la qualité de notre travail en images.
             </p>
           </motion.div>
@@ -62,7 +62,7 @@ export default function GaleriePage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
-              <span className="text-accent">TRANSFORMATION</span> VISUELLE
+              <span className="text-blue-400">TRANSFORMATION</span> VISUELLE
             </motion.h2>
             <motion.p
               className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed"
@@ -117,7 +117,7 @@ export default function GaleriePage() {
               className="max-w-full max-h-full object-contain"
             />
             <button
-              className="absolute top-8 right-8 text-white hover:text-accent transition-colors"
+              className="absolute top-8 right-8 text-white hover:text-blue-400 transition-colors"
               onClick={(e) => { e.stopPropagation(); setLightboxImage(null); }}
             >
               <X size={40} strokeWidth={2} />

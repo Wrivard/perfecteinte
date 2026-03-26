@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { Link } from "wouter";
 import { AccordionItem } from "@/components/ui/accordion-custom";
 
 const faqs = [
@@ -39,10 +40,10 @@ export function FAQ() {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6 leading-tight">
-            <span className="text-[#1a1a1a]">FOIRE AUX </span>
+            <span className="text-gray-900">FOIRE AUX </span>
             <span className="text-accent">QUESTIONS</span>
           </h2>
-          <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl md:text-2xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
             Découvrez les réponses aux questions fréquentes sur nos services de rénovation.
           </p>
         </motion.div>
@@ -60,16 +61,16 @@ export function FAQ() {
         </div>
 
         <div className="border-t border-gray-200 mt-16 pt-16 text-center">
-          <h3 className="text-2xl md:text-[28px] font-display font-bold text-[#1a1a1a]">
+          <h3 className="text-2xl md:text-[28px] font-display font-bold text-gray-900">
             VOUS AVEZ D'AUTRES QUESTIONS ?
           </h3>
-          <p className="text-gray-500 mt-3">Nous sommes là pour vous aider.</p>
-          <a
-            href="tel:4186655871"
-            className="inline-block mt-6 border-2 border-gray-300 text-[#1a1a1a] px-8 py-3 rounded-md font-semibold hover:border-accent hover:text-accent transition-colors"
+          <p className="text-gray-700 mt-3">Nous sommes là pour vous aider.</p>
+          <Link
+            href="/rendez-vous"
+            className="inline-block mt-6 border-2 border-gray-300 text-gray-900 px-8 py-3 rounded-md font-semibold hover:border-accent hover:text-accent transition-colors"
           >
             Contact
-          </a>
+          </Link>
         </div>
       </div>
     </section>

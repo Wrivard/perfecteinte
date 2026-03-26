@@ -1,0 +1,219 @@
+AUDIT COMPLET DU CONTRASTE ET ACCESSIBILITÉ - Esthétique Auto Pascal Pilote
+
+MISSION: Passer en revue TOUTES les combinaisons texte/background du site et corriger les problèmes de contraste pour assurer une lisibilité parfaite selon les standards WCAG AA (ratio minimum 4.5:1 pour texte normal, 3:1 pour gros texte).
+
+═══════════════════════════════════════════════════════════════════
+
+1. PROBLÈMES IDENTIFIÉS À CORRIGER:
+
+A) TEXTE BLEU SUR FOND NOIR:
+   ❌ Problème: Labels "EXPERTISE", "INNOVATION", "FINITION" en bleu #3b82f6 sur fond noir
+   ❌ Problème: Taglines en bleu sur fond noir dans certaines sections
+   
+   ✅ SOLUTIONS:
+   - Labels catégories sur fond noir: utiliser #60a5fa (blue-400) au lieu de #3b82f6 (blue-500)
+   - OU utiliser un fond semi-transparent derrière: bg-blue-500/20 avec texte blue-300
+   - Taglines sur fond noir: TOUJOURS blanc (#ffffff) ou gris très clair (#e5e7eb)
+
+B) TEXTE BLANC SUR FOND CLAIR:
+   ❌ Problème: Texte blanc qui pourrait apparaître sur des zones claires d'images
+   
+   ✅ SOLUTIONS:
+   - Assurer un overlay minimum de rgba(0,0,0,0.6) sur toutes les images avec texte blanc
+   - Augmenter à rgba(0,0,0,0.75) si le texte est petit (<18px)
+
+C) TEXTE GRIS SUR FOND GRIS CLAIR:
+   ❌ Problème: text-gray-500 (#6b7280) sur bg-gray-50 (#f9fafb)
+   
+   ✅ SOLUTIONS:
+   - Utiliser text-gray-700 (#374151) minimum sur fond clair
+   - Ou text-gray-600 (#4b5563) pour les paragraphes
+
+═══════════════════════════════════════════════════════════════════
+
+2. RÈGLES DE CONTRASTE PAR TYPE DE FOND:
+
+A) FOND NOIR (#000000, #0f0f0f, #1a1a1a):
+   ✅ Titres H2/H3: text-white (#ffffff)
+   ✅ Paragraphes: text-gray-200 (#e5e7eb) ou text-gray-100 (#f3f4f6)
+   ✅ Labels/small text: text-blue-400 (#60a5fa) OU text-blue-300 (#93c5fd)
+   ✅ Taglines: text-gray-300 (#d1d5db) minimum
+   ❌ JAMAIS: text-blue-500, text-gray-500, text-gray-400 sur fond noir
+
+B) FOND BLANC (#ffffff):
+   ✅ Titres: text-black (#000000) ou text-gray-900 (#111827)
+   ✅ Paragraphes: text-gray-700 (#374151) ou text-gray-600 (#4b5563)
+   ✅ Labels: text-blue-600 (#2563eb) ou text-blue-700
+   ✅ Accent: text-blue-500 (#3b82f6) OK pour gros texte uniquement
+   ❌ JAMAIS: text-gray-400, text-gray-500 sur fond blanc
+
+C) FOND GRIS CLAIR (#f3f4f6, #f9fafb, #e5e7eb):
+   ✅ Titres: text-black (#000000) ou text-gray-900
+   ✅ Paragraphes: text-gray-700 (#374151) minimum
+   ✅ Labels: text-blue-600 (#2563eb)
+   ❌ JAMAIS: text-gray-500, text-gray-400 sur fond gris clair
+
+D) FOND IMAGE AVEC OVERLAY:
+   ✅ Overlay minimum: bg-black/60 (rgba(0,0,0,0.6))
+   ✅ Pour petit texte: bg-black/75
+   ✅ Gradient overlay: from-black/90 via-black/60 to-transparent
+   ✅ Tout texte: text-white uniquement
+
+═══════════════════════════════════════════════════════════════════
+
+3. CORRECTIONS SECTION PAR SECTION:
+
+HERO SECTION:
+✅ Background: Image avec overlay rgba(0,0,0,0.5)
+✅ Titre H1: text-white
+✅ Paragraph: text-white ou text-gray-100
+✅ Buttons: bg-blue-500 avec text-white (OK - bon contraste)
+
+SECTION STATISTIQUES (Fond clair):
+✅ Titre: text-black
+✅ Numbers: text-blue-500 (OK - gros texte 80px+)
+✅ Labels: text-gray-900 ou text-black (actuellement OK)
+
+SECTION NOS SOLUTIONS (Fond noir #1a1a1a):
+❌ CORRIGER: Labels "EXPERTISE", "INNOVATION", "FINITION"
+   Ancien: text-blue-500
+   Nouveau: text-blue-400 (#60a5fa) OU text-blue-300 (#93c5fd)
+   
+✅ Titre H2: "NOS" en text-white, "SOLUTIONS" en text-blue-400
+✅ Tagline: text-gray-300 minimum (pas text-gray-400)
+✅ Titres cards H3: text-white
+✅ Overlay sur images: from-black/90 via-black/40 to-transparent (OK)
+
+SECTION TÉMOIGNAGES (Fond clair):
+✅ Titre: "TÉMOIGNAGES" en text-blue-500, reste en text-black
+✅ Tagline: text-gray-600 minimum
+✅ Cards avec overlay:
+   - Overlay: from-black/85 via-black/60 (augmenter si nécessaire)
+   - Étoiles: text-blue-400 (bien visible sur fond noir)
+   - Quote: text-white
+   - Noms: text-white
+
+SECTION TRANSFORMATION VISUELLE (Fond noir):
+❌ CORRIGER: Titre
+   Ancien: "TRANSFORMATION" en text-blue-500
+   Nouveau: "TRANSFORMATION" en text-blue-400
+   
+✅ "VISUELLE": text-white
+✅ Tagline: text-gray-300 minimum
+
+SECTION CTA (Fond image overlay):
+✅ Overlay: from-black/75 via-black/50 to-black/30 (bon)
+✅ Titre H2: text-white
+✅ Paragraph: text-white ou text-white/90
+✅ Buttons: OK
+
+SECTION FAQ (Fond blanc):
+✅ Titre: "FOIRE AUX" en text-black, "QUESTIONS" en text-blue-500
+✅ Tagline: text-gray-600
+✅ Questions: text-gray-900
+✅ Réponses: text-gray-700 minimum (pas text-gray-600)
+✅ Chevrons: text-blue-500 (OK)
+
+SECTION CONTACT/MAP (Fond noir):
+❌ CORRIGER: Labels "COURRIEL", "TÉLÉPHONE", "ADRESSE"
+   Ancien: text-blue-500
+   Nouveau: text-blue-400
+   
+✅ Titre: "PRÊT À" en text-white, "BRILLER" en text-blue-400
+✅ Paragraph: text-gray-300 minimum
+✅ Values (phone, email): text-white
+
+FOOTER (Fond blanc):
+✅ Texte: text-gray-700 minimum (pas text-gray-500)
+✅ Links hover: text-blue-600
+✅ Copyright: text-gray-600 minimum
+
+═══════════════════════════════════════════════════════════════════
+
+4. PALETTE DE COULEURS ACCESSIBLE:
+
+BLEUS (selon fond):
+- Sur fond NOIR: #60a5fa (blue-400) ou #93c5fd (blue-300)
+- Sur fond BLANC: #2563eb (blue-600) ou #1d4ed8 (blue-700)
+- Sur fond GRIS CLAIR: #2563eb (blue-600)
+- Accent principal: #3b82f6 (blue-500) - UNIQUEMENT pour gros texte (28px+) ou boutons
+
+GRIS (selon fond):
+- Sur fond NOIR: 
+  * Titres: #ffffff (white)
+  * Paragraphes: #e5e7eb (gray-200) ou #f3f4f6 (gray-100)
+  * Labels: #d1d5db (gray-300)
+  
+- Sur fond BLANC/GRIS CLAIR:
+  * Titres: #000000 (black) ou #111827 (gray-900)
+  * Paragraphes: #374151 (gray-700)
+  * Labels/small: #4b5563 (gray-600)
+
+═══════════════════════════════════════════════════════════════════
+
+5. CHECKLIST DE VÉRIFICATION:
+
+Pour CHAQUE élément de texte, vérifier:
+□ Le contraste avec le fond est-il ≥ 4.5:1 (texte normal) ?
+□ Le contraste avec le fond est-il ≥ 3:1 (gros texte 24px+) ?
+□ Le texte reste-t-il lisible sur mobile (plus petit) ?
+□ Les overlays d'images sont-ils assez foncés ?
+□ Les hover states conservent-ils un bon contraste ?
+□ Les états disabled/inactifs sont-ils suffisamment visibles ?
+
+Utiliser cet outil pour tester: https://webaim.org/resources/contrastchecker/
+- Minimum AA: 4.5:1 (texte normal)
+- Minimum AA: 3:1 (gros texte 18px+ ou bold 14px+)
+
+═══════════════════════════════════════════════════════════════════
+
+6. ACTIONS CONCRÈTES À FAIRE:
+
+A) RECHERCHER ET REMPLACER dans tout le code:
+
+Sur fond noir/sombre:
+text-blue-500 → text-blue-400 (pour labels et petits textes)
+text-gray-400 → text-gray-300 (minimum)
+text-gray-500 → text-gray-300
+
+Sur fond blanc/clair:
+text-gray-500 → text-gray-700 (pour paragraphes)
+text-gray-400 → text-gray-600 (minimum)
+
+B) VÉRIFIER TOUS LES OVERLAYS:
+- Hero: rgba(0,0,0,0.5) minimum
+- Solutions cards: from-black/90 via-black/40 (OK)
+- Testimonials cards: from-black/85 minimum
+- CTA: from-black/75 (OK)
+
+C) CRÉER DES CLASSES UTILITAIRES:
+
+// tailwind.config.js - Ajouter des couleurs sémantiques
+colors: {
+  'text-on-dark': '#e5e7eb',      // gray-200
+  'text-on-light': '#374151',     // gray-700
+  'accent-on-dark': '#60a5fa',    // blue-400
+  'accent-on-light': '#2563eb',   // blue-600
+}
+
+═══════════════════════════════════════════════════════════════════
+
+7. TESTS À EFFECTUER:
+
+1. Tester en mode sombre du navigateur
+2. Tester avec luminosité d'écran réduite
+3. Utiliser l'extension browser "WAVE" ou "axe DevTools"
+4. Vérifier sur mobile (écran plus petit, luminosité extérieure)
+5. Tester avec daltonisme (Chrome DevTools > Rendering > Emulate vision deficiencies)
+
+═══════════════════════════════════════════════════════════════════
+
+LIVRABLE ATTENDU:
+
+1. Une passe complète sur TOUT le site pour corriger les contrastes
+2. Une liste des changements effectués (avant → après)
+3. Des screenshots avant/après pour les sections problématiques
+4. Confirmation que tous les textes passent WCAG AA minimum
+5. Documentation des couleurs utilisées par contexte (fond noir, blanc, image)
+
+PRIORITÉ ABSOLUE: Aucun texte ne doit être difficile à lire, même en conditions difficiles (extérieur, lumière vive, fatigue visuelle). La lisibilité prime sur l'esthétique.

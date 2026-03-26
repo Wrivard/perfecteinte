@@ -73,5 +73,9 @@
     "vite": "catalog:",
     "wouter": "^3.3.5",
     "zod": "catalog:"
+  },
+  "dependencies": {
+    "react-countup": "^6.5.3",
+    "react-intersection-observer": "^10.0.3"
   }
 }

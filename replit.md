@@ -99,8 +99,9 @@ Frontend-only React + Vite website for **Esthétique Auto Pascal Pilote Inc.**, 
 - **Brand Colors**: Blue accent (#3b82f6), Dark (#1a1a1a), White (#ffffff), Light (#f9fafb)
 - **Fonts**: Inter (body), Montserrat (headings)
 - **Routing**: wouter — multi-page SPA (`/`, `/a-propos`, `/services`, `/galerie`, `/rendez-vous`)
-- **Home Sections**: Double-bar Sticky Navbar (top info bar + main nav), Hero, Stats, Services (3 image-background cards), Testimonials (paginated), Gallery (masonry + lightbox), CTA, FAQ (5 accordion items), Contact ("PRÊT À BRILLER" + Google Maps), Footer (white, 4-column)
-- **Pages**: À Propos (history + values + stats), Services (detailed 3-service layout with features), Galerie (all 17 photos + lightbox), Rendez-vous (Google Calendar embed placeholder + contact sidebar)
+- **Home Sections**: Double-bar Sticky Navbar (top info bar + main nav), Hero (H1 text-5xl to text-8xl responsive), Stats (react-countup animated counting), Services (3 image-background cards), Testimonials (paginated), Gallery (masonry + lightbox), CTA, FAQ (5 accordion items), Contact ("PRÊT À BRILLER" + Google Maps embed, shared on all pages via PageLayout), Footer (white, 4-column)
+- **Pages**: À Propos (history + values + stats), Services (detailed 3-service layout with features), Galerie (all 17 photos + lightbox), Rendez-vous (Google Calendar embed placeholder + contact sidebar, Contact section excluded)
+- **Accessibility**: WCAG AA contrast audit applied — text-blue-400 on dark backgrounds, text-gray-700+ on light backgrounds, proper overlay opacities on images
 - **Phone**: (418) 665-5871
 - **Email**: Pascal.1993@live.ca / info@esthetiqueautopascalpilote.ca
 - **Address**: 2535 boulevard Comporté, La Malbaie, Québec

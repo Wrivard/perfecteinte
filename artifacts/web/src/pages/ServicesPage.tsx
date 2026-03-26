@@ -62,7 +62,7 @@ const itemVariants = {
 export default function ServicesPage() {
   return (
     <PageLayout>
-      <section className="relative h-[50vh] min-h-[350px] flex items-center overflow-hidden">
+      <section className="relative h-[50vh] min-h-[350px] flex items-center overflow-hidden -mt-[120px] pt-[120px]">
         <div className="absolute inset-0">
           <img src={heroImg} alt="" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30" />
@@ -73,10 +73,10 @@ export default function ServicesPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-extrabold text-white uppercase leading-tight">
-              NOS <span className="text-accent">SERVICES</span>
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-display font-extrabold text-white uppercase leading-tight">
+              NOS <span className="text-blue-400">SERVICES</span>
             </h1>
-            <p className="text-xl text-white/80 mt-4 max-w-xl">
+            <p className="text-xl text-gray-100 mt-4 max-w-xl">
               Des solutions professionnelles pour chaque besoin automobile.
             </p>
           </motion.div>
@@ -87,7 +87,7 @@ export default function ServicesPage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <motion.h2
-              className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-[#1a1a1a] mb-6 leading-tight"
+              className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-gray-900 mb-6 leading-tight"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -95,7 +95,7 @@ export default function ServicesPage() {
               NOS <span className="text-accent">SOLUTIONS</span>
             </motion.h2>
             <motion.p
-              className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed"
+              className="text-xl md:text-2xl text-gray-700 max-w-3xl mx-auto leading-relaxed"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -133,13 +133,13 @@ export default function ServicesPage() {
                   <div className="w-14 h-14 bg-accent/10 rounded-md flex items-center justify-center mb-6">
                     <service.icon className="w-7 h-7 text-accent" />
                   </div>
-                  <h3 className="text-2xl md:text-3xl font-display font-bold text-[#1a1a1a] mb-4">{service.title}</h3>
-                  <p className="text-lg text-gray-500 leading-relaxed mb-6">{service.description}</p>
+                  <h3 className="text-2xl md:text-3xl font-display font-bold text-gray-900 mb-4">{service.title}</h3>
+                  <p className="text-lg text-gray-700 leading-relaxed mb-6">{service.description}</p>
                   <ul className="space-y-3 mb-8">
                     {service.features.map((feature, i) => (
                       <li key={i} className="flex items-center gap-3">
                         <Check className="w-5 h-5 text-accent shrink-0" />
-                        <span className="text-gray-600">{feature}</span>
+                        <span className="text-gray-700">{feature}</span>
                       </li>
                     ))}
                   </ul>
@@ -153,37 +153,6 @@ export default function ServicesPage() {
               </motion.div>
             ))}
           </motion.div>
-        </div>
-      </section>
-
-      <section className="relative h-[350px] md:h-[400px] flex items-center overflow-hidden">
-        <div className="absolute inset-0">
-          <img src={heroImg} alt="" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/50 to-black/30" />
-        </div>
-        <div className="max-w-7xl mx-auto px-6 relative z-10 w-full">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-8">
-            <div>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-white leading-tight">
-                PRÊT À TRANSFORMER<br />VOTRE VÉHICULE ?
-              </h2>
-              <p className="text-lg text-white/90 mt-4">Contactez-nous pour un devis personnalisé.</p>
-            </div>
-            <div className="flex gap-4 shrink-0">
-              <Link
-                href="/rendez-vous"
-                className="bg-accent text-white px-8 py-4 rounded-md font-semibold hover:bg-accent-hover transition-colors"
-              >
-                Réserver
-              </Link>
-              <a
-                href="tel:4186655871"
-                className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-md font-semibold hover:bg-white/10 transition-colors"
-              >
-                Appeler
-              </a>
-            </div>
-          </div>
         </div>
       </section>
     </PageLayout>

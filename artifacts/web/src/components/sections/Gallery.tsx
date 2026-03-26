@@ -29,7 +29,7 @@ export function Gallery() {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6 leading-tight">
-              <span className="text-accent">TRANSFORMATION </span>
+              <span className="text-blue-400">TRANSFORMATION </span>
               <span className="text-white">VISUELLE</span>
             </h2>
             <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
@@ -79,7 +79,7 @@ export function Gallery() {
               className="max-w-full max-h-full object-contain"
             />
             <button
-              className="absolute top-8 right-8 text-white hover:text-accent transition-colors"
+              className="absolute top-8 right-8 text-white hover:text-blue-400 transition-colors"
               onClick={(e) => { e.stopPropagation(); setLightboxImage(null); }}
             >
               <X size={40} strokeWidth={2} />

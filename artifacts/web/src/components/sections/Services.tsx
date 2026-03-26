@@ -44,7 +44,7 @@ export function Services() {
         >
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6 leading-tight">
             <span className="text-white">NOS </span>
-            <span className="text-accent">SOLUTIONS</span>
+            <span className="text-blue-400">SOLUTIONS</span>
           </h2>
           <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
             Des solutions techniques qui transforment et préservent l'intégrité de votre automobile.
@@ -74,7 +74,7 @@ export function Services() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent group-hover:from-black/95 transition-colors duration-300"></div>
               </div>
               <div className="relative h-full flex flex-col justify-end p-8">
-                <p className="text-sm uppercase tracking-wider text-accent/80 mb-3 font-semibold">
+                <p className="text-sm uppercase tracking-wider text-blue-400 mb-3 font-semibold">
                   {service.label}
                 </p>
                 <h3 className="text-2xl md:text-3xl font-bold text-white leading-tight whitespace-pre-line">

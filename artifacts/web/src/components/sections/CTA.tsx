@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "wouter";
-import img from "@assets/518400891_721263007179601_8348639493355995469_n_1774531645510.jpg";
+import img from "@assets/560145854_793100139995887_2888064327822015612_n_1774531645512.jpg";
 
 export function CTA() {
   return (
@@ -15,7 +15,7 @@ export function CTA() {
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-white leading-tight mb-4">
               VOTRE VÉHICULE MÉRITE<br />L'EXCELLENCE
             </h2>
-            <p className="text-lg md:text-xl text-white/90 leading-relaxed max-w-2xl">
+            <p className="text-lg md:text-xl text-gray-100 leading-relaxed max-w-2xl">
               Transformez l'apparence et la protection de votre automobile avec un service sur mesure et professionnel.
             </p>
           </div>

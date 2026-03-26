@@ -35,9 +35,9 @@ export function Testimonials() {
         >
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6 leading-tight">
             <span className="text-accent">TÉMOIGNAGES </span>
-            <span className="text-[#1a1a1a]">DE NOS CLIENTS</span>
+            <span className="text-gray-900">DE NOS CLIENTS</span>
           </h2>
-          <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl md:text-2xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
             L'excellence de notre travail racontée par ceux qui nous font confiance
           </p>
         </motion.div>
@@ -52,9 +52,9 @@ export function Testimonials() {
               className="relative h-[420px] rounded-md overflow-hidden group"
             >
               <img src={t.image} alt={t.author} className="absolute inset-0 w-full h-full object-cover" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-black/20"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/60 to-black/20"></div>
               <div className="absolute bottom-0 left-0 right-0 p-8">
-                <div className="flex gap-1 text-accent mb-4">
+                <div className="flex gap-1 text-blue-400 mb-4">
                   {[...Array(5)].map((_, j) => (
                     <Star key={j} className="w-5 h-5 fill-current" />
                   ))}
@@ -72,14 +72,14 @@ export function Testimonials() {
             disabled={page === 0}
             className="w-10 h-10 rounded-full border border-gray-300 flex items-center justify-center hover:bg-gray-50 transition-colors disabled:opacity-40"
           >
-            <ChevronLeft className="w-5 h-5" />
+            <ChevronLeft className="w-5 h-5 text-gray-700" />
           </button>
           <div className="flex gap-2">
             {Array.from({ length: totalPages }).map((_, i) => (
               <button
                 key={i}
                 onClick={() => setPage(i)}
-                className={`w-2 h-2 rounded-full transition-colors ${i === page ? "bg-[#1a1a1a]" : "bg-gray-300"}`}
+                className={`w-2 h-2 rounded-full transition-colors ${i === page ? "bg-gray-900" : "bg-gray-300"}`}
               />
             ))}
           </div>
@@ -88,7 +88,7 @@ export function Testimonials() {
             disabled={page === totalPages - 1}
             className="w-10 h-10 rounded-full border border-gray-300 flex items-center justify-center hover:bg-gray-50 transition-colors disabled:opacity-40"
           >
-            <ChevronRight className="w-5 h-5" />
+            <ChevronRight className="w-5 h-5 text-gray-700" />
           </button>
         </div>
       </div>
