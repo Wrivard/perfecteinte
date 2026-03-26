@@ -1,59 +1,129 @@
-import { motion } from "framer-motion";
-import { Star, Quote } from "lucide-react";
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Star, ChevronLeft, ChevronRight } from "lucide-react";
+import img1 from "@assets/515464037_717072027598699_7656154476338834597_n_1774531645510.jpg";
+import img2 from "@assets/532949601_746227078016527_8012720562132951420_n_1774531645511.jpg";
+import img3 from "@assets/535472325_752143490758219_186388118827140535_n_1774531645511.jpg";
+import img4 from "@assets/481287887_624839100155326_2322975325486587163_n_1774531645509.jpg";
+import img5 from "@assets/552939218_780287794610455_6908565764177471907_n_1774531645511.jpg";
+import img6 from "@assets/566216853_802767049029196_5018593656071286537_n_1774531645512.jpg";
 
 const testimonials = [
   {
-    quote: "Service exceptionnel! Ma voiture brille comme jamais. L'équipe est professionnelle et minutieuse. Je ne confierais mon véhicule à personne d'autre.",
-    author: "Jean Tremblay",
-    location: "Québec",
+    quote: "Chaque détail compte, et Pascal le comprend parfaitement.",
+    author: "Éric Laforce",
+    image: img1,
   },
   {
-    quote: "La protection céramique a transformé mon véhicule. L'eau perle instantanément et le nettoyage est devenu un jeu d'enfant. Le résultat est impressionnant et durable.",
-    author: "Marie Bouchard",
-    location: "Lévis",
+    quote: "Un service qui transforme littéralement l'apparence de mon véhicule.",
+    author: "Caroline Tremblay",
+    image: img2,
   },
   {
-    quote: "Excellent rapport qualité-prix. J'ai fait faire une correction de peinture avant la revente de mon auto et elle avait l'air neuve sortant du concessionnaire.",
-    author: "Pierre Gagnon",
-    location: "Beauport",
-  }
+    quote: "La précision et le professionnalisme sont au cœur de leur travail.",
+    author: "Michel Bouchard",
+    image: img3,
+  },
+  {
+    quote: "Résultats impeccables à chaque visite. Mon véhicule n'a jamais été aussi beau.",
+    author: "Sophie Dubois",
+    image: img4,
+  },
+  {
+    quote: "Le meilleur service de détailing de la région. Hautement recommandé!",
+    author: "Martin Côté",
+    image: img5,
+  },
+  {
+    quote: "Pascal a un œil exceptionnel pour la finition. Résultat au-delà de mes attentes.",
+    author: "Julie Gagnon",
+    image: img6,
+  },
 ];
 
 export function Testimonials() {
+  const [page, setPage] = useState(0);
+  const itemsPerPage = 3;
+  const totalPages = Math.ceil(testimonials.length / itemsPerPage);
+  const currentItems = testimonials.slice(page * itemsPerPage, (page + 1) * itemsPerPage);
+
   return (
-    <section id="testimonials" className="py-24 bg-light">
+    <section id="testimonials" className="py-20 bg-light">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-accent font-semibold uppercase tracking-[0.2em] text-sm mb-2 block">Avis</span>
-          <h2 className="text-3xl md:text-4xl font-display font-bold text-navy mb-4">
-            Ce Que Disent Nos Clients
-          </h2>
-          <div className="w-24 h-1 bg-accent mx-auto rounded-full"></div>
+        <div className="text-center max-w-3xl mx-auto mb-12">
+          <motion.h2
+            className="text-3xl md:text-[40px] font-display font-bold text-[#1a1a1a] leading-tight"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <span className="text-accent">TÉMOIGNAGES</span> DE NOS CLIENTS
+          </motion.h2>
+          <motion.p
+            className="text-lg text-gray-500 mt-4"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
+          >
+            L'excellence de notre travail racontée par ceux qui nous font confiance
+          </motion.p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {testimonials.map((t, i) => (
+          {currentItems.map((t, i) => (
             <motion.div
-              key={i}
+              key={`${page}-${i}`}
               initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.1, duration: 0.5 }}
-              className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 relative"
+              className="relative h-[420px] rounded-md overflow-hidden group"
             >
-              <Quote className="absolute top-6 right-6 w-12 h-12 text-light" />
-              <div className="flex gap-1 text-accent mb-6">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 fill-current" />
-                ))}
-              </div>
-              <p className="text-gray-600 mb-8 italic relative z-10 leading-relaxed">"{t.quote}"</p>
-              <div>
-                <p className="font-bold text-navy font-display">{t.author}</p>
-                <p className="text-sm text-gray-400">{t.location}</p>
+              <img
+                src={t.image}
+                alt={t.author}
+                className="absolute inset-0 w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-black/20"></div>
+              <div className="absolute bottom-0 left-0 right-0 p-8">
+                <div className="flex gap-1 text-accent mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-5 h-5 fill-current" />
+                  ))}
+                </div>
+                <p className="text-white text-lg leading-relaxed mb-6">"{t.quote}"</p>
+                <p className="text-white font-semibold">{t.author}</p>
               </div>
             </motion.div>
           ))}
+        </div>
+
+        <div className="flex items-center justify-center gap-4 mt-10">
+          <button
+            onClick={() => setPage(Math.max(0, page - 1))}
+            disabled={page === 0}
+            className="w-10 h-10 rounded-full border border-gray-300 flex items-center justify-center hover:bg-light transition-colors disabled:opacity-40"
+          >
+            <ChevronLeft className="w-5 h-5" />
+          </button>
+          <div className="flex gap-2">
+            {Array.from({ length: totalPages }).map((_, i) => (
+              <button
+                key={i}
+                onClick={() => setPage(i)}
+                className={`w-2 h-2 rounded-full transition-colors ${
+                  i === page ? "bg-[#1a1a1a]" : "bg-gray-300"
+                }`}
+              />
+            ))}
+          </div>
+          <button
+            onClick={() => setPage(Math.min(totalPages - 1, page + 1))}
+            disabled={page === totalPages - 1}
+            className="w-10 h-10 rounded-full border border-gray-300 flex items-center justify-center hover:bg-light transition-colors disabled:opacity-40"
+          >
+            <ChevronRight className="w-5 h-5" />
+          </button>
         </div>
       </div>
     </section>

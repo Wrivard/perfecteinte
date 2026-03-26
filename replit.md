@@ -93,13 +93,17 @@ Generated React Query hooks and fetch client from the OpenAPI spec (e.g. `useHea
 
 ### `artifacts/web` (`@workspace/web`)
 
-Frontend-only React + Vite website for **Esthétique Auto Pascal Pilote Inc.**, a premium auto detailing business in Quebec. Single-page site with all content in French.
+Frontend-only React + Vite website for **Esthétique Auto Pascal Pilote Inc.**, a premium auto detailing business in La Malbaie, Québec. Single-page site with all content in French.
 
-- **Stack**: React, Vite, Tailwind CSS, Framer Motion, Lucide Icons
-- **Brand Colors**: Deep Navy (#0a1628), Crimson Red (#dc2626), Light gray (#f8f9fa)
+- **Stack**: React, Vite, Tailwind CSS v4, Framer Motion, Lucide Icons
+- **Brand Colors**: Blue accent (#3b82f6), Dark (#1a1a1a), White (#ffffff), Light (#f9fafb)
 - **Fonts**: Inter (body), Montserrat (headings)
-- **Sections**: Sticky Navbar, Hero, Services (6 cards), Process (4 steps), Gallery (masonry grid with 9 car photos), CTA, Testimonials (3 cards), FAQ (8 accordion items), Contact (info + Google Maps), Footer
-- **Phone**: 418-670-1613
+- **Sections**: Double-bar Sticky Navbar (top info bar + main nav), Hero, Stats (15+ years, 100% quality, 350+ washes), Services (3 image-background cards), Testimonials (paginated image-background cards), Gallery (masonry grid with 9 car photos), CTA, FAQ (5 accordion items), Contact ("PRÊT À BRILLER" + Google Maps), Footer (white, 4-column)
+- **Phone**: (418) 665-5871
+- **Email**: Pascal.1993@live.ca / info@esthetiqueautopascalpilote.ca
+- **Address**: 2535 boulevard Comporté, La Malbaie, Québec
+- **Social**: Facebook, Instagram, X, LinkedIn, YouTube
+- **Design rules**: border-radius 6px, no gradients on backgrounds (only on image overlays), max-width 1200px container
 - **Images**: All imported from `attached_assets/` via `@assets/` alias
 - **No backend**: All content is static/hardcoded
 

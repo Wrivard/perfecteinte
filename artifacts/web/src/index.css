@@ -1,23 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@500;600;700;800&display=swap');
 @import "tailwindcss";
 
 @theme inline {
   --font-sans: 'Inter', sans-serif;
   --font-display: 'Montserrat', sans-serif;
 
-  /* Brand Colors */
-  --color-primary: hsl(216 60% 10%); /* Deep Navy #0a1628 */
+  --color-primary: hsl(216 60% 10%);
   --color-primary-foreground: hsl(0 0% 100%);
   
-  --color-accent: hsl(0 72% 51%); /* Crimson Red #dc2626 */
-  --color-accent-hover: hsl(0 72% 41%);
+  --color-accent: hsl(217 91% 60%);
+  --color-accent-hover: hsl(217 91% 50%);
   --color-accent-foreground: hsl(0 0% 100%);
 
   --color-navy: hsl(216 60% 10%);
-  --color-navy-dark: hsl(240 29% 9%); /* #1a1a2e */
+  --color-navy-dark: hsl(0 0% 6%);
   
-  --color-light: hsl(210 20% 98%); /* #f8f9fa */
-  --color-dark: hsl(0 0% 10%); /* #1a1a1a */
+  --color-light: hsl(210 20% 98%);
+  --color-dark: hsl(0 0% 10%);
 
   --color-background: hsl(0 0% 100%);
   --color-foreground: hsl(216 60% 10%);
@@ -37,7 +36,6 @@
   }
 }
 
-/* Custom Utilities for Masonry Gallery */
 @layer utilities {
   .masonry-grid {
     column-count: 1;

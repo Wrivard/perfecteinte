@@ -3,51 +3,40 @@ import { AccordionItem } from "@/components/ui/accordion-custom";
 
 const faqs = [
   {
-    q: "Combien de temps dure la protection céramique?",
-    a: "La durée de la protection céramique varie de 2 à 5 ans selon le produit choisi et l'entretien du véhicule. Nous offrons différents forfaits adaptés à vos besoins."
+    q: "Combien de temps dure un traitement nano-céramique ?",
+    a: "Un traitement nano-céramique professionnel peut durer de 2 à 5 ans selon le produit utilisé et l'entretien régulier du véhicule. Nous recommandons un entretien périodique pour maximiser la durabilité de la protection."
   },
   {
-    q: "Quelle est la différence entre la cire et la céramique?",
-    a: "La cire offre une protection temporaire de quelques semaines, tandis que la céramique crée une liaison chimique permanente avec la peinture, offrant une protection supérieure pendant des années contre les UV, produits chimiques et micro-rayures."
+    q: "Est-ce que la pellicule pare-pierre change l'apparence de la peinture ?",
+    a: "Non, la pellicule de protection de peinture (PPF) est pratiquement invisible une fois appliquée. Elle protège contre les éclats de pierre, les débris et les rayures légères tout en préservant l'apparence originale de votre véhicule."
   },
   {
-    q: "Combien de temps prend un service complet?",
-    a: "Un detailing complet prend généralement entre 1 et 3 jours selon l'état initial du véhicule et les services demandés. La protection céramique nécessite un temps de cure supplémentaire dans notre atelier avant la livraison."
+    q: "Dois-je prendre rendez-vous pour un lavage ?",
+    a: "Oui, nous vous recommandons de prendre rendez-vous à l'avance pour assurer un service optimal. Contactez-nous par téléphone au (418) 665-5871 pour réserver votre créneau."
   },
   {
-    q: "Offrez-vous un service mobile?",
-    a: "Actuellement, nos services sont offerts exclusivement dans notre atelier à Québec, où nous disposons de l'éclairage, de l'équipement et de l'environnement contrôlé (température/humidité) nécessaires pour garantir des résultats optimaux, particulièrement pour la céramique."
+    q: "Le polissage peut-il enlever toutes les égratignures ?",
+    a: "Le polissage peut éliminer la majorité des micro-rayures, swirls et défauts de surface. Cependant, les rayures profondes qui ont pénétré au-delà de la couche de vernis nécessitent parfois des traitements complémentaires. Nous évaluons chaque véhicule individuellement."
   },
   {
-    q: "Quels produits utilisez-vous?",
-    a: "Nous utilisons exclusivement des produits professionnels haut de gamme reconnus dans l'industrie, incluant des revêtements céramiques certifiés et des pâtes de correction de peinture de qualité supérieure pour assurer une finition miroir."
+    q: "Offrez-vous un service mobile à domicile ?",
+    a: "Actuellement, nos services sont offerts exclusivement dans notre atelier situé au 2535 boulevard Comporté à La Malbaie. Notre environnement contrôlé nous permet de garantir les meilleurs résultats possibles."
   },
-  {
-    q: "Comment prendre rendez-vous?",
-    a: "Vous pouvez nous contacter par téléphone au 418-670-1613 ou via notre page Facebook pour planifier votre évaluation et votre rendez-vous. Nous vous recommandons de réserver à l'avance, surtout en haute saison."
-  },
-  {
-    q: "Acceptez-vous les paiements par carte?",
-    a: "Oui, nous acceptons les paiements par carte de crédit, carte de débit, virement Interac et argent comptant pour votre commodité."
-  },
-  {
-    q: "Offrez-vous une garantie?",
-    a: "Oui, tous nos traitements de protection céramique sont accompagnés d'une garantie. La durée de cette garantie varie selon le forfait choisi et est valide sous réserve d'un entretien adéquat du véhicule."
-  }
 ];
 
 export function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section id="faq" className="py-24 bg-white">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
-        <div className="text-center mb-16">
-          <span className="text-accent font-semibold uppercase tracking-[0.2em] text-sm mb-2 block">Informations</span>
-          <h2 className="text-3xl md:text-4xl font-display font-bold text-navy mb-4">
-            Questions Fréquentes
+    <section id="faq" className="py-20 bg-white">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-[900px]">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-[40px] font-display font-bold text-[#1a1a1a] leading-tight">
+            FOIRE AUX <span className="text-accent">QUESTIONS</span>
           </h2>
-          <div className="w-24 h-1 bg-accent mx-auto rounded-full"></div>
+          <p className="text-lg text-gray-500 mt-4">
+            Découvrez les réponses aux questions fréquentes sur nos services de rénovation.
+          </p>
         </div>
 
         <div>
@@ -60,6 +49,19 @@ export function FAQ() {
               onClick={() => setOpenIndex(openIndex === index ? null : index)}
             />
           ))}
+        </div>
+
+        <div className="border-t border-gray-200 mt-16 pt-16 text-center">
+          <h3 className="text-2xl md:text-[28px] font-display font-bold text-[#1a1a1a]">
+            VOUS AVEZ D'AUTRES QUESTIONS ?
+          </h3>
+          <p className="text-gray-500 mt-3">Nous sommes là pour vous aider.</p>
+          <a
+            href="#contact"
+            className="inline-block mt-6 border-2 border-gray-300 text-[#1a1a1a] px-8 py-3 rounded-md font-semibold hover:border-accent hover:text-accent transition-colors"
+          >
+            Contact
+          </a>
         </div>
       </div>
     </section>

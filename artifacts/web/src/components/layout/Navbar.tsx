@@ -1,22 +1,25 @@
 import { useState, useEffect } from "react";
-import { Menu, X, Phone } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Menu, X, Phone, MapPin, ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 import logo from "@assets/425261687_389413763697862_6688968440363193968_n-removebg-previ_1774531438969.png";
 
 const navLinks = [
   { name: "Accueil", href: "#home" },
-  { name: "Services", href: "#services" },
-  { name: "Processus", href: "#process" },
+  { name: "À Propos", href: "#stats" },
+  { name: "Services", href: "#services", hasDropdown: true },
   { name: "Galerie", href: "#gallery" },
-  { name: "Témoignages", href: "#testimonials" },
-  { name: "FAQ", href: "#faq" },
-  { name: "Contact", href: "#contact" },
+];
+
+const serviceLinks = [
+  { name: "Lavage & Entretien esthétique", href: "#services" },
+  { name: "Protection de peinture (PPF)", href: "#services" },
+  { name: "Polissage & Nano-céramique", href: "#services" },
 ];
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -27,69 +30,108 @@ export function Navbar() {
   }, []);
 
   return (
-    <header
-      className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-        isScrolled
-          ? "bg-white/95 backdrop-blur-md shadow-md py-3"
-          : "bg-transparent py-5"
-      )}
-    >
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between">
-          {/* Logo */}
-          <a href="#home" className="flex items-center gap-2 z-50">
-            <img 
-              src={logo} 
-              alt="Esthétique Auto Pascal Pilote" 
-              className={cn(
-                "transition-all duration-300",
-                isScrolled ? "h-12 sm:h-14" : "h-16 sm:h-20 brightness-0 invert" // Make logo white when not scrolled if over dark bg
-              )} 
-            />
-          </a>
-
-          {/* Desktop Nav */}
-          <nav className="hidden md:flex items-center gap-6 lg:gap-8">
-            {navLinks.map((link) => (
-              <a
-                key={link.name}
-                href={link.href}
-                className={cn(
-                  "text-sm font-semibold uppercase tracking-wider transition-colors hover:text-accent",
-                  isScrolled ? "text-primary" : "text-white"
-                )}
-              >
-                {link.name}
-              </a>
-            ))}
-            <Button
-              variant="accent"
-              className="gap-2"
-              onClick={() => window.location.href = "tel:4186701613"}
-            >
+    <header className="fixed top-0 left-0 right-0 z-50">
+      <div className="bg-[#1a1a1a] h-10 hidden md:block">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center justify-between">
+          <div className="flex items-center gap-6 text-white text-sm">
+            <a href="tel:4186655871" className="flex items-center gap-2 hover:text-accent transition-colors">
               <Phone className="w-4 h-4" />
-              <span>418-670-1613</span>
-            </Button>
-          </nav>
-
-          {/* Mobile Menu Toggle */}
-          <button
-            className={cn(
-              "md:hidden z-50 p-2",
-              isScrolled ? "text-primary" : "text-white"
-            )}
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          >
-            {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
+              <span>(418) 665-5871</span>
+            </a>
+            <span className="flex items-center gap-2">
+              <MapPin className="w-4 h-4" />
+              <span>2535 boulevard Comporté, La Malbaie</span>
+            </span>
+          </div>
+          <div className="flex items-center gap-4">
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-accent transition-colors">
+              <svg className="w-[18px] h-[18px]" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-accent transition-colors">
+              <svg className="w-[18px] h-[18px]" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            </a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-accent transition-colors">
+              <svg className="w-[18px] h-[18px]" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-accent transition-colors">
+              <svg className="w-[18px] h-[18px]" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-accent transition-colors">
+              <svg className="w-[18px] h-[18px]" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+          </div>
         </div>
       </div>
 
-      {/* Mobile Nav Overlay */}
       <div
         className={cn(
-          "fixed inset-0 bg-navy/95 backdrop-blur-xl flex flex-col items-center justify-center transition-all duration-300 md:hidden",
+          "transition-all duration-300",
+          isScrolled
+            ? "bg-white/95 backdrop-blur-md shadow-md py-3"
+            : "bg-white py-4"
+        )}
+      >
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between">
+            <a href="#home" className="flex items-center gap-2 z-50">
+              <img 
+                src={logo} 
+                alt="Esthétique Auto Pascal Pilote" 
+                className={cn(
+                  "transition-all duration-300",
+                  isScrolled ? "h-12 sm:h-14" : "h-14 sm:h-16"
+                )} 
+              />
+            </a>
+
+            <nav className="hidden lg:flex items-center gap-8">
+              {navLinks.map((link) => (
+                <div key={link.name} className="relative group">
+                  <a
+                    href={link.href}
+                    className="text-[15px] font-medium text-[#1a1a1a] hover:text-accent transition-colors flex items-center gap-1"
+                  >
+                    {link.name}
+                    {link.hasDropdown && <ChevronDown className="w-4 h-4" />}
+                  </a>
+                  {link.hasDropdown && (
+                    <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-md shadow-lg border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                      <div className="py-2">
+                        {serviceLinks.map((sl) => (
+                          <a
+                            key={sl.name}
+                            href={sl.href}
+                            className="block px-4 py-3 text-sm text-gray-700 hover:bg-light hover:text-accent transition-colors"
+                          >
+                            {sl.name}
+                          </a>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                </div>
+              ))}
+              <a
+                href="#contact"
+                className="bg-accent text-white px-6 py-3 rounded-md font-semibold text-sm hover:bg-accent-hover transition-colors"
+              >
+                Prendre un rendez-vous
+              </a>
+            </nav>
+
+            <button
+              className="lg:hidden z-50 p-2 text-[#1a1a1a]"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            >
+              {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div
+        className={cn(
+          "fixed inset-0 bg-white flex flex-col items-center justify-center transition-all duration-300 lg:hidden",
           mobileMenuOpen ? "opacity-100 visible" : "opacity-0 invisible pointer-events-none"
         )}
       >
@@ -98,24 +140,26 @@ export function Navbar() {
             <a
               key={link.name}
               href={link.href}
-              className="text-2xl font-display font-bold text-white hover:text-accent transition-colors"
+              className="text-2xl font-display font-bold text-[#1a1a1a] hover:text-accent transition-colors"
               onClick={() => setMobileMenuOpen(false)}
             >
               {link.name}
             </a>
           ))}
-          <Button
-            variant="accent"
-            size="lg"
-            className="mt-4 gap-2 text-lg"
-            onClick={() => {
-              window.location.href = "tel:4186701613";
-              setMobileMenuOpen(false);
-            }}
+          <a
+            href="tel:4186655871"
+            className="text-lg text-accent font-semibold"
+            onClick={() => setMobileMenuOpen(false)}
           >
-            <Phone className="w-5 h-5" />
-            <span>418-670-1613</span>
-          </Button>
+            (418) 665-5871
+          </a>
+          <a
+            href="#contact"
+            className="mt-4 bg-accent text-white px-8 py-3 rounded-md font-semibold text-lg hover:bg-accent-hover transition-colors"
+            onClick={() => setMobileMenuOpen(false)}
+          >
+            Prendre un rendez-vous
+          </a>
         </nav>
       </div>
     </header>

@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -12,15 +11,16 @@ interface AccordionItemProps {
 
 export function AccordionItem({ question, answer, isOpen, onClick }: AccordionItemProps) {
   return (
-    <div className="border border-gray-200 rounded-xl mb-4 overflow-hidden bg-white shadow-sm hover:border-accent/30 transition-colors">
+    <div className="border-b border-gray-200">
       <button
-        className="w-full text-left px-6 py-5 flex items-center justify-between focus:outline-none"
+        className="w-full text-left py-5 flex items-center justify-between focus:outline-none group"
         onClick={onClick}
       >
-        <span className="font-bold text-navy pr-8">{question}</span>
-        <div className={cn("shrink-0 w-8 h-8 rounded-full bg-light flex items-center justify-center transition-transform duration-300", isOpen && "rotate-180 bg-accent text-white")}>
-          <ChevronDown className="w-5 h-5" />
-        </div>
+        <span className="text-lg font-medium text-[#1a1a1a] pr-8 group-hover:text-accent transition-colors">{question}</span>
+        <ChevronDown className={cn(
+          "w-5 h-5 text-accent shrink-0 transition-transform duration-300",
+          isOpen && "rotate-180"
+        )} />
       </button>
       <AnimatePresence initial={false}>
         {isOpen && (
@@ -30,7 +30,7 @@ export function AccordionItem({ question, answer, isOpen, onClick }: AccordionIt
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
           >
-            <div className="px-6 pb-6 text-gray-600 leading-relaxed border-t border-gray-100 pt-4">
+            <div className="pb-5 text-gray-500 leading-relaxed">
               {answer}
             </div>
           </motion.div>

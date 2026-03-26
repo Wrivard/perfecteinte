@@ -1,0 +1,612 @@
+REPLIT PROMPT DÉTAILLÉ - Esthétique Auto Pascal Pilote
+INFORMATIONS EXTRAITES DU SITE
+Informations de Contact
+
+Téléphone: (418) 665-5871
+Email: Pascal.1993@live.ca / info@esthetiqueautopascalpilote.ca
+Adresse: 2535 boulevard Comporté, La Malbaie, Québec
+Réseaux sociaux: Facebook, Instagram, X (Twitter), LinkedIn, YouTube
+
+Couleurs du Logo (Extraites)
+
+Noir: #000000 ou #1a1a1a (texte et arrière-plans sombres)
+Blanc: #ffffff
+Bleu: #3b82f6 ou #2563eb (accent principal - visible dans titres et boutons)
+Gris clair: #f3f4f6 ou #e5e7eb (arrière-plans clairs)
+
+
+STRUCTURE DÉTAILLÉE PAR SECTION
+1. NAVIGATION BAR (Sticky Header)
+Structure exacte du header:
+[Barre supérieure noire - 40px height]
+   [Icône téléphone] (418) 665-5871    2535 boulevards comporté, La Malbaie
+   [Right aligned: Facebook, Instagram, X, LinkedIn icons - blanc]
+
+[Barre principale blanche - 80px height]
+   [LEFT: Logo "ESTHÉTIQUE AUTO PASCAL PILOTE" - 180px width]
+   [CENTER/RIGHT: Navigation links]
+      Accueil | À Propos | Services ▼ | Galerie
+   [RIGHT: Bouton bleu "Prendre un rendez-vous"]
+Spécifications techniques:
+
+Barre supérieure: background: #1a1a1a, height: 40px, font-size: 14px, couleur texte blanc
+Icône téléphone: SVG blanc, 16px
+Social icons: 18px, espacement 16px entre chaque, hover: opacity: 0.8
+Barre principale: background: #ffffff, box-shadow: 0 2px 4px rgba(0,0,0,0.1) au scroll
+Logo: Texte noir "ESTHÉTIQUE AUTO" en haut, "PASCAL PILOTE" en dessous avec les 3 P stylisés
+Navigation: font-size: 16px, font-weight: 500, color: #1a1a1a, espacement 32px
+Dropdown Services: flèche vers le bas, menu blanc au hover
+Bouton CTA: background: #3b82f6, color: white, padding: 12px 24px, border-radius: 6px, font-weight: 600
+
+
+2. HERO SECTION (Image 1)
+Layout exact:
+[Background: Image pleine largeur d'une voiture bleue en cours de lavage avec foam]
+[Overlay sombre: rgba(0,0,0,0.4)]
+
+[Container centré - max-width: 1200px]
+   [Content aligné à gauche - 50% width]
+   
+      [H1 - Blanc, Bold, 52px, line-height: 1.1]
+      REDONNEZ DE
+      L'ÉCLAT À
+      VOTRE
+      VÉHICULE
+      
+      [Paragraph - Blanc, 18px, margin-top: 24px, max-width: 500px]
+      Des services professionnels de détail automobile qui
+      transforment et protègent votre véhicule. Nous combinons
+      passion et expertise pour un résultat impeccable.
+      
+      [Buttons Row - margin-top: 32px, gap: 16px]
+         [Bouton primaire bleu] Galerie
+         [Bouton secondaire transparent] Contactez-nous
+Spécifications techniques:
+
+Section height: min-height: 90vh
+Background image: Position centrée, cover, attachment fixed pour effet parallaxe subtil
+Overlay: background: rgba(0,0,0,0.4) ou gradient linear-gradient(to right, rgba(0,0,0,0.6), rgba(0,0,0,0.3))
+H1: font-size: 52px, font-weight: 800, color: white, letter-spacing: -1px, text-transform: uppercase
+Paragraph: font-size: 18px, font-weight: 300, color: white, line-height: 1.6
+Bouton primaire: background: #3b82f6, padding: 16px 32px, border-radius: 6px, hover: background: #2563eb
+Bouton secondaire: background: transparent, border: 2px solid white, color: white, hover: background: rgba(255,255,255,0.1)
+Animation: Fade-in + slide-up au chargement (0.8s ease-out)
+
+
+3. SECTION STATISTIQUES (Image 2)
+Layout exact:
+[Background: Blanc ou #f9fafb]
+[Padding: 80px vertical]
+
+[Container: max-width 1200px, centré]
+   
+   [H2 centré - 40px, Bold]
+   PERFORMANCE ET PRÉCISION EN
+   DÉTAIL AUTOMOBILE
+   
+   [Grid 3 colonnes - gap: 48px, margin-top: 48px]
+   
+      [Colonne 1]
+         [Nombre bleu - 72px, Bold] 15+
+         [Label noir - 18px, Semi-bold] ANNÉES D'EXPERTISE
+      
+      [Colonne 2]
+         [Nombre bleu - 72px, Bold] 100%
+         [Label noir - 18px, Semi-bold] PRODUIT DE QUALITÉ
+      
+      [Colonne 3]
+         [Nombre bleu - 72px, Bold] 350+
+         [Label noir - 18px, Semi-bold] LAVAGE COMPLÉTÉ
+Spécifications techniques:
+
+Background: #f9fafb ou #ffffff
+Section padding: 80px 0
+H2: font-size: 40px, font-weight: 700, color: #1a1a1a, text-align: center, margin-bottom: 64px
+Grid: display: grid, grid-template-columns: repeat(3, 1fr), gap: 48px
+Chaque stat centré: text-align: center
+Nombres: font-size: 72px, font-weight: 800, color: #3b82f6, line-height: 1
+Labels: font-size: 18px, font-weight: 600, color: #1a1a1a, margin-top: 8px, text-transform: uppercase, letter-spacing: 0.5px
+Responsive: 1 colonne sur mobile
+
+
+4. SECTION NOS SOLUTIONS / SERVICES (Image 3)
+Layout exact:
+[Background: #1a1a1a (noir/très sombre)]
+[Padding: 100px vertical]
+
+[Container: max-width 1200px]
+   
+   [Header centré]
+      [H2 - Blanc avec "SOLUTIONS" en bleu]
+      NOS SOLUTIONS
+      
+      [Tagline - Blanc, 18px, margin-top: 16px]
+      Des solutions techniques qui transforment et préservent l'intégrité de votre
+      automobile.
+   
+   [Grid 3 colonnes - gap: 24px, margin-top: 64px]
+   
+      [Card 1]
+         [Image background - Intérieur cuir de voiture]
+         [Overlay gradient bottom]
+         [Content en bas]
+            [Small label blanc] Expertise
+            [H3 blanc Bold 28px] LAVAGE &
+                                  ENTRETIEN
+                                  ESTHÉTIQUE
+      
+      [Card 2]
+         [Image background - Voiture en lavage avec foam]
+         [Overlay gradient bottom]
+         [Content en bas]
+            [Small label blanc] Innovation
+            [H3 blanc Bold 28px] PROTECTION DE
+                                  PEINTURE (PPF)
+      
+      [Card 3]
+         [Image background - Voiture noire polie]
+         [Overlay gradient bottom]
+         [Content en bas]
+            [Small label blanc] Finition
+            [H3 blanc Bold 28px] POLISSAGE &
+                                  NANO-
+                                  CÉRAMIQUE
+Spécifications techniques:
+
+Section background: #1a1a1a ou #0f0f0f
+Padding: 100px 0
+H2: font-size: 42px, font-weight: 700, color: white, "NOS" en blanc, "SOLUTIONS" en #3b82f6
+Tagline: font-size: 18px, color: rgba(255,255,255,0.8), max-width: 700px, centré
+Grid: display: grid, grid-template-columns: repeat(3, 1fr), gap: 24px
+Cards:
+
+aspect-ratio: 3/4 ou height: 550px
+border-radius: 6px
+overflow: hidden
+position: relative
+Background image: cover, center
+Overlay: background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.3) 50%, transparent 100%)
+
+
+Content card (position absolute bottom):
+
+padding: 32px
+Small label: font-size: 12px, text-transform: uppercase, letter-spacing: 1px, margin-bottom: 8px
+H3: font-size: 28px, font-weight: 700, line-height: 1.2, color: white
+
+
+Hover effect: Image scale 1.05, transition 0.4s
+
+
+5. SECTION TÉMOIGNAGES (Image 4)
+Layout exact:
+[Background: #f9fafb]
+[Padding: 80px vertical]
+
+[Container: max-width 1200px]
+   
+   [Header centré]
+      [H2] TÉMOIGNAGES DE NOS
+           CLIENTS
+           ("TÉMOIGNAGES" en bleu, reste en noir)
+      
+      [Tagline] L'excellence de notre travail racontée par ceux qui nous font confiance
+   
+   [Grid 3 colonnes - gap: 32px, margin-top: 48px]
+   
+      [Card 1]
+         [Image background - Voiture bleue classique]
+         [Overlay gradient sombre]
+         [Content]
+            [5 étoiles bleues - ★★★★★]
+            [Quote blanc 18px] "Chaque détail compte, et Pascal le
+                                comprend parfaitement."
+            [Nom blanc Bold] Éric Laforce
+      
+      [Card 2]
+         [Image background - Voiture noire sur route]
+         [Overlay gradient sombre]
+         [Content]
+            [5 étoiles bleues]
+            [Quote] "Un service qui transforme
+                     littéralement l'apparence de mon
+                     véhicule."
+            [Nom] Caroline Tremblay
+      
+      [Card 3]
+         [Image background - Voiture verte vintage]
+         [Overlay gradient sombre]
+         [Content]
+            [5 étoiles bleues]
+            [Quote] "La précision et le
+                     professionnalisme sont au cœur de
+                     leur travail."
+            [Nom] Michel Bouchard
+   
+   [Dots navigation - 6 dots, 1er actif en noir]
+   [Flèches navigation gauche/droite]
+Spécifications techniques:
+
+Background: #f9fafb
+H2: font-size: 40px, "TÉMOIGNAGES" en #3b82f6, reste en #1a1a1a
+Tagline: font-size: 18px, color: #6b7280
+Grid: grid-template-columns: repeat(3, 1fr), gap: 32px
+Cards:
+
+aspect-ratio: 3/4 ou height: 420px
+border-radius: 6px
+overflow: hidden
+Background image avec overlay: linear-gradient(to top, rgba(0,0,0,0.85), rgba(0,0,0,0.4))
+
+
+Étoiles: color: #3b82f6, font-size: 20px, margin-bottom: 16px
+Quote: font-size: 18px, color: white, line-height: 1.5, margin-bottom: 24px
+Nom: font-size: 16px, font-weight: 600, color: white
+Navigation dots: width: 8px, height: 8px, border-radius: 50%, background: #d1d5db, actif: #1a1a1a
+Flèches: Bordure grise, icônes, hover: background: #f3f4f6
+
+
+6. SECTION TRANSFORMATION VISUELLE (Image 5)
+Layout exact:
+[Background: #1a1a1a]
+[Padding: 100px vertical]
+
+[Container: max-width 1200px]
+   
+   [Header centré]
+      [H2] TRANSFORMATION
+           VISUELLE
+           ("TRANSFORMATION" en bleu, "VISUELLE" en blanc)
+      
+      [Tagline blanc] Chaque véhicule raconte une histoire de renaissance et de précision
+   
+   [Grid Masonry / 2 colonnes asymétriques - gap: 16px]
+   
+      [Colonne gauche]
+         [Grande image 2x2 - Before/After cup holders]
+         [Petite image 1x1 - Before/After floor mats]
+      
+      [Colonne droite]
+         [Grande image verticale - Audi noire polie]
+         [Grande image horizontale - Bumper before/after]
+      
+      [En bas: Grande image horizontale - Voiture dans garage avec portes ouvertes]
+Spécifications techniques:
+
+Background: #1a1a1a
+H2: "TRANSFORMATION" en #3b82f6, "VISUELLE" en blanc, font-size: 42px
+Tagline: color: rgba(255,255,255,0.8), font-size: 18px
+Images:
+
+border-radius: 6px
+object-fit: cover
+Hover: transform: scale(1.02), cursor: pointer, transition 0.3s
+
+
+Grid: Utiliser CSS Grid avec grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))
+Lightbox au clic pour voir en grand
+Before/After slider sur certaines images
+
+
+7. SECTION CTA MID-PAGE (Image 6)
+Layout exact:
+[Background: Image de voitures BMW dans garage - overlay sombre]
+[Height: 300px]
+
+[Container: max-width 1200px, flex centré verticalement]
+   
+   [LEFT: 60% width]
+      [H2 blanc Bold 42px] VOTRE VÉHICULE MÉRITE
+                            L'EXCELLENCE
+      
+      [Paragraph blanc 18px] Transformez l'apparence et la protection de votre automobile avec un service sur
+                             mesure et professionnel.
+   
+   [RIGHT: 40% width, flex gap 16px]
+      [Bouton bleu] Réserver
+      [Bouton transparent] Contactez-nous
+Spécifications techniques:
+
+Background image: Garage BMW avec overlay rgba(0,0,0,0.6)
+Height: 300px minimum
+Content: display: flex, align-items: center, justify-content: space-between
+H2: font-size: 42px, font-weight: 700, color: white, line-height: 1.2
+Paragraph: font-size: 18px, color: rgba(255,255,255,0.9), margin-top: 16px
+Boutons: Mêmes specs que hero (bleu primary + transparent outline)
+
+
+8. SECTION FAQ (Image 7)
+Layout exact:
+[Background: #ffffff]
+[Padding: 80px vertical]
+
+[Container: max-width 900px, centré]
+   
+   [Header centré]
+      [H2] FOIRE AUX QUESTIONS
+           ("QUESTIONS" en bleu)
+      
+      [Tagline] Découvrez les réponses aux questions fréquentes sur nos services de rénovation.
+   
+   [Accordion List - margin-top: 48px]
+   
+      [Item 1 - Border bottom gris]
+         [Button full width]
+            [Text left] Combien de temps dure un traitement nano-céramique ?
+            [Icon right] ▼ (chevron bleu)
+         [Panel collapsed]
+      
+      [Item 2]
+         [Button] Est-ce que la pellicule pare-pierre change l'apparence de la peinture ?
+         [Icon] ▼
+      
+      [Item 3]
+         [Button] Dois-je prendre rendez-vous pour un lavage ?
+         [Icon] ▼
+      
+      [Item 4]
+         [Button] Le polissage peut-il enlever toutes les égratignures ?
+         [Icon] ▼
+      
+      [Item 5]
+         [Button] Offrez-vous un service mobile à domicile ?
+         [Icon] ▼
+   
+   [Separator - margin: 64px vertical]
+   
+   [Section "VOUS AVEZ D'AUTRES QUESTIONS ?"]
+      [H3 Bold] VOUS AVEZ D'AUTRES
+                QUESTIONS ?
+      [Text] Nous sommes là pour vous aider.
+      [Bouton blanc outline] Contact
+Spécifications techniques:
+
+H2: "QUESTIONS" en #3b82f6, reste en noir
+Accordion items:
+
+border-bottom: 1px solid #e5e7eb
+padding: 20px 0
+
+
+Button:
+
+Full width, text-left
+font-size: 18px, font-weight: 500
+Chevron icon: color: #3b82f6, rotate 180deg quand ouvert
+
+
+Panel answer:
+
+padding: 16px 0 20px 0
+color: #6b7280
+line-height: 1.6
+Animation: Max-height expand, 0.3s ease
+
+
+Section "Autres questions":
+
+Centré, margin-top: 64px
+H3: font-size: 28px, font-weight: 700
+Bouton: Outline gris, hover bleu
+
+
+
+
+9. SECTION CONTACT & MAP (Image 8)
+Layout exact:
+[Background: #1a1a1a]
+[Padding: 0 (full bleed)]
+
+[Layout flex 2 colonnes - no gap]
+   
+   [LEFT: 40% - Background noir, padding 80px]
+      [Label petit blanc] Contact
+      
+      [H2 blanc avec "BRILLER" en bleu 48px]
+      PRÊT À BRILLER
+      
+      [Paragraph blanc] Votre véhicule mérite le meilleur traitement. Parlons de comment nous
+                        pouvons redonner de l'éclat à votre automobile.
+      
+      [Contact Blocks - margin-top: 48px, gap: 32px]
+         
+         [Block COURRIEL]
+            [Icon bleu] ✉
+            [Label bleu uppercase 12px] COURRIEL
+            [Value blanc 18px] Pascal.1993@live.ca
+         
+         [Block TÉLÉPHONE]
+            [Icon bleu] 📞
+            [Label bleu uppercase 12px] TÉLÉPHONE
+            [Value blanc 18px] (418) 665-5871
+         
+         [Block ADRESSE]
+            [Icon bleu] 📍
+            [Label bleu uppercase 12px] ADRESSE
+            [Value blanc 18px] 2535 boulevard Comporté, La Malbaie, Québec
+   
+   [RIGHT: 60% - Google Map]
+      [Embedded Map - height 100%, min 500px]
+Spécifications techniques:
+
+Layout: display: flex, no gap (full bleed)
+Left section:
+
+background: #1a1a1a
+padding: 80px 60px
+Label: font-size: 12px, text-transform: uppercase, color: rgba(255,255,255,0.6)
+
+
+H2: font-size: 48px, "BRILLER" en #3b82f6
+Contact blocks:
+
+Icon: width: 24px, color: #3b82f6
+Label: color: #3b82f6, font-size: 12px, text-transform: uppercase, letter-spacing: 1px
+Value: color: white, font-size: 18px, font-weight: 500
+Layout: Icon left, text right, gap 16px
+
+
+Map:
+
+Embedded Google Maps iframe
+width: 100%
+height: 100%, minimum 500px
+Marker personnalisé avec logo si possible
+Style sombre pour matcher le thème
+
+
+
+
+10. FOOTER (Image 9)
+Layout exact:
+[Background: #ffffff]
+[Padding: 60px vertical]
+
+[Container: max-width 1200px]
+   
+   [Grid 4 colonnes - gap: 64px]
+   
+      [Colonne 1 - Logo & Info]
+         [Logo noir 150px]
+         
+         [Adresse - margin-top: 24px]
+         Adresse
+         2535 boulevard Comporté, La Malbaie, Québec
+         
+         [Contact]
+         Contact
+         (418) 665-5871
+         info@esthetiqueautopascalpilote.ca
+         
+         [Social Icons row - margin-top: 24px]
+         Facebook Instagram X LinkedIn YouTube
+      
+      [Colonne 2 - Navigation]
+         [Pas de header visible dans screenshot]
+         Accueil
+         À Propos
+         Galerie
+         Prendre un rendez-vous
+      
+      [Colonne 3 - Services]
+         Lavage & Entretien esthétique
+         Protection de peinture (PPF)
+         Polissage & Nano-céramique
+      
+      [Colonne 4 - Vide ou autre contenu]
+   
+   [Separator line - margin 48px vertical]
+   
+   [Bottom bar - flex space-between]
+      [LEFT] © 2024 Esthétique Auto Pascal Pilote. Tous droits réservés
+      [RIGHT] Politique de confidentialité | Conditions de service | Paramètres des cookies
+Spécifications techniques:
+
+Background: #ffffff
+Grid: grid-template-columns: 2fr 1fr 1.5fr 1fr (proportions ajustables)
+Logo: Version noire, 150px width
+Texte général: font-size: 14px, color: #6b7280, line-height: 1.8
+Headers colonnes: font-weight: 600, color: #1a1a1a, margin-bottom: 16px
+Links: color: #6b7280, hover: color: #3b82f6, transition
+Social icons: font-size: 20px, color: #6b7280, gap 16px, hover: color: #3b82f6
+Separator: border-top: 1px solid #e5e7eb
+Bottom text: font-size: 14px, color: #9ca3af
+Legal links: Séparés par " | ", hover underline
+
+
+ANIMATIONS GLOBALES
+
+Scroll animations: Utiliser Intersection Observer
+
+Fade-in: opacity 0 → 1, duration 0.6s
+Slide-up: translateY(30px) → 0, duration 0.8s
+Stagger sur grids: delay 0.1s entre items
+
+
+Hover effects:
+
+Boutons: scale 1.02, shadow increase
+Cards: translateY -4px, shadow increase
+Images: scale 1.05 (overflow hidden sur parent)
+
+
+Smooth scroll: scroll-behavior: smooth
+Nav scroll effect: Réduire padding au scroll, ajouter shadow
+
+
+RESPONSIVE BREAKPOINTS
+
+Desktop: 1200px+
+Tablet: 768px - 1199px
+
+Grids 3 cols → 2 cols
+Hero height → 70vh
+
+
+Mobile: < 768px
+
+Grids → 1 col
+Nav → Hamburger
+Hero height → auto
+Font sizes -30%
+Padding sections → 40px
+
+
+
+
+INSTRUCTIONS FINALES POUR REPLIT
+Stack exact:
+
+Next.js 14+ avec App Router
+TypeScript
+Tailwind CSS
+Framer Motion pour animations
+React Icons pour icônes
+Embla Carousel ou Swiper pour testimonials
+
+Composants à créer:
+
+Navbar.tsx - Navigation sticky avec double barre
+Hero.tsx - Section hero avec overlay
+Stats.tsx - Section statistiques 3 colonnes
+Services.tsx - Grid de cartes services avec images background
+Testimonials.tsx - Carousel de témoignages
+Gallery.tsx - Grid masonry avant-après
+CTA.tsx - Call-to-action mid-page
+FAQ.tsx - Accordion FAQ
+Contact.tsx - Section contact avec map
+Footer.tsx - Footer multi-colonnes
+
+Images à utiliser (placeholders en attendant les vraies):
+
+Hero: Voiture bleue en cours de lavage avec foam
+Services: Intérieur cuir, voiture avec foam, voiture noire polie
+Testimonials: Voitures clients variées
+Gallery: Before/After détailing
+CTA: Garage BMW professionnel
+Toutes en haute résolution, optimisées avec Next/Image
+
+Ordre de build:
+
+Setup projet + Tailwind config
+Navbar sticky
+Hero section
+Stats section
+Services section
+Testimonials + carousel
+Gallery masonry
+CTA section
+FAQ accordion
+Contact + Google Maps
+Footer
+Responsive + animations
+Performance optimization
+
+Respecter EXACTEMENT:
+
+Border-radius: 6px partout
+Couleur bleue: #3b82f6
+Font sizes: H1(52px), H2(40-42px), H3(28px), Body(18px)
+Spacing sections: 80-100px vertical
+Container: max-width 1200px
+NO gradients sur backgrounds (seulement sur overlays d'images)
