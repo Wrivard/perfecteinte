@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "wouter";
 import { PageLayout } from "@/components/layout/PageLayout";
 import { Shield, Award, Heart, Wrench } from "lucide-react";
 import heroImg from "@assets/518400891_721263007179601_8348639493355995469_n_1774531645510.jpg";
@@ -41,7 +42,7 @@ const itemVariants = {
 export default function APropos() {
   return (
     <PageLayout>
-      <section className="relative h-[50vh] min-h-[350px] flex items-center overflow-hidden -mt-[120px] pt-[120px]">
+      <section className="relative h-[40vh] sm:h-[45vh] md:h-[50vh] min-h-[280px] sm:min-h-[350px] flex items-center overflow-hidden -mt-[120px] pt-[120px]">
         <div className="absolute inset-0">
           <img src={heroImg} alt="" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30" />
@@ -52,37 +53,43 @@ export default function APropos() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-display font-extrabold text-white uppercase leading-tight">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-extrabold text-white uppercase leading-tight">
               À <span className="text-blue-400">Propos</span>
             </h1>
-            <p className="text-xl text-gray-100 mt-4 max-w-xl">
+            <p className="text-base sm:text-lg md:text-xl text-gray-100 mt-4 max-w-xl">
               Découvrez l'histoire et les valeurs qui animent Esthétique Auto Pascal Pilote.
             </p>
           </motion.div>
         </div>
       </section>
 
-      <section className="py-20 md:py-24 bg-white">
+      <section className="py-16 md:py-20 lg:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-gray-900 mb-6 leading-tight">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-bold text-gray-900 mb-4 md:mb-6 leading-tight">
                 NOTRE <span className="text-accent">HISTOIRE</span>
               </h2>
-              <p className="text-xl md:text-2xl text-gray-700 leading-relaxed mb-6">
+              <p className="text-lg md:text-xl lg:text-2xl text-gray-700 leading-relaxed mb-4 md:mb-6">
                 Fondée il y a plus de 15 ans à La Malbaie, Esthétique Auto Pascal Pilote est née d'une passion profonde pour l'automobile.
               </p>
-              <p className="text-lg text-gray-700 leading-relaxed mb-6">
+              <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-4 md:mb-6">
                 Pascal Pilote a transformé sa passion en entreprise, offrant des services de détailing automobile de qualité supérieure dans la région de Charlevoix. Avec une attention méticuleuse aux détails et un engagement envers l'excellence, chaque véhicule qui passe entre nos mains reçoit un traitement personnalisé.
               </p>
-              <p className="text-lg text-gray-700 leading-relaxed">
-                Notre atelier, situé au 2535 boulevard Comporté, est équipé des dernières technologies en matière de protection et de restauration automobile. Nous investissons constamment dans notre formation et nos équipements pour vous offrir le meilleur service possible.
+              <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-6 md:mb-8">
+                Notre atelier, situé au 2535 boulevard Comporté, est équipé des dernières technologies en matière de protection et de restauration automobile.
               </p>
+              <Link
+                href="/rendez-vous"
+                className="inline-flex items-center bg-accent text-white px-6 py-3 rounded-md font-semibold hover:bg-accent-hover transition-colors"
+              >
+                Prendre un rendez-vous
+              </Link>
             </motion.div>
             <motion.div
               initial={{ opacity: 0, x: 30 }}
@@ -91,22 +98,22 @@ export default function APropos() {
               transition={{ duration: 0.6 }}
               className="relative"
             >
-              <img src={img1} alt="Atelier Pascal Pilote" className="w-full h-[400px] object-cover rounded-md" />
+              <img src={img1} alt="Atelier Pascal Pilote" className="w-full h-[300px] sm:h-[350px] md:h-[400px] object-cover rounded-md" />
               <img
                 src={img2}
                 alt="Travail en détail"
-                className="absolute -bottom-8 -left-8 w-48 h-48 object-cover rounded-md border-4 border-white shadow-xl hidden lg:block"
+                className="absolute -bottom-8 -left-8 w-40 h-40 md:w-48 md:h-48 object-cover rounded-md border-4 border-white shadow-xl hidden lg:block"
               />
             </motion.div>
           </div>
         </div>
       </section>
 
-      <section className="py-20 md:py-24 bg-[#f9fafb]">
+      <section className="py-16 md:py-20 lg:py-24 bg-[#f9fafb]">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
+          <div className="text-center mb-12 md:mb-16">
             <motion.h2
-              className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-gray-900 mb-6 leading-tight"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-bold text-gray-900 mb-4 md:mb-6 leading-tight"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -114,7 +121,7 @@ export default function APropos() {
               NOS <span className="text-accent">VALEURS</span>
             </motion.h2>
             <motion.p
-              className="text-xl md:text-2xl text-gray-700 max-w-3xl mx-auto leading-relaxed"
+              className="text-lg md:text-xl lg:text-2xl text-gray-700 max-w-3xl mx-auto leading-relaxed"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -125,7 +132,7 @@ export default function APropos() {
           </div>
 
           <motion.div
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8"
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
@@ -135,22 +142,22 @@ export default function APropos() {
               <motion.div
                 key={index}
                 variants={itemVariants}
-                className="bg-white p-8 rounded-md shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+                className="bg-white p-6 md:p-8 rounded-md shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
               >
-                <div className="w-14 h-14 bg-accent/10 rounded-md flex items-center justify-center mb-6">
-                  <value.icon className="w-7 h-7 text-accent" />
+                <div className="w-12 h-12 md:w-14 md:h-14 bg-accent/10 rounded-md flex items-center justify-center mb-4 md:mb-6">
+                  <value.icon className="w-6 h-6 md:w-7 md:h-7 text-accent" />
                 </div>
-                <h3 className="text-xl font-display font-bold text-gray-900 mb-3">{value.title}</h3>
-                <p className="text-gray-700 leading-relaxed">{value.description}</p>
+                <h3 className="text-lg md:text-xl font-display font-bold text-gray-900 mb-2 md:mb-3">{value.title}</h3>
+                <p className="text-gray-700 leading-relaxed text-sm md:text-base">{value.description}</p>
               </motion.div>
             ))}
           </motion.div>
         </div>
       </section>
 
-      <section className="py-20 md:py-24 bg-[#1a1a1a]">
+      <section className="py-16 md:py-20 lg:py-24 bg-[#1a1a1a]">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
+          <div className="grid grid-cols-3 gap-4 md:gap-12 text-center">
             {[
               { value: "15+", label: "Années d'expertise" },
               { value: "100%", label: "Produit de qualité" },
@@ -163,10 +170,10 @@ export default function APropos() {
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.15 }}
               >
-                <div className="text-6xl md:text-7xl lg:text-8xl font-display font-extrabold text-accent leading-none mb-4">
+                <div className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-display font-extrabold text-accent leading-none mb-2 md:mb-4">
                   {stat.value}
                 </div>
-                <p className="text-xl font-semibold text-white uppercase tracking-wide">{stat.label}</p>
+                <p className="text-xs sm:text-sm md:text-lg lg:text-xl font-semibold text-white uppercase tracking-wide">{stat.label}</p>
               </motion.div>
             ))}
           </div>

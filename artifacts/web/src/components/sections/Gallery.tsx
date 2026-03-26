@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { Link } from "wouter";
 import { X } from "lucide-react";
 
 import img1 from "@assets/481210775_625629666742936_5403171954558065410_n_1774531645509.jpg";
@@ -17,22 +18,24 @@ const images = [img1, img2, img3, img4, img5, img6, img7, img8, img9];
 export function Gallery() {
   const [lightboxImage, setLightboxImage] = useState<string | null>(null);
 
+  const closeLightbox = useCallback(() => setLightboxImage(null), []);
+
   return (
     <>
-      <section className="py-24 bg-[#1a1a1a]">
+      <section className="py-20 md:py-24 bg-[#1a1a1a]">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div
-            className="text-center mb-16"
+            className="text-center mb-12 md:mb-16"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6 leading-tight">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-4 md:mb-6 leading-tight">
               <span className="text-blue-400">TRANSFORMATION </span>
               <span className="text-white">VISUELLE</span>
             </h2>
-            <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg md:text-xl lg:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
               Chaque véhicule raconte une histoire de renaissance et de précision
             </p>
           </motion.div>
@@ -58,6 +61,15 @@ export function Gallery() {
               </motion.div>
             ))}
           </div>
+
+          <div className="text-center mt-12">
+            <Link
+              href="/rendez-vous"
+              className="inline-flex items-center justify-center bg-accent hover:bg-accent-hover text-white px-8 py-4 rounded-md font-semibold text-base transition-colors"
+            >
+              Prendre un rendez-vous
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -67,8 +79,8 @@ export function Gallery() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            onClick={() => setLightboxImage(null)}
-            className="fixed inset-0 bg-black/95 z-[100] flex items-center justify-center p-8 cursor-zoom-out"
+            onClick={closeLightbox}
+            className="fixed inset-0 bg-black/95 z-[100] flex items-center justify-center p-4 sm:p-8 cursor-zoom-out"
           >
             <motion.img
               initial={{ scale: 0.9 }}
@@ -76,13 +88,13 @@ export function Gallery() {
               exit={{ scale: 0.9 }}
               src={lightboxImage}
               alt="Vue agrandie"
-              className="max-w-full max-h-full object-contain"
+              className="max-w-full max-h-[90vh] object-contain"
             />
             <button
-              className="absolute top-8 right-8 text-white hover:text-blue-400 transition-colors"
-              onClick={(e) => { e.stopPropagation(); setLightboxImage(null); }}
+              className="absolute top-4 right-4 sm:top-8 sm:right-8 text-white hover:text-blue-400 transition-colors p-2"
+              onClick={(e) => { e.stopPropagation(); closeLightbox(); }}
             >
-              <X size={40} strokeWidth={2} />
+              <X size={32} strokeWidth={2} />
             </button>
           </motion.div>
         )}

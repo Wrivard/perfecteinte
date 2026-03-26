@@ -26,7 +26,7 @@ export function Navbar() {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -34,6 +34,15 @@ export function Navbar() {
     setMobileMenuOpen(false);
     window.scrollTo(0, 0);
   }, [location]);
+
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => { document.body.style.overflow = ""; };
+  }, [mobileMenuOpen]);
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50">
@@ -73,8 +82,8 @@ export function Navbar() {
         className={cn(
           "transition-all duration-300",
           isScrolled
-            ? "bg-white/95 backdrop-blur-md shadow-md py-3"
-            : "bg-white py-4"
+            ? "bg-white/95 backdrop-blur-md shadow-md py-2 md:py-3"
+            : "bg-white py-3 md:py-4"
         )}
       >
         <div className="max-w-7xl mx-auto px-6">
@@ -85,7 +94,7 @@ export function Navbar() {
                 alt="Esthétique Auto Pascal Pilote"
                 className={cn(
                   "transition-all duration-300",
-                  isScrolled ? "h-12 sm:h-14" : "h-14 sm:h-16"
+                  isScrolled ? "h-10 sm:h-12 md:h-14" : "h-12 sm:h-14 md:h-16"
                 )}
               />
             </Link>
@@ -133,6 +142,7 @@ export function Navbar() {
             <button
               className="lg:hidden z-50 p-2 text-[#1a1a1a]"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              aria-label={mobileMenuOpen ? "Fermer le menu" : "Ouvrir le menu"}
             >
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
@@ -142,7 +152,7 @@ export function Navbar() {
 
       <div
         className={cn(
-          "fixed inset-0 bg-white flex flex-col items-center justify-center transition-all duration-300 lg:hidden",
+          "fixed inset-0 bg-white flex flex-col items-center justify-center transition-all duration-300 lg:hidden z-40",
           mobileMenuOpen ? "opacity-100 visible" : "opacity-0 invisible pointer-events-none"
         )}
       >
@@ -168,7 +178,7 @@ export function Navbar() {
           </a>
           <Link
             href="/rendez-vous"
-            className="mt-4 bg-accent text-white px-8 py-3 rounded-md font-semibold text-lg hover:bg-accent-hover transition-colors"
+            className="mt-4 bg-accent text-white px-8 py-4 rounded-md font-semibold text-lg hover:bg-accent-hover transition-colors"
             onClick={() => setMobileMenuOpen(false)}
           >
             Prendre un rendez-vous

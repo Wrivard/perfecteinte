@@ -4,11 +4,11 @@ import logo from "@assets/425261687_389413763697862_6688968440363193968_n-remove
 
 export function Footer() {
   return (
-    <footer className="bg-white pt-16 pb-8">
+    <footer className="bg-white pt-12 md:pt-16 pb-6 md:pb-8">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16 mb-12">
-          <div className="space-y-4">
-            <img src={logo} alt="Esthétique Auto PP" className="h-20" />
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-16 mb-10 md:mb-12">
+          <div className="col-span-2 md:col-span-1 space-y-4">
+            <img src={logo} alt="Esthétique Auto PP" className="h-16 md:h-20" />
             <div>
               <h4 className="text-sm font-semibold text-gray-900 mb-1">Adresse</h4>
               <p className="text-sm text-gray-700 leading-relaxed">2535 boulevard Comporté,<br />La Malbaie, Québec</p>
@@ -16,7 +16,7 @@ export function Footer() {
             <div>
               <h4 className="text-sm font-semibold text-gray-900 mb-1">Contact</h4>
               <p className="text-sm text-gray-700">(418) 665-5871</p>
-              <p className="text-sm text-gray-700">info@esthetiqueautopascalpilote.ca</p>
+              <p className="text-sm text-gray-700 break-all">info@esthetiqueautopascalpilote.ca</p>
             </div>
             <div className="flex gap-4 pt-2">
               <a href="#" className="text-gray-600 hover:text-accent transition-colors"><Facebook className="w-5 h-5" /></a>
@@ -48,18 +48,18 @@ export function Footer() {
             </ul>
           </div>
 
-          <div></div>
+          <div className="hidden lg:block"></div>
         </div>
 
-        <div className="pt-8 border-t border-gray-200 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-sm text-gray-600">
-            © {new Date().getFullYear()} Esthétique Auto Pascal Pilote. Tous droits réservés
+        <div className="pt-6 md:pt-8 border-t border-gray-200 flex flex-col md:flex-row justify-between items-center gap-4">
+          <p className="text-xs md:text-sm text-gray-600 text-center md:text-left">
+            &copy; {new Date().getFullYear()} Esthétique Auto Pascal Pilote. Tous droits réservés
           </p>
-          <div className="text-sm text-gray-600 flex gap-4">
+          <div className="text-xs md:text-sm text-gray-600 flex flex-wrap justify-center gap-3 md:gap-4">
             <a href="#" className="hover:text-accent transition-colors">Politique de confidentialité</a>
-            <span>|</span>
+            <span className="hidden md:inline">|</span>
             <a href="#" className="hover:text-accent transition-colors">Conditions de service</a>
-            <span>|</span>
+            <span className="hidden md:inline">|</span>
             <a href="#" className="hover:text-accent transition-colors">Paramètres des cookies</a>
           </div>
         </div>

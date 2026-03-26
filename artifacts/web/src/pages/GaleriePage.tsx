@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { Link } from "wouter";
 import { X } from "lucide-react";
 import { PageLayout } from "@/components/layout/PageLayout";
 import heroImg from "@assets/532949601_746227078016527_8012720562132951420_n_1774531645511.jpg";
@@ -29,10 +30,11 @@ const allImages = [
 
 export default function GaleriePage() {
   const [lightboxImage, setLightboxImage] = useState<string | null>(null);
+  const closeLightbox = useCallback(() => setLightboxImage(null), []);
 
   return (
     <PageLayout>
-      <section className="relative h-[50vh] min-h-[350px] flex items-center overflow-hidden -mt-[120px] pt-[120px]">
+      <section className="relative h-[40vh] sm:h-[45vh] md:h-[50vh] min-h-[280px] sm:min-h-[350px] flex items-center overflow-hidden -mt-[120px] pt-[120px]">
         <div className="absolute inset-0">
           <img src={heroImg} alt="" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30" />
@@ -43,21 +45,21 @@ export default function GaleriePage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-display font-extrabold text-white uppercase leading-tight">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-extrabold text-white uppercase leading-tight">
               <span className="text-blue-400">GALERIE</span> PHOTO
             </h1>
-            <p className="text-xl text-gray-100 mt-4 max-w-xl">
+            <p className="text-base sm:text-lg md:text-xl text-gray-100 mt-4 max-w-xl">
               Découvrez nos réalisations et la qualité de notre travail en images.
             </p>
           </motion.div>
         </div>
       </section>
 
-      <section className="py-20 md:py-24 bg-[#1a1a1a]">
+      <section className="py-16 md:py-20 lg:py-24 bg-[#1a1a1a]">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
+          <div className="text-center mb-12 md:mb-16">
             <motion.h2
-              className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white mb-6 leading-tight"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white mb-4 md:mb-6 leading-tight"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -65,7 +67,7 @@ export default function GaleriePage() {
               <span className="text-blue-400">TRANSFORMATION</span> VISUELLE
             </motion.h2>
             <motion.p
-              className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed"
+              className="text-lg md:text-xl lg:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -96,6 +98,15 @@ export default function GaleriePage() {
               </motion.div>
             ))}
           </div>
+
+          <div className="text-center mt-12">
+            <Link
+              href="/rendez-vous"
+              className="inline-flex items-center justify-center bg-accent hover:bg-accent-hover text-white px-8 py-4 rounded-md font-semibold text-base transition-colors"
+            >
+              Prendre un rendez-vous
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -105,8 +116,8 @@ export default function GaleriePage() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            onClick={() => setLightboxImage(null)}
-            className="fixed inset-0 bg-black/95 z-[100] flex items-center justify-center p-8 cursor-zoom-out"
+            onClick={closeLightbox}
+            className="fixed inset-0 bg-black/95 z-[100] flex items-center justify-center p-4 sm:p-8 cursor-zoom-out"
           >
             <motion.img
               initial={{ scale: 0.9 }}
@@ -114,13 +125,13 @@ export default function GaleriePage() {
               exit={{ scale: 0.9 }}
               src={lightboxImage}
               alt="Vue agrandie"
-              className="max-w-full max-h-full object-contain"
+              className="max-w-full max-h-[90vh] object-contain"
             />
             <button
-              className="absolute top-8 right-8 text-white hover:text-blue-400 transition-colors"
-              onClick={(e) => { e.stopPropagation(); setLightboxImage(null); }}
+              className="absolute top-4 right-4 sm:top-8 sm:right-8 text-white hover:text-blue-400 transition-colors p-2"
+              onClick={(e) => { e.stopPropagation(); closeLightbox(); }}
             >
-              <X size={40} strokeWidth={2} />
+              <X size={32} strokeWidth={2} />
             </button>
           </motion.div>
         )}

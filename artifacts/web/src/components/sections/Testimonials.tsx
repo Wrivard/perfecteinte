@@ -27,46 +27,46 @@ export function Testimonials() {
     <section className="py-20 md:py-24 bg-[#f9fafb]">
       <div className="max-w-7xl mx-auto px-6">
         <motion.div
-          className="text-center mb-16"
+          className="text-center mb-12 md:mb-16"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6 leading-tight">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-4 md:mb-6 leading-tight">
             <span className="text-accent">TÉMOIGNAGES </span>
             <span className="text-gray-900">DE NOS CLIENTS</span>
           </h2>
-          <p className="text-xl md:text-2xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg md:text-xl lg:text-2xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
             L'excellence de notre travail racontée par ceux qui nous font confiance
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
           {currentItems.map((t, i) => (
             <motion.div
               key={`${page}-${i}`}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.1, duration: 0.5 }}
-              className="relative h-[420px] rounded-md overflow-hidden group"
+              className="relative h-[350px] sm:h-[380px] md:h-[420px] rounded-md overflow-hidden group"
             >
               <img src={t.image} alt={t.author} className="absolute inset-0 w-full h-full object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/60 to-black/20"></div>
-              <div className="absolute bottom-0 left-0 right-0 p-8">
-                <div className="flex gap-1 text-blue-400 mb-4">
+              <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8">
+                <div className="flex gap-1 text-blue-400 mb-3 md:mb-4">
                   {[...Array(5)].map((_, j) => (
-                    <Star key={j} className="w-5 h-5 fill-current" />
+                    <Star key={j} className="w-4 h-4 md:w-5 md:h-5 fill-current" />
                   ))}
                 </div>
-                <p className="text-white text-lg leading-relaxed mb-6">"{t.quote}"</p>
-                <p className="text-white font-semibold">{t.author}</p>
+                <p className="text-white text-base md:text-lg leading-relaxed mb-4 md:mb-6">"{t.quote}"</p>
+                <p className="text-white font-semibold text-sm md:text-base">{t.author}</p>
               </div>
             </motion.div>
           ))}
         </div>
 
-        <div className="flex items-center justify-center gap-4 mt-10">
+        <div className="flex items-center justify-center gap-4 mt-8 md:mt-10">
           <button
             onClick={() => setPage(Math.max(0, page - 1))}
             disabled={page === 0}
@@ -79,7 +79,7 @@ export function Testimonials() {
               <button
                 key={i}
                 onClick={() => setPage(i)}
-                className={`w-2 h-2 rounded-full transition-colors ${i === page ? "bg-gray-900" : "bg-gray-300"}`}
+                className={`w-2.5 h-2.5 rounded-full transition-colors ${i === page ? "bg-gray-900" : "bg-gray-300"}`}
               />
             ))}
           </div>

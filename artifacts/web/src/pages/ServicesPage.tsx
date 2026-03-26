@@ -62,7 +62,7 @@ const itemVariants = {
 export default function ServicesPage() {
   return (
     <PageLayout>
-      <section className="relative h-[50vh] min-h-[350px] flex items-center overflow-hidden -mt-[120px] pt-[120px]">
+      <section className="relative h-[40vh] sm:h-[45vh] md:h-[50vh] min-h-[280px] sm:min-h-[350px] flex items-center overflow-hidden -mt-[120px] pt-[120px]">
         <div className="absolute inset-0">
           <img src={heroImg} alt="" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30" />
@@ -73,21 +73,21 @@ export default function ServicesPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-display font-extrabold text-white uppercase leading-tight">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-extrabold text-white uppercase leading-tight">
               NOS <span className="text-blue-400">SERVICES</span>
             </h1>
-            <p className="text-xl text-gray-100 mt-4 max-w-xl">
+            <p className="text-base sm:text-lg md:text-xl text-gray-100 mt-4 max-w-xl">
               Des solutions professionnelles pour chaque besoin automobile.
             </p>
           </motion.div>
         </div>
       </section>
 
-      <section className="py-20 md:py-24 bg-white">
+      <section className="py-16 md:py-20 lg:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
+          <div className="text-center mb-12 md:mb-16">
             <motion.h2
-              className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-gray-900 mb-6 leading-tight"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-bold text-gray-900 mb-4 md:mb-6 leading-tight"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -95,7 +95,7 @@ export default function ServicesPage() {
               NOS <span className="text-accent">SOLUTIONS</span>
             </motion.h2>
             <motion.p
-              className="text-xl md:text-2xl text-gray-700 max-w-3xl mx-auto leading-relaxed"
+              className="text-lg md:text-xl lg:text-2xl text-gray-700 max-w-3xl mx-auto leading-relaxed"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -106,7 +106,7 @@ export default function ServicesPage() {
           </div>
 
           <motion.div
-            className="space-y-24"
+            className="space-y-16 md:space-y-24"
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
@@ -116,10 +116,10 @@ export default function ServicesPage() {
               <motion.div
                 key={index}
                 variants={itemVariants}
-                className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
+                className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center"
               >
                 <div className={index % 2 === 1 ? "lg:order-2" : ""}>
-                  <div className="relative h-[350px] md:h-[450px] rounded-md overflow-hidden group">
+                  <div className="relative h-[280px] sm:h-[320px] md:h-[450px] rounded-md overflow-hidden group">
                     <img
                       src={service.image}
                       alt={service.title}
@@ -130,16 +130,16 @@ export default function ServicesPage() {
                 </div>
 
                 <div className={index % 2 === 1 ? "lg:order-1" : ""}>
-                  <div className="w-14 h-14 bg-accent/10 rounded-md flex items-center justify-center mb-6">
-                    <service.icon className="w-7 h-7 text-accent" />
+                  <div className="w-12 h-12 md:w-14 md:h-14 bg-accent/10 rounded-md flex items-center justify-center mb-4 md:mb-6">
+                    <service.icon className="w-6 h-6 md:w-7 md:h-7 text-accent" />
                   </div>
-                  <h3 className="text-2xl md:text-3xl font-display font-bold text-gray-900 mb-4">{service.title}</h3>
-                  <p className="text-lg text-gray-700 leading-relaxed mb-6">{service.description}</p>
-                  <ul className="space-y-3 mb-8">
+                  <h3 className="text-xl sm:text-2xl md:text-3xl font-display font-bold text-gray-900 mb-3 md:mb-4">{service.title}</h3>
+                  <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-4 md:mb-6">{service.description}</p>
+                  <ul className="space-y-2 md:space-y-3 mb-6 md:mb-8">
                     {service.features.map((feature, i) => (
                       <li key={i} className="flex items-center gap-3">
                         <Check className="w-5 h-5 text-accent shrink-0" />
-                        <span className="text-gray-700">{feature}</span>
+                        <span className="text-gray-700 text-sm md:text-base">{feature}</span>
                       </li>
                     ))}
                   </ul>
@@ -147,7 +147,7 @@ export default function ServicesPage() {
                     href="/rendez-vous"
                     className="inline-flex items-center bg-accent text-white px-6 py-3 rounded-md font-semibold hover:bg-accent-hover transition-colors"
                   >
-                    Prendre rendez-vous
+                    Prendre un rendez-vous
                   </Link>
                 </div>
               </motion.div>

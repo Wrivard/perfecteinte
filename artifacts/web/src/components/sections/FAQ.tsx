@@ -30,20 +30,20 @@ export function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section className="py-20 md:py-24 bg-white">
+    <section className="py-16 md:py-20 lg:py-24 bg-white">
       <div className="max-w-4xl mx-auto px-6">
         <motion.div
-          className="text-center mb-16"
+          className="text-center mb-12 md:mb-16"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6 leading-tight">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-4 md:mb-6 leading-tight">
             <span className="text-gray-900">FOIRE AUX </span>
             <span className="text-accent">QUESTIONS</span>
           </h2>
-          <p className="text-xl md:text-2xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg md:text-xl lg:text-2xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
             Découvrez les réponses aux questions fréquentes sur nos services de rénovation.
           </p>
         </motion.div>
@@ -60,16 +60,16 @@ export function FAQ() {
           ))}
         </div>
 
-        <div className="border-t border-gray-200 mt-16 pt-16 text-center">
-          <h3 className="text-2xl md:text-[28px] font-display font-bold text-gray-900">
+        <div className="border-t border-gray-200 mt-12 md:mt-16 pt-12 md:pt-16 text-center">
+          <h3 className="text-xl sm:text-2xl md:text-[28px] font-display font-bold text-gray-900">
             VOUS AVEZ D'AUTRES QUESTIONS ?
           </h3>
           <p className="text-gray-700 mt-3">Nous sommes là pour vous aider.</p>
           <Link
             href="/rendez-vous"
-            className="inline-block mt-6 border-2 border-gray-300 text-gray-900 px-8 py-3 rounded-md font-semibold hover:border-accent hover:text-accent transition-colors"
+            className="inline-block mt-6 bg-accent text-white px-8 py-3 rounded-md font-semibold hover:bg-accent-hover transition-colors"
           >
-            Contact
+            Prendre un rendez-vous
           </Link>
         </div>
       </div>
