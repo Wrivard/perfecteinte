@@ -91,6 +91,18 @@ Generated Zod schemas from the OpenAPI spec (e.g. `HealthCheckResponse`). Used b
 
 Generated React Query hooks and fetch client from the OpenAPI spec (e.g. `useHealthCheck`, `healthCheck`).
 
+### `artifacts/web` (`@workspace/web`)
+
+Frontend-only React + Vite website for **Esthétique Auto Pascal Pilote Inc.**, a premium auto detailing business in Quebec. Single-page site with all content in French.
+
+- **Stack**: React, Vite, Tailwind CSS, Framer Motion, Lucide Icons
+- **Brand Colors**: Deep Navy (#0a1628), Crimson Red (#dc2626), Light gray (#f8f9fa)
+- **Fonts**: Inter (body), Montserrat (headings)
+- **Sections**: Sticky Navbar, Hero, Services (6 cards), Process (4 steps), Gallery (masonry grid with 9 car photos), CTA, Testimonials (3 cards), FAQ (8 accordion items), Contact (info + Google Maps), Footer
+- **Phone**: 418-670-1613
+- **Images**: All imported from `attached_assets/` via `@assets/` alias
+- **No backend**: All content is static/hardcoded
+
 ### `scripts` (`@workspace/scripts`)
 
 Utility scripts package. Each script is a `.ts` file in `src/` with a corresponding npm script in `package.json`. Run scripts via `pnpm --filter @workspace/scripts run <script>`. Scripts can import any workspace package (e.g., `@workspace/db`) by adding it as a dependency in `scripts/package.json`.

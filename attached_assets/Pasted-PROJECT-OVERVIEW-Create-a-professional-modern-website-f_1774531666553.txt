@@ -1,0 +1,473 @@
+PROJECT OVERVIEW
+Create a professional, modern website for Esthétique Auto PP, an auto detailing business in Laval, Quebec. The site should closely replicate the layout and structure of the existing Webflow site (https://esthetiqueautopp.webflow.io/) while being built in React/Next.js for future feature expansion.
+
+DESIGN SYSTEM & BRANDING
+Color Palette (Extract from logo)
+
+Primary: Deep Blue/Navy (from logo)
+Secondary: Bright Red/Crimson (from logo accent)
+Neutral Dark: #1a1a1a (text)
+Neutral Light: #f8f9fa (backgrounds)
+White: #ffffff
+Accent Gray: #6c757d
+
+Typography
+
+Headings (H1): 48-60px, Bold (700-800), Line height 1.1
+Headings (H2): 36-42px, Bold (700), Line height 1.2
+Headings (H3): 28-32px, Semi-bold (600), Line height 1.3
+Taglines/Subtitles: 18-20px, Regular (400), Line height 1.5
+Body Text: 16px, Regular (400), Line height 1.6
+Font Family: Modern sans-serif (Inter, Poppins, or similar)
+
+Design Principles
+
+Border Radius: Consistent 6px for all cards, buttons, images
+Container Width: 1200px max-width, centered
+Spacing: Consistent padding (80px vertical sections, 24px internal padding)
+NO fading/gradient backgrounds - Use solid colors only
+Clean, minimal animations: Fade-in on scroll, subtle hover effects (scale 1.02-1.05)
+
+
+WEBSITE STRUCTURE & SECTIONS
+1. NAVIGATION BAR (Sticky)
+Layout:
+
+Logo (left) - Use extracted logo from original site
+Navigation links (center/right): Accueil | Services | Galerie | Témoignages | FAQ | Contact
+Phone number button (right) - Primary color background, white text
+Mobile: Hamburger menu
+
+Design:
+
+Background: White with subtle shadow on scroll
+Height: 80px
+Logo: 150px width
+Links: 16px, semi-bold, hover underline effect
+CTA Button: Phone number with icon, 6px border-radius
+
+
+2. HERO SECTION
+Layout:
+[Full-width background image - professional car detailing shot]
+   [Large Container - Centered]
+      [LEFT: 50% width]
+         [H1] "ESTHÉTIQUE AUTOMOBILE PROFESSIONNELLE" (Big Bold - 56px)
+         [Tagline] "Protection céramique • Correction de peinture • Detailing complet"
+         [CTA Buttons Row]
+            [Primary Button] "Prendre rendez-vous" (Red background)
+            [Secondary Button] "Nos services" (Outline)
+      [RIGHT: 50% width]
+         [Empty/Image overlay]
+Design:
+
+Height: 90vh minimum
+Background: High-quality image with 40% dark overlay
+Text: White color
+H1: 56px, Bold, letter-spacing -1px
+Tagline: 20px, light (300), margin-bottom 32px
+Buttons: 18px text, 48px height, 6px border-radius, 16px horizontal padding
+Animation: Fade-in + slide-up on load (0.8s ease)
+
+
+3. SERVICES SECTION
+Layout:
+[Container 1200px]
+   [Section Header - Centered]
+      [Small Label] "NOS SERVICES" (12px, uppercase, tracking 2px)
+      [H2] "Des Services d'Excellence pour Votre Véhicule" (40px, Bold)
+      [Description] Brief text about comprehensive services
+   
+   [Services Grid - 3 columns]
+      [Service Card 1]
+         [Icon/Image] - 80x80px, circular or square with 6px radius
+         [H3] "Protection Céramique" (28px, Bold)
+         [Description] "Protection longue durée de 2 à 5 ans contre..."
+         [Details List] Bullet points or short features
+      
+      [Service Card 2]
+         [Icon/Image]
+         [H3] "Correction de Peinture" (28px, Bold)
+         [Description]
+         [Details List]
+      
+      [Service Card 3]
+         [Icon/Image]
+         [H3] "Detailing Intérieur" (28px, Bold)
+         [Description]
+         [Details List]
+      
+      [... more service cards as needed]
+Services to Include (from industry standard):
+
+Protection Céramique (Nano-ceramic coating)
+Correction de Peinture (Paint correction/polishing)
+Detailing Intérieur Complet (Complete interior detailing)
+Pellicule de Protection (PPF) (Paint protection film)
+Lavage et Décontamination (Wash & decontamination)
+Restauration de Phares (Headlight restoration)
+
+Design:
+
+Background: Light gray (#f8f9fa)
+Padding: 80px vertical
+Cards: White background, 6px border-radius, 24px padding
+Card hover: subtle lift (translateY -4px), shadow increase
+Icons: Primary blue color
+Card spacing: 32px gap between cards
+
+
+4. PROCESS/HOW IT WORKS SECTION
+Layout:
+[Container 1200px]
+   [Section Header - Centered]
+      [H2] "Notre Processus" (40px, Bold)
+   
+   [Steps - Horizontal Timeline or 4 Columns]
+      [Step 1]
+         [Number Badge] "01" (Large, primary color)
+         [H3] "Évaluation"
+         [Text] Description
+      [Step 2]
+         [Number Badge] "02"
+         [H3] "Préparation"
+         [Text]
+      [Step 3]
+         [Number Badge] "03"
+         [H3] "Application"
+         [Text]
+      [Step 4]
+         [Number Badge] "04"
+         [H3] "Livraison"
+         [Text]
+Design:
+
+Background: White
+Number badges: 60px circle, primary color, white text
+Connection lines between steps (1px solid, gray)
+
+
+5. GALLERY/BEFORE-AFTER SECTION
+Layout:
+[Full-width Background - Dark]
+   [Container 1200px]
+      [Section Header - Centered, White text]
+         [H2] "Nos Réalisations" (40px, Bold)
+      
+      [Gallery Grid - Masonry or 3 columns]
+         [Image Card with Before/After Slider]
+         [Image Card]
+         [Image Card]
+         [...6-9 images total]
+Design:
+
+Background: Dark navy (#1a1a1a)
+Images: 6px border-radius, aspect-ratio maintained
+Hover: Zoom effect (scale 1.05), overlay with "Voir plus"
+Before/After slider for key showcase images
+
+
+6. CTA SECTION (Mid-page)
+Layout:
+[Full-width Background - Primary Blue]
+   [Container 1200px - Centered content]
+      [H2] "Prêt à Transformer Votre Véhicule?" (40px, Bold, White)
+      [Subtext] "Prenez rendez-vous dès aujourd'hui" (18px, White)
+      [CTA Button] "514-XXX-XXXX" (Large, Red background, White text)
+Design:
+
+Background: Primary blue (from logo)
+Text: White, centered
+Padding: 80px vertical
+Button: Extra large (56px height, 24px padding)
+
+
+7. TESTIMONIALS SECTION
+Layout:
+[Container 1200px]
+   [Section Header - Centered]
+      [H2] "Ce Que Disent Nos Clients" (40px, Bold)
+   
+   [Testimonial Grid - 3 columns OR Carousel]
+      [Testimonial Card 1]
+         [Rating Stars] ★★★★★ (5 stars)
+         [Quote Text] "Testimonial content..."
+         [Author]
+            [Avatar Image] (if available)
+            [Name] "Jean Tremblay"
+            [Location] "Laval, QC"
+      
+      [Testimonial Card 2]
+      [Testimonial Card 3]
+Sample Testimonials (generic for now):
+
+"Service exceptionnel! Ma voiture brille comme jamais. L'équipe est professionnelle et minutieuse."
+"La protection céramique a transformé mon véhicule. Le résultat est impressionnant et durable."
+"Excellent rapport qualité-prix. Je recommande fortement pour tous vos besoins d'esthétique auto."
+
+Design:
+
+Background: Light gray
+Cards: White, 6px border-radius, 24px padding
+Stars: Gold/yellow color (#ffc107)
+Quote marks: Large, decorative, primary color
+Author section: Flex layout, avatar left aligned
+
+
+8. FAQ SECTION
+Layout:
+[Container 1200px]
+   [Section Header - Centered]
+      [H2] "Questions Fréquentes" (40px, Bold)
+   
+   [FAQ Accordion - Single column, full width]
+      [FAQ Item 1]
+         [Question Button] "Combien de temps dure la protection céramique?" [+/- Icon]
+         [Answer Panel - Expandable] "La protection céramique..."
+      
+      [FAQ Item 2]
+      [FAQ Item 3]
+      [...8-10 FAQ items]
+FAQ Questions (typical for detailing):
+
+"Combien de temps dure la protection céramique?"
+"Quelle est la différence entre la cire et la céramique?"
+"Combien de temps prend un service complet?"
+"Offrez-vous un service mobile?"
+"Quels produits utilisez-vous?"
+"Comment prendre rendez-vous?"
+"Acceptez-vous les paiements par carte?"
+"Offrez-vous une garantie?"
+
+Design:
+
+Background: White
+Question button: Full width, text-left, border-bottom, padding 20px
+Question text: 18px, semi-bold
+Icon: Right-aligned, rotate animation on open
+Answer: Padding 20px, border-left (primary color, 4px)
+Smooth expand/collapse animation (0.3s ease)
+
+
+9. CONTACT & MAP SECTION
+Layout:
+[Container 1200px]
+   [Two-Column Grid]
+      
+      [LEFT: Contact Information - 40% width]
+         [H2] "Contactez-Nous" (36px, Bold)
+         
+         [Contact Info Blocks]
+            [Phone Block]
+               [Icon] Phone
+               [Label] "Téléphone"
+               [Value] "514-XXX-XXXX" (Clickable link)
+            
+            [Email Block]
+               [Icon] Email
+               [Label] "Courriel"
+               [Value] "info@esthetiqueautopp.com"
+            
+            [Address Block]
+               [Icon] Location
+               [Label] "Adresse"
+               [Value] "XXX Rue Example, Laval, QC, H7X XXX"
+            
+            [Hours Block]
+               [Icon] Clock
+               [Label] "Heures d'ouverture"
+               [Value] 
+                  "Lun-Ven: 8h-18h"
+                  "Samedi: 9h-16h"
+                  "Dimanche: Fermé"
+         
+         [Social Media Icons Row]
+            [Facebook] [Instagram] [Google Business]
+      
+      [RIGHT: Google Map - 60% width]
+         [Embedded Google Map]
+            - Center on business location
+            - Custom marker with logo
+            - Interactive, zoom enabled
+            - 6px border-radius
+Design:
+
+Background: Light gray
+Padding: 80px vertical
+Info blocks: Flex layout, icon left, text right
+Icons: 32px, primary blue color, circle background (light blue)
+Labels: 14px, uppercase, gray
+Values: 18px, semi-bold, dark
+Phone & Email: Hover underline, cursor pointer
+Map: Minimum 400px height, 6px border-radius
+Social icons: 40px, hover scale 1.1
+
+
+10. FOOTER
+Layout:
+[Full-width Background - Dark Navy]
+   [Container 1200px]
+      [Three-Column Grid]
+         
+         [LEFT: Brand Column]
+            [Logo] (White version)
+            [Tagline] "Votre spécialiste en esthétique automobile"
+            [Description] Brief company description
+         
+         [CENTER: Quick Links]
+            [H4] "Liens Rapides"
+            [Links List]
+               - Accueil
+               - Services
+               - Galerie
+               - Témoignages
+               - FAQ
+               - Contact
+         
+         [RIGHT: Contact Info]
+            [H4] "Contact"
+            [Phone] 514-XXX-XXXX
+            [Email] info@esthetiqueautopp.com
+            [Address] Laval, QC
+      
+      [Bottom Bar - Full Width]
+         [Copyright] "© 2025 Esthétique Auto PP. Tous droits réservés."
+         [Legal Links] "Politique de confidentialité | Conditions d'utilisation"
+Design:
+
+Background: #1a1a1a
+Text: White/light gray
+Padding: 60px top, 32px bottom
+Links: Hover underline, transition
+Bottom bar: Border-top (1px, rgba white 10%), padding-top 32px
+
+
+ANIMATIONS & INTERACTIONS
+Scroll Animations:
+
+Fade-in when elements enter viewport (IntersectionObserver)
+Slide-up for cards/sections (translateY 20px to 0)
+Stagger effect for grid items (0.1s delay between items)
+Duration: 0.6-0.8s, ease-out timing
+
+Hover Effects:
+
+Buttons: Background darken 10%, scale 1.02
+Cards: Lift (translateY -4px), shadow increase
+Images: Zoom 1.05, maintain border-radius
+Links: Underline expand from center
+
+Loading Animation:
+
+Skeleton screens for images
+Smooth page transitions
+
+
+RESPONSIVE DESIGN
+Breakpoints:
+
+Desktop: 1200px+
+Tablet: 768px - 1199px
+Mobile: < 768px
+
+Mobile Adaptations:
+
+Hero: Stack content, full-width
+Services grid: 1 column
+Navigation: Hamburger menu
+Map: Full width, 300px height
+Contact: Single column layout
+Font sizes: Reduce by 20-30%
+Padding: Reduce to 40px vertical
+
+
+TECHNICAL REQUIREMENTS
+Stack:
+
+Next.js 14+ (App Router)
+React 18+
+Tailwind CSS
+Framer Motion (animations)
+React Icons
+Google Maps API (for map embed)
+
+Components to Create:
+
+Navbar (sticky, responsive)
+Hero section
+ServiceCard component
+ProcessStep component
+GalleryImage component (with before/after slider)
+TestimonialCard component
+FAQAccordion component
+ContactForm component
+Footer component
+
+Performance:
+
+Image optimization (Next.js Image component)
+Lazy loading for images below fold
+Code splitting
+SEO optimization (meta tags, structured data)
+
+
+CONTENT TO EXTRACT/USE
+From Original Site (please extract):
+
+Exact logo colors and assets
+Business phone number
+Email address
+Physical address
+Hours of operation
+Specific service descriptions and pricing
+Actual customer testimonials
+High-quality photos from gallery
+
+From Facebook Page:
+
+Service descriptions from posts
+Customer reviews/testimonials
+Additional photos
+Special offers or promotions
+
+
+VISUAL HIERARCHY RULES
+Between Sections:
+
+Clear spacing (80px minimum)
+Alternating backgrounds (white/light gray/dark)
+Consistent section headers (centered, same style)
+
+Within Sections:
+
+Header → Body → CTA (clear flow)
+Grid items: consistent card heights
+Text hierarchy: H2 → Description → Content
+Whitespace: breathing room, not cramped
+
+Typography Scale:
+
+H1: 56px
+H2: 40px
+H3: 28px
+Body: 16px
+Small: 14px
+(Reduce by 30% on mobile)
+
+
+FINAL CHECKLIST
+✅ Big bold titles with consistent sizing
+✅ Clear taglines under each section title
+✅ 6px border-radius on all elements
+✅ No fading/gradient backgrounds
+✅ Consistent container width (1200px)
+✅ Clean minimal animations (fade, slide, scale only)
+✅ Google Maps integration
+✅ Contact information extracted and displayed
+✅ CTA section present
+✅ FAQ accordion functional
+✅ Testimonials section with 3+ reviews
+✅ Sticky navigation
+✅ Mobile responsive
+✅ Fast loading times
+✅ SEO optimized

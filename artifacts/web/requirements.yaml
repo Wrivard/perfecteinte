@@ -1,0 +1,10 @@
+packages:
+  "framer-motion": "For premium scroll animations and smooth transitions"
+  "clsx": "Utility for constructing className strings conditionally"
+  "tailwind-merge": "Utility to safely merge Tailwind CSS classes"
+
+images: []
+
+notes:
+  - This is a frontend-only static site based on the provided specifications.
+  - Using real assets provided via @assets/ alias instead of AI-generated images to maintain brand authenticity.

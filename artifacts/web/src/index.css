@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme inline {
+  --font-sans: 'Inter', sans-serif;
+  --font-display: 'Montserrat', sans-serif;
+
+  /* Brand Colors */
+  --color-primary: hsl(216 60% 10%); /* Deep Navy #0a1628 */
+  --color-primary-foreground: hsl(0 0% 100%);
+  
+  --color-accent: hsl(0 72% 51%); /* Crimson Red #dc2626 */
+  --color-accent-hover: hsl(0 72% 41%);
+  --color-accent-foreground: hsl(0 0% 100%);
+
+  --color-navy: hsl(216 60% 10%);
+  --color-navy-dark: hsl(240 29% 9%); /* #1a1a2e */
+  
+  --color-light: hsl(210 20% 98%); /* #f8f9fa */
+  --color-dark: hsl(0 0% 10%); /* #1a1a1a */
+
+  --color-background: hsl(0 0% 100%);
+  --color-foreground: hsl(216 60% 10%);
+  --color-muted: hsl(210 20% 96%);
+  --color-muted-foreground: hsl(215 16% 47%);
+  --color-border: hsl(214 32% 91%);
+}
+
+@layer base {
+  body {
+    @apply bg-background text-foreground antialiased font-sans overflow-x-hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    @apply font-bold tracking-tight;
+  }
+}
+
+/* Custom Utilities for Masonry Gallery */
+@layer utilities {
+  .masonry-grid {
+    column-count: 1;
+    column-gap: 1rem;
+  }
+  @media (min-width: 768px) {
+    .masonry-grid {
+      column-count: 2;
+    }
+  }
+  @media (min-width: 1024px) {
+    .masonry-grid {
+      column-count: 3;
+    }
+  }
+  .masonry-item {
+    break-inside: avoid;
+    margin-bottom: 1rem;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
