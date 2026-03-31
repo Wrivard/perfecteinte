@@ -6,7 +6,7 @@ export function CTA() {
   return (
     <section className="relative h-[350px] sm:h-[400px] md:h-[450px] flex items-center overflow-hidden">
       <div className="absolute inset-0">
-        <img src={img} alt="BMW dans l'atelier" className="w-full h-full object-cover object-[center_65%]" />
+        <img src={img} alt="BMW dans l'atelier" className="w-full h-full object-cover object-[center_45%]" />
         <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/55 to-black/30"></div>
       </div>
       <div className="max-w-7xl mx-auto px-6 relative z-10 w-full">
