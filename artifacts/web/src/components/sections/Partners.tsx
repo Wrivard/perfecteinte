@@ -13,7 +13,7 @@ const partners = [
 
 export function Partners() {
   return (
-    <section className="py-10 md:py-14 bg-[#111111]">
+    <section className="py-10 md:py-14 bg-[#1a1a1a]">
       <div className="max-w-7xl mx-auto px-6">
         <motion.p
           className="text-center text-[11px] uppercase tracking-[0.25em] font-semibold text-gray-500 mb-8 md:mb-10"
