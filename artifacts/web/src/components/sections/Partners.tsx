@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import labocosmetica from "@assets/nobg_labo_1774964289735.png";
-import legend from "@assets/Legend-car-protection-film-scaled_1774963789970.png";
+import legend from "@assets/nobg_1774965084556.png";
 import carpro from "@assets/logo-carpro_1774963789970.png";
 import maxshine from "@assets/maxshine_1774963789970.png";
 
