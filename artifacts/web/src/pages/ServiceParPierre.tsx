@@ -8,7 +8,7 @@ import { AccordionItem } from "@/components/ui/accordion-custom";
 import heroImg from "@assets/485048289_636737895632113_6749648947738676055_n_1774531645510.jpg";
 import img1 from "@assets/552939218_780287794610455_6908565764177471907_n_1774531645511.jpg";
 import img2 from "@assets/566216853_802767049029196_5018593656071286537_n_1774531645512.jpg";
-import img3 from "@assets/481287887_624839100155326_2322975325486587163_n_1774531645509.jpg";
+
 import tImg1 from "@assets/515464037_717072027598699_7656154476338834597_n_1774531645510.jpg";
 import tImg2 from "@assets/532949601_746227078016527_8012720562132951420_n_1774531645511.jpg";
 import tImg3 from "@assets/535472325_752143490758219_186388118827140535_n_1774531645511.jpg";
@@ -121,16 +121,23 @@ export default function ServiceParPierre() {
         </div>
       </section>
 
-      <section className="py-16 md:py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="relative h-[250px] sm:h-[300px] md:h-[350px] rounded-md overflow-hidden">
-              <img src={img2} alt="Réalisation de Pierre" className="w-full h-full object-cover" />
-            </motion.div>
-            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }} className="relative h-[250px] sm:h-[300px] md:h-[350px] rounded-md overflow-hidden">
-              <img src={img3} alt="Finition par Pierre" className="w-full h-full object-cover" />
-            </motion.div>
-          </div>
+      <section className="relative h-[300px] sm:h-[350px] md:h-[400px] flex items-center overflow-hidden">
+        <div className="absolute inset-0">
+          <img src={img2} alt="Travail de Pierre" className="w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/55 to-black/30" />
+        </div>
+        <div className="max-w-7xl mx-auto px-6 relative z-10 w-full">
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-white mb-4 leading-tight">
+              CHAQUE DÉTAIL <span className="text-blue-400">COMPTE</span>
+            </h2>
+            <p className="text-base sm:text-lg md:text-xl text-gray-100 max-w-xl mb-6">
+              Pierre apporte un œil expert et une touche personnelle à chaque projet. Un service sur mesure pour des résultats exceptionnels.
+            </p>
+            <Link href="/rendez-vous" className="inline-flex items-center bg-accent text-white px-8 py-4 rounded-md font-semibold hover:bg-accent-hover transition-colors">
+              Réserver avec Pierre
+            </Link>
+          </motion.div>
         </div>
       </section>
 

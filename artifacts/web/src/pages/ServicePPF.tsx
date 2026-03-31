@@ -7,7 +7,7 @@ import { useState } from "react";
 import { AccordionItem } from "@/components/ui/accordion-custom";
 import heroImg from "@assets/570606844_804977075474860_4894531562783451229_n_1774531645512.jpg";
 import img1 from "@assets/559679573_796705672968667_6667683747001719488_n_1774531645511.jpg";
-import img2 from "@assets/560145854_793100139995887_2888064327822015612_n_1774531645512.jpg";
+
 import img3 from "@assets/558612629_793100233329211_2137356822840990595_n_1774533881229.jpg";
 import tImg1 from "@assets/481287887_624839100155326_2322975325486587163_n_1774531645509.jpg";
 import tImg2 from "@assets/552939218_780287794610455_6908565764177471907_n_1774531645511.jpg";
@@ -108,16 +108,23 @@ export default function ServicePPF() {
         </div>
       </section>
 
-      <section className="py-16 md:py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="relative h-[250px] sm:h-[300px] md:h-[350px] rounded-md overflow-hidden">
-              <img src={img2} alt="Résultat PPF" className="w-full h-full object-cover" />
-            </motion.div>
-            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }} className="relative h-[250px] sm:h-[300px] md:h-[350px] rounded-md overflow-hidden">
-              <img src={img3} alt="PPF installé" className="w-full h-full object-cover" />
-            </motion.div>
-          </div>
+      <section className="relative h-[300px] sm:h-[350px] md:h-[400px] flex items-center overflow-hidden">
+        <div className="absolute inset-0">
+          <img src={img3} alt="Véhicule protégé par PPF" className="w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/55 to-black/30" />
+        </div>
+        <div className="max-w-7xl mx-auto px-6 relative z-10 w-full">
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-white mb-4 leading-tight">
+              PROTÉGEZ VOTRE <span className="text-blue-400">INVESTISSEMENT</span>
+            </h2>
+            <p className="text-base sm:text-lg md:text-xl text-gray-100 max-w-xl mb-6">
+              Un film invisible qui préserve la beauté et la valeur de votre véhicule pour des années à venir.
+            </p>
+            <Link href="/rendez-vous" className="inline-flex items-center bg-accent text-white px-8 py-4 rounded-md font-semibold hover:bg-accent-hover transition-colors">
+              Demander une soumission
+            </Link>
+          </motion.div>
         </div>
       </section>
 
