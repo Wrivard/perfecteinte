@@ -26,7 +26,7 @@ const values = [
   {
     icon: Wrench,
     title: "Expertise",
-    description: "Plus de 15 ans d'expérience dans le domaine nous permettent de maîtriser les techniques les plus avancées.",
+    description: "Plus de 10 ans d'expérience dans le milieu automobile et 4 ans à la tête de son entreprise — un savoir-faire qui se perfectionne chaque jour.",
   },
 ];
 
@@ -77,13 +77,13 @@ export default function APropos() {
                 NOTRE <span className="text-accent">HISTOIRE</span>
               </h2>
               <p className="text-lg md:text-xl lg:text-2xl text-gray-700 leading-relaxed mb-4 md:mb-6">
-                Fondée il y a plus de 15 ans à La Malbaie, Esthétique Auto Pascal Pilote est née d'une passion profonde pour l'automobile.
+                Fils d'un garagiste, Pascal Pilote a grandi entouré d'automobiles. Cette passion, ancrée depuis l'enfance, ne l'a jamais quitté.
               </p>
               <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-4 md:mb-6">
-                Pascal Pilote a transformé sa passion en entreprise, offrant des services de détailing automobile de qualité supérieure dans la région de Charlevoix. Avec une attention méticuleuse aux détails et un engagement envers l'excellence, chaque véhicule qui passe entre nos mains reçoit un traitement personnalisé.
+                Après plus de 10 ans dans le milieu automobile, Pascal a fondé Esthétique Auto Pascal Pilote il y a 4 ans à La Malbaie. Amoureux de l'automobile et perfectionniste dans l'âme, il offre des services de détailing de qualité supérieure dans la région de Charlevoix. Chaque véhicule qui passe entre ses mains reçoit un traitement personnalisé avec une attention méticuleuse aux détails.
               </p>
               <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-6 md:mb-8">
-                Notre atelier, situé au 2535 boulevard Comporté, est équipé des dernières technologies en matière de protection et de restauration automobile.
+                Notre atelier, situé au 2535 boulevard Comporté, est équipé des dernières technologies en matière de protection et de restauration automobile. Avec plus de 1 500 lavages complétés, notre expertise parle d'elle-même.
               </p>
               <Link
                 href="/rendez-vous"
@@ -114,9 +114,9 @@ export default function APropos() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-3 gap-4 md:gap-12 text-center">
             {[
-              { value: "15+", label: "Années d'expertise" },
-              { value: "100%", label: "Produit de qualité" },
-              { value: "350+", label: "Lavages complétés" },
+              { value: "10+", label: "Années d'expérience" },
+              { value: "4", label: "Ans d'entreprise" },
+              { value: "1500+", label: "Lavages complétés" },
             ].map((stat, i) => (
               <motion.div
                 key={i}

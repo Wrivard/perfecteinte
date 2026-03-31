@@ -3,9 +3,9 @@ import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
 
 const stats = [
-  { value: 15, suffix: "+", label: "ANNÉES D'EXPERTISE" },
+  { value: 10, suffix: "+", label: "ANNÉES D'EXPÉRIENCE" },
   { value: 100, suffix: "%", label: "PRODUIT DE QUALITÉ" },
-  { value: 350, suffix: "+", label: "LAVAGE COMPLÉTÉ" },
+  { value: 1500, suffix: "+", label: "LAVAGES COMPLÉTÉS" },
 ];
 
 export function Stats() {

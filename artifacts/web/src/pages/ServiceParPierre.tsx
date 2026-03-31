@@ -26,7 +26,7 @@ const services = [
 
 const values = [
   { title: "Passion", description: "Chaque véhicule est traité avec la même passion et le même dévouement qu'au premier jour." },
-  { title: "Expertise", description: "Des années d'expérience et de formation continue pour maîtriser les dernières techniques." },
+  { title: "Expertise", description: "Plus de 10 ans d'expérience dans le milieu automobile et une formation continue pour maîtriser les dernières techniques." },
   { title: "Perfectionnisme", description: "Aucun compromis sur la qualité. Chaque détail compte pour un résultat impeccable." },
   { title: "Confiance", description: "Une relation de confiance bâtie avec chaque client, un véhicule à la fois." },
 ];
@@ -35,7 +35,7 @@ const faqs = [
   { q: "Qui est Pierre ?", a: "Pierre est un membre clé de notre équipe, reconnu pour son expertise exceptionnelle et son souci du détail incomparable. Il apporte une touche personnelle et un savoir-faire unique à chaque véhicule qu'il traite." },
   { q: "Quels services Pierre offre-t-il ?", a: "Pierre offre l'ensemble de nos services de détailing : lavage de luxe, polissage, nano-céramique et installation de PPF. Sa spécialité est la correction de peinture et les finitions haut de gamme." },
   { q: "Peut-on demander Pierre spécifiquement ?", a: "Oui, vous pouvez demander que Pierre s'occupe personnellement de votre véhicule lors de la prise de rendez-vous. Selon la disponibilité, nous ferons notre possible pour répondre à votre demande." },
-  { q: "Quelle est l'expérience de Pierre ?", a: "Pierre cumule plusieurs années d'expérience dans le domaine du détailing automobile. Il est formé aux techniques les plus avancées et utilise les produits les plus performants du marché." },
+  { q: "Quelle est l'expérience de Pierre ?", a: "Pierre cumule plus de 10 ans d'expérience dans le milieu automobile. Il est formé aux techniques les plus avancées et utilise les produits les plus performants du marché." },
 ];
 
 const testimonials = [
