@@ -1,12 +1,12 @@
 import { Link } from "wouter";
-import { Facebook, Instagram, Linkedin, Youtube } from "lucide-react";
+import { Facebook, Instagram } from "lucide-react";
 import logo from "@assets/425261687_389413763697862_6688968440363193968_n-removebg-previ_1774531438969.png";
 
 export function Footer() {
   return (
     <footer className="bg-white pt-12 md:pt-16 pb-6 md:pb-8">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-16 mb-10 md:mb-12">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-8 lg:gap-16 mb-10 md:mb-12">
           <div className="col-span-2 md:col-span-1 space-y-4">
             <img src={logo} alt="Esthétique Auto PP" className="h-16 md:h-20" />
             <div>
@@ -21,11 +21,6 @@ export function Footer() {
             <div className="flex gap-4 pt-2">
               <a href="#" className="text-gray-600 hover:text-accent transition-colors"><Facebook className="w-5 h-5" /></a>
               <a href="#" className="text-gray-600 hover:text-accent transition-colors"><Instagram className="w-5 h-5" /></a>
-              <a href="#" className="text-gray-600 hover:text-accent transition-colors">
-                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-              </a>
-              <a href="#" className="text-gray-600 hover:text-accent transition-colors"><Linkedin className="w-5 h-5" /></a>
-              <a href="#" className="text-gray-600 hover:text-accent transition-colors"><Youtube className="w-5 h-5" /></a>
             </div>
           </div>
 
@@ -48,7 +43,6 @@ export function Footer() {
             </ul>
           </div>
 
-          <div className="hidden lg:block"></div>
         </div>
 
         <div className="pt-6 md:pt-8 border-t border-gray-200 flex flex-col md:flex-row justify-between items-center gap-4">
