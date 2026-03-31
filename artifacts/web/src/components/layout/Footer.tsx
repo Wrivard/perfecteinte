@@ -49,12 +49,8 @@ export function Footer() {
           <p className="text-xs md:text-sm text-gray-600 text-center md:text-left">
             &copy; {new Date().getFullYear()} Esthétique Auto Pascal Pilote. Tous droits réservés
           </p>
-          <div className="text-xs md:text-sm text-gray-600 flex flex-wrap justify-center gap-3 md:gap-4">
-            <a href="#" className="hover:text-accent transition-colors">Politique de confidentialité</a>
-            <span className="hidden md:inline">|</span>
-            <a href="#" className="hover:text-accent transition-colors">Conditions de service</a>
-            <span className="hidden md:inline">|</span>
-            <a href="#" className="hover:text-accent transition-colors">Paramètres des cookies</a>
+          <div className="text-xs md:text-sm text-gray-600">
+            <Link href="/politique-de-confidentialite" className="hover:text-accent transition-colors">Politique de confidentialité</Link>
           </div>
         </div>
       </div>

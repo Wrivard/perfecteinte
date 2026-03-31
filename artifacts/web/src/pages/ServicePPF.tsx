@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "wouter";
+import { usePageMeta } from "@/hooks/usePageMeta";
 import { PageLayout } from "@/components/layout/PageLayout";
 import { Partners } from "@/components/sections/Partners";
 import { Shield, Check } from "lucide-react";
@@ -29,6 +30,7 @@ const faqs = [
 
 
 export default function ServicePPF() {
+  usePageMeta("Protection de peinture PPF", "Pellicule de protection de peinture (PPF) transparente et auto-cicatrisante à La Malbaie. Garantie jusqu'à 10 ans. Installation professionnelle.");
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (

@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "wouter";
+import { usePageMeta } from "@/hooks/usePageMeta";
 import { PageLayout } from "@/components/layout/PageLayout";
 import { Partners } from "@/components/sections/Partners";
 import { Droplets, Shield, Sparkles, User, ArrowRight } from "lucide-react";
@@ -75,6 +76,7 @@ const itemVariants = {
 };
 
 export default function ServicesPage() {
+  usePageMeta("Nos services", "Lavage de luxe, protection PPF, polissage, nano-céramique et service par Pierre. Découvrez tous nos services d'esthétique automobile à La Malbaie.");
   return (
     <PageLayout>
       <section className="relative h-[40vh] sm:h-[45vh] md:h-[50vh] min-h-[280px] sm:min-h-[350px] flex items-center overflow-hidden -mt-[120px] pt-[120px]">

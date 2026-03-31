@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "wouter";
+import { usePageMeta } from "@/hooks/usePageMeta";
 import { PageLayout } from "@/components/layout/PageLayout";
 import { Partners } from "@/components/sections/Partners";
 import { Sparkles, Check } from "lucide-react";
@@ -37,6 +38,7 @@ const faqs = [
 
 
 export default function ServicePolissage() {
+  usePageMeta("Polissage & Nano-Céramique", "Correction de peinture et revêtement nano-céramique pour une protection durable jusqu'à 5 ans. Service professionnel à La Malbaie, Charlevoix.");
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (

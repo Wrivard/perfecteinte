@@ -98,7 +98,7 @@ Frontend-only React + Vite website for **Esthétique Auto Pascal Pilote Inc.**, 
 - **Stack**: React, Vite, Tailwind CSS v4, Framer Motion, Lucide Icons
 - **Brand Colors**: Blue accent (#3b82f6), Dark (#1a1a1a), White (#ffffff), Light (#f9fafb)
 - **Fonts**: Inter (body), Montserrat (headings)
-- **Routing**: wouter — multi-page SPA (`/`, `/a-propos`, `/services`, `/services/lavage`, `/services/ppf`, `/services/par-pierre`, `/services/polissage`, `/galerie`, `/rendez-vous`)
+- **Routing**: wouter — multi-page SPA (`/`, `/a-propos`, `/services`, `/services/lavage`, `/services/ppf`, `/services/par-pierre`, `/services/polissage`, `/galerie`, `/rendez-vous`, `/politique-de-confidentialite`)
 - **Partners strip**: White bg with 4 dark logos (Labocosmetica, Legend PPF, CarPro, MaxShine) via CSS `brightness-0 opacity-40 hover:opacity-70`. Placed per-page individually (NOT in PageLayout)
 - **Testimonials**: Shared `Testimonials` component with 12 testimonials in a slider (3 per page, auto-advance every 6s, animated transitions). Used on homepage, all 4 service pages, and rendez-vous
 - **Tone**: Team/company voice — "notre équipe", "nos valeurs", "Prendre un rendez-vous" (not personal "ses valeurs", "réserver avec Pierre")
@@ -113,9 +113,11 @@ Frontend-only React + Vite website for **Esthétique Auto Pascal Pilote Inc.**, 
 - **Phone**: (418) 665-5871
 - **Email**: Pascal.1993@live.ca / info@esthetiqueautopascalpilote.ca
 - **Address**: 2535 boulevard Comporté, La Malbaie, Québec
-- **Social**: Facebook, Instagram, X, LinkedIn, YouTube
+- **Social**: Facebook, Instagram (only — X, LinkedIn, YouTube removed)
 - **Design rules**: border-radius 6px, no gradients on backgrounds (only on image overlays), max-width 1280px container, consistent visual hierarchy (H2: 60px, taglines: 24px, mb-16 section headers)
 - **Images**: All imported from `attached_assets/` via `@assets/` alias
+- **SEO**: Per-page `<title>` and meta description via `usePageMeta` hook, Open Graph + Twitter Card tags, JSON-LD structured data (AutoRepair schema), `robots.txt`, `sitemap.xml`, `llms.txt` in `public/`
+- **Legal**: Politique de confidentialité page at `/politique-de-confidentialite` — Loi 25 compliant, includes cookie policy (13 sections)
 - **No backend**: All content is static/hardcoded
 
 ### `scripts` (`@workspace/scripts`)

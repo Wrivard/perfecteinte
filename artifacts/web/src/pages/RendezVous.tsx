@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { usePageMeta } from "@/hooks/usePageMeta";
 import { PageLayout } from "@/components/layout/PageLayout";
 import { Partners } from "@/components/sections/Partners";
 import { Testimonials } from "@/components/sections/Testimonials";
@@ -7,6 +8,7 @@ import { Calendar, Phone, Mail, MapPin, Clock } from "lucide-react";
 import heroImg from "@assets/535472325_752143490758219_186388118827140535_n_1774531645511.jpg";
 
 export default function RendezVous() {
+  usePageMeta("Prendre un rendez-vous", "Réservez votre rendez-vous d'esthétique automobile chez Esthétique Auto Pascal Pilote à La Malbaie. Appelez au (418) 665-5871.");
   return (
     <PageLayout showContact={false}>
       <section className="relative h-[40vh] sm:h-[45vh] md:h-[50vh] min-h-[280px] sm:min-h-[350px] flex items-center overflow-hidden -mt-[120px] pt-[120px]">

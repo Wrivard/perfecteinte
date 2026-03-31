@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "wouter";
+import { usePageMeta } from "@/hooks/usePageMeta";
 import { PageLayout } from "@/components/layout/PageLayout";
 import { Partners } from "@/components/sections/Partners";
 import { Droplets, Check } from "lucide-react";
@@ -48,6 +49,7 @@ const faqs = [
 
 
 export default function ServiceLavage() {
+  usePageMeta("Lavage Auto & Entretien de Luxe", "Service de lavage automobile complet et entretien esthétique de luxe à La Malbaie. Forfaits Essentiel, Premium et Luxe disponibles.");
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (

@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "wouter";
+import { usePageMeta } from "@/hooks/usePageMeta";
 import { PageLayout } from "@/components/layout/PageLayout";
 import { Partners } from "@/components/sections/Partners";
 import { Shield, Award, Heart, Wrench } from "lucide-react";
@@ -41,6 +42,7 @@ const itemVariants = {
 };
 
 export default function APropos() {
+  usePageMeta("À propos", "Découvrez l'histoire et les valeurs d'Esthétique Auto Pascal Pilote, spécialiste du détailing automobile à La Malbaie depuis plus de 10 ans.");
   return (
     <PageLayout>
       <section className="relative h-[40vh] sm:h-[45vh] md:h-[50vh] min-h-[280px] sm:min-h-[350px] flex items-center overflow-hidden -mt-[120px] pt-[120px]">

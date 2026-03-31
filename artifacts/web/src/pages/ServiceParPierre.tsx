@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "wouter";
+import { usePageMeta } from "@/hooks/usePageMeta";
 import { PageLayout } from "@/components/layout/PageLayout";
 import { Partners } from "@/components/sections/Partners";
 import { Testimonials } from "@/components/sections/Testimonials";
@@ -36,6 +37,7 @@ const faqs = [
 ];
 
 export default function ServiceParPierre() {
+  usePageMeta("Service Par Pierre", "Service personnalisé de détailing par notre expert Pierre. Spécialiste en correction de peinture et finitions haut de gamme à La Malbaie.");
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (

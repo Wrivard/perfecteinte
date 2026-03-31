@@ -2,6 +2,7 @@ import { useState, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "wouter";
 import { X } from "lucide-react";
+import { usePageMeta } from "@/hooks/usePageMeta";
 import { PageLayout } from "@/components/layout/PageLayout";
 import { Partners } from "@/components/sections/Partners";
 import heroImg from "@assets/532949601_746227078016527_8012720562132951420_n_1774531645511.jpg";
@@ -30,6 +31,7 @@ const allImages = [
 ];
 
 export default function GaleriePage() {
+  usePageMeta("Galerie", "Découvrez nos réalisations en esthétique automobile. Photos avant/après de nos services de lavage, PPF, polissage et nano-céramique.");
   const [lightboxImage, setLightboxImage] = useState<string | null>(null);
   const closeLightbox = useCallback(() => setLightboxImage(null), []);
 

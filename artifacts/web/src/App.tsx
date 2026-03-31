@@ -11,6 +11,7 @@ import ServicePolissage from "./pages/ServicePolissage";
 import ServiceParPierre from "./pages/ServiceParPierre";
 import GaleriePage from "./pages/GaleriePage";
 import RendezVous from "./pages/RendezVous";
+import PolitiqueConfidentialite from "./pages/PolitiqueConfidentialite";
 import NotFound from "./pages/not-found";
 
 const queryClient = new QueryClient();
@@ -27,6 +28,7 @@ function Router() {
       <Route path="/services/par-pierre" component={ServiceParPierre} />
       <Route path="/galerie" component={GaleriePage} />
       <Route path="/rendez-vous" component={RendezVous} />
+      <Route path="/politique-de-confidentialite" component={PolitiqueConfidentialite} />
       <Route component={NotFound} />
     </Switch>
   );
