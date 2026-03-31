@@ -2,16 +2,13 @@ import { motion } from "framer-motion";
 import { Link } from "wouter";
 import { PageLayout } from "@/components/layout/PageLayout";
 import { Partners } from "@/components/sections/Partners";
-import { Sparkles, Check, Star } from "lucide-react";
+import { Sparkles, Check } from "lucide-react";
+import { Testimonials } from "@/components/sections/Testimonials";
 import { useState } from "react";
 import { AccordionItem } from "@/components/ui/accordion-custom";
 import heroImg from "@assets/526235082_739427715363130_6055039976108673408_n_1774531645511.jpg";
 import img1 from "@assets/532291985_746493491323219_5990593213632343471_n_1774531645511.jpg";
 import img2 from "@assets/518400891_721263007179601_8348639493355995469_n_1774531645510.jpg";
-
-import tImg1 from "@assets/515464037_717072027598699_7656154476338834597_n_1774531645510.jpg";
-import tImg2 from "@assets/532949601_746227078016527_8012720562132951420_n_1774531645511.jpg";
-import tImg3 from "@assets/535472325_752143490758219_186388118827140535_n_1774531645511.jpg";
 
 const steps = [
   { step: "01", title: "Inspection", description: "Analyse complète de l'état de la peinture avec un éclairage spécialisé pour identifier chaque imperfection." },
@@ -38,11 +35,6 @@ const faqs = [
   { q: "Puis-je laver mon véhicule après un traitement céramique ?", a: "Il faut attendre au moins 7 jours après l'application avant le premier lavage. Ensuite, nous recommandons un lavage à la main avec des produits pH neutre compatibles céramique." },
 ];
 
-const testimonials = [
-  { quote: "Le polissage a complètement transformé ma peinture. Les swirls ont disparu comme par magie!", author: "Éric Laforce", image: tImg1 },
-  { quote: "La nano-céramique est incroyable. L'eau perle comme sur une feuille de lotus!", author: "Caroline Tremblay", image: tImg2 },
-  { quote: "Après le traitement, ma voiture brille comme au premier jour. Résultat phénoménal.", author: "Michel Bouchard", image: tImg3 },
-];
 
 export default function ServicePolissage() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
@@ -144,30 +136,7 @@ export default function ServicePolissage() {
 
       <Partners />
 
-      <section className="py-16 md:py-20 lg:py-24 bg-[#f9fafb]">
-        <div className="max-w-7xl mx-auto px-6">
-          <motion.div className="text-center mb-12 md:mb-16" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold mb-4 leading-tight">
-              <span className="text-accent">TÉMOIGNAGES</span> <span className="text-gray-900">CLIENTS</span>
-            </h2>
-          </motion.div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
-            {testimonials.map((t, i) => (
-              <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }} className="relative h-[350px] sm:h-[380px] md:h-[420px] rounded-md overflow-hidden">
-                <img src={t.image} alt={t.author} className="absolute inset-0 w-full h-full object-cover" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/60 to-black/20" />
-                <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8">
-                  <div className="flex gap-1 text-blue-400 mb-3">
-                    {[...Array(5)].map((_, j) => <Star key={j} className="w-4 h-4 md:w-5 md:h-5 fill-current" />)}
-                  </div>
-                  <p className="text-white text-base md:text-lg leading-relaxed mb-4">"{t.quote}"</p>
-                  <p className="text-white font-semibold text-sm md:text-base">{t.author}</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <Testimonials />
 
       <section className="py-16 md:py-20 lg:py-24 bg-white">
         <div className="max-w-4xl mx-auto px-6">

@@ -40,7 +40,7 @@ const services = [
     icon: User,
     image: img3,
     title: "Par Pierre",
-    description: "Un service personnalisé par un expert passionné du détailing automobile. Pierre apporte son savoir-faire unique et son attention méticuleuse aux détails.",
+    description: "Un service personnalisé par notre expert passionné du détailing automobile. Un savoir-faire unique et une attention méticuleuse aux détails pour chaque véhicule.",
     href: "/services/par-pierre",
     features: [
       "Service sur mesure personnalisé",

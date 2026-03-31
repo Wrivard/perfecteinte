@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { PageLayout } from "@/components/layout/PageLayout";
 import { Partners } from "@/components/sections/Partners";
+import { Testimonials } from "@/components/sections/Testimonials";
 import { Calendar, Phone, Mail, MapPin, Clock } from "lucide-react";
 import heroImg from "@assets/535472325_752143490758219_186388118827140535_n_1774531645511.jpg";
 
@@ -154,6 +155,44 @@ export default function RendezVous() {
               </motion.div>
             </div>
           </div>
+        </div>
+      </section>
+
+      <Testimonials />
+
+      <section className="py-16 md:py-20 lg:py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-6">
+          <motion.div
+            className="text-center mb-8 md:mb-12"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-gray-900 mb-3 md:mb-4 leading-tight">
+              NOUS <span className="text-accent">TROUVER</span>
+            </h2>
+            <p className="text-base md:text-lg text-gray-700 max-w-2xl mx-auto">
+              2535 boulevard Comporté, La Malbaie, Québec
+            </p>
+          </motion.div>
+          <motion.div
+            className="rounded-md overflow-hidden h-[350px] sm:h-[400px] md:h-[500px]"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
+          >
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2654.8!2d-70.1536!3d47.6536!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4c8a0e6f0f0f0f0f%3A0x0!2s2535+Boulevard+Comport%C3%A9%2C+La+Malbaie%2C+QC!5e0!3m2!1sfr!2sca!4v1700000000000!5m2!1sfr!2sca"
+              width="100%"
+              height="100%"
+              style={{ border: 0, minHeight: '100%' }}
+              allowFullScreen={true}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Carte La Malbaie"
+            ></iframe>
+          </motion.div>
         </div>
       </section>
     </PageLayout>

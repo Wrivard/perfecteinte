@@ -2,16 +2,13 @@ import { motion } from "framer-motion";
 import { Link } from "wouter";
 import { PageLayout } from "@/components/layout/PageLayout";
 import { Partners } from "@/components/sections/Partners";
-import { Droplets, Check, Star } from "lucide-react";
+import { Droplets, Check } from "lucide-react";
+import { Testimonials } from "@/components/sections/Testimonials";
 import { useState } from "react";
 import { AccordionItem } from "@/components/ui/accordion-custom";
 import heroImg from "@assets/526917186_739427728696462_1785754575991955122_n_1774531645511.jpg";
 import img1 from "@assets/481210775_625629666742936_5403171954558065410_n_1774531645509.jpg";
 import img2 from "@assets/481287105_622811947024708_4552150963501534299_n_1774531645509.jpg";
-
-import tImg1 from "@assets/515464037_717072027598699_7656154476338834597_n_1774531645510.jpg";
-import tImg2 from "@assets/532949601_746227078016527_8012720562132951420_n_1774531645511.jpg";
-import tImg3 from "@assets/535472325_752143490758219_186388118827140535_n_1774531645511.jpg";
 
 const features = [
   "Lavage extérieur à la main avec produits premium",
@@ -49,11 +46,6 @@ const faqs = [
   { q: "Est-ce que vous lavez aussi les VUS et camions ?", a: "Absolument ! Nous traitons tous types de véhicules : berlines, VUS, camions, véhicules de luxe et exotiques." },
 ];
 
-const testimonials = [
-  { quote: "Mon véhicule n'a jamais été aussi propre. Un service exceptionnel du début à la fin.", author: "Éric Laforce", image: tImg1 },
-  { quote: "Le forfait de luxe en vaut chaque dollar. Résultat spectaculaire!", author: "Caroline Tremblay", image: tImg2 },
-  { quote: "Pascal et son équipe ont un souci du détail incroyable.", author: "Michel Bouchard", image: tImg3 },
-];
 
 export default function ServiceLavage() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
@@ -173,30 +165,7 @@ export default function ServiceLavage() {
 
       <Partners />
 
-      <section className="py-16 md:py-20 lg:py-24 bg-[#f9fafb]">
-        <div className="max-w-7xl mx-auto px-6">
-          <motion.div className="text-center mb-12 md:mb-16" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold mb-4 leading-tight">
-              <span className="text-accent">TÉMOIGNAGES</span> <span className="text-gray-900">CLIENTS</span>
-            </h2>
-          </motion.div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
-            {testimonials.map((t, i) => (
-              <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }} className="relative h-[350px] sm:h-[380px] md:h-[420px] rounded-md overflow-hidden">
-                <img src={t.image} alt={t.author} className="absolute inset-0 w-full h-full object-cover" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/60 to-black/20" />
-                <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8">
-                  <div className="flex gap-1 text-blue-400 mb-3">
-                    {[...Array(5)].map((_, j) => <Star key={j} className="w-4 h-4 md:w-5 md:h-5 fill-current" />)}
-                  </div>
-                  <p className="text-white text-base md:text-lg leading-relaxed mb-4">"{t.quote}"</p>
-                  <p className="text-white font-semibold text-sm md:text-base">{t.author}</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <Testimonials />
 
       <section className="py-16 md:py-20 lg:py-24 bg-white">
         <div className="max-w-4xl mx-auto px-6">

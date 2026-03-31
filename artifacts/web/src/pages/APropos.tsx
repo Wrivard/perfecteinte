@@ -26,7 +26,7 @@ const values = [
   {
     icon: Wrench,
     title: "Expertise",
-    description: "Plus de 10 ans d'expérience dans le milieu automobile et 4 ans à la tête de son entreprise — un savoir-faire qui se perfectionne chaque jour.",
+    description: "Plus de 10 ans d'expérience dans le milieu automobile et 4 ans à la tête de notre entreprise — un savoir-faire qui se perfectionne chaque jour.",
   },
 ];
 
@@ -80,7 +80,7 @@ export default function APropos() {
                 Fils d'un garagiste, Pascal Pilote a grandi entouré d'automobiles. Cette passion, ancrée depuis l'enfance, ne l'a jamais quitté.
               </p>
               <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-4 md:mb-6">
-                Après plus de 10 ans dans le milieu automobile, Pascal a fondé Esthétique Auto Pascal Pilote il y a 4 ans à La Malbaie. Amoureux de l'automobile et perfectionniste dans l'âme, il offre des services de détailing de qualité supérieure dans la région de Charlevoix. Chaque véhicule qui passe entre ses mains reçoit un traitement personnalisé avec une attention méticuleuse aux détails.
+                Après plus de 10 ans dans le milieu automobile, Pascal a fondé Esthétique Auto Pascal Pilote il y a 4 ans à La Malbaie. Amoureux de l'automobile et perfectionniste dans l'âme, notre équipe offre des services de détailing de qualité supérieure dans la région de Charlevoix. Chaque véhicule qui passe entre nos mains reçoit un traitement personnalisé avec une attention méticuleuse aux détails.
               </p>
               <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-6 md:mb-8">
                 Notre atelier, situé au 2535 boulevard Comporté, est équipé des dernières technologies en matière de protection et de restauration automobile. Avec plus de 1 500 lavages complétés, notre expertise parle d'elle-même.

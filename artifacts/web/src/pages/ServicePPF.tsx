@@ -2,16 +2,13 @@ import { motion } from "framer-motion";
 import { Link } from "wouter";
 import { PageLayout } from "@/components/layout/PageLayout";
 import { Partners } from "@/components/sections/Partners";
-import { Shield, Check, Star } from "lucide-react";
+import { Shield, Check } from "lucide-react";
+import { Testimonials } from "@/components/sections/Testimonials";
 import { useState } from "react";
 import { AccordionItem } from "@/components/ui/accordion-custom";
 import heroImg from "@assets/570606844_804977075474860_4894531562783451229_n_1774531645512.jpg";
 import img1 from "@assets/559679573_796705672968667_6667683747001719488_n_1774531645511.jpg";
-
 import img3 from "@assets/558612629_793100233329211_2137356822840990595_n_1774533881229.jpg";
-import tImg1 from "@assets/481287887_624839100155326_2322975325486587163_n_1774531645509.jpg";
-import tImg2 from "@assets/552939218_780287794610455_6908565764177471907_n_1774531645511.jpg";
-import tImg3 from "@assets/566216853_802767049029196_5018593656071286537_n_1774531645512.jpg";
 
 const benefits = [
   { title: "Protection invisible", description: "Film transparent qui préserve l'apparence d'origine de votre peinture." },
@@ -30,11 +27,6 @@ const faqs = [
   { q: "Quelle est la garantie sur le PPF ?", a: "Nous offrons une garantie allant jusqu'à 10 ans selon le produit choisi, couvrant le jaunissement, le craquelage et le décollement du film." },
 ];
 
-const testimonials = [
-  { quote: "Le PPF a complètement protégé mon capot d'un gros éclat de pierre. Investissement rentabilisé!", author: "Sophie Dubois", image: tImg1 },
-  { quote: "Installation impeccable, on ne voit absolument pas le film. Travail de pro!", author: "Martin Côté", image: tImg2 },
-  { quote: "Après 3 ans, la peinture sous le PPF est comme neuve. Extraordinaire.", author: "Julie Gagnon", image: tImg3 },
-];
 
 export default function ServicePPF() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
@@ -130,30 +122,7 @@ export default function ServicePPF() {
 
       <Partners />
 
-      <section className="py-16 md:py-20 lg:py-24 bg-[#f9fafb]">
-        <div className="max-w-7xl mx-auto px-6">
-          <motion.div className="text-center mb-12 md:mb-16" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold mb-4 leading-tight">
-              <span className="text-accent">TÉMOIGNAGES</span> <span className="text-gray-900">CLIENTS</span>
-            </h2>
-          </motion.div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
-            {testimonials.map((t, i) => (
-              <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }} className="relative h-[350px] sm:h-[380px] md:h-[420px] rounded-md overflow-hidden">
-                <img src={t.image} alt={t.author} className="absolute inset-0 w-full h-full object-cover" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/60 to-black/20" />
-                <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8">
-                  <div className="flex gap-1 text-blue-400 mb-3">
-                    {[...Array(5)].map((_, j) => <Star key={j} className="w-4 h-4 md:w-5 md:h-5 fill-current" />)}
-                  </div>
-                  <p className="text-white text-base md:text-lg leading-relaxed mb-4">"{t.quote}"</p>
-                  <p className="text-white font-semibold text-sm md:text-base">{t.author}</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <Testimonials />
 
       <section className="py-16 md:py-20 lg:py-24 bg-white">
         <div className="max-w-4xl mx-auto px-6">
