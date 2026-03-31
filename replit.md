@@ -98,9 +98,14 @@ Frontend-only React + Vite website for **Esthétique Auto Pascal Pilote Inc.**, 
 - **Stack**: React, Vite, Tailwind CSS v4, Framer Motion, Lucide Icons
 - **Brand Colors**: Blue accent (#3b82f6), Dark (#1a1a1a), White (#ffffff), Light (#f9fafb)
 - **Fonts**: Inter (body), Montserrat (headings)
-- **Routing**: wouter — multi-page SPA (`/`, `/a-propos`, `/services`, `/galerie`, `/rendez-vous`)
-- **Home Sections**: Double-bar Sticky Navbar (top info bar + main nav), Hero (H1 text-5xl to text-8xl responsive), Stats (react-countup animated counting), Services (3 image-background cards), Testimonials (paginated), Gallery (masonry + lightbox), CTA, FAQ (5 accordion items), Contact ("PRÊT À BRILLER" + Google Maps embed, shared on all pages via PageLayout), Footer (white, 4-column)
-- **Pages**: À Propos (history + values + stats), Services (detailed 3-service layout with features), Galerie (all 17 photos + lightbox), Rendez-vous (Google Calendar embed placeholder + contact sidebar, Contact section excluded)
+- **Routing**: wouter — multi-page SPA (`/`, `/a-propos`, `/services`, `/services/lavage`, `/services/ppf`, `/services/par-pierre`, `/services/polissage`, `/galerie`, `/rendez-vous`)
+- **Home Sections**: Double-bar Sticky Navbar (top info bar + main nav with dropdown), Hero (H1 text-5xl to text-8xl responsive), Stats (react-countup animated counting), Services (4 image-background cards linking to individual pages), Testimonials (paginated), Gallery (masonry + lightbox), CTA, FAQ (5 accordion items), Contact ("PRÊT À BRILLER" + Google Maps embed, shared on all pages via PageLayout), Footer (white, 4-column)
+- **Services** (4 services, each with dedicated page):
+  - Lavage Auto & Entretien Esthétique de Luxe (`/services/lavage`) — hero, features, 3 forfaits (Essentiel/Premium/Luxe), photo gallery, testimonials, FAQ
+  - Protection de Peinture PPF (`/services/ppf`) — hero, description, 6 benefit cards, photo gallery, testimonials, FAQ
+  - Par Pierre (`/services/par-pierre`) — hero, expertise description, 4 values cards, photo gallery, testimonials, FAQ
+  - Polissage & Nano-Céramique (`/services/polissage`) — hero, features, 4-step process, photo gallery, testimonials, FAQ
+- **Other Pages**: À Propos (history + values + stats), Services overview (4-service detailed layout with "En savoir plus" + "Prendre un rendez-vous"), Galerie (all 17 photos + lightbox), Rendez-vous (Google Calendar embed placeholder + contact sidebar, Contact section excluded)
 - **Accessibility**: WCAG AA contrast audit applied — text-blue-400 on dark backgrounds, text-gray-700+ on light backgrounds, proper overlay opacities on images
 - **Phone**: (418) 665-5871
 - **Email**: Pascal.1993@live.ca / info@esthetiqueautopascalpilote.ca

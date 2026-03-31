@@ -12,9 +12,10 @@ const navLinks = [
 ];
 
 const serviceLinks = [
-  { name: "Lavage & Entretien esthétique", href: "/services" },
-  { name: "Protection de peinture (PPF)", href: "/services" },
-  { name: "Polissage & Nano-céramique", href: "/services" },
+  { name: "Lavage Auto & Entretien de Luxe", href: "/services/lavage" },
+  { name: "Protection de Peinture PPF", href: "/services/ppf" },
+  { name: "Par Pierre", href: "/services/par-pierre" },
+  { name: "Polissage & Nano-Céramique", href: "/services/polissage" },
 ];
 
 export function Navbar() {
@@ -106,7 +107,7 @@ export function Navbar() {
                     href={link.href}
                     className={cn(
                       "text-[15px] font-medium transition-colors flex items-center gap-1 relative",
-                      location === link.href ? "text-accent" : "text-[#1a1a1a] hover:text-accent",
+                      location === link.href || (link.hasDropdown && location.startsWith("/services")) ? "text-accent" : "text-[#1a1a1a] hover:text-accent",
                       "after:content-[''] after:absolute after:-bottom-1 after:left-0 after:h-[2px] after:bg-accent after:transition-all after:duration-300",
                       location === link.href ? "after:w-full" : "after:w-0 hover:after:w-full"
                     )}
@@ -158,17 +159,35 @@ export function Navbar() {
       >
         <nav className="flex flex-col items-center gap-6">
           {navLinks.map((link) => (
-            <Link
-              key={link.name}
-              href={link.href}
-              className={cn(
-                "text-2xl font-display font-bold transition-colors",
-                location === link.href ? "text-accent" : "text-[#1a1a1a] hover:text-accent"
+            <div key={link.name} className="flex flex-col items-center">
+              <Link
+                href={link.href}
+                className={cn(
+                  "text-2xl font-display font-bold transition-colors",
+                  location === link.href || (link.hasDropdown && location.startsWith("/services")) ? "text-accent" : "text-[#1a1a1a] hover:text-accent"
+                )}
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                {link.name}
+              </Link>
+              {link.hasDropdown && (
+                <div className="flex flex-col items-center gap-2 mt-2">
+                  {serviceLinks.map((sl) => (
+                    <Link
+                      key={sl.name}
+                      href={sl.href}
+                      className={cn(
+                        "text-base transition-colors",
+                        location === sl.href ? "text-accent font-semibold" : "text-gray-500 hover:text-accent"
+                      )}
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      {sl.name}
+                    </Link>
+                  ))}
+                </div>
               )}
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              {link.name}
-            </Link>
+            </div>
           ))}
           <a
             href="tel:4186655871"

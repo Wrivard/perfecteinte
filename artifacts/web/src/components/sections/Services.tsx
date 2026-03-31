@@ -2,23 +2,33 @@ import { motion } from "framer-motion";
 import { Link } from "wouter";
 import img1 from "@assets/526917186_739427728696462_1785754575991955122_n_1774531645511.jpg";
 import img2 from "@assets/570606844_804977075474860_4894531562783451229_n_1774531645512.jpg";
-import img3 from "@assets/526235082_739427715363130_6055039976108673408_n_1774531645511.jpg";
+import img3 from "@assets/485048289_636737895632113_6749648947738676055_n_1774531645510.jpg";
+import img4 from "@assets/526235082_739427715363130_6055039976108673408_n_1774531645511.jpg";
 
 const services = [
   {
     image: img1,
     label: "Expertise",
-    title: "LAVAGE &\nENTRETIEN\nESTHÉTIQUE",
+    title: "LAVAGE AUTO &\nENTRETIEN\nDE LUXE",
+    href: "/services/lavage",
   },
   {
     image: img2,
     label: "Innovation",
-    title: "PROTECTION DE\nPEINTURE (PPF)",
+    title: "PROTECTION DE\nPEINTURE PPF",
+    href: "/services/ppf",
   },
   {
     image: img3,
+    label: "Personnel",
+    title: "PAR\nPIERRE",
+    href: "/services/par-pierre",
+  },
+  {
+    image: img4,
     label: "Finition",
     title: "POLISSAGE &\nNANO-\nCÉRAMIQUE",
+    href: "/services/polissage",
   },
 ];
 
@@ -53,18 +63,18 @@ export function Services() {
         </motion.div>
 
         <motion.div
-          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
         >
           {services.map((service, index) => (
-            <Link key={index} href="/rendez-vous" className="block">
+            <Link key={index} href={service.href} className="block">
               <motion.div
                 variants={itemVariants}
                 whileHover={{ y: -12, scale: 1.02, transition: { duration: 0.4, ease: "easeOut" } }}
-                className="relative h-[380px] sm:h-[420px] md:h-[550px] rounded-md overflow-hidden cursor-pointer group"
+                className="relative h-[380px] sm:h-[420px] md:h-[500px] rounded-md overflow-hidden cursor-pointer group"
               >
                 <div className="absolute inset-0">
                   <img
