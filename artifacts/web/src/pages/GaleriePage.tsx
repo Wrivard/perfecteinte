@@ -56,8 +56,6 @@ export default function GaleriePage() {
         </div>
       </section>
 
-      <Partners />
-
       <section className="py-16 md:py-20 lg:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-12 md:mb-16">
@@ -112,6 +110,8 @@ export default function GaleriePage() {
           </div>
         </div>
       </section>
+
+      <Partners />
 
       <AnimatePresence>
         {lightboxImage && (

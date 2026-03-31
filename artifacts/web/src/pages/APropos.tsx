@@ -110,7 +110,30 @@ export default function APropos() {
         </div>
       </section>
 
-      <Partners />
+      <section className="py-16 md:py-20 lg:py-24 bg-[#1a1a1a]">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid grid-cols-3 gap-4 md:gap-12 text-center">
+            {[
+              { value: "15+", label: "Années d'expertise" },
+              { value: "100%", label: "Produit de qualité" },
+              { value: "350+", label: "Lavages complétés" },
+            ].map((stat, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.15 }}
+              >
+                <div className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-display font-extrabold text-accent leading-none mb-2 md:mb-4">
+                  {stat.value}
+                </div>
+                <p className="text-xs sm:text-sm md:text-lg lg:text-xl font-semibold text-white uppercase tracking-wide">{stat.label}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       <section className="py-16 md:py-20 lg:py-24 bg-[#f9fafb]">
         <div className="max-w-7xl mx-auto px-6">
@@ -158,30 +181,7 @@ export default function APropos() {
         </div>
       </section>
 
-      <section className="py-16 md:py-20 lg:py-24 bg-[#1a1a1a]">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-3 gap-4 md:gap-12 text-center">
-            {[
-              { value: "15+", label: "Années d'expertise" },
-              { value: "100%", label: "Produit de qualité" },
-              { value: "350+", label: "Lavages complétés" },
-            ].map((stat, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.15 }}
-              >
-                <div className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-display font-extrabold text-accent leading-none mb-2 md:mb-4">
-                  {stat.value}
-                </div>
-                <p className="text-xs sm:text-sm md:text-lg lg:text-xl font-semibold text-white uppercase tracking-wide">{stat.label}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <Partners />
     </PageLayout>
   );
 }
