@@ -3,6 +3,7 @@ import { Link } from "wouter";
 import { usePageMeta } from "@/hooks/usePageMeta";
 import { PageLayout } from "@/components/layout/PageLayout";
 import { Partners } from "@/components/sections/Partners";
+import { SectionTagline } from "@/components/ui/SectionTagline";
 import { Droplets, Shield, Sparkles, User, ArrowRight } from "lucide-react";
 import heroImg from "@assets/526235082_739427715363130_6055039976108673408_n_1774531645511.jpg";
 import img1 from "@assets/526917186_739427728696462_1785754575991955122_n_1774531645511.jpg";
@@ -103,6 +104,13 @@ export default function ServicesPage() {
       <section className="py-16 md:py-20 lg:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-12 md:mb-16">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+            >
+              <SectionTagline text="Services" />
+            </motion.div>
             <motion.h2
               className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-bold text-gray-900 mb-4 md:mb-6 leading-tight"
               initial={{ opacity: 0, y: 30 }}

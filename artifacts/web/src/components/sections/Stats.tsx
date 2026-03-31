@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
+import { SectionTagline } from "@/components/ui/SectionTagline";
 
 const stats = [
   { value: 10, suffix: "+", label: "ANNÉES D'EXPÉRIENCE" },
@@ -24,6 +25,7 @@ export function Stats() {
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.6 }}
         >
+          <SectionTagline text="Résultats" />
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-bold text-gray-900 mb-4 md:mb-6 leading-tight">
             PERFORMANCE ET PRÉCISION EN<br className="hidden sm:block" /> DÉTAIL AUTOMOBILE
           </h2>

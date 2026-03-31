@@ -2,6 +2,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { Link } from "wouter";
 import { AccordionItem } from "@/components/ui/accordion-custom";
+import { SectionTagline } from "@/components/ui/SectionTagline";
 
 const faqs = [
   {
@@ -39,6 +40,7 @@ export function FAQ() {
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.6 }}
         >
+          <SectionTagline text="FAQ" />
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-4 md:mb-6 leading-tight">
             <span className="text-gray-900">FOIRE AUX </span>
             <span className="text-accent">QUESTIONS</span>

@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "wouter";
+import { SectionTagline } from "@/components/ui/SectionTagline";
 import img1 from "@assets/526917186_739427728696462_1785754575991955122_n_1774531645511.jpg";
 import img2 from "@assets/570606844_804977075474860_4894531562783451229_n_1774531645512.jpg";
 import img3 from "@assets/485048289_636737895632113_6749648947738676055_n_1774531645510.jpg";
@@ -53,6 +54,7 @@ export function Services() {
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.6 }}
         >
+          <SectionTagline text="Services" light />
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-4 md:mb-6 leading-tight">
             <span className="text-white">NOS </span>
             <span className="text-blue-400">SOLUTIONS</span>

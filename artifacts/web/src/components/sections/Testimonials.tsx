@@ -1,6 +1,7 @@
 import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Star, ChevronLeft, ChevronRight } from "lucide-react";
+import { SectionTagline } from "@/components/ui/SectionTagline";
 import img1 from "@assets/515464037_717072027598699_7656154476338834597_n_1774531645510.jpg";
 import img2 from "@assets/532949601_746227078016527_8012720562132951420_n_1774531645511.jpg";
 import img3 from "@assets/535472325_752143490758219_186388118827140535_n_1774531645511.jpg";
@@ -65,6 +66,7 @@ export function Testimonials({ compact = false }: { compact?: boolean }) {
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.6 }}
         >
+          <SectionTagline text="Témoignages" />
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-4 md:mb-6 leading-tight">
             <span className="text-accent">TÉMOIGNAGES </span>
             <span className="text-gray-900">DE NOS CLIENTS</span>

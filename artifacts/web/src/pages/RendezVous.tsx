@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { usePageMeta } from "@/hooks/usePageMeta";
 import { PageLayout } from "@/components/layout/PageLayout";
 import { Partners } from "@/components/sections/Partners";
+import { SectionTagline } from "@/components/ui/SectionTagline";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { Contact } from "@/components/sections/Contact";
 import { Calendar, Phone, Mail, MapPin, Clock } from "lucide-react";
@@ -44,6 +45,7 @@ export default function RendezVous() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
               >
+                <SectionTagline text="Rendez-vous" />
                 <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-display font-bold text-gray-900 mb-3 md:mb-4 leading-tight">
                   RÉSERVEZ EN <span className="text-accent">LIGNE</span>
                 </h2>

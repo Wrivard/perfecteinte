@@ -3,6 +3,7 @@ import { Link } from "wouter";
 import { usePageMeta } from "@/hooks/usePageMeta";
 import { PageLayout } from "@/components/layout/PageLayout";
 import { Partners } from "@/components/sections/Partners";
+import { SectionTagline } from "@/components/ui/SectionTagline";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { User, Check } from "lucide-react";
 import { useState } from "react";
@@ -68,6 +69,7 @@ export default function ServiceParPierre() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
             <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
+              <SectionTagline text="Expertise" center={false} />
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-gray-900 mb-4 md:mb-6 leading-tight">
                 L'EXPERTISE <span className="text-accent">PERSONNALISÉE</span>
               </h2>
@@ -99,6 +101,7 @@ export default function ServiceParPierre() {
       <section className="py-16 md:py-20 lg:py-24 bg-[#f9fafb]">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div className="text-center mb-12 md:mb-16" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+            <SectionTagline text="Nos valeurs" />
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-gray-900 mb-4 leading-tight">
               NOS <span className="text-accent">VALEURS</span>
             </h2>
@@ -121,6 +124,7 @@ export default function ServiceParPierre() {
         </div>
         <div className="max-w-7xl mx-auto px-6 relative z-10 w-full">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+            <SectionTagline text="Détailing" light center={false} />
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-white mb-4 leading-tight">
               CHAQUE DÉTAIL <span className="text-blue-400">COMPTE</span>
             </h2>
@@ -141,6 +145,7 @@ export default function ServiceParPierre() {
       <section className="py-16 md:py-20 lg:py-24 bg-white">
         <div className="max-w-4xl mx-auto px-6">
           <motion.div className="text-center mb-12 md:mb-16" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+            <SectionTagline text="FAQ" />
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold mb-4 leading-tight">
               <span className="text-gray-900">FOIRE AUX </span><span className="text-accent">QUESTIONS</span>
             </h2>

@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "wouter";
+import { SectionTagline } from "@/components/ui/SectionTagline";
 import img from "@assets/558612629_793100233329211_2137356822840990595_n_1774533881229.jpg";
 
 export function CTA() {
@@ -12,6 +13,7 @@ export function CTA() {
       <div className="max-w-7xl mx-auto px-6 relative z-10 w-full">
         <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8">
           <div className="flex-1">
+            <SectionTagline text="Passez à l'action" light center={false} />
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-white leading-tight mb-4">
               VOTRE VÉHICULE MÉRITE<br className="hidden sm:block" /> L'EXCELLENCE
             </h2>

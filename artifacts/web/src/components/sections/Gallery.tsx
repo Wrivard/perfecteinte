@@ -2,6 +2,7 @@ import { useState, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "wouter";
 import { X } from "lucide-react";
+import { SectionTagline } from "@/components/ui/SectionTagline";
 
 import img1 from "@assets/481210775_625629666742936_5403171954558065410_n_1774531645509.jpg";
 import img2 from "@assets/481287105_622811947024708_4552150963501534299_n_1774531645509.jpg";
@@ -31,6 +32,7 @@ export function Gallery() {
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.6 }}
           >
+            <SectionTagline text="Galerie" light />
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-4 md:mb-6 leading-tight">
               <span className="text-blue-400">TRANSFORMATION </span>
               <span className="text-white">VISUELLE</span>

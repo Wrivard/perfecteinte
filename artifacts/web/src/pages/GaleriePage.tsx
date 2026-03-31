@@ -5,6 +5,7 @@ import { X } from "lucide-react";
 import { usePageMeta } from "@/hooks/usePageMeta";
 import { PageLayout } from "@/components/layout/PageLayout";
 import { Partners } from "@/components/sections/Partners";
+import { SectionTagline } from "@/components/ui/SectionTagline";
 import heroImg from "@assets/532949601_746227078016527_8012720562132951420_n_1774531645511.jpg";
 
 import img1 from "@assets/481210775_625629666742936_5403171954558065410_n_1774531645509.jpg";
@@ -61,6 +62,13 @@ export default function GaleriePage() {
       <section className="py-16 md:py-20 lg:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-12 md:mb-16">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+            >
+              <SectionTagline text="Galerie" />
+            </motion.div>
             <motion.h2
               className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-bold text-gray-900 mb-4 md:mb-6 leading-tight"
               initial={{ opacity: 0, y: 30 }}

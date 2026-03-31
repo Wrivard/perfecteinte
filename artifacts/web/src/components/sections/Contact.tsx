@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Link } from "wouter";
 import { Phone, Mail, MapPin } from "lucide-react";
+import { SectionTagline } from "@/components/ui/SectionTagline";
 
 export function Contact() {
   return (
@@ -13,7 +14,7 @@ export function Contact() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <span className="text-xs uppercase tracking-widest text-gray-400 mb-4 block">Contact</span>
+            <SectionTagline text="Contact" light center={false} />
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white leading-tight mb-4">
               PRÊT À <span className="text-blue-400">BRILLER</span>
             </h2>
