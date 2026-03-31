@@ -6,6 +6,7 @@ import { Testimonials } from "@/components/sections/Testimonials";
 import { Gallery } from "@/components/sections/Gallery";
 import { CTA } from "@/components/sections/CTA";
 import { FAQ } from "@/components/sections/FAQ";
+import { Partners } from "@/components/sections/Partners";
 import { Contact } from "@/components/sections/Contact";
 import { Footer } from "@/components/layout/Footer";
 
@@ -22,6 +23,7 @@ export default function Home() {
         <Gallery />
         <CTA />
         <FAQ />
+        <Partners variant="dark" />
         <Contact />
       </main>
 
