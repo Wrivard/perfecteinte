@@ -13,10 +13,10 @@ const partners = [
 
 export function Partners() {
   return (
-    <section className="py-10 md:py-14 bg-[#1a1a1a]">
+    <section className="py-10 md:py-14 bg-white">
       <div className="max-w-7xl mx-auto px-6">
         <motion.p
-          className="text-center text-[11px] uppercase tracking-[0.25em] font-semibold text-gray-500 mb-8 md:mb-10"
+          className="text-center text-[11px] uppercase tracking-[0.25em] font-semibold text-gray-400 mb-8 md:mb-10"
           initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
@@ -44,7 +44,7 @@ export function Partners() {
               <img
                 src={partner.logo}
                 alt={partner.name}
-                className="h-8 sm:h-10 md:h-12 w-auto object-contain brightness-0 invert opacity-70 hover:opacity-100 transition-opacity duration-300"
+                className="h-8 sm:h-10 md:h-12 w-auto object-contain brightness-0 opacity-40 hover:opacity-70 transition-opacity duration-300"
               />
             </motion.div>
           ))}
