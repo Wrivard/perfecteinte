@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
-import labocosmetica from "@assets/labocosmetica-logo-nobg.png";
-import legend from "@assets/legend-ppf-nobg.png";
-import carpro from "@assets/carpro-nobg.png";
-import maxshine from "@assets/maxshine-nobg.png";
+import labocosmetica from "@assets/nobg_labo_1774964289735.png";
+import legend from "@assets/Legend-car-protection-film-scaled_1774963789970.png";
+import carpro from "@assets/logo-carpro_1774963789970.png";
+import maxshine from "@assets/maxshine_1774963789970.png";
 
 const partners = [
   { name: "Labocosmetica", logo: labocosmetica },
@@ -11,30 +11,22 @@ const partners = [
   { name: "MaxShine", logo: maxshine },
 ];
 
-interface PartnersProps {
-  variant?: "light" | "dark";
-}
-
-export function Partners({ variant = "light" }: PartnersProps) {
-  const isDark = variant === "dark";
-
+export function Partners() {
   return (
-    <section className={isDark ? "py-12 md:py-16 bg-[#1a1a1a]" : "py-12 md:py-16 bg-[#f9fafb]"}>
+    <section className="py-10 md:py-14 bg-[#111111]">
       <div className="max-w-7xl mx-auto px-6">
-        <motion.div
-          className="text-center mb-8 md:mb-10"
-          initial={{ opacity: 0, y: 20 }}
+        <motion.p
+          className="text-center text-[11px] uppercase tracking-[0.25em] font-semibold text-gray-500 mb-8 md:mb-10"
+          initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.5 }}
         >
-          <p className={`text-xs uppercase tracking-[0.2em] font-semibold ${isDark ? "text-gray-400" : "text-gray-500"}`}>
-            Nos partenaires de confiance
-          </p>
-        </motion.div>
+          Nos partenaires de confiance
+        </motion.p>
 
         <motion.div
-          className="flex flex-wrap items-center justify-center gap-8 md:gap-12 lg:gap-16"
+          className="flex flex-wrap items-center justify-center gap-10 md:gap-14 lg:gap-20"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true, amount: 0.3 }}
@@ -52,7 +44,7 @@ export function Partners({ variant = "light" }: PartnersProps) {
               <img
                 src={partner.logo}
                 alt={partner.name}
-                className={`h-10 sm:h-12 md:h-14 w-auto object-contain transition-opacity duration-300 ${isDark ? "brightness-0 invert opacity-60 hover:opacity-100" : "opacity-50 hover:opacity-100 grayscale hover:grayscale-0"}`}
+                className="h-8 sm:h-10 md:h-12 w-auto object-contain brightness-0 invert opacity-70 hover:opacity-100 transition-opacity duration-300"
               />
             </motion.div>
           ))}

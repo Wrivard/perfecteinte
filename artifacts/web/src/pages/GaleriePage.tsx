@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "wouter";
 import { X } from "lucide-react";
 import { PageLayout } from "@/components/layout/PageLayout";
+import { Partners } from "@/components/sections/Partners";
 import heroImg from "@assets/532949601_746227078016527_8012720562132951420_n_1774531645511.jpg";
 
 import img1 from "@assets/481210775_625629666742936_5403171954558065410_n_1774531645509.jpg";
@@ -55,19 +56,21 @@ export default function GaleriePage() {
         </div>
       </section>
 
-      <section className="py-16 md:py-20 lg:py-24 bg-[#1a1a1a]">
+      <Partners />
+
+      <section className="py-16 md:py-20 lg:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-12 md:mb-16">
             <motion.h2
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white mb-4 md:mb-6 leading-tight"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-bold text-gray-900 mb-4 md:mb-6 leading-tight"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
-              <span className="text-blue-400">TRANSFORMATION</span> VISUELLE
+              <span className="text-accent">TRANSFORMATION</span> VISUELLE
             </motion.h2>
             <motion.p
-              className="text-lg md:text-xl lg:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed"
+              className="text-lg md:text-xl lg:text-2xl text-gray-700 max-w-3xl mx-auto leading-relaxed"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}

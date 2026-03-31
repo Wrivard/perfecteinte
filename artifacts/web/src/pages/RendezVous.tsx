@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { PageLayout } from "@/components/layout/PageLayout";
+import { Partners } from "@/components/sections/Partners";
 import { Calendar, Phone, Mail, MapPin, Clock } from "lucide-react";
 import heroImg from "@assets/535472325_752143490758219_186388118827140535_n_1774531645511.jpg";
 
@@ -26,6 +27,8 @@ export default function RendezVous() {
           </motion.div>
         </div>
       </section>
+
+      <Partners />
 
       <section className="py-16 md:py-20 lg:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6">

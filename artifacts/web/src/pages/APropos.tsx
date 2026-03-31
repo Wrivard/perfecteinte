@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Link } from "wouter";
 import { PageLayout } from "@/components/layout/PageLayout";
+import { Partners } from "@/components/sections/Partners";
 import { Shield, Award, Heart, Wrench } from "lucide-react";
 import heroImg from "@assets/518400891_721263007179601_8348639493355995469_n_1774531645510.jpg";
 import img1 from "@assets/560145854_793100139995887_2888064327822015612_n_1774531645512.jpg";
@@ -108,6 +109,8 @@ export default function APropos() {
           </div>
         </div>
       </section>
+
+      <Partners />
 
       <section className="py-16 md:py-20 lg:py-24 bg-[#f9fafb]">
         <div className="max-w-7xl mx-auto px-6">

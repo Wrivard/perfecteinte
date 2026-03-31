@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Link } from "wouter";
 import { PageLayout } from "@/components/layout/PageLayout";
+import { Partners } from "@/components/sections/Partners";
 import { User, Check, Star } from "lucide-react";
 import { useState } from "react";
 import { AccordionItem } from "@/components/ui/accordion-custom";
@@ -69,6 +70,8 @@ export default function ServiceParPierre() {
           </motion.div>
         </div>
       </section>
+
+      <Partners />
 
       <section className="py-16 md:py-20 lg:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6">
