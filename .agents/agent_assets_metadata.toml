@@ -1,0 +1,8 @@
+uploads = []
+generated = []
+
+[[outputs]]
+id = "zta1O_e0C2XDxs0wGOUP6"
+uri = "file://artifacts/web/SEO_AUDIT.md"
+type = "text"
+title = "Rapport d'audit SEO complet"
