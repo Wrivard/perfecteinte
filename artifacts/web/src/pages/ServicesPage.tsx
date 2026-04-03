@@ -82,7 +82,7 @@ export default function ServicesPage() {
     <PageLayout>
       <section className="relative h-[40vh] sm:h-[45vh] md:h-[50vh] min-h-[280px] sm:min-h-[350px] flex items-center overflow-hidden -mt-[120px] pt-[120px]">
         <div className="absolute inset-0">
-          <img src={heroImg} alt="" className="w-full h-full object-cover" />
+          <img src={heroImg} alt="Services d'esthétique automobile professionnels à La Malbaie" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/30" />
         </div>
         <div className="max-w-7xl mx-auto px-6 relative z-10 w-full">

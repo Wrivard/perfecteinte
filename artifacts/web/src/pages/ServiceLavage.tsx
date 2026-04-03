@@ -4,6 +4,7 @@ import { usePageMeta } from "@/hooks/usePageMeta";
 import { PageLayout } from "@/components/layout/PageLayout";
 import { Partners } from "@/components/sections/Partners";
 import { SectionTagline } from "@/components/ui/SectionTagline";
+import { FAQSchema } from "@/components/seo/FAQSchema";
 import { Droplets, Check } from "lucide-react";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { useState } from "react";
@@ -55,6 +56,7 @@ export default function ServiceLavage() {
 
   return (
     <PageLayout>
+      <FAQSchema faqs={faqs} />
       <section className="relative h-[40vh] sm:h-[45vh] md:h-[50vh] min-h-[280px] sm:min-h-[350px] flex items-center overflow-hidden -mt-[120px] pt-[120px]">
         <div className="absolute inset-0">
           <img src={heroImg} alt="Lavage automobile" className="w-full h-full object-cover" />

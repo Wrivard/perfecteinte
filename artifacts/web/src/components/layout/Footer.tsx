@@ -37,9 +37,10 @@ export function Footer() {
           <div>
             <h3 className="text-sm font-semibold text-gray-900 mb-4 uppercase">Services</h3>
             <ul className="space-y-3">
-              <li><Link href="/services" className="text-sm text-gray-700 hover:text-accent transition-colors">Lavage & Entretien esthétique</Link></li>
-              <li><Link href="/services" className="text-sm text-gray-700 hover:text-accent transition-colors">Protection de peinture (PPF)</Link></li>
-              <li><Link href="/services" className="text-sm text-gray-700 hover:text-accent transition-colors">Polissage & Nano-céramique</Link></li>
+              <li><Link href="/services/lavage" className="text-sm text-gray-700 hover:text-accent transition-colors">Lavage & Entretien de Luxe</Link></li>
+              <li><Link href="/services/ppf" className="text-sm text-gray-700 hover:text-accent transition-colors">Protection de peinture (PPF)</Link></li>
+              <li><Link href="/services/par-pierre" className="text-sm text-gray-700 hover:text-accent transition-colors">Par Pierre</Link></li>
+              <li><Link href="/services/polissage" className="text-sm text-gray-700 hover:text-accent transition-colors">Polissage & Nano-céramique</Link></li>
             </ul>
           </div>
 

@@ -32,7 +32,7 @@ const allImages = [
 ];
 
 export default function GaleriePage() {
-  usePageMeta("Galerie", "Découvrez nos réalisations en esthétique automobile. Photos avant/après de nos services de lavage, PPF, polissage et nano-céramique.");
+  usePageMeta("Galerie photos — Détailing automobile", "Découvrez nos réalisations en esthétique automobile. Photos avant/après de nos services de lavage, PPF, polissage et nano-céramique à La Malbaie.");
   const [lightboxImage, setLightboxImage] = useState<string | null>(null);
   const closeLightbox = useCallback(() => setLightboxImage(null), []);
 
@@ -40,7 +40,7 @@ export default function GaleriePage() {
     <PageLayout>
       <section className="relative h-[40vh] sm:h-[45vh] md:h-[50vh] min-h-[280px] sm:min-h-[350px] flex items-center overflow-hidden -mt-[120px] pt-[120px]">
         <div className="absolute inset-0">
-          <img src={heroImg} alt="" className="w-full h-full object-cover" />
+          <img src={heroImg} alt="Galerie de réalisations en esthétique automobile" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30" />
         </div>
         <div className="max-w-7xl mx-auto px-6 relative z-10 w-full">

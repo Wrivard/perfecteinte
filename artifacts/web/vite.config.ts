@@ -3,6 +3,7 @@ import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
 import path from "path";
 import runtimeErrorOverlay from "@replit/vite-plugin-runtime-error-modal";
+import { seoPrerender } from "./vite-plugin-seo-prerender";
 
 const rawPort = process.env.PORT;
 
@@ -45,6 +46,7 @@ export default defineConfig({
           ),
         ]
       : []),
+    seoPrerender(),
   ],
   resolve: {
     alias: {

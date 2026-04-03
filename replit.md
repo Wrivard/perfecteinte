@@ -116,7 +116,7 @@ Frontend-only React + Vite website for **Esthétique Auto Pascal Pilote Inc.**, 
 - **Social**: Facebook, Instagram (only — X, LinkedIn, YouTube removed)
 - **Design rules**: border-radius 6px, no gradients on backgrounds (only on image overlays), max-width 1280px container, consistent visual hierarchy (H2: 60px, taglines: 24px, mb-16 section headers)
 - **Images**: All imported from `attached_assets/` via `@assets/` alias
-- **SEO**: Per-page `<title>` and meta description via `usePageMeta` hook, Open Graph + Twitter Card tags, JSON-LD structured data (AutoRepair schema), `robots.txt`, `sitemap.xml`, `llms.txt` in `public/`
+- **SEO**: Per-page `<title>`, meta description, canonical URL, OG tags, Twitter Cards — all dynamically updated via `usePageMeta` hook. JSON-LD structured data: `WebSite` + `Organization` graph, `AutoRepair` local business schema, `FAQPage` schema on all 4 service pages (injected via `FAQSchema` component). Static assets: `robots.txt`, `sitemap.xml` (with `<lastmod>`), `llms.txt`, `opengraph.jpg` (1200x630). Google Fonts loaded asynchronously (non-render-blocking). Build-time SEO prerendering via custom `vite-plugin-seo-prerender` generates per-route HTML files with unique meta tags for crawler visibility. `<meta name="theme-color">` set.
 - **Legal**: Politique de confidentialité page at `/politique-de-confidentialite` — Loi 25 compliant, includes cookie policy (13 sections)
 - **No backend**: All content is static/hardcoded
 

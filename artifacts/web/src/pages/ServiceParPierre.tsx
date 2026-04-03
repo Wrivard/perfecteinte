@@ -4,6 +4,7 @@ import { usePageMeta } from "@/hooks/usePageMeta";
 import { PageLayout } from "@/components/layout/PageLayout";
 import { Partners } from "@/components/sections/Partners";
 import { SectionTagline } from "@/components/ui/SectionTagline";
+import { FAQSchema } from "@/components/seo/FAQSchema";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { User, Check } from "lucide-react";
 import { useState } from "react";
@@ -43,9 +44,10 @@ export default function ServiceParPierre() {
 
   return (
     <PageLayout>
+      <FAQSchema faqs={faqs} />
       <section className="relative h-[40vh] sm:h-[45vh] md:h-[50vh] min-h-[280px] sm:min-h-[350px] flex items-center overflow-hidden -mt-[120px] pt-[120px]">
         <div className="absolute inset-0">
-          <img src={heroImg} alt="Service par pierre" className="w-full h-full object-cover" />
+          <img src={heroImg} alt="Service personnalisé de détailing automobile par Pierre" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/30" />
         </div>
         <div className="max-w-7xl mx-auto px-6 relative z-10 w-full">
@@ -92,7 +94,7 @@ export default function ServiceParPierre() {
               </Link>
             </motion.div>
             <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="relative h-[300px] sm:h-[400px] md:h-[500px] rounded-md overflow-hidden">
-              <img src={img1} alt="Service par pierre" className="w-full h-full object-cover" />
+              <img src={img1} alt="Détailing automobile personnalisé par notre expert" className="w-full h-full object-cover" />
             </motion.div>
           </div>
         </div>
@@ -119,7 +121,7 @@ export default function ServiceParPierre() {
 
       <section className="relative h-[300px] sm:h-[350px] md:h-[400px] flex items-center overflow-hidden">
         <div className="absolute inset-0">
-          <img src={img2} alt="Service par pierre" className="w-full h-full object-cover" />
+          <img src={img2} alt="Finition haut de gamme sur véhicule de luxe" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/55 to-black/30" />
         </div>
         <div className="max-w-7xl mx-auto px-6 relative z-10 w-full">
