@@ -1,6 +1,8 @@
 import { Navbar } from "./Navbar";
 import { Footer } from "./Footer";
 import { Contact } from "../sections/Contact";
+import { MessengerButton } from "../ui/MessengerButton";
+import { BackToTop } from "../ui/BackToTop";
 
 interface PageLayoutProps {
   children: React.ReactNode;
@@ -16,6 +18,8 @@ export function PageLayout({ children, showContact = true }: PageLayoutProps) {
         {showContact && <Contact />}
       </main>
       <Footer />
+      <MessengerButton />
+      <BackToTop />
     </div>
   );
 }
