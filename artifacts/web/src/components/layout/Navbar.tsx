@@ -83,7 +83,7 @@ export function Navbar() {
       >
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex items-center justify-between">
-            <Link href="/" className="flex items-center gap-2 z-50">
+            <Link href="/" className="flex items-center gap-2">
               <img
                 src={logo}
                 alt="Esthétique Auto Pascal Pilote"
