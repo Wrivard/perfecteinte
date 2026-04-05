@@ -1,28 +1,42 @@
 import { Link } from "wouter";
 import { usePageMeta } from "@/hooks/usePageMeta";
-import { ArrowLeft } from "lucide-react";
+import { PageLayout } from "@/components/layout/PageLayout";
+import { ArrowLeft, Home } from "lucide-react";
 
 export default function NotFound() {
   usePageMeta("Page introuvable", "La page que vous cherchez n'existe pas ou a été déplacée.");
 
   return (
-    <div className="min-h-screen w-full flex items-center justify-center bg-[#f9fafb] px-6">
-      <div className="text-center max-w-md">
-        <span className="text-8xl font-display font-extrabold text-accent/20">404</span>
-        <h1 className="text-2xl sm:text-3xl font-display font-bold text-gray-900 mt-4">
-          Page introuvable
-        </h1>
-        <p className="text-gray-600 mt-3">
-          La page que vous cherchez n'existe pas ou a été déplacée.
-        </p>
-        <Link
-          href="/"
-          className="inline-flex items-center gap-2 mt-8 bg-accent text-white px-6 py-3 rounded-md font-semibold hover:bg-accent-hover transition-colors"
-        >
-          <ArrowLeft className="w-4 h-4" />
-          Retour à l'accueil
-        </Link>
-      </div>
-    </div>
+    <PageLayout showContact={false}>
+      <section className="py-20 md:py-32 bg-[#f9fafb]">
+        <div className="max-w-2xl mx-auto px-6 text-center">
+          <span className="text-[120px] sm:text-[160px] font-display font-extrabold text-accent/15 leading-none select-none">
+            404
+          </span>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-gray-900 mt-2">
+            Page <span className="text-accent">introuvable</span>
+          </h1>
+          <p className="text-gray-600 text-lg mt-4 max-w-md mx-auto">
+            La page que vous cherchez n'existe pas ou a été déplacée.
+          </p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-10">
+            <Link
+              href="/"
+              className="inline-flex items-center gap-2 bg-accent text-white px-8 py-3.5 rounded-md font-semibold hover:bg-accent-hover transition-colors"
+            >
+              <Home className="w-4 h-4" />
+              Retour à l'accueil
+            </Link>
+            <Link
+              href="/services"
+              className="inline-flex items-center gap-2 border-2 border-gray-300 text-gray-700 px-8 py-3.5 rounded-md font-semibold hover:border-accent hover:text-accent transition-colors"
+            >
+              <ArrowLeft className="w-4 h-4" />
+              Voir nos services
+            </Link>
+          </div>
+        </div>
+      </section>
+    </PageLayout>
   );
 }
