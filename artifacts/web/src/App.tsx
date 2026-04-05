@@ -2,6 +2,8 @@ import { Switch, Route, Router as WouterRouter } from "wouter";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
+import { MessengerButton } from "@/components/ui/MessengerButton";
+import { BackToTop } from "@/components/ui/BackToTop";
 import Home from "./pages/Home";
 import APropos from "./pages/APropos";
 import ServicesPage from "./pages/ServicesPage";
@@ -43,6 +45,8 @@ function App() {
         </WouterRouter>
         <Toaster />
       </TooltipProvider>
+      <MessengerButton />
+      <BackToTop />
     </QueryClientProvider>
   );
 }
