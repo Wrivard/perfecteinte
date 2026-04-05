@@ -5,6 +5,7 @@ import { X } from "lucide-react";
 import { usePageMeta } from "@/hooks/usePageMeta";
 import { PageLayout } from "@/components/layout/PageLayout";
 import { Partners } from "@/components/sections/Partners";
+import { Testimonials } from "@/components/sections/Testimonials";
 import { SectionTagline } from "@/components/ui/SectionTagline";
 import heroImg from "@assets/532949601_746227078016527_8012720562132951420_n_1774531645511.jpg";
 
@@ -122,6 +123,7 @@ export default function GaleriePage() {
       </section>
 
       <Partners />
+      <Testimonials />
 
       <AnimatePresence>
         {lightboxImage && (

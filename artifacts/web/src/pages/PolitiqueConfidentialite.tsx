@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { usePageMeta } from "@/hooks/usePageMeta";
 import { PageLayout } from "@/components/layout/PageLayout";
+import { Testimonials } from "@/components/sections/Testimonials";
 
 export default function PolitiqueConfidentialite() {
   usePageMeta("Politique de confidentialité", "Politique de confidentialité et de témoins (cookies) d'Esthétique Auto Pascal Pilote, conforme à la Loi 25 du Québec.");
@@ -177,6 +178,7 @@ export default function PolitiqueConfidentialite() {
           </motion.div>
         </div>
       </section>
+      <Testimonials />
     </PageLayout>
   );
 }

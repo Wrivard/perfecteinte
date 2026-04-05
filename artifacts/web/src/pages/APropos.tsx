@@ -3,6 +3,7 @@ import { Link } from "wouter";
 import { usePageMeta } from "@/hooks/usePageMeta";
 import { PageLayout } from "@/components/layout/PageLayout";
 import { Partners } from "@/components/sections/Partners";
+import { Testimonials } from "@/components/sections/Testimonials";
 import { SectionTagline } from "@/components/ui/SectionTagline";
 import { Shield, Award, Heart, Wrench } from "lucide-react";
 import heroImg from "@assets/518400891_721263007179601_8348639493355995469_n_1774531645510.jpg";
@@ -193,6 +194,7 @@ export default function APropos() {
       </section>
 
       <Partners />
+      <Testimonials />
     </PageLayout>
   );
 }
