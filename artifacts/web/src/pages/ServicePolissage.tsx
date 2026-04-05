@@ -156,7 +156,7 @@ export default function ServicePolissage() {
           </motion.div>
           <div>
             {faqs.map((faq, index) => (
-              <AccordionItem key={index} question={faq.q} answer={faq.a} isOpen={openIndex === index} onClick={() => setOpenIndex(openIndex === index ? null : index)} />
+              <AccordionItem key={index} question={faq.q} answer={faq.a} isOpen={openIndex === index} onClick={() => setOpenIndex(openIndex === index ? null : index)} isLast={index === faqs.length - 1} />
             ))}
           </div>
           <div className="border-t border-gray-200 mt-12 pt-12 text-center">

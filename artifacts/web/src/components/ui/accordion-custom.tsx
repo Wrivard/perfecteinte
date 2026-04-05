@@ -7,11 +7,12 @@ interface AccordionItemProps {
   answer: string;
   isOpen: boolean;
   onClick: () => void;
+  isLast?: boolean;
 }
 
-export function AccordionItem({ question, answer, isOpen, onClick }: AccordionItemProps) {
+export function AccordionItem({ question, answer, isOpen, onClick, isLast }: AccordionItemProps) {
   return (
-    <div className="border-b border-gray-200">
+    <div className={cn("border-b border-gray-200", isLast && "border-b-0")}>
       <button
         className="w-full text-left py-5 flex items-center justify-between focus:outline-none group"
         onClick={onClick}

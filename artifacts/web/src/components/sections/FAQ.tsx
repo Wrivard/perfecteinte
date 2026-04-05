@@ -58,6 +58,7 @@ export function FAQ() {
               answer={faq.a}
               isOpen={openIndex === index}
               onClick={() => setOpenIndex(openIndex === index ? null : index)}
+              isLast={index === faqs.length - 1}
             />
           ))}
         </div>
