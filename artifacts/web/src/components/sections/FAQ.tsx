@@ -63,7 +63,7 @@ export function FAQ() {
           ))}
         </div>
 
-        <div className="border-t border-gray-200 mt-12 md:mt-16 pt-12 md:pt-16 text-center">
+        <div className="mt-12 md:mt-16 pt-12 md:pt-16 text-center">
           <h3 className="text-xl sm:text-2xl md:text-[28px] font-display font-bold text-gray-900">
             VOUS AVEZ D'AUTRES QUESTIONS ?
           </h3>

@@ -145,7 +145,7 @@ export default function ServicePPF() {
               <AccordionItem key={index} question={faq.q} answer={faq.a} isOpen={openIndex === index} onClick={() => setOpenIndex(openIndex === index ? null : index)} isLast={index === faqs.length - 1} />
             ))}
           </div>
-          <div className="border-t border-gray-200 mt-12 pt-12 text-center">
+          <div className="mt-12 pt-12 text-center">
             <h3 className="text-xl sm:text-2xl font-display font-bold text-gray-900">PRÊT À PROTÉGER VOTRE VÉHICULE ?</h3>
             <p className="text-gray-700 mt-3">Contactez-nous pour une soumission personnalisée.</p>
             <Link href="/rendez-vous" className="inline-block mt-6 bg-accent text-white px-8 py-3 rounded-md font-semibold hover:bg-accent-hover transition-colors">
