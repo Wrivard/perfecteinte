@@ -32,14 +32,14 @@ const values = [
 ];
 
 const faqs = [
-  { q: "En quoi consiste le service par pierre ?", a: "Le service par pierre est un traitement personnalisé haut de gamme réalisé par notre expert dédié au détailing. Chaque véhicule bénéficie d'une attention méticuleuse et d'un savoir-faire unique." },
+  { q: "En quoi consiste le service pare-pierre ?", a: "Le service pare-pierre est un traitement de protection haut de gamme qui protège votre carrosserie contre les éclats de pierre, les débris de route et les rayures. Chaque véhicule bénéficie d'une attention méticuleuse et d'un savoir-faire unique." },
   { q: "Quels services sont inclus ?", a: "Ce service couvre l'ensemble de nos prestations de détailing : lavage de luxe, polissage, nano-céramique et installation de PPF. La spécialité est la correction de peinture et les finitions haut de gamme." },
-  { q: "Comment réserver ce service ?", a: "Vous pouvez demander le service par pierre lors de la prise de rendez-vous. Selon la disponibilité, nous ferons notre possible pour répondre à votre demande." },
+  { q: "Comment réserver ce service ?", a: "Vous pouvez demander le service pare-pierre lors de la prise de rendez-vous. Selon la disponibilité, nous ferons notre possible pour répondre à votre demande." },
   { q: "Quelle est l'expérience derrière ce service ?", a: "Notre équipe cumule plus de 10 ans d'expérience dans le milieu automobile. Nous sommes formés aux techniques les plus avancées et utilisons les produits les plus performants du marché." },
 ];
 
 export default function ServiceParPierre() {
-  usePageMeta("Service Par Pierre", "Service personnalisé de détailing par notre expert Pierre. Spécialiste en correction de peinture et finitions haut de gamme à La Malbaie.");
+  usePageMeta("Service Pare-Pierre", "Service personnalisé de pare-pierre pour protéger votre véhicule contre les éclats et les débris. Spécialiste en protection haut de gamme à La Malbaie.");
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
@@ -58,7 +58,7 @@ export default function ServiceParPierre() {
               </div>
             </div>
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-extrabold text-white uppercase leading-tight">
-              PAR <span className="text-blue-400">PIERRE</span>
+              PARE-<span className="text-blue-400">PIERRE</span>
             </h1>
             <p className="text-base sm:text-lg md:text-xl text-gray-100 mt-4 max-w-xl">
               Un service personnalisé par notre expert passionné du détailing automobile.
@@ -76,7 +76,7 @@ export default function ServiceParPierre() {
                 L'EXPERTISE <span className="text-accent">PERSONNALISÉE</span>
               </h2>
               <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-6">
-                Le service par pierre incarne la passion et le perfectionnisme qui définissent Esthétique Auto Pascal Pilote. Avec une expertise pointue et une attention méticuleuse aux détails, notre équipe offre un service sur mesure qui transforme chaque véhicule.
+                Le service pare-pierre incarne la passion et le perfectionnisme qui définissent Esthétique Auto Pascal Pilote. Avec une expertise pointue et une attention méticuleuse aux détails, notre équipe offre un service sur mesure qui protège chaque véhicule.
               </p>
               <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-8">
                 Que ce soit pour un lavage de luxe, une correction de peinture ou une protection céramique, ce service apporte un savoir-faire unique et une touche personnelle à chaque projet.

@@ -42,7 +42,7 @@ const services = [
   {
     icon: User,
     image: img3,
-    title: "Par Pierre",
+    title: "Pare-Pierre",
     description: "Un service personnalisé par notre expert passionné du détailing automobile. Un savoir-faire unique et une attention méticuleuse aux détails pour chaque véhicule.",
     href: "/services/par-pierre",
     features: [

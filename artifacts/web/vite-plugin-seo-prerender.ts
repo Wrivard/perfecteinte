@@ -45,7 +45,7 @@ const pages: PageMeta[] = [
   },
   {
     path: "/services/par-pierre",
-    title: `Service Par Pierre | ${BASE_TITLE}`,
+    title: `Service Pare-Pierre | ${BASE_TITLE}`,
     description: "Service personnalisé de détailing par notre expert Pierre. Spécialiste en correction de peinture et finitions haut de gamme à La Malbaie.",
     canonical: `${BASE_URL}/services/par-pierre`,
   },

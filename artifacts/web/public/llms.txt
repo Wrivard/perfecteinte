@@ -10,7 +10,7 @@ Esthétique Auto Pascal Pilote est une entreprise spécialisée en détailing au
 
 - **Lavage Auto & Entretien Esthétique de Luxe** : Nettoyage complet intérieur et extérieur avec produits professionnels haut de gamme. Trois forfaits disponibles : Essentiel, Premium et Luxe.
 - **Protection de Peinture PPF** : Installation de pellicule de protection de peinture (Paint Protection Film) transparente, auto-cicatrisante, avec garantie jusqu'à 10 ans.
-- **Par Pierre** : Service personnalisé de détailing par notre expert dédié, spécialisé en correction de peinture et finitions haut de gamme.
+- **Pare-Pierre** : Service de protection pare-pierre haut de gamme pour protéger votre véhicule contre les éclats de pierre, les débris de route et les rayures.
 - **Polissage & Nano-Céramique** : Correction des imperfections de peinture et application de revêtement nano-céramique pour une protection durable jusqu'à 5 ans.
 
 ## Coordonnées
@@ -31,7 +31,7 @@ Labocosmetica, Legend PPF, CarPro, MaxShine
 - /services — Tous les services
 - /services/lavage — Lavage Auto & Entretien de Luxe
 - /services/ppf — Protection de Peinture PPF
-- /services/par-pierre — Service Par Pierre
+- /services/par-pierre — Service Pare-Pierre
 - /services/polissage — Polissage & Nano-Céramique
 - /galerie — Galerie photo
 - /rendez-vous — Prendre un rendez-vous

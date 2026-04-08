@@ -15,7 +15,7 @@ const navLinks = [
 const serviceLinks = [
   { name: "Lavage Auto & Entretien de Luxe", href: "/services/lavage" },
   { name: "Protection de Peinture PPF", href: "/services/ppf" },
-  { name: "Par Pierre", href: "/services/par-pierre" },
+  { name: "Pare-Pierre", href: "/services/par-pierre" },
   { name: "Polissage & Nano-Céramique", href: "/services/polissage" },
 ];
 
