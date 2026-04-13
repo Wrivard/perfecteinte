@@ -2,9 +2,9 @@ import { motion } from "framer-motion";
 import { Link } from "wouter";
 import { SectionTagline } from "@/components/ui/SectionTagline";
 import img1 from "@/assets/optimized-photos/IMG_9370.webp";
-import img2 from "@/assets/optimized-photos/IMG_9584.webp";
+import img2 from "@/assets/optimized-photos/IMG_4953.webp";
 import img3 from "@/assets/optimized-photos/IMG_6900.webp";
-import img4 from "@/assets/optimized-photos/IMG_8382.webp";
+import img4 from "@/assets/optimized-photos/IMG_7930.webp";
 
 const services = [
   {
