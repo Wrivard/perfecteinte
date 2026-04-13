@@ -7,25 +7,25 @@ import { PageLayout } from "@/components/layout/PageLayout";
 import { Partners } from "@/components/sections/Partners";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { SectionTagline } from "@/components/ui/SectionTagline";
-import heroImg from "@assets/532949601_746227078016527_8012720562132951420_n_1774531645511.jpg";
+import heroImg from "@/assets/optimized-photos/IMG_5278.webp";
 
-import img1 from "@assets/481210775_625629666742936_5403171954558065410_n_1774531645509.jpg";
-import img2 from "@assets/481287105_622811947024708_4552150963501534299_n_1774531645509.jpg";
-import img3 from "@assets/481287887_624839100155326_2322975325486587163_n_1774531645509.jpg";
-import img4 from "@assets/485048289_636737895632113_6749648947738676055_n_1774531645510.jpg";
-import img5 from "@assets/496493881_674438051862097_5255794160296938583_n_1774531645510.jpg";
-import img6 from "@assets/515464037_717072027598699_7656154476338834597_n_1774531645510.jpg";
-import img7 from "@assets/518400891_721263007179601_8348639493355995469_n_1774531645510.jpg";
-import img8 from "@assets/526235082_739427715363130_6055039976108673408_n_1774531645511.jpg";
-import img9 from "@assets/526917186_739427728696462_1785754575991955122_n_1774531645511.jpg";
-import img10 from "@assets/532291985_746493491323219_5990593213632343471_n_1774531645511.jpg";
-import img11 from "@assets/532949601_746227078016527_8012720562132951420_n_1774531645511.jpg";
-import img12 from "@assets/535472325_752143490758219_186388118827140535_n_1774531645511.jpg";
-import img13 from "@assets/552939218_780287794610455_6908565764177471907_n_1774531645511.jpg";
-import img14 from "@assets/559679573_796705672968667_6667683747001719488_n_1774531645511.jpg";
-import img15 from "@assets/560145854_793100139995887_2888064327822015612_n_1774531645512.jpg";
-import img16 from "@assets/566216853_802767049029196_5018593656071286537_n_1774531645512.jpg";
-import img17 from "@assets/570606844_804977075474860_4894531562783451229_n_1774531645512.jpg";
+import img1 from "@/assets/optimized-photos/IMG_2992.webp";
+import img2 from "@/assets/optimized-photos/IMG_8023.webp";
+import img3 from "@/assets/optimized-photos/IMG_8781.webp";
+import img4 from "@/assets/optimized-photos/IMG_7854.webp";
+import img5 from "@/assets/optimized-photos/IMG_5134.webp";
+import img6 from "@/assets/optimized-photos/IMG_1647.webp";
+import img7 from "@/assets/optimized-photos/IMG_9142.webp";
+import img8 from "@/assets/optimized-photos/IMG_3898.webp";
+import img9 from "@/assets/optimized-photos/IMG_9304.webp";
+import img10 from "@/assets/optimized-photos/IMG_4627.webp";
+import img11 from "@/assets/optimized-photos/IMG_7529.webp";
+import img12 from "@/assets/optimized-photos/IMG_8051.webp";
+import img13 from "@/assets/optimized-photos/IMG_9370.webp";
+import img14 from "@/assets/optimized-photos/IMG_8779.webp";
+import img15 from "@/assets/optimized-photos/IMG_7859.webp";
+import img16 from "@/assets/optimized-photos/IMG_5138.webp";
+import img17 from "@/assets/optimized-photos/IMG_9584.webp";
 
 const allImages = [
   img1, img2, img3, img4, img5, img6, img7, img8, img9,

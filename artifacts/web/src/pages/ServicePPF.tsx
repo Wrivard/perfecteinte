@@ -9,9 +9,9 @@ import { Shield, Check } from "lucide-react";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { useState } from "react";
 import { AccordionItem } from "@/components/ui/accordion-custom";
-import heroImg from "@assets/570606844_804977075474860_4894531562783451229_n_1774531645512.jpg";
-import img1 from "@assets/559679573_796705672968667_6667683747001719488_n_1774531645511.jpg";
-import img3 from "@assets/558612629_793100233329211_2137356822840990595_n_1774533881229.jpg";
+import heroImg from "@/assets/optimized-photos/IMG_9584.webp";
+import img1 from "@/assets/optimized-photos/IMG_4953.webp";
+import img3 from "@/assets/optimized-photos/IMG_3308.webp";
 
 const benefits = [
   { title: "Protection invisible", description: "Film transparent qui préserve l'apparence d'origine de votre peinture." },

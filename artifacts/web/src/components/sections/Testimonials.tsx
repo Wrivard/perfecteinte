@@ -2,12 +2,12 @@ import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Star, ChevronLeft, ChevronRight } from "lucide-react";
 import { SectionTagline } from "@/components/ui/SectionTagline";
-import img1 from "@assets/515464037_717072027598699_7656154476338834597_n_1774531645510.jpg";
-import img2 from "@assets/532949601_746227078016527_8012720562132951420_n_1774531645511.jpg";
-import img3 from "@assets/535472325_752143490758219_186388118827140535_n_1774531645511.jpg";
-import img4 from "@assets/481287887_624839100155326_2322975325486587163_n_1774531645509.jpg";
-import img5 from "@assets/552939218_780287794610455_6908565764177471907_n_1774531645511.jpg";
-import img6 from "@assets/566216853_802767049029196_5018593656071286537_n_1774531645512.jpg";
+import img1 from "@/assets/optimized-photos/IMG_7529.webp";
+import img2 from "@/assets/optimized-photos/IMG_8048.webp";
+import img3 from "@/assets/optimized-photos/IMG_4627.webp";
+import img4 from "@/assets/optimized-photos/IMG_8779.webp";
+import img5 from "@/assets/optimized-photos/IMG_7859.webp";
+import img6 from "@/assets/optimized-photos/IMG_5258.webp";
 
 const allTestimonials = [
   { quote: "Chaque détail compte, et l'équipe le comprend parfaitement.", author: "Éric Laforce", image: img1 },

@@ -9,9 +9,9 @@ import { Sparkles, Check } from "lucide-react";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { useState } from "react";
 import { AccordionItem } from "@/components/ui/accordion-custom";
-import heroImg from "@assets/526235082_739427715363130_6055039976108673408_n_1774531645511.jpg";
-import img1 from "@assets/532291985_746493491323219_5990593213632343471_n_1774531645511.jpg";
-import img2 from "@assets/518400891_721263007179601_8348639493355995469_n_1774531645510.jpg";
+import heroImg from "@/assets/optimized-photos/IMG_7930.webp";
+import img1 from "@/assets/optimized-photos/IMG_4360.webp";
+import img2 from "@/assets/optimized-photos/IMG_8382.webp";
 
 const steps = [
   { step: "01", title: "Inspection", description: "Analyse complète de l'état de la peinture avec un éclairage spécialisé pour identifier chaque imperfection." },

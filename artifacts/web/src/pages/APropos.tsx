@@ -6,9 +6,9 @@ import { Partners } from "@/components/sections/Partners";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { SectionTagline } from "@/components/ui/SectionTagline";
 import { Shield, Award, Heart, Wrench } from "lucide-react";
-import heroImg from "@assets/518400891_721263007179601_8348639493355995469_n_1774531645510.jpg";
-import img1 from "@assets/560145854_793100139995887_2888064327822015612_n_1774531645512.jpg";
-import img2 from "@assets/559679573_796705672968667_6667683747001719488_n_1774531645511.jpg";
+import heroImg from "@/assets/optimized-photos/IMG_3898.webp";
+import img1 from "@/assets/optimized-photos/IMG_9142.webp";
+import img2 from "@/assets/optimized-photos/IMG_8023.webp";
 
 const values = [
   {

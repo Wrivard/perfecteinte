@@ -9,9 +9,9 @@ import { Droplets, Check } from "lucide-react";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { useState } from "react";
 import { AccordionItem } from "@/components/ui/accordion-custom";
-import heroImg from "@assets/526917186_739427728696462_1785754575991955122_n_1774531645511.jpg";
-import img1 from "@assets/481210775_625629666742936_5403171954558065410_n_1774531645509.jpg";
-import img2 from "@assets/481287105_622811947024708_4552150963501534299_n_1774531645509.jpg";
+import heroImg from "@/assets/optimized-photos/IMG_5191.webp";
+import img1 from "@/assets/optimized-photos/IMG_3255.webp";
+import img2 from "@/assets/optimized-photos/IMG_9345.webp";
 
 const features = [
   "Lavage extérieur à la main avec produits premium",

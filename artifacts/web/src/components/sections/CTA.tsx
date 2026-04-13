@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Link } from "wouter";
 import { SectionTagline } from "@/components/ui/SectionTagline";
-import img from "@assets/558612629_793100233329211_2137356822840990595_n_1774533881229.jpg";
+import img from "@/assets/optimized-photos/IMG_3303.webp";
 
 export function CTA() {
   return (

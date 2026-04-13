@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
 import { Link } from "wouter";
 import { SectionTagline } from "@/components/ui/SectionTagline";
-import img1 from "@assets/526917186_739427728696462_1785754575991955122_n_1774531645511.jpg";
-import img2 from "@assets/570606844_804977075474860_4894531562783451229_n_1774531645512.jpg";
-import img3 from "@assets/485048289_636737895632113_6749648947738676055_n_1774531645510.jpg";
-import img4 from "@assets/526235082_739427715363130_6055039976108673408_n_1774531645511.jpg";
+import img1 from "@/assets/optimized-photos/IMG_9370.webp";
+import img2 from "@/assets/optimized-photos/IMG_9584.webp";
+import img3 from "@/assets/optimized-photos/IMG_6900.webp";
+import img4 from "@/assets/optimized-photos/IMG_8382.webp";
 
 const services = [
   {
@@ -22,7 +22,7 @@ const services = [
   {
     image: img3,
     label: "Personnel",
-    title: "PAR\nPIERRE",
+    title: "PARE-\nPIERRE",
     href: "/services/par-pierre",
   },
   {

@@ -9,9 +9,9 @@ import { Testimonials } from "@/components/sections/Testimonials";
 import { User, Check } from "lucide-react";
 import { useState } from "react";
 import { AccordionItem } from "@/components/ui/accordion-custom";
-import heroImg from "@assets/485048289_636737895632113_6749648947738676055_n_1774531645510.jpg";
-import img1 from "@assets/552939218_780287794610455_6908565764177471907_n_1774531645511.jpg";
-import img2 from "@assets/566216853_802767049029196_5018593656071286537_n_1774531645512.jpg";
+import heroImg from "@/assets/optimized-photos/IMG_6900.webp";
+import img1 from "@/assets/optimized-photos/IMG_3303.webp";
+import img2 from "@/assets/optimized-photos/IMG_5246.webp";
 
 const services = [
   "Lavage complet intérieur et extérieur",

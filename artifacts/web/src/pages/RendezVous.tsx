@@ -6,7 +6,7 @@ import { SectionTagline } from "@/components/ui/SectionTagline";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { Contact } from "@/components/sections/Contact";
 import { Calendar, Phone, Mail, MapPin, Clock } from "lucide-react";
-import heroImg from "@assets/535472325_752143490758219_186388118827140535_n_1774531645511.jpg";
+import heroImg from "@/assets/optimized-photos/IMG_1647.webp";
 
 export default function RendezVous() {
   usePageMeta("Prendre un rendez-vous", "Réservez votre rendez-vous d'esthétique automobile chez Esthétique Auto Pascal Pilote à La Malbaie. Appelez au (418) 665-5871.");
