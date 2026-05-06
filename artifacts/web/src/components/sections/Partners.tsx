@@ -52,23 +52,26 @@ export function Partners() {
         </motion.div>
 
         <motion.div
-          className="flex items-center justify-center gap-3 pt-6 border-t border-gray-100"
+          className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6"
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.3 }}
         >
-          <div className="flex items-center gap-2 bg-accent/5 border border-accent/20 rounded-full px-4 py-2">
-            <Award className="w-4 h-4 text-accent shrink-0" />
-            <span className="text-xs sm:text-sm font-semibold text-gray-700">
-              Certifié installateur pare-pierre par{" "}
-              <img
-                src={labocosmetica}
-                alt="Labocosmetica"
-                className="inline h-4 sm:h-5 w-auto object-contain brightness-0 opacity-70 ml-1 align-middle"
-              />
-            </span>
+          <div className="flex items-center gap-3">
+            <div className="w-10 h-10 bg-accent/10 rounded-full flex items-center justify-center shrink-0">
+              <Award className="w-5 h-5 text-accent" />
+            </div>
+            <div className="text-left">
+              <p className="text-[11px] uppercase tracking-widest text-gray-500 font-semibold">Certification officielle</p>
+              <p className="text-sm font-bold text-gray-900">Certifié installateur pare-pierre par</p>
+            </div>
           </div>
+          <img
+            src={labocosmetica}
+            alt="Labocosmetica"
+            className="h-8 sm:h-10 w-auto object-contain brightness-0 opacity-70"
+          />
         </motion.div>
       </div>
     </section>
