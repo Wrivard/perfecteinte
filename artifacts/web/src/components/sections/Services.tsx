@@ -10,18 +10,21 @@ const services = [
     image: img1,
     label: "Entretien",
     title: "LAVAGE",
+    description: "Lavage intérieur et extérieur, décontamination complète et finition impeccable de votre véhicule.",
     href: "/services/lavage",
   },
   {
     image: img2,
     label: "Protection",
     title: "SCELLANT",
+    description: "Protection longue durée de la peinture grâce à un scellant qui repousse l'eau et la saleté.",
     href: "/services/scellant",
   },
   {
     image: img3,
     label: "Premium",
     title: "NANOCÉRAMIQUE",
+    description: "Revêtement céramique haut de gamme et pare-pierre PPF pour une protection maximale.",
     href: "/services/nano-ceramique",
   },
 ];
@@ -83,9 +86,12 @@ export function Services() {
                   <p className="text-sm uppercase tracking-wider text-blue-400 mb-3 font-semibold">
                     {service.label}
                   </p>
-                  <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white leading-tight">
+                  <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white leading-tight mb-3">
                     {service.title}
                   </h3>
+                  <p className="text-sm md:text-base text-gray-200 leading-relaxed">
+                    {service.description}
+                  </p>
                 </div>
               </motion.div>
             </Link>
