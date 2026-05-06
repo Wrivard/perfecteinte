@@ -52,30 +52,22 @@ const benefits = [
   {
     Icon: Shield,
     title: "Protection maximale",
-    description: "La combinaison PPF + nanocéramique offre la protection la plus complète disponible sur le marché — barrière physique contre les éclats et chimique contre les contaminants.",
-    stat: "5 ans",
-    statLabel: "de protection",
+    description: "La combinaison PPF + nanocéramique offre la protection la plus complète disponible sur le marché — une barrière physique contre les éclats et chimique contre les contaminants.",
   },
   {
     Icon: BadgeCheck,
     title: "Technicien certifié",
     description: "Notre installateur est certifié pare-pierre (PPF) par Labocosmetica, gage absolu de qualité, de précision et d'expertise reconnue à l'international.",
-    stat: "100 %",
-    statLabel: "certifié",
   },
   {
     Icon: Settings2,
     title: "Technologie avancée",
-    description: "Nous travaillons exclusivement avec des films premium et des céramiques de dernière génération sélectionnés pour leur durabilité et leur transparence.",
-    stat: "Premium",
-    statLabel: "qualité",
+    description: "Nous travaillons exclusivement avec des films premium et des céramiques de dernière génération, sélectionnés pour leur durabilité et leur transparence.",
   },
   {
     Icon: Wrench,
     title: "Sur mesure",
-    description: "Chaque installation est planifiée et adaptée à votre véhicule : zones partielles ou véhicule complet, selon votre niveau de protection souhaité.",
-    stat: "1:1",
-    statLabel: "personnalisé",
+    description: "Chaque installation est planifiée et adaptée à votre véhicule : zones partielles ou véhicule complet, selon le niveau de protection souhaité.",
   },
 ];
 
@@ -194,22 +186,19 @@ export default function ServiceNanoceramique() {
         </div>
       </section>
 
-      <section className="py-16 md:py-20 lg:py-24 bg-gray-900 relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute inset-0 bg-gradient-to-br from-accent via-transparent to-blue-500" />
-        </div>
-        <div className="max-w-7xl mx-auto px-6 relative">
+      <section className="py-16 md:py-20 lg:py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-6">
           <motion.div className="text-center mb-12 md:mb-16" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-            <SectionTagline text="Notre engagement" light />
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-white mb-4 leading-tight">
-              POURQUOI <span className="text-blue-400">NOUS CHOISIR</span>
+            <SectionTagline text="Notre engagement" />
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-gray-900 mb-4 leading-tight">
+              POURQUOI <span className="text-accent">NOUS CHOISIR</span>
             </h2>
-            <p className="text-base md:text-lg text-gray-300 max-w-2xl mx-auto">
+            <p className="text-base md:text-lg text-gray-700 max-w-2xl mx-auto">
               Quatre raisons pour lesquelles nos clients nous confient leurs véhicules les plus précieux.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
             {benefits.map((b, i) => {
               const Icon = b.Icon;
               return (
@@ -219,17 +208,13 @@ export default function ServiceNanoceramique() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.1 }}
-                  className="bg-white/[0.04] backdrop-blur-sm rounded-md p-6 md:p-8 border border-white/10 hover:border-accent/40 hover:bg-white/[0.06] transition-all duration-300 flex flex-col"
+                  className="bg-[#f9fafb] rounded-md p-6 md:p-8 border border-gray-100 hover:shadow-md hover:-translate-y-1 transition-all duration-300"
                 >
-                  <div className="w-14 h-14 bg-accent/15 rounded-md flex items-center justify-center mb-5">
-                    <Icon className="w-7 h-7 text-accent" strokeWidth={1.75} />
+                  <div className="w-12 h-12 bg-accent/10 rounded-md flex items-center justify-center mb-5">
+                    <Icon className="w-6 h-6 text-accent" strokeWidth={1.75} />
                   </div>
-                  <h4 className="text-lg md:text-xl font-display font-bold text-white mb-3">{b.title}</h4>
-                  <p className="text-gray-300 text-sm leading-relaxed mb-6 flex-1">{b.description}</p>
-                  <div className="pt-5 border-t border-white/10">
-                    <p className="text-2xl md:text-3xl font-display font-extrabold text-blue-400 leading-none">{b.stat}</p>
-                    <p className="text-xs uppercase tracking-widest text-gray-400 mt-1">{b.statLabel}</p>
-                  </div>
+                  <h4 className="text-lg md:text-xl font-display font-bold text-gray-900 mb-3">{b.title}</h4>
+                  <p className="text-gray-600 text-sm md:text-base leading-relaxed">{b.description}</p>
                 </motion.div>
               );
             })}
