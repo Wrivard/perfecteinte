@@ -20,7 +20,7 @@ export function Footer() {
               <p className="text-sm text-gray-700 break-all">info@esthetiqueautopascalpilote.ca</p>
             </div>
             <div className="flex gap-4 pt-2">
-              <a href="#" className="text-gray-600 hover:text-accent transition-colors"><Facebook className="w-5 h-5" /></a>
+              <a href="https://www.facebook.com/profile.php?id=100078877238175" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-gray-600 hover:text-accent transition-colors"><Facebook className="w-5 h-5" /></a>
               <a href="#" className="text-gray-600 hover:text-accent transition-colors"><Instagram className="w-5 h-5" /></a>
             </div>
           </div>
