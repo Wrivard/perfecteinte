@@ -98,11 +98,16 @@ function Step1({ form, setForm }: { form: FormData; setForm: (f: FormData) => vo
     return acc;
   }, {});
 
+  const EXCLUSIVE_LAVAGE = ["lavage-int", "lavage-ext", "lavage-complet"];
+
   function toggle(id: string) {
     if (form.services.includes(id)) {
       setForm({ ...form, services: form.services.filter((s) => s !== id) });
     } else {
-      setForm({ ...form, services: [...form.services, id] });
+      const next = EXCLUSIVE_LAVAGE.includes(id)
+        ? form.services.filter((s) => !EXCLUSIVE_LAVAGE.includes(s))
+        : form.services;
+      setForm({ ...form, services: [...next, id] });
     }
   }
 
