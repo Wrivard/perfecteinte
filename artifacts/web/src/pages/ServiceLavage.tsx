@@ -5,7 +5,7 @@ import { PageLayout } from "@/components/layout/PageLayout";
 import { Partners } from "@/components/sections/Partners";
 import { SectionTagline } from "@/components/ui/SectionTagline";
 import { FAQSchema } from "@/components/seo/FAQSchema";
-import { Droplets, Check } from "lucide-react";
+import { Droplets, Check, Clock } from "lucide-react";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { useState } from "react";
 import { AccordionItem } from "@/components/ui/accordion-custom";
@@ -13,45 +13,50 @@ import heroImg from "@/assets/optimized-photos/IMG_5191.webp";
 import img1 from "@/assets/optimized-photos/IMG_3255.webp";
 import img2 from "@/assets/optimized-photos/IMG_9345.webp";
 
+const subServices = [
+  {
+    title: "Lavage intérieur",
+    description: "Nettoyage complet de l'habitacle : aspiration, nettoyage des surfaces, traitement des cuirs et plastiques, vitres intérieures.",
+    icon: "🧹",
+  },
+  {
+    title: "Lavage extérieur",
+    description: "Lavage à la main avec produits professionnels, dégraissage, rinçage, séchage et traitement des jantes et pneus.",
+    icon: "💧",
+  },
+  {
+    title: "Lavage intérieur & extérieur",
+    description: "La combinaison complète : un véhicule impeccable de l'intérieur à l'extérieur pour un résultat optimal.",
+    icon: "✨",
+  },
+  {
+    title: "Décontamination",
+    description: "Élimination des contaminants ferrifères et organiques incrustés dans la peinture. Idéal en complément du lavage extérieur pour une surface parfaitement saine.",
+    icon: "🛡️",
+  },
+];
+
 const features = [
-  "Lavage extérieur à la main avec produits premium",
+  "Lavage à la main avec produits premium",
   "Nettoyage intérieur complet et minutieux",
   "Traitement des cuirs, plastiques et tissus",
   "Décontamination de la carrosserie",
-  "Protection des surfaces traitées",
   "Nettoyage des jantes et des pneus",
   "Traitement des vitres et rétroviseurs",
   "Aspiration complète et shampoing des tapis",
-];
-
-const packages = [
-  {
-    name: "Entretien Essentiel",
-    description: "Un lavage complet à la main pour redonner de l'éclat à votre véhicule.",
-    features: ["Lavage extérieur à la main", "Aspiration intérieure", "Nettoyage des vitres", "Traitement des pneus"],
-  },
-  {
-    name: "Entretien Premium",
-    description: "Un nettoyage approfondi intérieur et extérieur pour un véhicule impeccable.",
-    features: ["Tout de l'Essentiel", "Shampoing des tapis et sièges", "Traitement des cuirs et plastiques", "Décontamination carrosserie", "Cire protectrice"],
-  },
-  {
-    name: "Entretien de Luxe",
-    description: "Le traitement ultime pour les propriétaires exigeants qui veulent le meilleur.",
-    features: ["Tout du Premium", "Polissage léger", "Traitement nano-hydrophobe", "Protection longue durée", "Parfum d'ambiance premium", "Inspection complète des surfaces"],
-  },
+  "Séchage soigneux sans traces",
 ];
 
 const faqs = [
-  { q: "Combien de temps dure un lavage complet ?", a: "Un lavage complet prend entre 2 et 4 heures selon le forfait choisi et l'état du véhicule. Le forfait de luxe peut prendre jusqu'à une journée complète." },
-  { q: "Dois-je prendre rendez-vous ?", a: "Oui, nous recommandons fortement de prendre rendez-vous à l'avance pour vous garantir un créneau et un service optimal. Appelez-nous au (418) 665-5871." },
-  { q: "Quels produits utilisez-vous ?", a: "Nous utilisons exclusivement des produits professionnels haut de gamme, respectueux de l'environnement et adaptés à chaque type de surface." },
+  { q: "Quelle est la différence entre lavage intérieur et extérieur ?", a: "Le lavage intérieur comprend l'aspiration, le nettoyage des surfaces, cuirs, plastiques et vitres intérieures. Le lavage extérieur comprend le lavage à la main, les jantes, pneus et carrosserie. Vous pouvez choisir l'un ou l'autre, ou les deux ensemble." },
+  { q: "Qu'est-ce que la décontamination ?", a: "La décontamination élimine les particules ferrifères (poussières de frein, rouille) et contaminants organiques incrustés dans la peinture que le lavage normal ne peut pas enlever. C'est une étape recommandée régulièrement pour préserver la santé de votre peinture." },
+  { q: "Dois-je prendre rendez-vous ?", a: "Oui, nous recommandons fortement de prendre rendez-vous à l'avance pour vous garantir un créneau et un service optimal. Appelez-nous au (418) 665-5871 ou remplissez notre formulaire en ligne." },
+  { q: "Quels produits utilisez-vous ?", a: "Nous utilisons exclusivement des produits professionnels haut de gamme, notamment de la gamme Labocosmetica et CarPro, respectueux de l'environnement et adaptés à chaque type de surface." },
   { q: "Est-ce que vous lavez aussi les VUS et camions ?", a: "Absolument ! Nous traitons tous types de véhicules : berlines, VUS, camions, véhicules de luxe et exotiques." },
 ];
 
-
 export default function ServiceLavage() {
-  usePageMeta("Lavage Auto & Entretien de Luxe", "Service de lavage automobile complet et entretien esthétique de luxe à La Malbaie. Forfaits Essentiel, Premium et Luxe disponibles.");
+  usePageMeta("Lavage", "Service de lavage automobile intérieur, extérieur et décontamination à La Malbaie. Lavage à la main avec produits professionnels haut de gamme.");
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
@@ -70,7 +75,7 @@ export default function ServiceLavage() {
               </div>
             </div>
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-extrabold text-white uppercase leading-tight">
-              LAVAGE AUTO &<br /><span className="text-blue-400">ENTRETIEN DE LUXE</span>
+              LAVAGE<br /><span className="text-blue-400">AUTOMOBILE</span>
             </h1>
             <p className="text-base sm:text-lg md:text-xl text-gray-100 mt-4 max-w-xl">
               Un nettoyage complet qui va bien au-delà du simple lavage pour un résultat impeccable.
@@ -112,17 +117,17 @@ export default function ServiceLavage() {
       <section className="py-16 md:py-20 lg:py-24 bg-[#f9fafb]">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div className="text-center mb-12 md:mb-16" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-            <SectionTagline text="Forfaits" />
+            <SectionTagline text="Nos services" />
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-gray-900 mb-4 leading-tight">
-              NOS <span className="text-accent">FORFAITS</span>
+              CE QU'ON <span className="text-accent">OFFRE</span>
             </h2>
             <p className="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto">
-              Choisissez le forfait qui correspond le mieux à vos besoins.
+              Choisissez la formule qui correspond à vos besoins.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-            {packages.map((pkg, i) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+            {subServices.map((svc, i) => (
               <motion.div
                 key={i}
                 initial={{ opacity: 0, y: 20 }}
@@ -131,18 +136,11 @@ export default function ServiceLavage() {
                 transition={{ delay: i * 0.1 }}
                 className="bg-white rounded-md p-6 md:p-8 shadow-sm border border-gray-100 hover:shadow-md transition-shadow"
               >
-                <h3 className="text-xl md:text-2xl font-display font-bold text-gray-900 mb-2">{pkg.name}</h3>
-                <p className="text-gray-600 text-sm md:text-base mb-6">{pkg.description}</p>
-                <ul className="space-y-3 mb-8">
-                  {pkg.features.map((f, j) => (
-                    <li key={j} className="flex items-center gap-3">
-                      <Check className="w-4 h-4 text-accent shrink-0" />
-                      <span className="text-gray-700 text-sm">{f}</span>
-                    </li>
-                  ))}
-                </ul>
+                <div className="text-3xl mb-4">{svc.icon}</div>
+                <h3 className="text-xl md:text-2xl font-display font-bold text-gray-900 mb-3">{svc.title}</h3>
+                <p className="text-gray-600 text-sm md:text-base leading-relaxed mb-6">{svc.description}</p>
                 <Link href="/rendez-vous" className="inline-flex items-center justify-center w-full bg-accent text-white px-6 py-3 rounded-md font-semibold hover:bg-accent-hover transition-colors text-sm">
-                  Prendre un rendez-vous
+                  Obtenir une soumission
                 </Link>
               </motion.div>
             ))}
@@ -162,7 +160,7 @@ export default function ServiceLavage() {
               UN RÉSULTAT <span className="text-blue-400">GARANTI</span>
             </h2>
             <p className="text-base sm:text-lg md:text-xl text-gray-100 max-w-xl mb-6">
-              Plus de 1 500 véhicules lavés avec la même passion et le même souci du détail. Votre satisfaction est notre priorité.
+              Plus de 1 500 véhicules traités avec la même passion et le même souci du détail. Votre satisfaction est notre priorité.
             </p>
             <Link href="/rendez-vous" className="inline-flex items-center bg-accent text-white px-8 py-4 rounded-md font-semibold hover:bg-accent-hover transition-colors">
               Réserver votre lavage
@@ -172,7 +170,6 @@ export default function ServiceLavage() {
       </section>
 
       <Partners />
-
       <Testimonials />
 
       <section className="py-16 md:py-20 lg:py-24 bg-white">

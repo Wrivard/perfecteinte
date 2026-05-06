@@ -2,34 +2,27 @@ import { motion } from "framer-motion";
 import { Link } from "wouter";
 import { SectionTagline } from "@/components/ui/SectionTagline";
 import img1 from "@/assets/optimized-photos/IMG_9370.webp";
-import img2 from "@/assets/optimized-photos/IMG_4953.webp";
-import img3 from "@/assets/optimized-photos/IMG_6900.webp";
-import img4 from "@/assets/optimized-photos/IMG_7930.webp";
+import img2 from "@/assets/optimized-photos/IMG_7930.webp";
+import img3 from "@/assets/optimized-photos/IMG_4953.webp";
 
 const services = [
   {
     image: img1,
-    label: "Expertise",
-    title: "LAVAGE AUTO &\nENTRETIEN\nDE LUXE",
+    label: "Entretien",
+    title: "LAVAGE",
     href: "/services/lavage",
   },
   {
     image: img2,
-    label: "Innovation",
-    title: "PROTECTION DE\nPEINTURE PPF",
-    href: "/services/ppf",
+    label: "Protection",
+    title: "SCELLANT",
+    href: "/services/scellant",
   },
   {
     image: img3,
-    label: "Personnel",
-    title: "PARE-\nPIERRE",
-    href: "/services/par-pierre",
-  },
-  {
-    image: img4,
-    label: "Finition",
-    title: "POLISSAGE &\nNANO-\nCÉRAMIQUE",
-    href: "/services/polissage",
+    label: "Premium",
+    title: "NANOCÉRAMIQUE",
+    href: "/services/nano-ceramique",
   },
 ];
 
@@ -65,7 +58,7 @@ export function Services() {
         </motion.div>
 
         <motion.div
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6"
+          className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -76,7 +69,7 @@ export function Services() {
               <motion.div
                 variants={itemVariants}
                 whileHover={{ y: -12, scale: 1.02, transition: { duration: 0.4, ease: "easeOut" } }}
-                className="relative h-[380px] sm:h-[420px] md:h-[500px] rounded-md overflow-hidden cursor-pointer group"
+                className="relative h-[380px] sm:h-[420px] md:h-[520px] rounded-md overflow-hidden cursor-pointer group"
               >
                 <div className="absolute inset-0">
                   <img
@@ -90,7 +83,7 @@ export function Services() {
                   <p className="text-sm uppercase tracking-wider text-blue-400 mb-3 font-semibold">
                     {service.label}
                   </p>
-                  <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-white leading-tight whitespace-pre-line">
+                  <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white leading-tight">
                     {service.title}
                   </h3>
                 </div>

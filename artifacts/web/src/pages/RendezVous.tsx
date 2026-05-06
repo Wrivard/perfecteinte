@@ -1,15 +1,358 @@
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
+import { useState } from "react";
 import { usePageMeta } from "@/hooks/usePageMeta";
 import { PageLayout } from "@/components/layout/PageLayout";
 import { Partners } from "@/components/sections/Partners";
 import { SectionTagline } from "@/components/ui/SectionTagline";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { Contact } from "@/components/sections/Contact";
-import { Calendar, Phone, Mail, MapPin, Clock } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, Check, ChevronRight, ChevronLeft } from "lucide-react";
 import heroImg from "@/assets/optimized-photos/IMG_1647.webp";
 
+const SERVICES = [
+  { id: "lavage-int", label: "Lavage intérieur", category: "Lavage" },
+  { id: "lavage-ext", label: "Lavage extérieur", category: "Lavage" },
+  { id: "lavage-complet", label: "Lavage intérieur & extérieur", category: "Lavage" },
+  { id: "decontamination", label: "Décontamination", category: "Lavage" },
+  { id: "cires", label: "Cires (scellant peinture)", category: "Scellant" },
+  { id: "polissage", label: "Polissage", category: "Scellant" },
+  { id: "nano-ceramique", label: "Polissage & Nano Céramique", category: "Nanocéramique" },
+  { id: "ppf", label: "Installation de pare-pierre (PPF)", category: "Nanocéramique" },
+];
+
+const STEPS = [
+  { num: 1, label: "Service" },
+  { num: 2, label: "Véhicule" },
+  { num: 3, label: "Coordonnées" },
+  { num: 4, label: "Confirmation" },
+];
+
+interface FormData {
+  service: string;
+  vehicleMake: string;
+  vehicleModel: string;
+  vehicleYear: string;
+  vehicleColor: string;
+  firstName: string;
+  lastName: string;
+  phone: string;
+  email: string;
+  message: string;
+}
+
+const EMPTY_FORM: FormData = {
+  service: "",
+  vehicleMake: "",
+  vehicleModel: "",
+  vehicleYear: "",
+  vehicleColor: "",
+  firstName: "",
+  lastName: "",
+  phone: "",
+  email: "",
+  message: "",
+};
+
+function StepIndicator({ current }: { current: number }) {
+  return (
+    <div className="flex items-center justify-center gap-2 mb-8 md:mb-10">
+      {STEPS.map((step, i) => (
+        <div key={step.num} className="flex items-center gap-2">
+          <div className="flex flex-col items-center gap-1">
+            <div
+              className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold transition-all duration-300 ${
+                current > step.num
+                  ? "bg-accent text-white"
+                  : current === step.num
+                  ? "bg-accent text-white ring-4 ring-accent/20"
+                  : "bg-gray-100 text-gray-400"
+              }`}
+            >
+              {current > step.num ? <Check className="w-4 h-4" /> : step.num}
+            </div>
+            <span className={`text-xs font-medium hidden sm:block transition-colors ${current >= step.num ? "text-accent" : "text-gray-400"}`}>
+              {step.label}
+            </span>
+          </div>
+          {i < STEPS.length - 1 && (
+            <div className={`w-8 sm:w-12 h-[2px] mb-4 transition-colors duration-300 ${current > step.num ? "bg-accent" : "bg-gray-200"}`} />
+          )}
+        </div>
+      ))}
+    </div>
+  );
+}
+
+function Step1({ form, setForm }: { form: FormData; setForm: (f: FormData) => void }) {
+  const grouped = SERVICES.reduce<Record<string, typeof SERVICES>>((acc, s) => {
+    if (!acc[s.category]) acc[s.category] = [];
+    acc[s.category].push(s);
+    return acc;
+  }, {});
+
+  return (
+    <div>
+      <h3 className="text-xl sm:text-2xl font-display font-bold text-gray-900 mb-2">Quel service vous intéresse ?</h3>
+      <p className="text-gray-600 text-sm mb-6">Sélectionnez un service pour votre soumission.</p>
+      <div className="space-y-5">
+        {Object.entries(grouped).map(([category, services]) => (
+          <div key={category}>
+            <p className="text-xs uppercase tracking-widest text-accent font-bold mb-2">{category}</p>
+            <div className="space-y-2">
+              {services.map((svc) => (
+                <label
+                  key={svc.id}
+                  className={`flex items-center gap-3 p-3 sm:p-4 rounded-md border-2 cursor-pointer transition-all duration-200 ${
+                    form.service === svc.id
+                      ? "border-accent bg-accent/5"
+                      : "border-gray-100 bg-gray-50 hover:border-gray-300"
+                  }`}
+                >
+                  <div className={`w-5 h-5 rounded-full border-2 shrink-0 flex items-center justify-center transition-colors ${
+                    form.service === svc.id ? "border-accent bg-accent" : "border-gray-300"
+                  }`}>
+                    {form.service === svc.id && <div className="w-2 h-2 bg-white rounded-full" />}
+                  </div>
+                  <input
+                    type="radio"
+                    name="service"
+                    value={svc.id}
+                    className="sr-only"
+                    checked={form.service === svc.id}
+                    onChange={() => setForm({ ...form, service: svc.id })}
+                  />
+                  <span className="text-sm sm:text-base font-medium text-gray-800">{svc.label}</span>
+                </label>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function Step2({ form, setForm }: { form: FormData; setForm: (f: FormData) => void }) {
+  const currentYear = new Date().getFullYear();
+  const years = Array.from({ length: 30 }, (_, i) => String(currentYear - i));
+
+  return (
+    <div>
+      <h3 className="text-xl sm:text-2xl font-display font-bold text-gray-900 mb-2">Votre véhicule</h3>
+      <p className="text-gray-600 text-sm mb-6">Ces informations nous permettent de préparer une soumission précise.</p>
+      <div className="space-y-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label className="block text-sm font-semibold text-gray-700 mb-1.5">Marque <span className="text-accent">*</span></label>
+            <input
+              type="text"
+              placeholder="Ex: Toyota, BMW, Ford..."
+              value={form.vehicleMake}
+              onChange={(e) => setForm({ ...form, vehicleMake: e.target.value })}
+              className="w-full px-4 py-3 border border-gray-200 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-accent/30 focus:border-accent transition-colors"
+            />
+          </div>
+          <div>
+            <label className="block text-sm font-semibold text-gray-700 mb-1.5">Modèle <span className="text-accent">*</span></label>
+            <input
+              type="text"
+              placeholder="Ex: Camry, M3, F-150..."
+              value={form.vehicleModel}
+              onChange={(e) => setForm({ ...form, vehicleModel: e.target.value })}
+              className="w-full px-4 py-3 border border-gray-200 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-accent/30 focus:border-accent transition-colors"
+            />
+          </div>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label className="block text-sm font-semibold text-gray-700 mb-1.5">Année <span className="text-accent">*</span></label>
+            <select
+              value={form.vehicleYear}
+              onChange={(e) => setForm({ ...form, vehicleYear: e.target.value })}
+              className="w-full px-4 py-3 border border-gray-200 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-accent/30 focus:border-accent transition-colors bg-white"
+            >
+              <option value="">Sélectionner...</option>
+              {years.map((y) => (
+                <option key={y} value={y}>{y}</option>
+              ))}
+            </select>
+          </div>
+          <div>
+            <label className="block text-sm font-semibold text-gray-700 mb-1.5">Couleur</label>
+            <input
+              type="text"
+              placeholder="Ex: Noir, Blanc, Gris..."
+              value={form.vehicleColor}
+              onChange={(e) => setForm({ ...form, vehicleColor: e.target.value })}
+              className="w-full px-4 py-3 border border-gray-200 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-accent/30 focus:border-accent transition-colors"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function Step3({ form, setForm }: { form: FormData; setForm: (f: FormData) => void }) {
+  return (
+    <div>
+      <h3 className="text-xl sm:text-2xl font-display font-bold text-gray-900 mb-2">Vos coordonnées</h3>
+      <p className="text-gray-600 text-sm mb-6">Nous vous contacterons pour confirmer votre soumission.</p>
+      <div className="space-y-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label className="block text-sm font-semibold text-gray-700 mb-1.5">Prénom <span className="text-accent">*</span></label>
+            <input
+              type="text"
+              placeholder="Jean"
+              value={form.firstName}
+              onChange={(e) => setForm({ ...form, firstName: e.target.value })}
+              className="w-full px-4 py-3 border border-gray-200 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-accent/30 focus:border-accent transition-colors"
+            />
+          </div>
+          <div>
+            <label className="block text-sm font-semibold text-gray-700 mb-1.5">Nom <span className="text-accent">*</span></label>
+            <input
+              type="text"
+              placeholder="Tremblay"
+              value={form.lastName}
+              onChange={(e) => setForm({ ...form, lastName: e.target.value })}
+              className="w-full px-4 py-3 border border-gray-200 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-accent/30 focus:border-accent transition-colors"
+            />
+          </div>
+        </div>
+        <div>
+          <label className="block text-sm font-semibold text-gray-700 mb-1.5">Téléphone <span className="text-accent">*</span></label>
+          <input
+            type="tel"
+            placeholder="(418) 555-1234"
+            value={form.phone}
+            onChange={(e) => setForm({ ...form, phone: e.target.value })}
+            className="w-full px-4 py-3 border border-gray-200 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-accent/30 focus:border-accent transition-colors"
+          />
+        </div>
+        <div>
+          <label className="block text-sm font-semibold text-gray-700 mb-1.5">Courriel <span className="text-accent">*</span></label>
+          <input
+            type="email"
+            placeholder="jean@exemple.com"
+            value={form.email}
+            onChange={(e) => setForm({ ...form, email: e.target.value })}
+            className="w-full px-4 py-3 border border-gray-200 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-accent/30 focus:border-accent transition-colors"
+          />
+        </div>
+        <div>
+          <label className="block text-sm font-semibold text-gray-700 mb-1.5">Message (optionnel)</label>
+          <textarea
+            placeholder="Précisions supplémentaires sur votre véhicule ou votre demande..."
+            value={form.message}
+            onChange={(e) => setForm({ ...form, message: e.target.value })}
+            rows={3}
+            className="w-full px-4 py-3 border border-gray-200 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-accent/30 focus:border-accent transition-colors resize-none"
+          />
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function Step4({ form }: { form: FormData }) {
+  const serviceLabel = SERVICES.find((s) => s.id === form.service)?.label ?? form.service;
+
+  const rows = [
+    { label: "Service", value: serviceLabel },
+    { label: "Véhicule", value: [form.vehicleYear, form.vehicleMake, form.vehicleModel, form.vehicleColor].filter(Boolean).join(" ") },
+    { label: "Nom", value: `${form.firstName} ${form.lastName}` },
+    { label: "Téléphone", value: form.phone },
+    { label: "Courriel", value: form.email },
+    ...(form.message ? [{ label: "Message", value: form.message }] : []),
+  ];
+
+  return (
+    <div>
+      <h3 className="text-xl sm:text-2xl font-display font-bold text-gray-900 mb-2">Confirmer votre demande</h3>
+      <p className="text-gray-600 text-sm mb-6">Vérifiez vos informations avant d'envoyer.</p>
+      <div className="bg-[#f9fafb] rounded-md border border-gray-200 overflow-hidden mb-6">
+        {rows.map((row, i) => (
+          <div key={i} className={`flex gap-4 px-4 py-3 ${i < rows.length - 1 ? "border-b border-gray-200" : ""}`}>
+            <span className="text-xs font-semibold text-gray-500 uppercase tracking-wide w-24 shrink-0 pt-0.5">{row.label}</span>
+            <span className="text-sm text-gray-800 font-medium">{row.value}</span>
+          </div>
+        ))}
+      </div>
+      <p className="text-xs text-gray-500">
+        En soumettant ce formulaire, vous acceptez d'être contacté par notre équipe pour discuter de votre demande.
+      </p>
+    </div>
+  );
+}
+
+function SuccessState() {
+  return (
+    <motion.div
+      initial={{ opacity: 0, scale: 0.95 }}
+      animate={{ opacity: 1, scale: 1 }}
+      className="text-center py-8"
+    >
+      <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-5">
+        <Check className="w-8 h-8 text-green-600" />
+      </div>
+      <h3 className="text-xl sm:text-2xl font-display font-bold text-gray-900 mb-3">Demande envoyée !</h3>
+      <p className="text-gray-600 text-sm sm:text-base max-w-sm mx-auto leading-relaxed mb-2">
+        Merci pour votre soumission. Notre équipe vous contactera dans les meilleurs délais pour confirmer votre rendez-vous.
+      </p>
+      <p className="text-gray-500 text-sm">
+        Des questions ? Appelez-nous au{" "}
+        <a href="tel:4186655871" className="text-accent font-semibold hover:underline">(418) 665-5871</a>
+      </p>
+    </motion.div>
+  );
+}
+
 export default function RendezVous() {
-  usePageMeta("Prendre un rendez-vous", "Réservez votre rendez-vous d'esthétique automobile chez Esthétique Auto Pascal Pilote à La Malbaie. Appelez au (418) 665-5871.");
+  usePageMeta("Prendre un rendez-vous", "Obtenez une soumission pour votre esthétique automobile chez Esthétique Auto Pascal Pilote à La Malbaie. Remplissez notre formulaire en ligne.");
+  const [step, setStep] = useState(1);
+  const [form, setForm] = useState<FormData>(EMPTY_FORM);
+  const [submitted, setSubmitted] = useState(false);
+  const [errors, setErrors] = useState<string[]>([]);
+
+  function validate(s: number): string[] {
+    const errs: string[] = [];
+    if (s === 1 && !form.service) errs.push("Veuillez sélectionner un service.");
+    if (s === 2) {
+      if (!form.vehicleMake.trim()) errs.push("La marque du véhicule est requise.");
+      if (!form.vehicleModel.trim()) errs.push("Le modèle du véhicule est requis.");
+      if (!form.vehicleYear) errs.push("L'année du véhicule est requise.");
+    }
+    if (s === 3) {
+      if (!form.firstName.trim()) errs.push("Le prénom est requis.");
+      if (!form.lastName.trim()) errs.push("Le nom est requis.");
+      if (!form.phone.trim()) errs.push("Le téléphone est requis.");
+      if (!form.email.trim()) errs.push("Le courriel est requis.");
+      else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) errs.push("Le courriel n'est pas valide.");
+    }
+    return errs;
+  }
+
+  function handleNext() {
+    const errs = validate(step);
+    if (errs.length > 0) {
+      setErrors(errs);
+      return;
+    }
+    setErrors([]);
+    setStep((s) => s + 1);
+  }
+
+  function handleBack() {
+    setErrors([]);
+    setStep((s) => s - 1);
+  }
+
+  function handleSubmit() {
+    setSubmitted(true);
+  }
+
   return (
     <PageLayout showContact={false}>
       <section className="relative h-[40vh] sm:h-[45vh] md:h-[50vh] min-h-[280px] sm:min-h-[350px] flex items-center overflow-hidden -mt-[120px] pt-[120px]">
@@ -24,10 +367,10 @@ export default function RendezVous() {
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-display font-extrabold text-white uppercase leading-tight">
-              PRENDRE UN <span className="text-blue-400">RENDEZ-VOUS</span>
+              OBTENIR UNE <span className="text-blue-400">SOUMISSION</span>
             </h1>
             <p className="text-base sm:text-lg md:text-xl text-gray-100 mt-4 max-w-xl">
-              Réservez votre créneau directement en ligne pour un service rapide et personnalisé.
+              Remplissez le formulaire ci-dessous et nous vous contacterons rapidement.
             </p>
           </motion.div>
         </div>
@@ -45,45 +388,85 @@ export default function RendezVous() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
               >
-                <SectionTagline text="Rendez-vous" />
+                <SectionTagline text="Soumission" />
                 <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-display font-bold text-gray-900 mb-3 md:mb-4 leading-tight">
-                  RÉSERVEZ EN <span className="text-accent">LIGNE</span>
+                  VOTRE <span className="text-accent">DEMANDE</span>
                 </h2>
                 <p className="text-base md:text-xl text-gray-700 max-w-2xl mx-auto">
-                  Choisissez la date et l'heure qui vous conviennent le mieux.
+                  Un processus simple en 4 étapes pour obtenir votre soumission.
                 </p>
               </motion.div>
 
               <motion.div
-                className="bg-[#f9fafb] rounded-md border border-gray-200 overflow-hidden"
+                className="bg-white rounded-md border border-gray-200 overflow-hidden shadow-sm"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.1 }}
               >
-                <div className="flex items-center gap-3 bg-accent text-white px-4 sm:px-6 py-3 sm:py-4">
-                  <Calendar className="w-5 h-5 sm:w-6 sm:h-6" />
-                  <span className="font-semibold text-base sm:text-lg">Calendrier de réservation</span>
-                </div>
+                <div className="px-6 sm:px-8 pt-8 pb-6">
+                  {submitted ? (
+                    <SuccessState />
+                  ) : (
+                    <>
+                      <StepIndicator current={step} />
 
-                <div className="flex flex-col items-center justify-center min-h-[350px] sm:min-h-[400px] md:min-h-[500px] p-6 sm:p-8 text-center">
-                  <div className="w-16 h-16 sm:w-20 sm:h-20 bg-accent/10 rounded-full flex items-center justify-center mb-4 sm:mb-6">
-                    <Calendar className="w-8 h-8 sm:w-10 sm:h-10 text-accent" />
-                  </div>
-                  <h3 className="text-xl sm:text-2xl font-display font-bold text-gray-900 mb-3">
-                    Google Calendar
-                  </h3>
-                  <p className="text-gray-700 text-base sm:text-lg max-w-md mb-4 sm:mb-6">
-                    L'intégration Google Calendar sera disponible ici pour vous permettre de réserver directement votre rendez-vous en ligne.
-                  </p>
-                  <div className="bg-white border border-dashed border-accent/40 rounded-md p-4 sm:p-6 w-full max-w-lg">
-                    <p className="text-xs sm:text-sm text-gray-600 font-mono break-all">
-                      &lt;iframe src="https://calendar.google.com/calendar/appointments/..." /&gt;
-                    </p>
-                  </div>
-                  <p className="text-xs sm:text-sm text-gray-600 mt-4">
-                    Embed Google Calendar — à configurer prochainement
-                  </p>
+                      <AnimatePresence mode="wait">
+                        <motion.div
+                          key={step}
+                          initial={{ opacity: 0, x: 20 }}
+                          animate={{ opacity: 1, x: 0 }}
+                          exit={{ opacity: 0, x: -20 }}
+                          transition={{ duration: 0.25 }}
+                        >
+                          {step === 1 && <Step1 form={form} setForm={setForm} />}
+                          {step === 2 && <Step2 form={form} setForm={setForm} />}
+                          {step === 3 && <Step3 form={form} setForm={setForm} />}
+                          {step === 4 && <Step4 form={form} />}
+                        </motion.div>
+                      </AnimatePresence>
+
+                      {errors.length > 0 && (
+                        <motion.div
+                          initial={{ opacity: 0, y: -8 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          className="mt-5 bg-red-50 border border-red-200 rounded-md px-4 py-3"
+                        >
+                          {errors.map((e, i) => (
+                            <p key={i} className="text-red-700 text-sm">{e}</p>
+                          ))}
+                        </motion.div>
+                      )}
+
+                      <div className="flex items-center justify-between mt-8 pt-6 border-t border-gray-100">
+                        {step > 1 ? (
+                          <button
+                            onClick={handleBack}
+                            className="inline-flex items-center gap-2 text-gray-600 hover:text-gray-900 font-medium text-sm transition-colors"
+                          >
+                            <ChevronLeft className="w-4 h-4" /> Retour
+                          </button>
+                        ) : (
+                          <div />
+                        )}
+                        {step < 4 ? (
+                          <button
+                            onClick={handleNext}
+                            className="inline-flex items-center gap-2 bg-accent text-white px-6 py-3 rounded-md font-semibold text-sm hover:bg-accent-hover transition-colors"
+                          >
+                            Suivant <ChevronRight className="w-4 h-4" />
+                          </button>
+                        ) : (
+                          <button
+                            onClick={handleSubmit}
+                            className="inline-flex items-center gap-2 bg-accent text-white px-8 py-3 rounded-md font-semibold text-sm hover:bg-accent-hover transition-colors"
+                          >
+                            Envoyer ma demande <Check className="w-4 h-4" />
+                          </button>
+                        )}
+                      </div>
+                    </>
+                  )}
                 </div>
               </motion.div>
             </div>
@@ -114,8 +497,8 @@ export default function RendezVous() {
                     <Mail className="w-5 h-5 text-blue-400 shrink-0 mt-1" />
                     <div>
                       <span className="text-blue-400 text-xs uppercase tracking-widest font-semibold block mb-1">Courriel</span>
-                      <a href="mailto:Pascal.1993@live.ca" className="text-white font-medium hover:text-blue-400 transition-colors text-sm md:text-base break-all">
-                        Pascal.1993@live.ca
+                      <a href="mailto:info@esthetiqueautopascalpilote.ca" className="text-white font-medium hover:text-blue-400 transition-colors text-sm md:text-base break-all">
+                        info@esthetiqueautopascalpilote.ca
                       </a>
                     </div>
                   </div>
@@ -164,7 +547,6 @@ export default function RendezVous() {
       </section>
 
       <Testimonials />
-
       <Contact />
     </PageLayout>
   );

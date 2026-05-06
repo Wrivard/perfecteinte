@@ -13,10 +13,9 @@ const navLinks = [
 ];
 
 const serviceLinks = [
-  { name: "Lavage Auto & Entretien de Luxe", href: "/services/lavage" },
-  { name: "Protection de Peinture PPF", href: "/services/ppf" },
-  { name: "Pare-Pierre", href: "/services/par-pierre" },
-  { name: "Polissage & Nano-Céramique", href: "/services/polissage" },
+  { name: "Lavage", href: "/services/lavage" },
+  { name: "Scellant", href: "/services/scellant" },
+  { name: "Nanocéramique", href: "/services/nano-ceramique" },
 ];
 
 export function Navbar() {
@@ -110,7 +109,7 @@ export function Navbar() {
                     {link.hasDropdown && <ChevronDown className="w-4 h-4" />}
                   </Link>
                   {link.hasDropdown && (
-                    <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-md shadow-lg border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                    <div className="absolute top-full left-0 mt-2 w-52 bg-white rounded-md shadow-lg border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                       <div className="py-2">
                         {serviceLinks.map((sl) => (
                           <Link

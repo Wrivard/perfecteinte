@@ -5,64 +5,47 @@ import { PageLayout } from "@/components/layout/PageLayout";
 import { Partners } from "@/components/sections/Partners";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { SectionTagline } from "@/components/ui/SectionTagline";
-import { Droplets, Shield, Sparkles, User, ArrowRight } from "lucide-react";
+import { Droplets, Sparkles, Shield, ArrowRight } from "lucide-react";
 import heroImg from "@/assets/optimized-photos/IMG_5278.webp";
 import img1 from "@/assets/optimized-photos/IMG_9370.webp";
-import img2 from "@/assets/optimized-photos/IMG_9584.webp";
-import img3 from "@/assets/optimized-photos/IMG_6900.webp";
-import img4 from "@/assets/optimized-photos/IMG_7930.webp";
+import img2 from "@/assets/optimized-photos/IMG_7930.webp";
+import img3 from "@/assets/optimized-photos/IMG_4953.webp";
 
 const services = [
   {
     icon: Droplets,
     image: img1,
-    title: "Lavage Auto & Entretien Esthétique de Luxe",
-    description: "Un nettoyage complet qui va bien au-delà du simple lavage. Nous traitons chaque surface avec des produits professionnels pour un résultat impeccable.",
+    title: "Lavage",
+    description: "Un nettoyage complet qui va bien au-delà du simple lavage. Lavage intérieur, extérieur, complet et décontamination — traités avec des produits professionnels pour un résultat impeccable.",
     href: "/services/lavage",
     features: [
-      "Lavage extérieur à la main",
-      "Nettoyage intérieur complet",
-      "Traitement des cuirs et plastiques",
+      "Lavage intérieur",
+      "Lavage extérieur",
+      "Lavage intérieur & extérieur",
       "Décontamination de la carrosserie",
     ],
   },
   {
-    icon: Shield,
-    image: img2,
-    title: "Protection de Peinture PPF",
-    description: "La pellicule de protection de peinture (PPF) protège votre véhicule contre les éclats de pierre, les rayures et les débris de la route.",
-    href: "/services/ppf",
-    features: [
-      "Film transparent haute performance",
-      "Protection contre les éclats de pierre",
-      "Auto-cicatrisant à la chaleur",
-      "Garantie longue durée",
-    ],
-  },
-  {
-    icon: User,
-    image: img3,
-    title: "Pare-Pierre",
-    description: "Un service personnalisé par notre expert passionné du détailing automobile. Un savoir-faire unique et une attention méticuleuse aux détails pour chaque véhicule.",
-    href: "/services/par-pierre",
-    features: [
-      "Service sur mesure personnalisé",
-      "Expertise pointue en finition",
-      "Attention aux moindres détails",
-      "Résultats d'exception garantis",
-    ],
-  },
-  {
     icon: Sparkles,
-    image: img4,
-    title: "Polissage & Nano-Céramique",
-    description: "Le polissage corrige les imperfections et la nano-céramique offre une protection durable avec un éclat incomparable.",
-    href: "/services/polissage",
+    image: img2,
+    title: "Scellant",
+    description: "Protégez et sublimez votre peinture avec nos services de cires et polissage. Une finition brillante qui préserve la beauté de votre véhicule.",
+    href: "/services/scellant",
     features: [
-      "Correction des micro-rayures",
-      "Revêtement nano-céramique",
-      "Protection jusqu'à 5 ans",
-      "Effet hydrophobe supérieur",
+      "Cires (scellant peinture)",
+      "Polissage",
+    ],
+  },
+  {
+    icon: Shield,
+    image: img3,
+    title: "Nanocéramique",
+    description: "La protection ultime : polissage combiné à la nano-céramique et installation de pare-pierre (PPF). Certifié installateur par Labocosmetica.",
+    href: "/services/nano-ceramique",
+    features: [
+      "Polissage & Nano Céramique",
+      "Installation de pare-pierre (PPF)",
+      "Certifié par Labocosmetica",
     ],
   },
 ];
@@ -78,7 +61,7 @@ const itemVariants = {
 };
 
 export default function ServicesPage() {
-  usePageMeta("Nos services", "Lavage de luxe, protection PPF, polissage, nano-céramique et service par Pierre. Découvrez tous nos services d'esthétique automobile à La Malbaie.");
+  usePageMeta("Nos services", "Lavage, scellant, polissage, nano-céramique et installation de pare-pierre (PPF). Découvrez tous nos services d'esthétique automobile à La Malbaie.");
   return (
     <PageLayout>
       <section className="relative h-[40vh] sm:h-[45vh] md:h-[50vh] min-h-[280px] sm:min-h-[350px] flex items-center overflow-hidden -mt-[120px] pt-[120px]">
@@ -161,7 +144,7 @@ export default function ServicesPage() {
                   <div className="w-12 h-12 md:w-14 md:h-14 bg-accent/10 rounded-md flex items-center justify-center mb-4 md:mb-6">
                     <service.icon className="w-6 h-6 md:w-7 md:h-7 text-accent" />
                   </div>
-                  <h3 className="text-xl sm:text-2xl md:text-3xl font-display font-bold text-gray-900 mb-3 md:mb-4">{service.title}</h3>
+                  <h3 className="text-2xl sm:text-3xl md:text-4xl font-display font-bold text-gray-900 mb-3 md:mb-4">{service.title}</h3>
                   <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-4 md:mb-6">{service.description}</p>
                   <ul className="space-y-2 md:space-y-3 mb-6 md:mb-8">
                     {service.features.map((feature, i) => (
