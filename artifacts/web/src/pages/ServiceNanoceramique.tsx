@@ -5,20 +5,23 @@ import { PageLayout } from "@/components/layout/PageLayout";
 import { Partners } from "@/components/sections/Partners";
 import { SectionTagline } from "@/components/ui/SectionTagline";
 import { FAQSchema } from "@/components/seo/FAQSchema";
-import { Shield, Check, Award } from "lucide-react";
+import { Shield, Check, Gem, ShieldCheck, Wrench, BadgeCheck, Settings2 } from "lucide-react";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { useState } from "react";
 import { AccordionItem } from "@/components/ui/accordion-custom";
 import heroImg from "@/assets/optimized-photos/IMG_9584.webp";
 import img1 from "@/assets/optimized-photos/IMG_4953.webp";
 import img2 from "@/assets/optimized-photos/IMG_6900.webp";
-import labocosmetica from "@assets/nobg_labo_1774964289735.png";
+import imgNano from "@/assets/optimized-photos/IMG_4953.webp";
+import imgPPF from "@/assets/optimized-photos/IMG_6900.webp";
 
 const subServices = [
   {
     title: "Polissage & Nano Céramique",
     description: "La combinaison ultime : un polissage complet pour corriger toutes les imperfections, suivi d'un revêtement nanocéramique qui offre une protection d'une durabilité exceptionnelle, un effet hydrophobe supérieur et un éclat inégalé.",
-    icon: "💎",
+    Icon: Gem,
+    image: imgNano,
+    alt: "Application de revêtement nanocéramique",
     features: [
       "Polissage multi-étapes complet",
       "Revêtement nanocéramique professionnel",
@@ -31,7 +34,9 @@ const subServices = [
   {
     title: "Installation de pare-pierre (PPF)",
     description: "La pellicule de protection de peinture (PPF) est la solution ultime contre les éclats de pierre, les débris routiers et les rayures. Film auto-cicatrisant et pratiquement invisible, installé par notre technicien certifié par Labocosmetica.",
-    icon: "🛡️",
+    Icon: ShieldCheck,
+    image: imgPPF,
+    alt: "Installation de pare-pierre PPF",
     features: [
       "Film transparent auto-cicatrisant",
       "Protection contre les éclats de pierre",
@@ -44,10 +49,34 @@ const subServices = [
 ];
 
 const benefits = [
-  { title: "Protection maximale", description: "La combinaison PPF + nanocéramique offre la protection la plus complète disponible sur le marché." },
-  { title: "Technologie avancée", description: "Nous utilisons les meilleurs produits et films disponibles pour des résultats durables et visibles." },
-  { title: "Technicien certifié", description: "Notre installateur est certifié pare-pierre (PPF) par Labocosmetica, gage de qualité et de professionnalisme." },
-  { title: "Sur mesure", description: "Chaque installation est adaptée à votre véhicule et à votre niveau de protection souhaité." },
+  {
+    Icon: Shield,
+    title: "Protection maximale",
+    description: "La combinaison PPF + nanocéramique offre la protection la plus complète disponible sur le marché — barrière physique contre les éclats et chimique contre les contaminants.",
+    stat: "5 ans",
+    statLabel: "de protection",
+  },
+  {
+    Icon: BadgeCheck,
+    title: "Technicien certifié",
+    description: "Notre installateur est certifié pare-pierre (PPF) par Labocosmetica, gage absolu de qualité, de précision et d'expertise reconnue à l'international.",
+    stat: "100 %",
+    statLabel: "certifié",
+  },
+  {
+    Icon: Settings2,
+    title: "Technologie avancée",
+    description: "Nous travaillons exclusivement avec des films premium et des céramiques de dernière génération sélectionnés pour leur durabilité et leur transparence.",
+    stat: "Premium",
+    statLabel: "qualité",
+  },
+  {
+    Icon: Wrench,
+    title: "Sur mesure",
+    description: "Chaque installation est planifiée et adaptée à votre véhicule : zones partielles ou véhicule complet, selon votre niveau de protection souhaité.",
+    stat: "1:1",
+    statLabel: "personnalisé",
+  },
 ];
 
 const faqs = [
@@ -88,32 +117,7 @@ export default function ServiceNanoceramique() {
         </div>
       </section>
 
-      <section className="py-10 bg-[#f9fafb] border-y border-gray-200">
-        <div className="max-w-7xl mx-auto px-6">
-          <motion.div
-            className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8"
-            initial={{ opacity: 0, y: 15 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-          >
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 bg-accent/10 rounded-full flex items-center justify-center shrink-0">
-                <Award className="w-5 h-5 text-accent" />
-              </div>
-              <div>
-                <p className="text-xs uppercase tracking-widest text-gray-500 font-semibold">Certification officielle</p>
-                <p className="text-sm font-bold text-gray-900">Certifié installateur pare-pierre par</p>
-              </div>
-            </div>
-            <img
-              src={labocosmetica}
-              alt="Labocosmetica"
-              className="h-8 sm:h-10 w-auto object-contain brightness-0 opacity-70"
-            />
-          </motion.div>
-        </div>
-      </section>
+      <Partners />
 
       <section className="py-16 md:py-20 lg:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6">
@@ -149,46 +153,86 @@ export default function ServiceNanoceramique() {
             </h2>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mb-16">
-            {subServices.map((svc, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-                className="bg-white rounded-md p-6 md:p-8 shadow-sm border border-gray-100 hover:shadow-md transition-shadow"
-              >
-                <div className="text-3xl mb-4">{svc.icon}</div>
-                <h3 className="text-xl md:text-2xl font-display font-bold text-gray-900 mb-3">{svc.title}</h3>
-                <p className="text-gray-600 text-sm md:text-base leading-relaxed mb-5">{svc.description}</p>
-                <ul className="space-y-2 mb-6">
-                  {svc.features.map((f, j) => (
-                    <li key={j} className="flex items-center gap-3">
-                      <Check className="w-4 h-4 text-accent shrink-0" />
-                      <span className="text-gray-700 text-sm">{f}</span>
-                    </li>
-                  ))}
-                </ul>
-                <Link href="/rendez-vous" className="inline-flex items-center justify-center w-full bg-accent text-white px-6 py-3 rounded-md font-semibold hover:bg-accent-hover transition-colors text-sm">
-                  Obtenir une soumission
-                </Link>
-              </motion.div>
-            ))}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+            {subServices.map((svc, i) => {
+              const Icon = svc.Icon;
+              return (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.1 }}
+                  className="group bg-white rounded-md overflow-hidden shadow-sm border border-gray-100 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex flex-col"
+                >
+                  <div className="relative h-56 md:h-64 overflow-hidden">
+                    <img src={svc.image} alt={svc.alt} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+                    <div className="absolute top-4 left-4 w-12 h-12 bg-white rounded-md flex items-center justify-center shadow-md">
+                      <Icon className="w-6 h-6 text-accent" strokeWidth={1.75} />
+                    </div>
+                  </div>
+                  <div className="p-6 md:p-8 flex flex-col flex-1">
+                    <h3 className="text-xl md:text-2xl font-display font-bold text-gray-900 mb-3">{svc.title}</h3>
+                    <p className="text-gray-600 text-sm md:text-base leading-relaxed mb-5">{svc.description}</p>
+                    <ul className="space-y-2 mb-6">
+                      {svc.features.map((f, j) => (
+                        <li key={j} className="flex items-center gap-3">
+                          <Check className="w-4 h-4 text-accent shrink-0" />
+                          <span className="text-gray-700 text-sm">{f}</span>
+                        </li>
+                      ))}
+                    </ul>
+                    <Link href="/rendez-vous" className="inline-flex items-center justify-center w-full bg-accent text-white px-6 py-3 rounded-md font-semibold hover:bg-accent-hover transition-colors text-sm mt-auto">
+                      Obtenir une soumission
+                    </Link>
+                  </div>
+                </motion.div>
+              );
+            })}
           </div>
+        </div>
+      </section>
 
-          <motion.div className="text-center mb-8" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-            <h3 className="text-2xl sm:text-3xl font-display font-bold text-gray-900 mb-8">
-              POURQUOI <span className="text-accent">NOUS CHOISIR ?</span>
-            </h3>
+      <section className="py-16 md:py-20 lg:py-24 bg-gray-900 relative overflow-hidden">
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute inset-0 bg-gradient-to-br from-accent via-transparent to-blue-500" />
+        </div>
+        <div className="max-w-7xl mx-auto px-6 relative">
+          <motion.div className="text-center mb-12 md:mb-16" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+            <SectionTagline text="Notre engagement" light />
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-white mb-4 leading-tight">
+              POURQUOI <span className="text-blue-400">NOUS CHOISIR</span>
+            </h2>
+            <p className="text-base md:text-lg text-gray-300 max-w-2xl mx-auto">
+              Quatre raisons pour lesquelles nos clients nous confient leurs véhicules les plus précieux.
+            </p>
           </motion.div>
+
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {benefits.map((b, i) => (
-              <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }} className="bg-white rounded-md p-6 shadow-sm border border-gray-100 text-center">
-                <h4 className="text-base font-display font-bold text-gray-900 mb-2">{b.title}</h4>
-                <p className="text-gray-600 text-sm leading-relaxed">{b.description}</p>
-              </motion.div>
-            ))}
+            {benefits.map((b, i) => {
+              const Icon = b.Icon;
+              return (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.1 }}
+                  className="bg-white/[0.04] backdrop-blur-sm rounded-md p-6 md:p-8 border border-white/10 hover:border-accent/40 hover:bg-white/[0.06] transition-all duration-300 flex flex-col"
+                >
+                  <div className="w-14 h-14 bg-accent/15 rounded-md flex items-center justify-center mb-5">
+                    <Icon className="w-7 h-7 text-accent" strokeWidth={1.75} />
+                  </div>
+                  <h4 className="text-lg md:text-xl font-display font-bold text-white mb-3">{b.title}</h4>
+                  <p className="text-gray-300 text-sm leading-relaxed mb-6 flex-1">{b.description}</p>
+                  <div className="pt-5 border-t border-white/10">
+                    <p className="text-2xl md:text-3xl font-display font-extrabold text-blue-400 leading-none">{b.stat}</p>
+                    <p className="text-xs uppercase tracking-widest text-gray-400 mt-1">{b.statLabel}</p>
+                  </div>
+                </motion.div>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -214,7 +258,6 @@ export default function ServiceNanoceramique() {
         </div>
       </section>
 
-      <Partners />
       <Testimonials />
 
       <section className="py-16 md:py-20 lg:py-24 bg-white">

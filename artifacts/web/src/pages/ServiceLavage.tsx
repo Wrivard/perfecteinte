@@ -5,34 +5,46 @@ import { PageLayout } from "@/components/layout/PageLayout";
 import { Partners } from "@/components/sections/Partners";
 import { SectionTagline } from "@/components/ui/SectionTagline";
 import { FAQSchema } from "@/components/seo/FAQSchema";
-import { Droplets, Check, Clock } from "lucide-react";
+import { Droplets, Check, Brush, Sparkles, ShieldCheck } from "lucide-react";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { useState } from "react";
 import { AccordionItem } from "@/components/ui/accordion-custom";
 import heroImg from "@/assets/optimized-photos/IMG_5191.webp";
 import img1 from "@/assets/optimized-photos/IMG_3255.webp";
 import img2 from "@/assets/optimized-photos/IMG_9345.webp";
+import imgInt from "@/assets/optimized-photos/IMG_3255.webp";
+import imgExt from "@/assets/optimized-photos/IMG_5246.webp";
+import imgComplet from "@/assets/optimized-photos/IMG_8023.webp";
+import imgDecont from "@/assets/optimized-photos/IMG_3308.webp";
 
 const subServices = [
   {
     title: "Lavage intérieur",
     description: "Nettoyage complet de l'habitacle : aspiration, nettoyage des surfaces, traitement des cuirs et plastiques, vitres intérieures.",
-    icon: "🧹",
+    Icon: Brush,
+    image: imgInt,
+    alt: "Lavage intérieur d'un véhicule",
   },
   {
     title: "Lavage extérieur",
     description: "Lavage à la main avec produits professionnels, dégraissage, rinçage, séchage et traitement des jantes et pneus.",
-    icon: "💧",
+    Icon: Droplets,
+    image: imgExt,
+    alt: "Lavage extérieur à la main",
   },
   {
     title: "Lavage intérieur & extérieur",
     description: "La combinaison complète : un véhicule impeccable de l'intérieur à l'extérieur pour un résultat optimal.",
-    icon: "✨",
+    Icon: Sparkles,
+    image: imgComplet,
+    alt: "Véhicule lavé complètement",
   },
   {
     title: "Décontamination",
     description: "Élimination des contaminants ferrifères et organiques incrustés dans la peinture. Idéal en complément du lavage extérieur pour une surface parfaitement saine.",
-    icon: "🛡️",
+    Icon: ShieldCheck,
+    image: imgDecont,
+    alt: "Décontamination de la peinture",
   },
 ];
 
@@ -84,6 +96,8 @@ export default function ServiceLavage() {
         </div>
       </section>
 
+      <Partners />
+
       <section className="py-16 md:py-20 lg:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
@@ -127,23 +141,34 @@ export default function ServiceLavage() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-            {subServices.map((svc, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-                className="bg-white rounded-md p-6 md:p-8 shadow-sm border border-gray-100 hover:shadow-md transition-shadow"
-              >
-                <div className="text-3xl mb-4">{svc.icon}</div>
-                <h3 className="text-xl md:text-2xl font-display font-bold text-gray-900 mb-3">{svc.title}</h3>
-                <p className="text-gray-600 text-sm md:text-base leading-relaxed mb-6">{svc.description}</p>
-                <Link href="/rendez-vous" className="inline-flex items-center justify-center w-full bg-accent text-white px-6 py-3 rounded-md font-semibold hover:bg-accent-hover transition-colors text-sm">
-                  Obtenir une soumission
-                </Link>
-              </motion.div>
-            ))}
+            {subServices.map((svc, i) => {
+              const Icon = svc.Icon;
+              return (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.1 }}
+                  className="group bg-white rounded-md overflow-hidden shadow-sm border border-gray-100 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex flex-col"
+                >
+                  <div className="relative h-48 md:h-56 overflow-hidden">
+                    <img src={svc.image} alt={svc.alt} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+                    <div className="absolute top-4 left-4 w-12 h-12 bg-white rounded-md flex items-center justify-center shadow-md">
+                      <Icon className="w-6 h-6 text-accent" strokeWidth={1.75} />
+                    </div>
+                  </div>
+                  <div className="p-6 md:p-8 flex flex-col flex-1">
+                    <h3 className="text-xl md:text-2xl font-display font-bold text-gray-900 mb-3">{svc.title}</h3>
+                    <p className="text-gray-600 text-sm md:text-base leading-relaxed mb-6 flex-1">{svc.description}</p>
+                    <Link href="/rendez-vous" className="inline-flex items-center justify-center w-full bg-accent text-white px-6 py-3 rounded-md font-semibold hover:bg-accent-hover transition-colors text-sm">
+                      Obtenir une soumission
+                    </Link>
+                  </div>
+                </motion.div>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -169,7 +194,6 @@ export default function ServiceLavage() {
         </div>
       </section>
 
-      <Partners />
       <Testimonials />
 
       <section className="py-16 md:py-20 lg:py-24 bg-white">

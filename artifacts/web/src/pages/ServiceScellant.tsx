@@ -5,19 +5,23 @@ import { PageLayout } from "@/components/layout/PageLayout";
 import { Partners } from "@/components/sections/Partners";
 import { SectionTagline } from "@/components/ui/SectionTagline";
 import { FAQSchema } from "@/components/seo/FAQSchema";
-import { Sparkles, Check } from "lucide-react";
+import { Sparkles, Check, Layers, Disc3 } from "lucide-react";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { useState } from "react";
 import { AccordionItem } from "@/components/ui/accordion-custom";
 import heroImg from "@/assets/optimized-photos/IMG_7930.webp";
 import img1 from "@/assets/optimized-photos/IMG_3412.webp";
 import img2 from "@/assets/optimized-photos/IMG_3303.webp";
+import imgCires from "@/assets/optimized-photos/IMG_7694.webp";
+import imgPolissage from "@/assets/optimized-photos/IMG_3303.webp";
 
 const subServices = [
   {
     title: "Cires (scellant peinture)",
     description: "Application d'une cire de protection haute performance qui scelle et protège la peinture tout en lui donnant un éclat profond et durable. Idéal pour l'entretien régulier de votre carrosserie.",
-    icon: "🪣",
+    Icon: Layers,
+    image: imgCires,
+    alt: "Application de cire de protection",
     features: [
       "Protection contre les UV",
       "Éclat profond et lumineux",
@@ -28,7 +32,9 @@ const subServices = [
   {
     title: "Polissage",
     description: "Correction des imperfections de la peinture : micro-rayures, marques de lavage automatique, oxydation légère. Le polissage redonne à votre peinture sa profondeur et son éclat d'origine.",
-    icon: "⚙️",
+    Icon: Disc3,
+    image: imgPolissage,
+    alt: "Polissage professionnel d'un véhicule",
     features: [
       "Correction des micro-rayures",
       "Élimination des tourbillons",
@@ -82,6 +88,8 @@ export default function ServiceScellant() {
         </div>
       </section>
 
+      <Partners />
+
       <section className="py-16 md:py-20 lg:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
@@ -117,31 +125,42 @@ export default function ServiceScellant() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mb-16">
-            {subServices.map((svc, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-                className="bg-white rounded-md p-6 md:p-8 shadow-sm border border-gray-100 hover:shadow-md transition-shadow"
-              >
-                <div className="text-3xl mb-4">{svc.icon}</div>
-                <h3 className="text-xl md:text-2xl font-display font-bold text-gray-900 mb-3">{svc.title}</h3>
-                <p className="text-gray-600 text-sm md:text-base leading-relaxed mb-5">{svc.description}</p>
-                <ul className="space-y-2 mb-6">
-                  {svc.features.map((f, j) => (
-                    <li key={j} className="flex items-center gap-3">
-                      <Check className="w-4 h-4 text-accent shrink-0" />
-                      <span className="text-gray-700 text-sm">{f}</span>
-                    </li>
-                  ))}
-                </ul>
-                <Link href="/rendez-vous" className="inline-flex items-center justify-center w-full bg-accent text-white px-6 py-3 rounded-md font-semibold hover:bg-accent-hover transition-colors text-sm">
-                  Obtenir une soumission
-                </Link>
-              </motion.div>
-            ))}
+            {subServices.map((svc, i) => {
+              const Icon = svc.Icon;
+              return (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.1 }}
+                  className="group bg-white rounded-md overflow-hidden shadow-sm border border-gray-100 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex flex-col"
+                >
+                  <div className="relative h-56 md:h-64 overflow-hidden">
+                    <img src={svc.image} alt={svc.alt} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+                    <div className="absolute top-4 left-4 w-12 h-12 bg-white rounded-md flex items-center justify-center shadow-md">
+                      <Icon className="w-6 h-6 text-accent" strokeWidth={1.75} />
+                    </div>
+                  </div>
+                  <div className="p-6 md:p-8 flex flex-col flex-1">
+                    <h3 className="text-xl md:text-2xl font-display font-bold text-gray-900 mb-3">{svc.title}</h3>
+                    <p className="text-gray-600 text-sm md:text-base leading-relaxed mb-5">{svc.description}</p>
+                    <ul className="space-y-2 mb-6">
+                      {svc.features.map((f, j) => (
+                        <li key={j} className="flex items-center gap-3">
+                          <Check className="w-4 h-4 text-accent shrink-0" />
+                          <span className="text-gray-700 text-sm">{f}</span>
+                        </li>
+                      ))}
+                    </ul>
+                    <Link href="/rendez-vous" className="inline-flex items-center justify-center w-full bg-accent text-white px-6 py-3 rounded-md font-semibold hover:bg-accent-hover transition-colors text-sm mt-auto">
+                      Obtenir une soumission
+                    </Link>
+                  </div>
+                </motion.div>
+              );
+            })}
           </div>
 
           <motion.div className="text-center mb-8" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
@@ -181,7 +200,6 @@ export default function ServiceScellant() {
         </div>
       </section>
 
-      <Partners />
       <Testimonials />
 
       <section className="py-16 md:py-20 lg:py-24 bg-white">
