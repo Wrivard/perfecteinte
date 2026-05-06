@@ -10,14 +10,14 @@ import { Phone, Mail, MapPin, Clock, Check, ChevronRight, ChevronLeft } from "lu
 import heroImg from "@/assets/optimized-photos/IMG_1647.webp";
 
 const SERVICES = [
-  { id: "lavage-int", label: "Lavage intérieur", category: "Lavage" },
-  { id: "lavage-ext", label: "Lavage extérieur", category: "Lavage" },
-  { id: "lavage-complet", label: "Lavage intérieur & extérieur", category: "Lavage" },
-  { id: "decontamination", label: "Décontamination", category: "Lavage" },
-  { id: "cires", label: "Cires (scellant peinture)", category: "Scellant" },
-  { id: "polissage", label: "Polissage", category: "Scellant" },
-  { id: "nano-ceramique", label: "Polissage & Nano Céramique", category: "Nanocéramique" },
-  { id: "ppf", label: "Installation de pare-pierre (PPF)", category: "Nanocéramique" },
+  { id: "lavage-int", label: "Lavage intérieur", duration: "2h", category: "Lavage" },
+  { id: "lavage-ext", label: "Lavage extérieur", duration: "1h", category: "Lavage" },
+  { id: "lavage-complet", label: "Lavage intérieur & extérieur", duration: "3h", category: "Lavage" },
+  { id: "decontamination", label: "Décontamination", duration: "1h (ajouter au lavage extérieur)", category: "Lavage" },
+  { id: "cires", label: "Cires (scellant peinture)", duration: "3h", category: "Scellant" },
+  { id: "polissage", label: "Polissage", duration: "Journée complète", category: "Scellant" },
+  { id: "nano-ceramique", label: "Polissage & Nano Céramique", duration: "2 jours", category: "Nanocéramique" },
+  { id: "ppf", label: "Installation de pare-pierre (PPF)", duration: "Selon le véhicule", category: "Nanocéramique" },
 ];
 
 const STEPS = [
@@ -28,7 +28,7 @@ const STEPS = [
 ];
 
 interface FormData {
-  service: string;
+  services: string[];
   vehicleMake: string;
   vehicleModel: string;
   vehicleYear: string;
@@ -41,7 +41,7 @@ interface FormData {
 }
 
 const EMPTY_FORM: FormData = {
-  service: "",
+  services: [],
   vehicleMake: "",
   vehicleModel: "",
   vehicleYear: "",
@@ -90,45 +90,68 @@ function Step1({ form, setForm }: { form: FormData; setForm: (f: FormData) => vo
     return acc;
   }, {});
 
+  function toggle(id: string) {
+    if (form.services.includes(id)) {
+      setForm({ ...form, services: form.services.filter((s) => s !== id) });
+    } else {
+      setForm({ ...form, services: [...form.services, id] });
+    }
+  }
+
   return (
-    <div>
-      <h3 className="text-xl sm:text-2xl font-display font-bold text-gray-900 mb-2">Quel service vous intéresse ?</h3>
-      <p className="text-gray-600 text-sm mb-6">Sélectionnez un service pour votre soumission.</p>
+    <fieldset aria-describedby="rdv-step1-error" aria-required="true">
+      <legend className="text-xl sm:text-2xl font-display font-bold text-gray-900 mb-2">Quels services vous intéressent ?</legend>
+      <p className="text-gray-600 text-sm mb-6">Sélectionnez un ou plusieurs services pour votre soumission. Vous pouvez combiner ce qui fait du sens pour vous.</p>
       <div className="space-y-5">
         {Object.entries(grouped).map(([category, services]) => (
           <div key={category}>
             <p className="text-xs uppercase tracking-widest text-accent font-bold mb-2">{category}</p>
             <div className="space-y-2">
-              {services.map((svc) => (
-                <label
-                  key={svc.id}
-                  className={`flex items-center gap-3 p-3 sm:p-4 rounded-md border-2 cursor-pointer transition-all duration-200 ${
-                    form.service === svc.id
-                      ? "border-accent bg-accent/5"
-                      : "border-gray-100 bg-gray-50 hover:border-gray-300"
-                  }`}
-                >
-                  <div className={`w-5 h-5 rounded-full border-2 shrink-0 flex items-center justify-center transition-colors ${
-                    form.service === svc.id ? "border-accent bg-accent" : "border-gray-300"
-                  }`}>
-                    {form.service === svc.id && <div className="w-2 h-2 bg-white rounded-full" />}
-                  </div>
-                  <input
-                    type="radio"
-                    name="service"
-                    value={svc.id}
-                    className="sr-only"
-                    checked={form.service === svc.id}
-                    onChange={() => setForm({ ...form, service: svc.id })}
-                  />
-                  <span className="text-sm sm:text-base font-medium text-gray-800">{svc.label}</span>
-                </label>
-              ))}
+              {services.map((svc) => {
+                const checked = form.services.includes(svc.id);
+                return (
+                  <label
+                    key={svc.id}
+                    className={`flex items-start gap-3 p-3 sm:p-4 rounded-md border-2 cursor-pointer transition-all duration-200 ${
+                      checked
+                        ? "border-accent bg-accent/5"
+                        : "border-gray-100 bg-gray-50 hover:border-gray-300"
+                    }`}
+                  >
+                    <div className={`w-5 h-5 rounded border-2 shrink-0 flex items-center justify-center transition-colors mt-0.5 ${
+                      checked ? "border-accent bg-accent" : "border-gray-300 bg-white"
+                    }`}>
+                      {checked && <Check className="w-3.5 h-3.5 text-white" strokeWidth={3} />}
+                    </div>
+                    <input
+                      type="checkbox"
+                      className="sr-only"
+                      checked={checked}
+                      onChange={() => toggle(svc.id)}
+                    />
+                    <div className="flex-1 min-w-0 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1">
+                      <span className="text-sm sm:text-base font-medium text-gray-800">{svc.label}</span>
+                      <span className="inline-flex items-center gap-1 text-xs font-semibold text-gray-500 bg-white border border-gray-200 rounded-full px-2.5 py-0.5 shrink-0">
+                        <Clock className="w-3 h-3" />
+                        {svc.duration}
+                      </span>
+                    </div>
+                  </label>
+                );
+              })}
             </div>
           </div>
         ))}
       </div>
-    </div>
+      {form.services.length > 0 && (
+        <div className="mt-5 bg-accent/5 border border-accent/20 rounded-md px-4 py-3 flex items-center gap-2">
+          <Check className="w-4 h-4 text-accent shrink-0" />
+          <p className="text-sm text-gray-700">
+            <span className="font-semibold">{form.services.length}</span> service{form.services.length > 1 ? "s" : ""} sélectionné{form.services.length > 1 ? "s" : ""}
+          </p>
+        </div>
+      )}
+    </fieldset>
   );
 }
 
@@ -257,10 +280,9 @@ function Step3({ form, setForm }: { form: FormData; setForm: (f: FormData) => vo
 }
 
 function Step4({ form }: { form: FormData }) {
-  const serviceLabel = SERVICES.find((s) => s.id === form.service)?.label ?? form.service;
+  const selectedServices = SERVICES.filter((s) => form.services.includes(s.id));
 
   const rows = [
-    { label: "Service", value: serviceLabel },
     { label: "Véhicule", value: [form.vehicleYear, form.vehicleMake, form.vehicleModel, form.vehicleColor].filter(Boolean).join(" ") },
     { label: "Nom", value: `${form.firstName} ${form.lastName}` },
     { label: "Téléphone", value: form.phone },
@@ -272,6 +294,24 @@ function Step4({ form }: { form: FormData }) {
     <div>
       <h3 className="text-xl sm:text-2xl font-display font-bold text-gray-900 mb-2">Confirmer votre demande</h3>
       <p className="text-gray-600 text-sm mb-6">Vérifiez vos informations avant d'envoyer.</p>
+
+      <div className="mb-4">
+        <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">
+          Service{selectedServices.length > 1 ? "s" : ""} sélectionné{selectedServices.length > 1 ? "s" : ""}
+        </p>
+        <div className="bg-[#f9fafb] rounded-md border border-gray-200 overflow-hidden">
+          {selectedServices.map((svc, i) => (
+            <div key={svc.id} className={`flex items-center justify-between gap-3 px-4 py-3 ${i < selectedServices.length - 1 ? "border-b border-gray-200" : ""}`}>
+              <span className="text-sm text-gray-800 font-medium">{svc.label}</span>
+              <span className="inline-flex items-center gap-1 text-xs font-semibold text-gray-500 bg-white border border-gray-200 rounded-full px-2.5 py-0.5 shrink-0">
+                <Clock className="w-3 h-3" />
+                {svc.duration}
+              </span>
+            </div>
+          ))}
+        </div>
+      </div>
+
       <div className="bg-[#f9fafb] rounded-md border border-gray-200 overflow-hidden mb-6">
         {rows.map((row, i) => (
           <div key={i} className={`flex gap-4 px-4 py-3 ${i < rows.length - 1 ? "border-b border-gray-200" : ""}`}>
@@ -318,7 +358,7 @@ export default function RendezVous() {
 
   function validate(s: number): string[] {
     const errs: string[] = [];
-    if (s === 1 && !form.service) errs.push("Veuillez sélectionner un service.");
+    if (s === 1 && form.services.length === 0) errs.push("Veuillez sélectionner au moins un service.");
     if (s === 2) {
       if (!form.vehicleMake.trim()) errs.push("La marque du véhicule est requise.");
       if (!form.vehicleModel.trim()) errs.push("Le modèle du véhicule est requis.");
@@ -428,6 +468,9 @@ export default function RendezVous() {
 
                       {errors.length > 0 && (
                         <motion.div
+                          id="rdv-step1-error"
+                          role="alert"
+                          aria-live="polite"
                           initial={{ opacity: 0, y: -8 }}
                           animate={{ opacity: 1, y: 0 }}
                           className="mt-5 bg-red-50 border border-red-200 rounded-md px-4 py-3"
