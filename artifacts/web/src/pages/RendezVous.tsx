@@ -9,6 +9,14 @@ import { Contact } from "@/components/sections/Contact";
 import { Phone, Mail, MapPin, Clock, Check, ChevronRight, ChevronLeft } from "lucide-react";
 import heroImg from "@/assets/optimized-photos/IMG_1647.webp";
 
+function formatPhone(value: string): string {
+  const digits = value.replace(/\D/g, "").slice(0, 10);
+  if (digits.length === 0) return "";
+  if (digits.length <= 3) return `(${digits}`;
+  if (digits.length <= 6) return `(${digits.slice(0, 3)}) ${digits.slice(3)}`;
+  return `(${digits.slice(0, 3)}) ${digits.slice(3, 6)}-${digits.slice(6)}`;
+}
+
 const SERVICES = [
   { id: "lavage-int", label: "Lavage intérieur", duration: "2h", category: "Lavage" },
   { id: "lavage-ext", label: "Lavage extérieur", duration: "1h", category: "Lavage" },
@@ -248,9 +256,12 @@ function Step3({ form, setForm }: { form: FormData; setForm: (f: FormData) => vo
           <label className="block text-sm font-semibold text-gray-700 mb-1.5">Téléphone <span className="text-accent">*</span></label>
           <input
             type="tel"
+            inputMode="tel"
+            autoComplete="tel"
             placeholder="(418) 555-1234"
             value={form.phone}
-            onChange={(e) => setForm({ ...form, phone: e.target.value })}
+            onChange={(e) => setForm({ ...form, phone: formatPhone(e.target.value) })}
+            maxLength={14}
             className="w-full px-4 py-3 border border-gray-200 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-accent/30 focus:border-accent transition-colors"
           />
         </div>
@@ -368,6 +379,7 @@ export default function RendezVous() {
       if (!form.firstName.trim()) errs.push("Le prénom est requis.");
       if (!form.lastName.trim()) errs.push("Le nom est requis.");
       if (!form.phone.trim()) errs.push("Le téléphone est requis.");
+      else if (form.phone.replace(/\D/g, "").length !== 10) errs.push("Le téléphone doit contenir 10 chiffres.");
       if (!form.email.trim()) errs.push("Le courriel est requis.");
       else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) errs.push("Le courriel n'est pas valide.");
     }
