@@ -9,6 +9,7 @@ import { Shield, Award, Heart, Wrench } from "lucide-react";
 import heroImg from "@/assets/optimized-photos/IMG_3898.webp";
 import img1 from "@/assets/optimized-photos/IMG_9142.webp";
 import img2 from "@/assets/optimized-photos/IMG_8023.webp";
+import ctaImg from "@/assets/optimized-photos/IMG_9345.webp";
 
 const values = [
   {
@@ -189,6 +190,32 @@ export default function APropos() {
                 <p className="text-gray-700 leading-relaxed text-sm md:text-base">{value.description}</p>
               </motion.div>
             ))}
+          </motion.div>
+        </div>
+      </section>
+
+      <section className="relative h-[320px] sm:h-[380px] md:h-[440px] flex items-center overflow-hidden">
+        <div className="absolute inset-0">
+          <img src={ctaImg} alt="Service d'esthétique automobile à La Malbaie" className="w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/30" />
+        </div>
+        <div className="max-w-7xl mx-auto px-6 relative z-10 w-full">
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+            <SectionTagline text="Confiez-nous votre véhicule" light center={false} />
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-white mb-4 leading-tight max-w-2xl">
+              VIVEZ L'EXPÉRIENCE <span className="text-blue-400">PASCAL PILOTE</span>
+            </h2>
+            <p className="text-base sm:text-lg md:text-xl text-gray-100 max-w-xl mb-6 md:mb-8">
+              La même passion, la même précision et le même souci du détail pour chaque véhicule qui passe entre nos mains.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+              <Link href="/rendez-vous" className="inline-flex items-center justify-center bg-accent text-white px-8 py-4 rounded-md font-semibold hover:bg-accent-hover transition-colors">
+                Prendre un rendez-vous
+              </Link>
+              <a href="tel:+14186655871" className="inline-flex items-center justify-center bg-white/10 backdrop-blur-sm border border-white/30 text-white px-8 py-4 rounded-md font-semibold hover:bg-white/20 transition-colors">
+                (418) 665-5871
+              </a>
+            </div>
           </motion.div>
         </div>
       </section>

@@ -26,6 +26,7 @@ import img14 from "@/assets/optimized-photos/IMG_8779.webp";
 import img15 from "@/assets/optimized-photos/IMG_7859.webp";
 import img16 from "@/assets/optimized-photos/IMG_5138.webp";
 import img17 from "@/assets/optimized-photos/IMG_9584.webp";
+import ctaImg from "@/assets/optimized-photos/IMG_5191.webp";
 
 const allImages = [
   img1, img2, img3, img4, img5, img6, img7, img8, img9,
@@ -111,14 +112,32 @@ export default function GaleriePage() {
             ))}
           </div>
 
-          <div className="text-center mt-12">
-            <Link
-              href="/rendez-vous"
-              className="inline-flex items-center justify-center bg-accent hover:bg-accent-hover text-white px-8 py-4 rounded-md font-semibold text-base transition-colors"
-            >
-              Prendre un rendez-vous
-            </Link>
-          </div>
+        </div>
+      </section>
+
+      <section className="relative h-[320px] sm:h-[380px] md:h-[440px] flex items-center overflow-hidden">
+        <div className="absolute inset-0">
+          <img src={ctaImg} alt="Atelier d'esthétique automobile Pascal Pilote" className="w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/30" />
+        </div>
+        <div className="max-w-7xl mx-auto px-6 relative z-10 w-full">
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+            <SectionTagline text="Votre véhicule" light center={false} />
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-white mb-4 leading-tight max-w-2xl">
+              PRÊT À FAIRE PARTIE DE <span className="text-blue-400">NOTRE GALERIE</span> ?
+            </h2>
+            <p className="text-base sm:text-lg md:text-xl text-gray-100 max-w-xl mb-6 md:mb-8">
+              Confiez-nous votre véhicule et obtenez le même niveau de fini que vous voyez ci-dessus.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+              <Link href="/rendez-vous" className="inline-flex items-center justify-center bg-accent text-white px-8 py-4 rounded-md font-semibold hover:bg-accent-hover transition-colors">
+                Obtenir une soumission
+              </Link>
+              <a href="tel:+14186655871" className="inline-flex items-center justify-center bg-white/10 backdrop-blur-sm border border-white/30 text-white px-8 py-4 rounded-md font-semibold hover:bg-white/20 transition-colors">
+                (418) 665-5871
+              </a>
+            </div>
+          </motion.div>
         </div>
       </section>
 
