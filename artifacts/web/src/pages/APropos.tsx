@@ -50,7 +50,7 @@ export default function APropos() {
     <PageLayout>
       <section className="relative h-[40vh] sm:h-[45vh] md:h-[50vh] min-h-[280px] sm:min-h-[350px] flex items-center overflow-hidden -mt-[120px] pt-[120px]">
         <div className="absolute inset-0">
-          <img src={heroImg} alt="L'équipe d'Esthétique Auto Pascal Pilote à La Malbaie" className="w-full h-full object-cover" />
+          <img src={heroImg} alt="L'équipe d'Esthétique Auto Pascal Pilote à La Malbaie" className="w-full h-full object-cover" fetchPriority="high" decoding="async" />
           <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30" />
         </div>
         <div className="max-w-7xl mx-auto px-6 relative z-10 w-full">
@@ -105,8 +105,8 @@ export default function APropos() {
               transition={{ duration: 0.6 }}
               className="relative"
             >
-              <img src={img1} alt="Atelier Pascal Pilote" className="w-full h-[300px] sm:h-[350px] md:h-[400px] object-cover rounded-md" />
-              <img
+              <img loading="lazy" decoding="async" src={img1} alt="Atelier Pascal Pilote" className="w-full h-[300px] sm:h-[350px] md:h-[400px] object-cover rounded-md" />
+              <img loading="lazy" decoding="async"
                 src={img2}
                 alt="Travail en détail"
                 className="absolute -bottom-8 -left-8 w-40 h-40 md:w-48 md:h-48 object-cover rounded-md border-4 border-white shadow-xl hidden lg:block"
@@ -198,7 +198,7 @@ export default function APropos() {
 
       <section className="relative h-[320px] sm:h-[380px] md:h-[440px] flex items-center overflow-hidden">
         <div className="absolute inset-0">
-          <img src={ctaImg} alt="Service d'esthétique automobile à La Malbaie" className="w-full h-full object-cover" />
+          <img loading="lazy" decoding="async" src={ctaImg} alt="Service d'esthétique automobile à La Malbaie" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/30" />
         </div>
         <div className="max-w-7xl mx-auto px-6 relative z-10 w-full">

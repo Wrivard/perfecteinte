@@ -9,7 +9,7 @@ export function Footer() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-2 md:grid-cols-3 gap-8 lg:gap-16 mb-10 md:mb-12">
           <div className="col-span-2 md:col-span-1 space-y-4">
-            <img src={logo} alt="Esthétique Auto PP" className="h-16 md:h-20" />
+            <img loading="lazy" decoding="async" src={logo} alt="Esthétique Auto PP" className="h-16 md:h-20" />
             <div>
               <h4 className="text-sm font-semibold text-gray-900 mb-1">Adresse</h4>
               <p className="text-sm text-gray-700 leading-relaxed">2535 boulevard Comporté,<br />La Malbaie, Québec</p>
@@ -51,7 +51,7 @@ export function Footer() {
           </p>
           <a href="https://kua.quebec" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-xs md:text-sm text-gray-500 hover:text-gray-700 transition-colors">
             <span>Fait localement par</span>
-            <img src={kuaLogo} alt="Küa" className="h-4 md:h-5" />
+            <img loading="lazy" decoding="async" src={kuaLogo} alt="Küa" className="h-4 md:h-5" />
           </a>
           <div className="text-xs md:text-sm text-gray-600">
             <Link href="/politique-de-confidentialite" className="hover:text-accent transition-colors">Politique de confidentialité</Link>

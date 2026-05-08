@@ -10,6 +10,8 @@ export function Hero() {
           src={bgImage}
           alt="Subaru WRX bleue – nano-céramique"
           className="w-full h-full object-cover object-[center_30%]"
+          fetchPriority="high"
+          decoding="async"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40"></div>
       </div>

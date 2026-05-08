@@ -42,7 +42,7 @@ export default function GaleriePage() {
     <PageLayout>
       <section className="relative h-[40vh] sm:h-[45vh] md:h-[50vh] min-h-[280px] sm:min-h-[350px] flex items-center overflow-hidden -mt-[120px] pt-[120px]">
         <div className="absolute inset-0">
-          <img src={heroImg} alt="Galerie de réalisations en esthétique automobile" className="w-full h-full object-cover" />
+          <img src={heroImg} alt="Galerie de réalisations en esthétique automobile" className="w-full h-full object-cover" fetchPriority="high" decoding="async" />
           <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30" />
         </div>
         <div className="max-w-7xl mx-auto px-6 relative z-10 w-full">
@@ -109,6 +109,7 @@ export default function GaleriePage() {
                   alt={`Réalisation ${index + 1}`}
                   className="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-500"
                   loading="lazy"
+                  decoding="async"
                 />
               </motion.div>
             ))}
@@ -119,7 +120,7 @@ export default function GaleriePage() {
 
       <section className="relative h-[320px] sm:h-[380px] md:h-[440px] flex items-center overflow-hidden">
         <div className="absolute inset-0">
-          <img src={ctaImg} alt="Atelier d'esthétique automobile Pascal Pilote" className="w-full h-full object-cover" />
+          <img loading="lazy" decoding="async" src={ctaImg} alt="Atelier d'esthétique automobile Pascal Pilote" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/30" />
         </div>
         <div className="max-w-7xl mx-auto px-6 relative z-10 w-full">

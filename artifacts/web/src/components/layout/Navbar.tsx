@@ -86,6 +86,7 @@ export function Navbar() {
               <img
                 src={logo}
                 alt="Esthétique Auto Pascal Pilote"
+                decoding="async"
                 className={cn(
                   "transition-all duration-300",
                   isScrolled ? "h-10 sm:h-12 md:h-14" : "h-12 sm:h-14 md:h-16"

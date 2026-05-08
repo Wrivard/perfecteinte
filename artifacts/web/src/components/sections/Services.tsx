@@ -75,7 +75,7 @@ export function Services() {
                 className="relative h-[380px] sm:h-[420px] md:h-[520px] rounded-md overflow-hidden cursor-pointer group"
               >
                 <div className="absolute inset-0">
-                  <img
+                  <img loading="lazy" decoding="async"
                     src={service.image}
                     alt={service.title}
                     className="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-110"

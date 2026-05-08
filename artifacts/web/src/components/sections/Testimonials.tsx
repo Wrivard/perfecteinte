@@ -93,7 +93,7 @@ export function Testimonials({ compact = false }: { compact?: boolean }) {
                   key={`${page}-${i}`}
                   className="relative h-[350px] sm:h-[380px] md:h-[420px] rounded-md overflow-hidden group"
                 >
-                  <img src={t.image} alt={t.author} className="absolute inset-0 w-full h-full object-cover" />
+                  <img loading="lazy" decoding="async" src={t.image} alt={t.author} className="absolute inset-0 w-full h-full object-cover" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/60 to-black/20"></div>
                   <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8">
                     <div className="flex gap-1 text-blue-400 mb-3 md:mb-4">

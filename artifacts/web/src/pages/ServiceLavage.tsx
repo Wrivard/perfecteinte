@@ -76,7 +76,7 @@ export default function ServiceLavage() {
       <FAQSchema faqs={faqs} />
       <section className="relative h-[40vh] sm:h-[45vh] md:h-[50vh] min-h-[280px] sm:min-h-[350px] flex items-center overflow-hidden -mt-[120px] pt-[120px]">
         <div className="absolute inset-0">
-          <img src={heroImg} alt="Lavage automobile" className="w-full h-full object-cover" />
+          <img src={heroImg} alt="Lavage automobile" className="w-full h-full object-cover" fetchPriority="high" decoding="async" />
           <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/30" />
         </div>
         <div className="max-w-7xl mx-auto px-6 relative z-10 w-full">
@@ -122,7 +122,7 @@ export default function ServiceLavage() {
               </Link>
             </motion.div>
             <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="relative h-[300px] sm:h-[400px] md:h-[500px] rounded-md overflow-hidden">
-              <img src={img1} alt="Lavage intérieur" className="w-full h-full object-cover" />
+              <img loading="lazy" decoding="async" src={img1} alt="Lavage intérieur" className="w-full h-full object-cover" />
             </motion.div>
           </div>
         </div>
@@ -153,7 +153,7 @@ export default function ServiceLavage() {
                   className="group bg-white rounded-md overflow-hidden shadow-sm border border-gray-100 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex flex-col"
                 >
                   <div className="relative h-48 md:h-56 overflow-hidden">
-                    <img src={svc.image} alt={svc.alt} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                    <img loading="lazy" decoding="async" src={svc.image} alt={svc.alt} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
                     <div className="absolute top-4 left-4 w-12 h-12 bg-white rounded-md flex items-center justify-center shadow-md">
                       <Icon className="w-6 h-6 text-accent" strokeWidth={1.75} />
@@ -175,7 +175,7 @@ export default function ServiceLavage() {
 
       <section className="relative h-[300px] sm:h-[350px] md:h-[400px] flex items-center overflow-hidden">
         <div className="absolute inset-0">
-          <img src={img2} alt="Résultat lavage impeccable" className="w-full h-full object-cover" />
+          <img loading="lazy" decoding="async" src={img2} alt="Résultat lavage impeccable" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/55 to-black/30" />
         </div>
         <div className="max-w-7xl mx-auto px-6 relative z-10 w-full">

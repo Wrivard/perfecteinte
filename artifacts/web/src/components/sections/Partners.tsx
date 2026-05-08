@@ -42,7 +42,7 @@ export function Partners() {
               viewport={{ once: true }}
               transition={{ delay: i * 0.1, duration: 0.4 }}
             >
-              <img
+              <img loading="lazy" decoding="async"
                 src={partner.logo}
                 alt={partner.name}
                 className="h-8 sm:h-10 md:h-12 w-auto object-contain brightness-0 opacity-40 hover:opacity-70 transition-opacity duration-300"
@@ -67,7 +67,7 @@ export function Partners() {
               <p className="text-sm font-bold text-gray-900">Certifié installateur pare-pierre par</p>
             </div>
           </div>
-          <img
+          <img loading="lazy" decoding="async"
             src={labocosmetica}
             alt="Labocosmetica"
             className="h-8 sm:h-10 w-auto object-contain brightness-0 opacity-70"

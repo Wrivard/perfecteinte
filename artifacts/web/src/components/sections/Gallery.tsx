@@ -59,6 +59,7 @@ export function Gallery() {
                   alt={`Réalisation ${index + 1}`}
                   className="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-500"
                   loading="lazy"
+                  decoding="async"
                 />
               </motion.div>
             ))}

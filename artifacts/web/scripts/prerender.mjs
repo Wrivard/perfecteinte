@@ -218,6 +218,14 @@ async function main() {
     html = html.replace(/<title>[^<]*<\/title>/, `<title>${page.title}</title>`);
     html = replaceMetaContent(html, 'name="description"', page.description);
     html = replaceMetaContent(html, 'rel="canonical"', canonical, "href");
+    html = html.replace(
+      /<link rel="alternate" hreflang="fr-CA"[^>]*>/,
+      `<link rel="alternate" hreflang="fr-CA" href="${canonical}" />`,
+    );
+    html = html.replace(
+      /<link rel="alternate" hreflang="x-default"[^>]*>/,
+      `<link rel="alternate" hreflang="x-default" href="${canonical}" />`,
+    );
     html = replaceMetaContent(html, 'property="og:title"', page.title);
     html = replaceMetaContent(html, 'property="og:description"', page.description);
     html = replaceMetaContent(html, 'property="og:url"', canonical);
@@ -245,6 +253,19 @@ async function main() {
   }
 
   console.log(`[prerender] Wrote ${total} pre-rendered HTML files (full SSG with React content + per-page meta + schemas)`);
+
+  const today = new Date().toISOString().slice(0, 10);
+  const sitemapEntries = pages
+    .map((p) => {
+      const loc = canonicalUrl(p.path);
+      const priority = p.path === "/" ? "1.0" : p.path.startsWith("/services") ? "0.9" : p.path === "/rendez-vous" ? "0.9" : p.path === "/politique-de-confidentialite" ? "0.3" : "0.8";
+      const changefreq = p.path === "/" ? "weekly" : p.path === "/politique-de-confidentialite" ? "yearly" : "monthly";
+      return `  <url>\n    <loc>${loc}</loc>\n    <lastmod>${today}</lastmod>\n    <changefreq>${changefreq}</changefreq>\n    <priority>${priority}</priority>\n  </url>`;
+    })
+    .join("\n");
+  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${sitemapEntries}\n</urlset>\n`;
+  writeFileSync(join(outDir, "sitemap.xml"), sitemap, "utf-8");
+  console.log(`[prerender] Wrote dynamic sitemap.xml with lastmod=${today}`);
 }
 
 main().catch((err) => {
