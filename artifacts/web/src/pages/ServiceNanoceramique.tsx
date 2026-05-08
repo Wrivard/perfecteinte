@@ -5,7 +5,7 @@ import { PageLayout } from "@/components/layout/PageLayout";
 import { Partners } from "@/components/sections/Partners";
 import { SectionTagline } from "@/components/ui/SectionTagline";
 import { FAQSchema } from "@/components/seo/FAQSchema";
-import { Shield, Check, Gem, ShieldCheck, Wrench, BadgeCheck, Settings2 } from "lucide-react";
+import { Shield, Check, Gem, ShieldCheck, Wrench, Settings2 } from "lucide-react";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { useState } from "react";
 import { AccordionItem } from "@/components/ui/accordion-custom";
@@ -52,11 +52,6 @@ const benefits = [
     Icon: Shield,
     title: "Protection maximale",
     description: "La combinaison PPF + nanocéramique offre la protection la plus complète disponible sur le marché — une barrière physique contre les éclats et chimique contre les contaminants.",
-  },
-  {
-    Icon: BadgeCheck,
-    title: "Technicien certifié",
-    description: "Notre installateur est certifié pare-pierre (PPF) par Labocosmetica, gage absolu de qualité, de précision et d'expertise reconnue à l'international.",
   },
   {
     Icon: Settings2,
@@ -193,11 +188,11 @@ export default function ServiceNanoceramique() {
               POURQUOI <span className="text-accent">NOUS CHOISIR</span>
             </h2>
             <p className="text-base md:text-lg text-gray-700 max-w-2xl mx-auto">
-              Quatre raisons pour lesquelles nos clients nous confient leurs véhicules les plus précieux.
+              Trois raisons pour lesquelles nos clients nous confient leurs véhicules les plus précieux.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {benefits.map((b, i) => {
               const Icon = b.Icon;
               return (
