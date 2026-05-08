@@ -1,5 +1,5 @@
 import { Link } from "wouter";
-import { Facebook, Instagram } from "lucide-react";
+import { Facebook } from "lucide-react";
 import logo from "@assets/425261687_389413763697862_6688968440363193968_n-removebg-previ_1774531438969.png";
 import kuaLogo from "@assets/black-letter-kua-logo_1775680036268.png";
 
@@ -21,7 +21,6 @@ export function Footer() {
             </div>
             <div className="flex gap-4 pt-2">
               <a href="https://www.facebook.com/profile.php?id=100078877238175" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-gray-600 hover:text-accent transition-colors"><Facebook className="w-5 h-5" /></a>
-              <a href="#" className="text-gray-600 hover:text-accent transition-colors"><Instagram className="w-5 h-5" /></a>
             </div>
           </div>
 

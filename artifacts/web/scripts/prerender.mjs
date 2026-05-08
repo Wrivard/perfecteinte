@@ -168,6 +168,7 @@ function buildSchemas(page) {
           streetAddress: "2535 boulevard Comporté",
           addressLocality: "La Malbaie",
           addressRegion: "QC",
+          postalCode: "G4A 1C1",
           addressCountry: "CA",
         },
       },
