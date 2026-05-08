@@ -11,7 +11,7 @@ import { useState } from "react";
 import { AccordionItem } from "@/components/ui/accordion-custom";
 import heroImg from "@/assets/optimized-photos/IMG_9584.webp";
 import img1 from "@assets/img-6900-23_1778253975583.webp";
-import img2 from "@/assets/optimized-photos/IMG_6900.webp";
+import img2 from "@/assets/optimized-photos/IMG_5278.webp";
 import imgNano from "@/assets/optimized-photos/IMG_7930_new.webp";
 import imgPPF from "@assets/img-4953-12_1778253672138.webp";
 
