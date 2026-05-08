@@ -34,11 +34,15 @@ function Router() {
   );
 }
 
-function App() {
+interface AppProps {
+  ssrPath?: string;
+}
+
+function App({ ssrPath }: AppProps = {}) {
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
-        <WouterRouter base={import.meta.env.BASE_URL.replace(/\/$/, "")}>
+        <WouterRouter base={import.meta.env.BASE_URL.replace(/\/$/, "")} ssrPath={ssrPath}>
           <Router />
         </WouterRouter>
         <Toaster />

@@ -9,15 +9,14 @@ Esthétique Auto Pascal Pilote est une entreprise spécialisée en détailing au
 ## Services
 
 - **Lavage Auto & Entretien Esthétique de Luxe** : Nettoyage complet intérieur et extérieur avec produits professionnels haut de gamme. Trois forfaits disponibles : Essentiel, Premium et Luxe.
-- **Protection de Peinture PPF** : Installation de pellicule de protection de peinture (Paint Protection Film) transparente, auto-cicatrisante, avec garantie jusqu'à 10 ans.
-- **Pare-Pierre** : Service de protection pare-pierre haut de gamme pour protéger votre véhicule contre les éclats de pierre, les débris de route et les rayures.
-- **Polissage & Nano-Céramique** : Correction des imperfections de peinture et application de revêtement nano-céramique pour une protection durable jusqu'à 5 ans.
+- **Scellant & Polissage** : Cires, scellant peinture et polissage professionnel pour corriger les imperfections et protéger durablement la peinture.
+- **Nano-Céramique & Pare-Pierre (PPF)** : Application de revêtement nano-céramique pour protection durable et installation de pellicule pare-pierre (PPF) auto-cicatrisante.
 
 ## Coordonnées
 
 - **Adresse** : 2535 boulevard Comporté, La Malbaie, Québec
 - **Téléphone** : (418) 665-5871
-- **Courriel** : info@esthetiqueautopascalpilote.ca
+- **Courriel** : Pascal.1993@live.ca
 - **Horaires** : Lundi au vendredi, 8h à 17h | Samedi sur rendez-vous
 
 ## Partenaires
@@ -30,9 +29,8 @@ Labocosmetica, Legend PPF, CarPro, MaxShine
 - /a-propos — À propos de l'entreprise
 - /services — Tous les services
 - /services/lavage — Lavage Auto & Entretien de Luxe
-- /services/ppf — Protection de Peinture PPF
-- /services/par-pierre — Service Pare-Pierre
-- /services/polissage — Polissage & Nano-Céramique
+- /services/scellant — Scellant & Polissage
+- /services/nano-ceramique — Nano-Céramique & Pare-Pierre (PPF)
 - /galerie — Galerie photo
 - /rendez-vous — Prendre un rendez-vous
 - /politique-de-confidentialite — Politique de confidentialité et cookies

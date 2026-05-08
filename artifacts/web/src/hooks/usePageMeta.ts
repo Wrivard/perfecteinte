@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 
 const BASE_TITLE = "Esthétique Auto Pascal Pilote";
-const BASE_URL = "https://esthetiqueautopascalpilote.ca";
+const BASE_URL = "https://esthetiqueautopascalpilote.com";
 
 export function usePageMeta(title?: string, description?: string, path?: string) {
   useEffect(() => {
