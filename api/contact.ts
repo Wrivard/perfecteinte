@@ -95,20 +95,96 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     ...(message ? ["", "Message du client:", message] : []),
   ].join("\n");
 
+  const clientHtml = `
+    <div style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;max-width:640px;margin:0 auto;color:#111827;">
+      <div style="background:#0f172a;padding:24px;text-align:center;border-radius:8px 8px 0 0;">
+        <h1 style="color:#ffffff;margin:0;font-size:22px;letter-spacing:1px;">ESTHÉTIQUE AUTO PASCAL PILOTE</h1>
+        <p style="color:#93c5fd;margin:6px 0 0;font-size:13px;letter-spacing:2px;text-transform:uppercase;">Détailing automobile · La Malbaie</p>
+      </div>
+      <div style="background:#ffffff;padding:32px 24px;border:1px solid #e5e7eb;border-top:none;border-radius:0 0 8px 8px;">
+        <h2 style="color:#0f172a;margin:0 0 12px;font-size:20px;">Bonjour ${escapeHtml(firstName)},</h2>
+        <p style="font-size:15px;line-height:1.6;color:#374151;">
+          Merci pour votre demande de soumission ! Nous avons bien reçu votre formulaire et un membre de notre équipe vous contactera dans les meilleurs délais pour confirmer les détails et planifier votre rendez-vous.
+        </p>
+        <h3 style="margin-top:24px;color:#0f172a;font-size:16px;border-bottom:2px solid #3b82f6;padding-bottom:6px;">Récapitulatif de votre demande</h3>
+        <table style="border-collapse:collapse;width:100%;margin-top:12px;font-size:14px;">
+          ${row("Véhicule", vehicle)}
+          ${row("Téléphone", phone)}
+          ${row("Courriel", email)}
+        </table>
+        <h3 style="margin-top:24px;color:#0f172a;font-size:16px;border-bottom:2px solid #3b82f6;padding-bottom:6px;">Services demandés</h3>
+        <ul style="font-size:14px;color:#111827;padding-left:20px;">${servicesList}</ul>
+        ${message ? `<h3 style="margin-top:24px;color:#0f172a;font-size:16px;border-bottom:2px solid #3b82f6;padding-bottom:6px;">Votre message</h3><p style="font-size:14px;white-space:pre-wrap;background:#f9fafb;padding:12px;border-radius:6px;border:1px solid #e5e7eb;">${escapeHtml(message)}</p>` : ""}
+        <div style="margin-top:32px;padding:20px;background:#f9fafb;border-radius:8px;border:1px solid #e5e7eb;">
+          <p style="margin:0 0 8px;font-size:14px;font-weight:600;color:#0f172a;">Une question ?</p>
+          <p style="margin:0;font-size:14px;color:#374151;line-height:1.6;">
+            📞 <a href="tel:4186655871" style="color:#2563eb;text-decoration:none;font-weight:600;">(418) 665-5871</a><br/>
+            ✉️ <a href="mailto:Pascal.1993@live.ca" style="color:#2563eb;text-decoration:none;">Pascal.1993@live.ca</a><br/>
+            📍 2535 boulevard Comporté, La Malbaie, Québec
+          </p>
+        </div>
+        <p style="margin-top:24px;font-size:13px;color:#6b7280;text-align:center;">
+          À très bientôt,<br/>
+          <strong style="color:#0f172a;">L'équipe Esthétique Auto Pascal Pilote</strong>
+        </p>
+      </div>
+      <p style="margin-top:16px;font-size:11px;color:#9ca3af;text-align:center;">
+        Ce courriel vous a été envoyé suite à votre demande sur esthetiqueautopascalpilote.com
+      </p>
+    </div>
+  `;
+
+  const clientText = [
+    `Bonjour ${firstName},`,
+    "",
+    "Merci pour votre demande de soumission ! Nous avons bien reçu votre formulaire et un membre de notre équipe vous contactera dans les meilleurs délais pour confirmer les détails.",
+    "",
+    "RÉCAPITULATIF DE VOTRE DEMANDE",
+    `Véhicule: ${vehicle}`,
+    `Téléphone: ${phone}`,
+    `Courriel: ${email}`,
+    "",
+    "Services demandés:",
+    ...services.map((s) => `  - ${s}`),
+    ...(message ? ["", "Votre message:", message] : []),
+    "",
+    "Une question ?",
+    "Téléphone: (418) 665-5871",
+    "Courriel: Pascal.1993@live.ca",
+    "Adresse: 2535 boulevard Comporté, La Malbaie, Québec",
+    "",
+    "À très bientôt,",
+    "L'équipe Esthétique Auto Pascal Pilote",
+  ].join("\n");
+
   try {
     const resend = new Resend(apiKey);
-    const { error } = await resend.emails.send({
-      from: fromEmail,
-      to: recipientEmail,
-      replyTo: email,
-      subject: `Nouvelle soumission — ${fullName} (${vehicleMake} ${vehicleModel})`,
-      html,
-      text,
-    });
 
-    if (error) {
-      console.error("Resend error:", error);
+    const [internalResult, clientResult] = await Promise.all([
+      resend.emails.send({
+        from: fromEmail,
+        to: recipientEmail,
+        replyTo: email,
+        subject: `Nouvelle soumission — ${fullName} (${vehicleMake} ${vehicleModel})`,
+        html,
+        text,
+      }),
+      resend.emails.send({
+        from: fromEmail,
+        to: email,
+        replyTo: recipientEmail,
+        subject: "Confirmation de votre demande — Esthétique Auto Pascal Pilote",
+        html: clientHtml,
+        text: clientText,
+      }),
+    ]);
+
+    if (internalResult.error) {
+      console.error("Resend internal email error:", internalResult.error);
       return res.status(502).json({ error: "Échec de l'envoi du courriel." });
+    }
+    if (clientResult.error) {
+      console.error("Resend client confirmation email error:", clientResult.error);
     }
 
     return res.status(200).json({ success: true });
