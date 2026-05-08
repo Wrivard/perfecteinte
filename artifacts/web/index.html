@@ -2,42 +2,15 @@
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
-    <script>
-      (function () {
-        var host = window.location.hostname;
-        // Skip ONLY local/preview environments. .replit.app (Publish) and the production domain MUST load Cookiebot + GTM.
-        var isDev =
-          host === 'localhost' ||
-          host === '127.0.0.1' ||
-          host.endsWith('.replit.dev') ||
-          host.endsWith('.worf.replit.dev') ||
-          host.endsWith('.janeway.replit.dev') ||
-          host.endsWith('.riker.replit.dev') ||
-          host.endsWith('.picard.replit.dev') ||
-          host.endsWith('.kirk.replit.dev') ||
-          host.endsWith('.spock.replit.dev');
-        if (isDev) return;
-        var cb = document.createElement('script');
-        cb.id = 'Cookiebot';
-        cb.src = 'https://consent.cookiebot.com/uc.js';
-        cb.setAttribute('data-cbid', 'f31450a8-4e36-4675-bed7-9ee818c8e0d2');
-        cb.setAttribute('data-blockingmode', 'auto');
-        cb.type = 'text/javascript';
-        document.head.appendChild(cb);
-        var cd = document.createElement('script');
-        cd.id = 'CookieDeclaration';
-        cd.src = 'https://consent.cookiebot.com/f31450a8-4e36-4675-bed7-9ee818c8e0d2/cd.js';
-        cd.type = 'text/javascript';
-        cd.async = true;
-        document.head.appendChild(cd);
-        (function (w, d, s, l, i) {
-          w[l] = w[l] || []; w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
-          var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
-          j.async = true; j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-          f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-K9NJ99T2');
-      })();
-    </script>
+    <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="f31450a8-4e36-4675-bed7-9ee818c8e0d2" data-blockingmode="auto" type="text/javascript"></script>
+    <script id="CookieDeclaration" src="https://consent.cookiebot.com/f31450a8-4e36-4675-bed7-9ee818c8e0d2/cd.js" type="text/javascript" async></script>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-K9NJ99T2');</script>
+    <!-- End Google Tag Manager -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5" />
     <title>Esthétique Auto Pascal Pilote | Détailing à La Malbaie</title>
     <meta name="description" content="Services professionnels d'esthétique automobile à La Malbaie, Charlevoix. Lavage de luxe, PPF, polissage, nano-céramique. Prenez rendez-vous au (418) 665-5871." />
