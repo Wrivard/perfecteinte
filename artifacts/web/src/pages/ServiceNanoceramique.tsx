@@ -113,11 +113,8 @@ export default function ServiceNanoceramique() {
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-gray-900 mb-4 md:mb-6 leading-tight">
                 LA PROTECTION <span className="text-accent">ULTIME</span>
               </h2>
-              <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-4">
-                La nanocéramique et le pare-pierre (PPF) représentent le sommet de la protection automobile. Ensemble, ils offrent une barrière complète contre les éclats, les rayures, les UV, la pollution et les contaminants chimiques.
-              </p>
               <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-8">
-                Notre technicien est certifié installateur pare-pierre par <strong>Labocosmetica</strong>, garantissant une installation sans défaut et des résultats durables.
+                La nanocéramique et le pare-pierre (PPF) représentent le sommet de la protection automobile. Ensemble, ils offrent une barrière complète contre les éclats, les rayures, les UV, la pollution et les contaminants chimiques.
               </p>
               <Link href="/rendez-vous" className="inline-flex items-center bg-accent text-white px-6 py-3 rounded-md font-semibold hover:bg-accent-hover transition-colors">
                 Obtenir une soumission
