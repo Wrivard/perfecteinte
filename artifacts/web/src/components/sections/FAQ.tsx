@@ -15,7 +15,7 @@ const faqs = [
   },
   {
     q: "Dois-je prendre rendez-vous pour un lavage ?",
-    a: "Oui, nous vous recommandons de prendre rendez-vous à l'avance pour assurer un service optimal. Contactez-nous par téléphone au (418) 665-5871 pour réserver votre créneau."
+    a: "Oui, nous vous recommandons de prendre rendez-vous à l'avance pour assurer un service optimal. Vous pouvez réserver directement en ligne via notre formulaire de rendez-vous, ou nous contacter par téléphone au (418) 665-5871."
   },
   {
     q: "Le polissage peut-il enlever toutes les égratignures ?",
