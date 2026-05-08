@@ -12,7 +12,7 @@ import { AccordionItem } from "@/components/ui/accordion-custom";
 import heroImg from "@/assets/optimized-photos/IMG_7930.webp";
 import img1 from "@assets/img-1647-01_1778252857606.webp";
 import img2 from "@/assets/optimized-photos/IMG_5258.webp";
-import imgCires from "@/assets/optimized-photos/IMG_7694.webp";
+import imgCires from "@assets/eau-perler-pascal_1778270597032.PNG";
 import imgPolissage from "@/assets/optimized-photos/IMG_3303.webp";
 
 const subServices = [
