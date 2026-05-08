@@ -1,0 +1,36 @@
+# Esthétique Auto Pascal Pilote Inc.
+
+> Service professionnel d'esthétique automobile à La Malbaie, Québec (Charlevoix)
+
+## À propos
+
+Esthétique Auto Pascal Pilote est une entreprise spécialisée en détailing automobile haut de gamme, fondée il y a plus de 4 ans à La Malbaie, dans la région de Charlevoix. Avec plus de 10 ans d'expérience dans le milieu automobile et plus de 1 500 lavages complétés, notre équipe offre des services de qualité supérieure.
+
+## Services
+
+- **Lavage Auto & Entretien Esthétique de Luxe** : Nettoyage complet intérieur et extérieur avec produits professionnels haut de gamme. Trois forfaits disponibles : Essentiel, Premium et Luxe.
+- **Scellant & Polissage** : Cires, scellant peinture et polissage professionnel pour corriger les imperfections et protéger durablement la peinture.
+- **Nano-Céramique & Pare-Pierre (PPF)** : Application de revêtement nano-céramique pour protection durable et installation de pellicule pare-pierre (PPF) auto-cicatrisante.
+
+## Coordonnées
+
+- **Adresse** : 2535 boulevard Comporté, La Malbaie, Québec
+- **Téléphone** : (418) 665-5871
+- **Courriel** : Pascal.1993@live.ca
+- **Horaires** : Lundi au vendredi, 8h à 17h | Samedi sur rendez-vous
+
+## Partenaires
+
+Labocosmetica, Legend PPF, CarPro, MaxShine
+
+## Pages du site
+
+- / — Accueil
+- /a-propos — À propos de l'entreprise
+- /services — Tous les services
+- /services/lavage — Lavage Auto & Entretien de Luxe
+- /services/scellant — Scellant & Polissage
+- /services/nano-ceramique — Nano-Céramique & Pare-Pierre (PPF)
+- /galerie — Galerie photo
+- /rendez-vous — Prendre un rendez-vous
+- /politique-de-confidentialite — Politique de confidentialité et cookies
