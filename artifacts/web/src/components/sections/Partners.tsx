@@ -17,7 +17,7 @@ export function Partners() {
     <section className="py-10 md:py-14 bg-white">
       <div className="max-w-7xl mx-auto px-6">
         <motion.p
-          className="text-center text-[11px] uppercase tracking-[0.25em] font-semibold text-gray-400 mb-8 md:mb-10"
+          className="text-center text-[11px] uppercase tracking-[0.25em] font-semibold text-gray-400 mb-6 md:mb-10"
           initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
@@ -27,7 +27,7 @@ export function Partners() {
         </motion.p>
 
         <motion.div
-          className="flex flex-wrap items-center justify-center gap-10 md:gap-14 lg:gap-20 mb-8 md:mb-10"
+          className="grid grid-cols-4 items-center gap-3 sm:gap-8 md:gap-14 lg:gap-20 mb-6 md:mb-10"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true, amount: 0.3 }}
@@ -42,35 +42,36 @@ export function Partners() {
               viewport={{ once: true }}
               transition={{ delay: i * 0.1, duration: 0.4 }}
             >
-              <img loading="lazy" decoding="async"
+              <img
+                loading="lazy"
+                decoding="async"
                 src={partner.logo}
                 alt={partner.name}
-                className="h-8 sm:h-10 md:h-12 w-auto object-contain brightness-0 opacity-40 hover:opacity-70 transition-opacity duration-300"
+                className="h-7 sm:h-10 md:h-12 w-auto max-w-full object-contain brightness-0 opacity-40 hover:opacity-70 transition-opacity duration-300"
               />
             </motion.div>
           ))}
         </motion.div>
 
         <motion.div
-          className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6"
+          className="mx-auto max-w-md sm:max-w-none w-fit flex items-center justify-center gap-3 sm:gap-4 px-4 py-2.5 sm:px-5 sm:py-3 rounded-full border border-gray-200 bg-gray-50/80"
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.3 }}
         >
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-accent/10 rounded-full flex items-center justify-center shrink-0">
-              <Award className="w-5 h-5 text-accent" />
-            </div>
-            <div className="text-left">
-              <p className="text-[11px] uppercase tracking-widest text-gray-500 font-semibold">Certification officielle</p>
-              <p className="text-sm font-bold text-gray-900">Certifié installateur pare-pierre par</p>
-            </div>
+          <div className="w-7 h-7 sm:w-8 sm:h-8 bg-accent/10 rounded-full flex items-center justify-center shrink-0">
+            <Award className="w-4 h-4 text-accent" />
           </div>
-          <img loading="lazy" decoding="async"
+          <p className="text-[11px] sm:text-xs font-semibold text-gray-700 leading-tight">
+            Certifié installateur PPF par
+          </p>
+          <img
+            loading="lazy"
+            decoding="async"
             src={labocosmetica}
             alt="Labocosmetica"
-            className="h-8 sm:h-10 w-auto object-contain brightness-0 opacity-70"
+            className="h-5 sm:h-6 w-auto object-contain brightness-0 opacity-80"
           />
         </motion.div>
       </div>
