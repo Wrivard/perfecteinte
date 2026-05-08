@@ -43,7 +43,6 @@ const subServices = [
       "Pratiquement invisible",
       "Garantie longue durée",
       "Valeur de revente préservée",
-      "Certifié installateur par Labocosmetica",
     ],
   },
 ];
