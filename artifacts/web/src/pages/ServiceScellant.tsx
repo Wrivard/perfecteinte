@@ -11,7 +11,7 @@ import { useState } from "react";
 import { AccordionItem } from "@/components/ui/accordion-custom";
 import heroImg from "@/assets/optimized-photos/IMG_7930.webp";
 import img1 from "@assets/img-1647-01_1778252857606.webp";
-import img2 from "@/assets/optimized-photos/IMG_3303.webp";
+import img2 from "@/assets/optimized-photos/IMG_5258.webp";
 import imgCires from "@/assets/optimized-photos/IMG_7694.webp";
 import imgPolissage from "@/assets/optimized-photos/IMG_3303.webp";
 
@@ -181,7 +181,7 @@ export default function ServiceScellant() {
 
       <section className="relative h-[300px] sm:h-[350px] md:h-[400px] flex items-center overflow-hidden">
         <div className="absolute inset-0">
-          <img src={img2} alt="Résultat polissage" className="w-full h-full object-cover" />
+          <img src={img2} alt="Audi R8 noire avec finition brillante après scellant" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/55 to-black/30" />
         </div>
         <div className="max-w-7xl mx-auto px-6 relative z-10 w-full">
