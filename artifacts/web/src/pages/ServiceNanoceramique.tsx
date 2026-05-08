@@ -33,7 +33,7 @@ const subServices = [
   },
   {
     title: "Installation de pare-pierre (PPF)",
-    description: "La pellicule de protection de peinture (PPF) est la solution ultime contre les éclats de pierre, les débris routiers et les rayures. Film auto-cicatrisant et pratiquement invisible, installé par notre technicien certifié par Labocosmetica.",
+    description: "La pellicule de protection de peinture (PPF) est la solution ultime contre les éclats de pierre, les débris routiers et les rayures. Film auto-cicatrisant et pratiquement invisible, installé par notre technicien.",
     Icon: ShieldCheck,
     image: imgPPF,
     alt: "Installation de pare-pierre PPF",
