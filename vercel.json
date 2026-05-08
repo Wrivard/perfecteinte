@@ -1,0 +1,9 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "buildCommand": "PORT=3000 BASE_PATH=/ pnpm --filter @workspace/web... run build",
+  "installCommand": "pnpm install --frozen-lockfile",
+  "outputDirectory": "artifacts/web/dist/public",
+  "framework": null,
+  "trailingSlash": false,
+  "cleanUrls": true
+}
