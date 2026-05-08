@@ -75,7 +75,7 @@ const faqs = [
 ];
 
 export default function ServiceNanoceramique() {
-  usePageMeta("Nanocéramique", "Polissage & nano-céramique et installation de pare-pierre (PPF) à La Malbaie. Technicien certifié par Labocosmetica. Protection maximale pour votre véhicule.");
+  usePageMeta("Nanocéramique & PPF", "Polissage, nano-céramique et installation de pare-pierre (PPF) à La Malbaie. Protection maximale et durable pour la peinture de votre véhicule.");
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
