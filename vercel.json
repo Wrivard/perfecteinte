@@ -5,5 +5,10 @@
   "installCommand": "pnpm install --frozen-lockfile",
   "outputDirectory": "public",
   "trailingSlash": false,
-  "cleanUrls": true
+  "cleanUrls": true,
+  "functions": {
+    "api/*.ts": {
+      "runtime": "@vercel/node@5.1.0"
+    }
+  }
 }

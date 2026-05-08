@@ -371,6 +371,7 @@ export default function RendezVous() {
   const [form, setForm] = useState<FormData>(EMPTY_FORM);
   const [submitted, setSubmitted] = useState(false);
   const [errors, setErrors] = useState<string[]>([]);
+  const [submitting, setSubmitting] = useState(false);
 
   function validate(s: number): string[] {
     const errs: string[] = [];
@@ -406,8 +407,27 @@ export default function RendezVous() {
     setStep((s) => s - 1);
   }
 
-  function handleSubmit() {
-    setSubmitted(true);
+  async function handleSubmit() {
+    if (submitting) return;
+    setErrors([]);
+    setSubmitting(true);
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+      if (!res.ok) {
+        const data = (await res.json().catch(() => ({}))) as { error?: string };
+        setErrors([data.error || "Échec de l'envoi. Veuillez réessayer ou nous appeler au (418) 665-5871."]);
+        setSubmitting(false);
+        return;
+      }
+      setSubmitted(true);
+    } catch {
+      setErrors(["Erreur réseau. Veuillez vérifier votre connexion ou nous appeler au (418) 665-5871."]);
+      setSubmitting(false);
+    }
   }
 
   return (
@@ -519,9 +539,10 @@ export default function RendezVous() {
                         ) : (
                           <button
                             onClick={handleSubmit}
-                            className="inline-flex items-center gap-2 bg-accent text-white px-8 py-3 rounded-md font-semibold text-sm hover:bg-accent-hover transition-colors"
+                            disabled={submitting}
+                            className="inline-flex items-center gap-2 bg-accent text-white px-8 py-3 rounded-md font-semibold text-sm hover:bg-accent-hover transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
                           >
-                            Envoyer ma demande <Check className="w-4 h-4" />
+                            {submitting ? "Envoi en cours…" : <>Envoyer ma demande <Check className="w-4 h-4" /></>}
                           </button>
                         )}
                       </div>

@@ -1,0 +1,22 @@
+Setup Resend Email sur Vercel (pour formulaire de contact) :
+
+Installer resend dans le projet : npm install resend
+
+Créer un fichier api/contact.ts avec une fonction serverless Vercel qui utilise Resend :
+
+import { Resend } from "resend";
+const resend = new Resend(process.env.RESEND_API_KEY);
+// Envoyer avec: resend.emails.send({ from: process.env.RESEND_FROM_EMAIL, to: process.env.RECIPIENT_EMAIL, ... })
+Configurer 3 variables d'environnement sur Vercel (Settings > Environment Variables) :
+
+RESEND_API_KEY — Clé API depuis resend.com/api-keys
+RESEND_FROM_EMAIL — Adresse d'envoi (always use bonjour@kua.quebec)
+RECIPIENT_EMAIL — Adresse qui reçoit les soumissions (ex: paver.francism@gmail.com)
+Dans vercel.json, s'assurer que la route /api/ n'est pas capturée par le SPA fallback :
+
+{
+  "rewrites": [
+    { "source": "/((?!api/).*)", "destination": "/index.html" }
+  ]
+}
+Le frontend envoie avec fetch("/api/contact", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(formData) })
