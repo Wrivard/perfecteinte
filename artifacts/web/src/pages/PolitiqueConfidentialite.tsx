@@ -40,7 +40,7 @@ export default function PolitiqueConfidentialite() {
                 </p>
                 <ul className="list-disc pl-6 space-y-1">
                   <li><strong>Nom</strong> : Pascal Pilote</li>
-                  <li><strong>Courriel</strong> : <a href="mailto:info@esthetiqueautopascalpilote.ca" className="text-accent hover:underline">info@esthetiqueautopascalpilote.ca</a></li>
+                  <li><strong>Courriel</strong> : <a href="mailto:Pascal.1993@live.ca" className="text-accent hover:underline">Pascal.1993@live.ca</a></li>
                   <li><strong>Téléphone</strong> : <a href="tel:4186655871" className="text-accent hover:underline">(418) 665-5871</a></li>
                 </ul>
               </section>
@@ -143,7 +143,7 @@ export default function PolitiqueConfidentialite() {
                   <li><strong>Droit de déposer une plainte</strong> : Auprès de la Commission d'accès à l'information du Québec (CAI) si vous estimez que vos droits n'ont pas été respectés.</li>
                 </ul>
                 <p className="mt-3">
-                  Pour exercer l'un de ces droits, veuillez nous contacter à <a href="mailto:info@esthetiqueautopascalpilote.ca" className="text-accent hover:underline">info@esthetiqueautopascalpilote.ca</a> ou au <a href="tel:4186655871" className="text-accent hover:underline">(418) 665-5871</a>.
+                  Pour exercer l'un de ces droits, veuillez nous contacter à <a href="mailto:Pascal.1993@live.ca" className="text-accent hover:underline">Pascal.1993@live.ca</a> ou au <a href="tel:4186655871" className="text-accent hover:underline">(418) 665-5871</a>.
                 </p>
               </section>
 
@@ -170,7 +170,7 @@ export default function PolitiqueConfidentialite() {
                   <p className="font-semibold text-gray-900 mb-2">Esthétique Auto Pascal Pilote Inc.</p>
                   <p>2535 boulevard Comporté, La Malbaie, Québec</p>
                   <p>Téléphone : <a href="tel:4186655871" className="text-accent hover:underline">(418) 665-5871</a></p>
-                  <p>Courriel : <a href="mailto:info@esthetiqueautopascalpilote.ca" className="text-accent hover:underline">info@esthetiqueautopascalpilote.ca</a></p>
+                  <p>Courriel : <a href="mailto:Pascal.1993@live.ca" className="text-accent hover:underline">Pascal.1993@live.ca</a></p>
                 </div>
               </section>
 

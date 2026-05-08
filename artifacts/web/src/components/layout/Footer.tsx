@@ -17,7 +17,7 @@ export function Footer() {
             <div>
               <h4 className="text-sm font-semibold text-gray-900 mb-1">Contact</h4>
               <p className="text-sm text-gray-700">(418) 665-5871</p>
-              <p className="text-sm text-gray-700 break-all">info@esthetiqueautopascalpilote.ca</p>
+              <p className="text-sm text-gray-700 break-all">Pascal.1993@live.ca</p>
             </div>
             <div className="flex gap-4 pt-2">
               <a href="https://www.facebook.com/profile.php?id=100078877238175" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-gray-600 hover:text-accent transition-colors"><Facebook className="w-5 h-5" /></a>

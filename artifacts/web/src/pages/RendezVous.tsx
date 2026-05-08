@@ -557,8 +557,8 @@ export default function RendezVous() {
                     <Mail className="w-5 h-5 text-blue-400 shrink-0 mt-1" />
                     <div>
                       <span className="text-blue-400 text-xs uppercase tracking-widest font-semibold block mb-1">Courriel</span>
-                      <a href="mailto:info@esthetiqueautopascalpilote.ca" className="text-white font-medium hover:text-blue-400 transition-colors text-sm md:text-base break-all">
-                        info@esthetiqueautopascalpilote.ca
+                      <a href="mailto:Pascal.1993@live.ca" className="text-white font-medium hover:text-blue-400 transition-colors text-sm md:text-base break-all">
+                        Pascal.1993@live.ca
                       </a>
                     </div>
                   </div>
