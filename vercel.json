@@ -1,9 +1,9 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": "vite",
-  "buildCommand": "PORT=3000 BASE_PATH=/ pnpm --filter @workspace/web... run build",
+  "buildCommand": "PORT=3000 BASE_PATH=/ pnpm --filter @workspace/web... run build && WS_ROOT=$(dirname $(pnpm root -w)) && rm -rf public && cp -r \"$WS_ROOT/artifacts/web/dist/public\" public",
   "installCommand": "pnpm install --frozen-lockfile",
-  "outputDirectory": "artifacts/web/dist/public",
+  "outputDirectory": "public",
   "trailingSlash": false,
   "cleanUrls": true
 }
