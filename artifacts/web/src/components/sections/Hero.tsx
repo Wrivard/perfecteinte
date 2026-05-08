@@ -4,7 +4,7 @@ import bgImage from "@/assets/optimized-photos/IMG_8382.webp";
 
 export function Hero() {
   return (
-    <section id="home" className="relative min-h-[600px] h-[calc(100vh-40px)] flex items-center overflow-hidden">
+    <section id="home" className="relative min-h-[600px] h-[calc(100svh-40px)] flex items-center overflow-hidden">
       <div className="absolute inset-0 z-0">
         <img
           src={bgImage}

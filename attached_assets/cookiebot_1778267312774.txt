@@ -1,0 +1,38 @@
+Setup Cookiebot + Google Tag Manager (compatible Replit dev + site live) :
+
+L'utilisateur va fournir le script Cookiebot et GTM à intégrer. Voici comment le mettre en place pour qu'il fonctionne en production mais ne crash pas en développement local (Replit).
+
+Dans client/index.html, ajouter ce bloc dans le <head> avant toutes les autres balises :
+
+<script>
+if (window.location.hostname !== 'localhost' && !window.location.hostname.includes('replit')) {
+  // --- COOKIEBOT ---
+  var cb = document.createElement('script');
+  cb.id = 'Cookiebot';
+  cb.src = 'https://consent.cookiebot.com/uc.js';
+  cb.setAttribute('data-cbid', 'VOTRE_CBID_ICI');
+  cb.setAttribute('data-blockingmode', 'auto');
+  cb.type = 'text/javascript';
+  document.head.appendChild(cb);
+  var cd = document.createElement('script');
+  cd.id = 'CookieDeclaration';
+  cd.src = 'https://consent.cookiebot.com/VOTRE_CBID_ICI/cd.js';
+  cd.type = 'text/javascript';
+  cd.async = true;
+  document.head.appendChild(cd);
+  // --- GOOGLE TAG MANAGER ---
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','VOTRE_GTM_ID_ICI');
+}
+</script>
+Puis ajouter dans le <body>, juste après la balise <body> :
+
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=VOTRE_GTM_ID_ICI"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+Remplacer :
+
+VOTRE_CBID_ICI par l'ID du groupe de domaines Cookiebot (ex: 22fc0905-72b5-434b-94bb-39e56b6811cc)
+VOTRE_GTM_ID_ICI par l'ID Google Tag Manager (ex: GTM-N654Q4HW)
