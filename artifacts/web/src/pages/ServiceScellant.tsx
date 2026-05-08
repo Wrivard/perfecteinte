@@ -10,7 +10,7 @@ import { Testimonials } from "@/components/sections/Testimonials";
 import { useState } from "react";
 import { AccordionItem } from "@/components/ui/accordion-custom";
 import heroImg from "@/assets/optimized-photos/IMG_7930.webp";
-import img1 from "@/assets/optimized-photos/IMG_3412.webp";
+import img1 from "@assets/img-1647-01_1778252857606.webp";
 import img2 from "@/assets/optimized-photos/IMG_3303.webp";
 import imgCires from "@/assets/optimized-photos/IMG_7694.webp";
 import imgPolissage from "@/assets/optimized-photos/IMG_3303.webp";
@@ -109,7 +109,7 @@ export default function ServiceScellant() {
               </Link>
             </motion.div>
             <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="relative h-[300px] sm:h-[400px] md:h-[500px] rounded-md overflow-hidden">
-              <img src={img1} alt="Polissage professionnel" className="w-full h-full object-cover" />
+              <img src={img1} alt="Mercedes SUV avec finition impeccable après scellant" className="w-full h-full object-cover" />
             </motion.div>
           </div>
         </div>
