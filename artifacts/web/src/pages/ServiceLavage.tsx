@@ -41,7 +41,7 @@ const subServices = [
   },
   {
     title: "Décontamination",
-    description: "Élimination des contaminants ferrifères et organiques incrustés dans la peinture. Idéal en complément du lavage extérieur pour une surface parfaitement saine.",
+    description: "Élimination des contaminants ferreux et organiques incrustés dans la peinture. Idéal en complément du lavage extérieur pour une surface parfaitement saine.",
     Icon: ShieldCheck,
     image: imgDecont,
     alt: "Décontamination de la peinture",
@@ -61,7 +61,7 @@ const features = [
 
 const faqs = [
   { q: "Quelle est la différence entre lavage intérieur et extérieur ?", a: "Le lavage intérieur comprend l'aspiration, le nettoyage des surfaces, cuirs, plastiques et vitres intérieures. Le lavage extérieur comprend le lavage à la main, les jantes, pneus et carrosserie. Vous pouvez choisir l'un ou l'autre, ou les deux ensemble." },
-  { q: "Qu'est-ce que la décontamination ?", a: "La décontamination élimine les particules ferrifères (poussières de frein, rouille) et contaminants organiques incrustés dans la peinture que le lavage normal ne peut pas enlever. C'est une étape recommandée régulièrement pour préserver la santé de votre peinture." },
+  { q: "Qu'est-ce que la décontamination ?", a: "La décontamination élimine les particules ferreuses (poussières de frein, rouille) et contaminants organiques incrustés dans la peinture que le lavage normal ne peut pas enlever. C'est une étape recommandée régulièrement pour préserver la santé de votre peinture." },
   { q: "Dois-je prendre rendez-vous ?", a: "Oui, nous recommandons fortement de prendre rendez-vous à l'avance pour vous garantir un créneau et un service optimal. Appelez-nous au (418) 665-5871 ou remplissez notre formulaire en ligne." },
   { q: "Quels produits utilisez-vous ?", a: "Nous utilisons exclusivement des produits professionnels haut de gamme, notamment de la gamme Labocosmetica et CarPro, respectueux de l'environnement et adaptés à chaque type de surface." },
   { q: "Est-ce que vous lavez aussi les VUS et camions ?", a: "Absolument ! Nous traitons tous types de véhicules : berlines, VUS, camions, véhicules de luxe et exotiques." },
