@@ -13,7 +13,7 @@ import heroImg from "@/assets/optimized-photos/IMG_9584.webp";
 import img1 from "@/assets/optimized-photos/IMG_4953.webp";
 import img2 from "@/assets/optimized-photos/IMG_6900.webp";
 import imgNano from "@/assets/optimized-photos/IMG_4953.webp";
-import imgPPF from "@assets/img-1647-01_1778252857606.webp";
+import imgPPF from "@assets/img-4953-12_1778253672138.webp";
 
 const subServices = [
   {
