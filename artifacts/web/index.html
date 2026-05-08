@@ -5,7 +5,17 @@
     <script>
       (function () {
         var host = window.location.hostname;
-        var isDev = host === 'localhost' || host === '127.0.0.1' || host.includes('replit') || host.includes('worf') || host.includes('janeway') || host.includes('riker') || host.includes('picard');
+        // Skip ONLY local/preview environments. .replit.app (Publish) and the production domain MUST load Cookiebot + GTM.
+        var isDev =
+          host === 'localhost' ||
+          host === '127.0.0.1' ||
+          host.endsWith('.replit.dev') ||
+          host.endsWith('.worf.replit.dev') ||
+          host.endsWith('.janeway.replit.dev') ||
+          host.endsWith('.riker.replit.dev') ||
+          host.endsWith('.picard.replit.dev') ||
+          host.endsWith('.kirk.replit.dev') ||
+          host.endsWith('.spock.replit.dev');
         if (isDev) return;
         var cb = document.createElement('script');
         cb.id = 'Cookiebot';
