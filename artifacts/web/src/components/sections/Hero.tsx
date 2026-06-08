@@ -8,8 +8,8 @@ export function Hero() {
       <div className="absolute inset-0 z-0">
         <img
           src={bgImage}
-          alt="Subaru WRX bleue – nano-céramique"
-          className="w-full h-full object-cover object-[center_30%]"
+          alt="Audi R8 blanche – nano-céramique"
+          className="w-full h-full object-cover object-[center_50%]"
           fetchPriority="high"
           decoding="async"
         />
