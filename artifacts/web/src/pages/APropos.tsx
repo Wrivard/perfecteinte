@@ -6,7 +6,7 @@ import { Partners } from "@/components/sections/Partners";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { SectionTagline } from "@/components/ui/SectionTagline";
 import { Shield, Award, Heart, Wrench } from "lucide-react";
-import heroImg from "@/assets/optimized-photos/IMG_3898.webp";
+import heroImg from "@assets/487280382_651198107665881_8063805331803723505_n_1780950309802.jpg";
 import img1 from "@/assets/optimized-photos/IMG_9142.webp";
 import img2 from "@/assets/optimized-photos/IMG_8023.webp";
 import ctaImg from "@/assets/optimized-photos/IMG_9345.webp";

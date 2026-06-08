@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "wouter";
-import bgImage from "@/assets/optimized-photos/IMG_8382.webp";
+import bgImage from "@assets/adobe_1780950309806.JPG";
 
 export function Hero() {
   return (
