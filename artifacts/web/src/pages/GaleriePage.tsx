@@ -28,7 +28,17 @@ import img16 from "@/assets/optimized-photos/IMG_5138.webp";
 import img17 from "@/assets/optimized-photos/IMG_9584.webp";
 import ctaImg from "@/assets/optimized-photos/IMG_5191.webp";
 
+import newImg1 from "@assets/485077445_642811888504503_325527761917987874_n_1780951111840.jpg";
+import newImg2 from "@assets/484579202_642806558505036_4164192967183294918_n_1780951111839.jpg";
+import newImg3 from "@assets/484813297_644287891690236_147594783183215853_n_1780951111839.jpg";
+import newImg4 from "@assets/485150908_644297641689261_4715788982551897010_n_1780951111841.jpg";
+import newImg5 from "@assets/485158474_644297581689267_3518560219241088530_n_1780951111841.jpg";
+import newImg6 from "@assets/484978617_644417801677245_5709279693467673838_n_1780951111840.jpg";
+import newImg7 from "@assets/485012542_644422901676735_3255584034753389984_n_1780951111840.jpg";
+import newImg8 from "@assets/485174268_642679441851081_2024101051486167124_n_1780951111841.jpg";
+
 const allImages = [
+  newImg1, newImg2, newImg3, newImg4, newImg5, newImg6, newImg7, newImg8,
   img1, img2, img3, img4, img5, img6, img7, img8, img9,
   img10, img11, img12, img13, img14, img15, img16, img17,
 ];
