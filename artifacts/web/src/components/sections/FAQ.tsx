@@ -15,7 +15,7 @@ const faqs = [
   },
   {
     q: "Dois-je prendre rendez-vous pour un lavage ?",
-    a: "Oui, nous vous recommandons de prendre rendez-vous à l'avance pour assurer un service optimal. Vous pouvez réserver directement en ligne via notre formulaire de rendez-vous, ou nous contacter par téléphone au (418) 665-5871."
+    a: "Oui, nous vous recommandons de prendre rendez-vous à l'avance pour assurer un service optimal. Vous pouvez réserver directement en ligne via notre formulaire de rendez-vous, ou nous contacter par téléphone au (418) 957-8168."
   },
   {
     q: "Le polissage peut-il enlever toutes les égratignures ?",
@@ -23,7 +23,7 @@ const faqs = [
   },
   {
     q: "Offrez-vous un service mobile à domicile ?",
-    a: "Actuellement, nos services sont offerts exclusivement dans notre atelier situé au 2535 boulevard Comporté à La Malbaie. Notre environnement contrôlé nous permet de garantir les meilleurs résultats possibles."
+    a: "Actuellement, nos services sont offerts exclusivement dans notre atelier situé au 20 Rue de la Montagne, porte 2 à Sainte-Claire. Notre environnement contrôlé nous permet de garantir les meilleurs résultats possibles."
   },
 ];
 
@@ -70,7 +70,7 @@ export function FAQ() {
           <p className="text-gray-700 mt-3">Nous sommes là pour vous aider.</p>
           <Link
             href="/rendez-vous"
-            className="inline-block mt-6 bg-accent text-white px-8 py-3 rounded-md font-semibold hover:bg-accent-hover transition-colors"
+            className="inline-block mt-6 bg-accent text-[#1b1b1b] px-8 py-3 rounded-md font-semibold hover:bg-accent-hover transition-colors"
           >
             Prendre un rendez-vous
           </Link>

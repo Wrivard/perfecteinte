@@ -30,7 +30,7 @@ const values = [
   {
     icon: Wrench,
     title: "Expertise",
-    description: "Plus de 10 ans d'expérience dans le milieu automobile et 4 ans à la tête de notre entreprise — un savoir-faire qui se perfectionne chaque jour.",
+    description: "Un savoir-faire qui se perfectionne à chaque véhicule, pour des résultats toujours à la hauteur de vos attentes.",
   },
 ];
 
@@ -45,12 +45,12 @@ const itemVariants = {
 };
 
 export default function APropos() {
-  usePageMeta("À propos", "Découvrez l'histoire et les valeurs d'Esthétique Auto Pascal Pilote, spécialiste du détailing automobile à La Malbaie depuis plus de 10 ans.");
+  usePageMeta("À propos", "Découvrez l'histoire et les valeurs d'Esthétique Auto A.V, spécialiste du détailing automobile à Sainte-Claire et dans la région de Bellechasse.");
   return (
     <PageLayout>
       <section className="relative h-[40vh] sm:h-[45vh] md:h-[50vh] min-h-[280px] sm:min-h-[350px] flex items-center overflow-hidden -mt-[120px] pt-[120px]">
         <div className="absolute inset-0">
-          <img src={heroImg} alt="L'équipe d'Esthétique Auto Pascal Pilote à La Malbaie" className="w-full h-full object-cover" fetchPriority="high" decoding="async" />
+          <img src={heroImg} alt="L'équipe d'Esthétique Auto A.V à Sainte-Claire" className="w-full h-full object-cover" fetchPriority="high" decoding="async" />
           <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30" />
         </div>
         <div className="max-w-7xl mx-auto px-6 relative z-10 w-full">
@@ -60,10 +60,10 @@ export default function APropos() {
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-extrabold text-white uppercase leading-tight">
-              À <span className="text-blue-400">Propos</span>
+              À <span className="text-[#D4AF37]">Propos</span>
             </h1>
             <p className="text-base sm:text-lg md:text-xl text-gray-100 mt-4 max-w-xl">
-              Découvrez l'histoire et les valeurs qui animent Esthétique Auto Pascal Pilote.
+              Découvrez l'histoire et les valeurs qui animent Esthétique Auto A.V.
             </p>
           </motion.div>
         </div>
@@ -83,17 +83,17 @@ export default function APropos() {
                 NOTRE <span className="text-accent">HISTOIRE</span>
               </h2>
               <p className="text-lg md:text-xl lg:text-2xl text-gray-700 leading-relaxed mb-4 md:mb-6">
-                Fils d'un garagiste, Pascal Pilote a grandi entouré d'automobiles. Cette passion, ancrée depuis l'enfance, ne l'a jamais quitté.
+                Passionnée par l'automobile et le souci du détail, l'équipe d'Esthétique Auto A.V offre des services professionnels de remise à neuf esthétique pour tous types de véhicules.
               </p>
               <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-4 md:mb-6">
-                Après plus de 10 ans dans le milieu automobile, Pascal a fondé Esthétique Auto Pascal Pilote il y a 4 ans à La Malbaie. Amoureux de l'automobile et perfectionniste dans l'âme, notre équipe offre des services de détailing de qualité supérieure dans la région de Charlevoix. Chaque véhicule qui passe entre nos mains reçoit un traitement personnalisé avec une attention méticuleuse aux détails.
+                Chaque intervention est réalisée avec précision afin de restaurer, protéger et mettre en valeur votre investissement. De la correction de peinture à la protection nano-céramique, nous traitons chaque automobile avec une attention méticuleuse.
               </p>
               <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-6 md:mb-8">
-                Notre atelier, situé au 2535 boulevard Comporté, est équipé des dernières technologies en matière de protection et de restauration automobile. Avec plus de 1 500 lavages complétés, notre expertise parle d'elle-même.
+                Située au 20 Rue de la Montagne, porte 2 à Sainte-Claire, notre équipe dessert les régions de Bellechasse, Lévis, Québec, la Beauce et Montmagny.
               </p>
               <Link
                 href="/rendez-vous"
-                className="inline-flex items-center bg-accent text-white px-6 py-3 rounded-md font-semibold hover:bg-accent-hover transition-colors"
+                className="inline-flex items-center bg-accent text-[#1b1b1b] px-6 py-3 rounded-md font-semibold hover:bg-accent-hover transition-colors"
               >
                 Prendre un rendez-vous
               </Link>
@@ -105,7 +105,7 @@ export default function APropos() {
               transition={{ duration: 0.6 }}
               className="relative"
             >
-              <img loading="lazy" decoding="async" src={img1} alt="Atelier Pascal Pilote" className="w-full h-[300px] sm:h-[350px] md:h-[400px] object-cover rounded-md" />
+              <img loading="lazy" decoding="async" src={img1} alt="Atelier d'Esthétique Auto A.V" className="w-full h-[300px] sm:h-[350px] md:h-[400px] object-cover rounded-md" />
               <img loading="lazy" decoding="async"
                 src={img2}
                 alt="Travail en détail"
@@ -122,9 +122,9 @@ export default function APropos() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-3 gap-4 md:gap-12 text-center">
             {[
-              { value: "10+", label: "Années d'expérience" },
-              { value: "4", label: "Ans d'entreprise" },
-              { value: "1500+", label: "Lavages complétés" },
+              { value: "Précision", label: "Un travail méticuleux à chaque étape" },
+              { value: "Protection", label: "Des traitements durables et performants" },
+              { value: "Passion", label: "L'amour du détail dans chaque véhicule" },
             ].map((stat, i) => (
               <motion.div
                 key={i}
@@ -133,10 +133,10 @@ export default function APropos() {
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.15 }}
               >
-                <div className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-display font-extrabold text-accent leading-none mb-2 md:mb-4">
+                <div className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-display font-extrabold text-accent leading-none mb-2 md:mb-4">
                   {stat.value}
                 </div>
-                <p className="text-xs sm:text-sm md:text-lg lg:text-xl font-semibold text-white uppercase tracking-wide">{stat.label}</p>
+                <p className="text-xs sm:text-sm md:text-base lg:text-lg font-semibold text-white tracking-wide">{stat.label}</p>
               </motion.div>
             ))}
           </div>
@@ -198,24 +198,24 @@ export default function APropos() {
 
       <section className="relative h-[320px] sm:h-[380px] md:h-[440px] flex items-center overflow-hidden">
         <div className="absolute inset-0">
-          <img loading="lazy" decoding="async" src={ctaImg} alt="Service d'esthétique automobile à La Malbaie" className="w-full h-full object-cover" />
+          <img loading="lazy" decoding="async" src={ctaImg} alt="Service d'esthétique automobile à Sainte-Claire" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/30" />
         </div>
         <div className="max-w-7xl mx-auto px-6 relative z-10 w-full">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
             <SectionTagline text="Confiez-nous votre véhicule" light center={false} />
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-white mb-4 leading-tight max-w-2xl">
-              VIVEZ L'EXPÉRIENCE <span className="text-blue-400">PASCAL PILOTE</span>
+              VIVEZ L'EXPÉRIENCE <span className="text-[#D4AF37]">A.V</span>
             </h2>
             <p className="text-base sm:text-lg md:text-xl text-gray-100 max-w-xl mb-6 md:mb-8">
               La même passion, la même précision et le même souci du détail pour chaque véhicule qui passe entre nos mains.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
-              <Link href="/rendez-vous" className="inline-flex items-center justify-center bg-accent text-white px-8 py-4 rounded-md font-semibold hover:bg-accent-hover transition-colors">
+              <Link href="/rendez-vous" className="inline-flex items-center justify-center bg-accent text-[#1b1b1b] px-8 py-4 rounded-md font-semibold hover:bg-accent-hover transition-colors">
                 Prendre un rendez-vous
               </Link>
-              <a href="tel:+14186655871" className="inline-flex items-center justify-center bg-white/10 backdrop-blur-sm border border-white/30 text-white px-8 py-4 rounded-md font-semibold hover:bg-white/20 transition-colors">
-                (418) 665-5871
+              <a href="tel:+14189578168" className="inline-flex items-center justify-center bg-white/10 backdrop-blur-sm border border-white/30 text-white px-8 py-4 rounded-md font-semibold hover:bg-white/20 transition-colors">
+                (418) 957-8168
               </a>
             </div>
           </motion.div>

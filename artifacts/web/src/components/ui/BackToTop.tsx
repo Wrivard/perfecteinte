@@ -20,7 +20,7 @@ export function BackToTop() {
     <button
       onClick={scrollToTop}
       aria-label="Retour en haut de la page"
-      className={`fixed bottom-6 right-6 z-50 flex items-center justify-center w-14 h-14 bg-accent text-white rounded-full shadow-lg hover:bg-blue-600 hover:scale-110 transition-all duration-300 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 pointer-events-none"}`}
+      className={`fixed bottom-6 right-6 z-50 flex items-center justify-center w-14 h-14 bg-accent text-[#1b1b1b] rounded-full shadow-lg hover:bg-accent-hover hover:scale-110 transition-all duration-300 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 pointer-events-none"}`}
     >
       <ArrowUp className="w-6 h-6" />
     </button>

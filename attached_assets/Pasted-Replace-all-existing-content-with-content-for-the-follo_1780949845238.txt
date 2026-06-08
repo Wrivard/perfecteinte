@@ -1,0 +1,223 @@
+Replace all existing content with content for the following business.
+
+BUSINESS INFORMATION
+
+Company Name:
+Esthétique Auto A.V
+
+Tagline:
+L'excellence en esthétique automobile
+
+Phone:
+(418) 957-8168
+
+Email:
+esthetiquea.v@gmail.com
+
+Address:
+20 Rue de la Montagne, porte 2
+Sainte-Claire, QC
+G0R 2V0
+
+Service Area:
+Bellechasse, Lévis, Québec, Beauce, Montmagny et les environs.
+
+Business Type:
+Esthétique automobile professionnelle
+
+Brand Positioning:
+Esthétique Auto A.V est spécialisée dans le reconditionnement esthétique automobile haut de gamme. L'entreprise offre des services de nettoyage intérieur et extérieur, correction de peinture, protection nano-céramique et traitements de protection afin de préserver l'apparence et la valeur des véhicules.
+
+COLORS
+
+Primary:
+#0A0A0A
+
+Secondary:
+#FFFFFF
+
+Accent Gold:
+#D4AF37
+
+Accent Blue:
+#0D6EFD
+
+Use the gold as the primary accent color for CTA buttons, highlights and premium elements.
+Use the blue sparingly for hover states and secondary actions.
+
+HERO SECTION
+
+Headline:
+Redonnez à votre véhicule son apparence d'origine
+
+Subheadline:
+Spécialistes en esthétique automobile, correction de peinture et protection nano-céramique à Sainte-Claire.
+
+Primary CTA:
+Obtenir une soumission
+
+Secondary CTA:
+Voir nos réalisations
+
+TRUST SECTION
+
+Replace existing trust cards with:
+
+- Protection Nano-Céramique
+- Produits professionnels
+- Résultats haut de gamme
+- Service personnalisé
+
+SERVICES SECTION
+
+Replace existing services with these 6 service cards:
+
+1. Lavage intérieur complet
+Nettoyage en profondeur de l'habitacle, tapis, sièges, plastiques et surfaces intérieures.
+
+2. Lavage extérieur premium
+Décontamination, nettoyage minutieux et finition professionnelle de la carrosserie.
+
+3. Correction de peinture
+Élimination des micro-rayures, défauts et imperfections pour retrouver une finition éclatante.
+
+4. Protection nano-céramique
+Protection longue durée contre les contaminants, UV, saleté et intempéries.
+
+5. Cire et scellant protecteur
+Ajout d'une couche protectrice pour préserver l'éclat et faciliter l'entretien.
+
+6. Reconditionnement complet
+Service clé en main combinant nettoyage, correction et protection pour un résultat optimal.
+
+ABOUT SECTION
+
+Replace company story with:
+
+Passionnée par l'automobile et le souci du détail, l'équipe d'Esthétique Auto A.V offre des services professionnels de remise à neuf esthétique pour tous types de véhicules. Chaque intervention est réalisée avec précision afin de restaurer, protéger et mettre en valeur votre investissement.
+
+WHY CHOOSE US
+
+Replace existing content with:
+
+- Souci exceptionnel du détail
+- Produits professionnels de qualité
+- Protection durable
+- Résultats haut de gamme
+- Service personnalisé
+- Satisfaction client prioritaire
+
+PACKAGES SECTION
+
+Create 3 package cards:
+
+Entretien
+Pour véhicules régulièrement entretenus
+
+Protection
+Nettoyage complet + protection
+
+Signature
+Correction de peinture + nano-céramique + traitement complet
+
+Allow future pricing updates.
+
+PROJECTS SECTION
+
+Update project categories to:
+
+- Avant / Après
+- Correction de peinture
+- Nano-céramique
+- Lavage intérieur
+- Lavage extérieur
+- Véhicules de prestige
+
+FEATURED PROJECTS
+
+Highlight luxury vehicles and dramatic before/after transformations.
+
+Use large visual cards.
+
+BEFORE / AFTER SECTION
+
+Create a dedicated section showcasing transformation results.
+
+Use slider comparisons if available.
+
+TESTIMONIALS SECTION
+
+Add a section with customer reviews.
+
+Focus on:
+
+- Quality
+- Professionalism
+- Attention to detail
+- Vehicle transformation
+
+FINAL CTA
+
+Headline:
+Votre véhicule mérite le meilleur traitement
+
+Subheadline:
+Contactez Esthétique Auto A.V dès aujourd'hui pour obtenir une estimation personnalisée.
+
+Button:
+Demander une soumission
+
+CONTACT SECTION
+
+Display prominently:
+
+Téléphone:
+(418) 957-8168
+
+Courriel:
+esthetiquea.v@gmail.com
+
+Adresse:
+20 Rue de la Montagne, porte 2
+Sainte-Claire, QC
+G0R 2V0
+
+CONTACT FORM
+
+Replace current form with:
+
+- Nom
+- Téléphone
+- Courriel
+- Marque du véhicule
+- Modèle du véhicule
+- Année
+- Service désiré
+- Message
+
+Service Options:
+
+- Lavage intérieur
+- Lavage extérieur
+- Correction de peinture
+- Nano-céramique
+- Cire / Scellant
+- Reconditionnement complet
+
+SEO KEYWORDS
+
+- Esthétique automobile Sainte-Claire
+- Nano céramique Sainte-Claire
+- Correction de peinture Bellechasse
+- Lavage automobile professionnel
+- Protection céramique automobile
+- Reconditionnement automobile Québec
+- Esthétique automobile Lévis
+
+IMPORTANT
+
+Keep the existing layout, spacing, animations, section order and design system.
+
+Only replace the content, branding, colors, service cards, contact information and project categories to match Esthétique Auto A.V.
+
+The website should feel premium, meticulous and specialized in high-end automotive detailing.

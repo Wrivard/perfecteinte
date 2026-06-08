@@ -64,15 +64,8 @@ export function Partners() {
             <Award className="w-4 h-4 text-accent" />
           </div>
           <p className="text-[11px] sm:text-xs font-semibold text-gray-700 leading-tight">
-            Certifié installateur PPF par
+            Produits professionnels haut de gamme
           </p>
-          <img
-            loading="lazy"
-            decoding="async"
-            src={labocosmetica}
-            alt="Labocosmetica"
-            className="h-5 sm:h-6 w-auto object-contain brightness-0 opacity-80"
-          />
         </motion.div>
       </div>
     </section>

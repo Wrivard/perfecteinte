@@ -24,29 +24,29 @@ export function Hero() {
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-display font-extrabold text-white leading-[1.05] uppercase tracking-[-1px] md:tracking-[-2px]">
-            REDONNEZ DE L'ÉCLAT À VOTRE VÉHICULE
+            REDONNEZ À VOTRE VÉHICULE SON APPARENCE D'ORIGINE
           </h1>
 
           <p className="text-base sm:text-lg md:text-xl text-gray-100 mt-6 max-w-[550px] font-light leading-relaxed">
-            Des services professionnels de détail automobile qui transforment et protègent votre véhicule. Nous combinons passion et expertise pour un résultat impeccable.
+            Spécialistes en esthétique automobile, correction de peinture et protection nano-céramique à Sainte-Claire et dans la région de Bellechasse.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 mt-8">
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Link
                 href="/rendez-vous"
-                className="inline-flex items-center justify-center bg-accent text-white px-8 py-4 rounded-md font-semibold text-base hover:bg-accent-hover transition-all shadow-lg w-full sm:w-auto"
+                className="inline-flex items-center justify-center bg-accent text-[#1b1b1b] px-8 py-4 rounded-md font-semibold text-base hover:bg-accent-hover transition-all shadow-lg w-full sm:w-auto"
               >
-                Prendre un rendez-vous
+                Obtenir une soumission
               </Link>
             </motion.div>
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-              <a
-                href="tel:4186655871"
+              <Link
+                href="/galerie"
                 className="inline-flex items-center justify-center bg-transparent border-2 border-white text-white px-8 py-4 rounded-md font-semibold text-base hover:bg-white/10 transition-all w-full sm:w-auto"
               >
-                (418) 665-5871
-              </a>
+                Voir nos réalisations
+              </Link>
             </motion.div>
           </div>
         </motion.div>

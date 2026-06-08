@@ -22,7 +22,7 @@ export default function NotFound() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-10">
             <Link
               href="/"
-              className="inline-flex items-center gap-2 bg-accent text-white px-8 py-3.5 rounded-md font-semibold hover:bg-accent-hover transition-colors"
+              className="inline-flex items-center gap-2 bg-accent text-[#1b1b1b] px-8 py-3.5 rounded-md font-semibold hover:bg-accent-hover transition-colors"
             >
               <Home className="w-4 h-4" />
               Retour à l'accueil

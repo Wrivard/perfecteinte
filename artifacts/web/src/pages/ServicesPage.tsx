@@ -40,12 +40,12 @@ const services = [
     icon: Shield,
     image: img3,
     title: "Nanocéramique",
-    description: "La protection ultime : polissage combiné à la nano-céramique et installation de pare-pierre (PPF). Certifié installateur par Labocosmetica.",
+    description: "La protection ultime : polissage combiné à la nano-céramique et installation de pare-pierre (PPF) pour une protection maximale.",
     href: "/services/nano-ceramique",
     features: [
       "Polissage & Nano Céramique",
       "Installation de pare-pierre (PPF)",
-      "Certifié par Labocosmetica",
+      "Produits professionnels haut de gamme",
     ],
   },
 ];
@@ -61,12 +61,12 @@ const itemVariants = {
 };
 
 export default function ServicesPage() {
-  usePageMeta("Nos services", "Lavage, scellant, polissage, nano-céramique et installation de pare-pierre (PPF). Découvrez tous nos services d'esthétique automobile à La Malbaie.");
+  usePageMeta("Nos services", "Lavage, scellant, polissage, nano-céramique et installation de pare-pierre (PPF). Découvrez tous nos services d'esthétique automobile à Sainte-Claire.");
   return (
     <PageLayout>
       <section className="relative h-[40vh] sm:h-[45vh] md:h-[50vh] min-h-[280px] sm:min-h-[350px] flex items-center overflow-hidden -mt-[120px] pt-[120px]">
         <div className="absolute inset-0">
-          <img src={heroImg} alt="Services d'esthétique automobile professionnels à La Malbaie" className="w-full h-full object-cover" fetchPriority="high" decoding="async" />
+          <img src={heroImg} alt="Services d'esthétique automobile professionnels à Sainte-Claire" className="w-full h-full object-cover" fetchPriority="high" decoding="async" />
           <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/30" />
         </div>
         <div className="max-w-7xl mx-auto px-6 relative z-10 w-full">
@@ -76,7 +76,7 @@ export default function ServicesPage() {
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-extrabold text-white uppercase leading-tight">
-              NOS <span className="text-blue-400">SERVICES</span>
+              NOS <span className="text-[#D4AF37]">SERVICES</span>
             </h1>
             <p className="text-base sm:text-lg md:text-xl text-gray-100 mt-4 max-w-xl">
               Des solutions professionnelles pour chaque besoin automobile.
@@ -159,13 +159,13 @@ export default function ServicesPage() {
                   <div className="flex flex-col sm:flex-row gap-3">
                     <Link
                       href={service.href}
-                      className="inline-flex items-center gap-2 bg-accent text-white px-6 py-3 rounded-md font-semibold hover:bg-accent-hover transition-colors"
+                      className="inline-flex items-center gap-2 bg-accent text-[#1b1b1b] px-6 py-3 rounded-md font-semibold hover:bg-accent-hover transition-colors"
                     >
                       En savoir plus <ArrowRight className="w-4 h-4" />
                     </Link>
                     <Link
                       href="/rendez-vous"
-                      className="inline-flex items-center gap-2 border-2 border-accent text-accent px-6 py-3 rounded-md font-semibold hover:bg-accent hover:text-white transition-colors"
+                      className="inline-flex items-center gap-2 border-2 border-accent text-accent px-6 py-3 rounded-md font-semibold hover:bg-accent hover:text-[#1b1b1b] transition-colors"
                     >
                       Prendre un rendez-vous
                     </Link>

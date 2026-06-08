@@ -96,7 +96,7 @@ export function Testimonials({ compact = false }: { compact?: boolean }) {
                   <img loading="lazy" decoding="async" src={t.image} alt={t.author} className="absolute inset-0 w-full h-full object-cover" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/60 to-black/20"></div>
                   <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8">
-                    <div className="flex gap-1 text-blue-400 mb-3 md:mb-4">
+                    <div className="flex gap-1 text-[#D4AF37] mb-3 md:mb-4">
                       {[...Array(5)].map((_, j) => (
                         <Star key={j} className="w-4 h-4 md:w-5 md:h-5 fill-current" />
                       ))}

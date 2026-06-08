@@ -60,7 +60,7 @@ const faqs = [
 ];
 
 export default function ServiceScellant() {
-  usePageMeta("Scellant", "Service de cires, scellant peinture et polissage professionnel à La Malbaie. Correction des imperfections et protection durable de votre peinture.");
+  usePageMeta("Scellant", "Service de cires, scellant peinture et polissage professionnel à Sainte-Claire. Correction des imperfections et protection durable de votre peinture.");
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
@@ -75,11 +75,11 @@ export default function ServiceScellant() {
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
             <div className="flex items-center gap-3 mb-4">
               <div className="w-10 h-10 md:w-12 md:h-12 bg-accent/20 rounded-md flex items-center justify-center">
-                <Sparkles className="w-5 h-5 md:w-6 md:h-6 text-blue-400" />
+                <Sparkles className="w-5 h-5 md:w-6 md:h-6 text-[#D4AF37]" />
               </div>
             </div>
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-extrabold text-white uppercase leading-tight">
-              SCELLANT &<br /><span className="text-blue-400">POLISSAGE</span>
+              SCELLANT &<br /><span className="text-[#D4AF37]">POLISSAGE</span>
             </h1>
             <p className="text-base sm:text-lg md:text-xl text-gray-100 mt-4 max-w-xl">
               Protection et correction de peinture pour un éclat incomparable.
@@ -104,7 +104,7 @@ export default function ServiceScellant() {
               <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-8">
                 Nous utilisons exclusivement des produits professionnels haut de gamme — Labocosmetica, CarPro, MaxShine — pour des résultats qui se voient et se sentent.
               </p>
-              <Link href="/rendez-vous" className="inline-flex items-center bg-accent text-white px-6 py-3 rounded-md font-semibold hover:bg-accent-hover transition-colors">
+              <Link href="/rendez-vous" className="inline-flex items-center bg-accent text-[#1b1b1b] px-6 py-3 rounded-md font-semibold hover:bg-accent-hover transition-colors">
                 Obtenir une soumission
               </Link>
             </motion.div>
@@ -154,7 +154,7 @@ export default function ServiceScellant() {
                         </li>
                       ))}
                     </ul>
-                    <Link href="/rendez-vous" className="inline-flex items-center justify-center w-full bg-accent text-white px-6 py-3 rounded-md font-semibold hover:bg-accent-hover transition-colors text-sm mt-auto">
+                    <Link href="/rendez-vous" className="inline-flex items-center justify-center w-full bg-accent text-[#1b1b1b] px-6 py-3 rounded-md font-semibold hover:bg-accent-hover transition-colors text-sm mt-auto">
                       Obtenir une soumission
                     </Link>
                   </div>
@@ -188,12 +188,12 @@ export default function ServiceScellant() {
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
             <SectionTagline text="Résultat" light center={false} />
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-white mb-4 leading-tight">
-              VOTRE PEINTURE <span className="text-blue-400">SUBLIMÉE</span>
+              VOTRE PEINTURE <span className="text-[#D4AF37]">SUBLIMÉE</span>
             </h2>
             <p className="text-base sm:text-lg md:text-xl text-gray-100 max-w-xl mb-6">
               Un éclat incomparable et une protection durable — c'est notre promesse pour chaque véhicule.
             </p>
-            <Link href="/rendez-vous" className="inline-flex items-center bg-accent text-white px-8 py-4 rounded-md font-semibold hover:bg-accent-hover transition-colors">
+            <Link href="/rendez-vous" className="inline-flex items-center bg-accent text-[#1b1b1b] px-8 py-4 rounded-md font-semibold hover:bg-accent-hover transition-colors">
               Obtenir une soumission
             </Link>
           </motion.div>
@@ -218,7 +218,7 @@ export default function ServiceScellant() {
           <div className="mt-12 pt-12 text-center">
             <h3 className="text-xl sm:text-2xl font-display font-bold text-gray-900">D'AUTRES QUESTIONS ?</h3>
             <p className="text-gray-700 mt-3">Contactez-nous — nous sommes là pour vous guider.</p>
-            <Link href="/rendez-vous" className="inline-block mt-6 bg-accent text-white px-8 py-3 rounded-md font-semibold hover:bg-accent-hover transition-colors">
+            <Link href="/rendez-vous" className="inline-block mt-6 bg-accent text-[#1b1b1b] px-8 py-3 rounded-md font-semibold hover:bg-accent-hover transition-colors">
               Prendre un rendez-vous
             </Link>
           </div>

@@ -70,9 +70,9 @@ function StepIndicator({ current }: { current: number }) {
             <div
               className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold transition-all duration-300 ${
                 current > step.num
-                  ? "bg-accent text-white"
+                  ? "bg-accent text-[#1b1b1b]"
                   : current === step.num
-                  ? "bg-accent text-white ring-4 ring-accent/20"
+                  ? "bg-accent text-[#1b1b1b] ring-4 ring-accent/20"
                   : "bg-gray-100 text-gray-400"
               }`}
             >
@@ -359,14 +359,14 @@ function SuccessState() {
       </p>
       <p className="text-gray-500 text-sm">
         Des questions ? Appelez-nous au{" "}
-        <a href="tel:4186655871" className="text-accent font-semibold hover:underline">(418) 665-5871</a>
+        <a href="tel:4189578168" className="text-accent font-semibold hover:underline">(418) 957-8168</a>
       </p>
     </motion.div>
   );
 }
 
 export default function RendezVous() {
-  usePageMeta("Prendre un rendez-vous", "Obtenez une soumission pour votre esthétique automobile chez Esthétique Auto Pascal Pilote à La Malbaie. Remplissez notre formulaire en ligne.");
+  usePageMeta("Prendre un rendez-vous", "Obtenez une soumission pour votre esthétique automobile chez Esthétique Auto A.V à Sainte-Claire. Remplissez notre formulaire en ligne.");
   const [step, setStep] = useState(1);
   const [form, setForm] = useState<FormData>(EMPTY_FORM);
   const [submitted, setSubmitted] = useState(false);
@@ -419,13 +419,13 @@ export default function RendezVous() {
       });
       if (!res.ok) {
         const data = (await res.json().catch(() => ({}))) as { error?: string };
-        setErrors([data.error || "Échec de l'envoi. Veuillez réessayer ou nous appeler au (418) 665-5871."]);
+        setErrors([data.error || "Échec de l'envoi. Veuillez réessayer ou nous appeler au (418) 957-8168."]);
         setSubmitting(false);
         return;
       }
       setSubmitted(true);
     } catch {
-      setErrors(["Erreur réseau. Veuillez vérifier votre connexion ou nous appeler au (418) 665-5871."]);
+      setErrors(["Erreur réseau. Veuillez vérifier votre connexion ou nous appeler au (418) 957-8168."]);
       setSubmitting(false);
     }
   }
@@ -444,7 +444,7 @@ export default function RendezVous() {
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-display font-extrabold text-white uppercase leading-tight">
-              OBTENIR UNE <span className="text-blue-400">SOUMISSION</span>
+              OBTENIR UNE <span className="text-[#D4AF37]">SOUMISSION</span>
             </h1>
             <p className="text-base sm:text-lg md:text-xl text-gray-100 mt-4 max-w-xl">
               Remplissez le formulaire ci-dessous et nous vous contacterons rapidement.
@@ -532,7 +532,7 @@ export default function RendezVous() {
                         {step < 4 ? (
                           <button
                             onClick={handleNext}
-                            className="inline-flex items-center gap-2 bg-accent text-white px-6 py-3 rounded-md font-semibold text-sm hover:bg-accent-hover transition-colors"
+                            className="inline-flex items-center gap-2 bg-accent text-[#1b1b1b] px-6 py-3 rounded-md font-semibold text-sm hover:bg-accent-hover transition-colors"
                           >
                             Suivant <ChevronRight className="w-4 h-4" />
                           </button>
@@ -540,7 +540,7 @@ export default function RendezVous() {
                           <button
                             onClick={handleSubmit}
                             disabled={submitting}
-                            className="inline-flex items-center gap-2 bg-accent text-white px-8 py-3 rounded-md font-semibold text-sm hover:bg-accent-hover transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
+                            className="inline-flex items-center gap-2 bg-accent text-[#1b1b1b] px-8 py-3 rounded-md font-semibold text-sm hover:bg-accent-hover transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
                           >
                             {submitting ? "Envoi en cours…" : <>Envoyer ma demande <Check className="w-4 h-4" /></>}
                           </button>
@@ -560,42 +560,42 @@ export default function RendezVous() {
                 viewport={{ once: true }}
               >
                 <h3 className="text-lg md:text-xl font-display font-bold mb-4 md:mb-6">
-                  PRÊT À <span className="text-blue-400">BRILLER</span> ?
+                  PRÊT À <span className="text-[#D4AF37]">BRILLER</span> ?
                 </h3>
 
                 <div className="space-y-5 md:space-y-6">
                   <div className="flex items-start gap-3 md:gap-4">
-                    <Phone className="w-5 h-5 text-blue-400 shrink-0 mt-1" />
+                    <Phone className="w-5 h-5 text-[#D4AF37] shrink-0 mt-1" />
                     <div>
-                      <span className="text-blue-400 text-xs uppercase tracking-widest font-semibold block mb-1">Téléphone</span>
-                      <a href="tel:4186655871" className="text-white font-medium hover:text-blue-400 transition-colors text-sm md:text-base">
-                        (418) 665-5871
+                      <span className="text-[#D4AF37] text-xs uppercase tracking-widest font-semibold block mb-1">Téléphone</span>
+                      <a href="tel:4189578168" className="text-white font-medium hover:text-[#D4AF37] transition-colors text-sm md:text-base">
+                        (418) 957-8168
                       </a>
                     </div>
                   </div>
 
                   <div className="flex items-start gap-3 md:gap-4">
-                    <Mail className="w-5 h-5 text-blue-400 shrink-0 mt-1" />
+                    <Mail className="w-5 h-5 text-[#D4AF37] shrink-0 mt-1" />
                     <div>
-                      <span className="text-blue-400 text-xs uppercase tracking-widest font-semibold block mb-1">Courriel</span>
-                      <a href="mailto:Pascal.1993@live.ca" className="text-white font-medium hover:text-blue-400 transition-colors text-sm md:text-base break-all">
-                        Pascal.1993@live.ca
+                      <span className="text-[#D4AF37] text-xs uppercase tracking-widest font-semibold block mb-1">Courriel</span>
+                      <a href="mailto:esthetiquea.v@gmail.com" className="text-white font-medium hover:text-[#D4AF37] transition-colors text-sm md:text-base break-all">
+                        esthetiquea.v@gmail.com
                       </a>
                     </div>
                   </div>
 
                   <div className="flex items-start gap-3 md:gap-4">
-                    <MapPin className="w-5 h-5 text-blue-400 shrink-0 mt-1" />
+                    <MapPin className="w-5 h-5 text-[#D4AF37] shrink-0 mt-1" />
                     <div>
-                      <span className="text-blue-400 text-xs uppercase tracking-widest font-semibold block mb-1">Adresse</span>
-                      <p className="text-white font-medium text-sm md:text-base">2535 boulevard Comporté,<br />La Malbaie, Québec</p>
+                      <span className="text-[#D4AF37] text-xs uppercase tracking-widest font-semibold block mb-1">Adresse</span>
+                      <p className="text-white font-medium text-sm md:text-base">20 Rue de la Montagne, porte 2,<br />Sainte-Claire, QC G0R 2V0</p>
                     </div>
                   </div>
 
                   <div className="flex items-start gap-3 md:gap-4">
-                    <Clock className="w-5 h-5 text-blue-400 shrink-0 mt-1" />
+                    <Clock className="w-5 h-5 text-[#D4AF37] shrink-0 mt-1" />
                     <div>
-                      <span className="text-blue-400 text-xs uppercase tracking-widest font-semibold block mb-1">Horaires</span>
+                      <span className="text-[#D4AF37] text-xs uppercase tracking-widest font-semibold block mb-1">Horaires</span>
                       <p className="text-white font-medium text-sm md:text-base">Lun - Ven: 8h - 17h</p>
                       <p className="text-gray-300 text-xs md:text-sm">Sam: Sur rendez-vous</p>
                     </div>
@@ -615,8 +615,8 @@ export default function RendezVous() {
                   Si vous préférez nous parler directement, n'hésitez pas à nous contacter par téléphone.
                 </p>
                 <a
-                  href="tel:4186655871"
-                  className="inline-flex items-center gap-2 bg-accent text-white px-6 py-3 rounded-md font-semibold text-sm hover:bg-accent-hover transition-colors w-full justify-center"
+                  href="tel:4189578168"
+                  className="inline-flex items-center gap-2 bg-accent text-[#1b1b1b] px-6 py-3 rounded-md font-semibold text-sm hover:bg-accent-hover transition-colors w-full justify-center"
                 >
                   <Phone className="w-4 h-4" />
                   Appeler maintenant

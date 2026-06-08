@@ -1,0 +1,1 @@
+- [Rebrand scrub checklist](rebrand-scrub.md) — when reskinning a cloned site for a new client, hunt beyond src/: public SEO files and hardcoded third-party IDs.

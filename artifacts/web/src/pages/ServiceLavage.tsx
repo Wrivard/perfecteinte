@@ -62,13 +62,13 @@ const features = [
 const faqs = [
   { q: "Quelle est la différence entre lavage intérieur et extérieur ?", a: "Le lavage intérieur comprend l'aspiration, le nettoyage des surfaces, cuirs, plastiques et vitres intérieures. Le lavage extérieur comprend le lavage à la main, les jantes, pneus et carrosserie. Vous pouvez choisir l'un ou l'autre, ou les deux ensemble." },
   { q: "Qu'est-ce que la décontamination ?", a: "La décontamination élimine les particules ferreuses (poussières de frein, rouille) et contaminants organiques incrustés dans la peinture que le lavage normal ne peut pas enlever. C'est une étape recommandée régulièrement pour préserver la santé de votre peinture." },
-  { q: "Dois-je prendre rendez-vous ?", a: "Oui, nous recommandons fortement de prendre rendez-vous à l'avance pour vous garantir un créneau et un service optimal. Appelez-nous au (418) 665-5871 ou remplissez notre formulaire en ligne." },
+  { q: "Dois-je prendre rendez-vous ?", a: "Oui, nous recommandons fortement de prendre rendez-vous à l'avance pour vous garantir un créneau et un service optimal. Appelez-nous au (418) 957-8168 ou remplissez notre formulaire en ligne." },
   { q: "Quels produits utilisez-vous ?", a: "Nous utilisons exclusivement des produits professionnels haut de gamme, notamment de la gamme Labocosmetica et CarPro, respectueux de l'environnement et adaptés à chaque type de surface." },
   { q: "Est-ce que vous lavez aussi les VUS et camions ?", a: "Absolument ! Nous traitons tous types de véhicules : berlines, VUS, camions, véhicules de luxe et exotiques." },
 ];
 
 export default function ServiceLavage() {
-  usePageMeta("Lavage", "Service de lavage automobile intérieur, extérieur et décontamination à La Malbaie. Lavage à la main avec produits professionnels haut de gamme.");
+  usePageMeta("Lavage", "Service de lavage automobile intérieur, extérieur et décontamination à Sainte-Claire. Lavage à la main avec produits professionnels haut de gamme.");
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
@@ -83,11 +83,11 @@ export default function ServiceLavage() {
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
             <div className="flex items-center gap-3 mb-4">
               <div className="w-10 h-10 md:w-12 md:h-12 bg-accent/20 rounded-md flex items-center justify-center">
-                <Droplets className="w-5 h-5 md:w-6 md:h-6 text-blue-400" />
+                <Droplets className="w-5 h-5 md:w-6 md:h-6 text-[#D4AF37]" />
               </div>
             </div>
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-extrabold text-white uppercase leading-tight">
-              LAVAGE<br /><span className="text-blue-400">AUTOMOBILE</span>
+              LAVAGE<br /><span className="text-[#D4AF37]">AUTOMOBILE</span>
             </h1>
             <p className="text-base sm:text-lg md:text-xl text-gray-100 mt-4 max-w-xl">
               Un nettoyage complet qui va bien au-delà du simple lavage pour un résultat impeccable.
@@ -107,7 +107,7 @@ export default function ServiceLavage() {
                 UN LAVAGE <span className="text-accent">D'EXCEPTION</span>
               </h2>
               <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-6">
-                Chez Esthétique Auto Pascal Pilote, le lavage automobile est un art. Nous traitons chaque surface avec des produits professionnels haut de gamme pour un résultat qui dépasse vos attentes. Que ce soit pour un entretien régulier ou un nettoyage en profondeur, votre véhicule retrouvera son éclat d'origine.
+                Chez Esthétique Auto A.V, le lavage automobile est un art. Nous traitons chaque surface avec des produits professionnels haut de gamme pour un résultat qui dépasse vos attentes. Que ce soit pour un entretien régulier ou un nettoyage en profondeur, votre véhicule retrouvera son éclat d'origine.
               </p>
               <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
                 {features.map((f, i) => (
@@ -117,7 +117,7 @@ export default function ServiceLavage() {
                   </li>
                 ))}
               </ul>
-              <Link href="/rendez-vous" className="inline-flex items-center bg-accent text-white px-6 py-3 rounded-md font-semibold hover:bg-accent-hover transition-colors">
+              <Link href="/rendez-vous" className="inline-flex items-center bg-accent text-[#1b1b1b] px-6 py-3 rounded-md font-semibold hover:bg-accent-hover transition-colors">
                 Prendre un rendez-vous
               </Link>
             </motion.div>
@@ -162,7 +162,7 @@ export default function ServiceLavage() {
                   <div className="p-6 md:p-8 flex flex-col flex-1">
                     <h3 className="text-xl md:text-2xl font-display font-bold text-gray-900 mb-3">{svc.title}</h3>
                     <p className="text-gray-600 text-sm md:text-base leading-relaxed mb-6 flex-1">{svc.description}</p>
-                    <Link href="/rendez-vous" className="inline-flex items-center justify-center w-full bg-accent text-white px-6 py-3 rounded-md font-semibold hover:bg-accent-hover transition-colors text-sm">
+                    <Link href="/rendez-vous" className="inline-flex items-center justify-center w-full bg-accent text-[#1b1b1b] px-6 py-3 rounded-md font-semibold hover:bg-accent-hover transition-colors text-sm">
                       Obtenir une soumission
                     </Link>
                   </div>
@@ -182,12 +182,12 @@ export default function ServiceLavage() {
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
             <SectionTagline text="Garantie" light center={false} />
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-white mb-4 leading-tight">
-              UN RÉSULTAT <span className="text-blue-400">GARANTI</span>
+              UN RÉSULTAT <span className="text-[#D4AF37]">GARANTI</span>
             </h2>
             <p className="text-base sm:text-lg md:text-xl text-gray-100 max-w-xl mb-6">
-              Plus de 1 500 véhicules traités avec la même passion et le même souci du détail. Votre satisfaction est notre priorité.
+              Chaque véhicule est traité avec la même passion et le même souci du détail. Votre satisfaction est notre priorité.
             </p>
-            <Link href="/rendez-vous" className="inline-flex items-center bg-accent text-white px-8 py-4 rounded-md font-semibold hover:bg-accent-hover transition-colors">
+            <Link href="/rendez-vous" className="inline-flex items-center bg-accent text-[#1b1b1b] px-8 py-4 rounded-md font-semibold hover:bg-accent-hover transition-colors">
               Réserver votre lavage
             </Link>
           </motion.div>
@@ -212,7 +212,7 @@ export default function ServiceLavage() {
           <div className="mt-12 pt-12 text-center">
             <h3 className="text-xl sm:text-2xl font-display font-bold text-gray-900">VOUS AVEZ D'AUTRES QUESTIONS ?</h3>
             <p className="text-gray-700 mt-3">Nous sommes là pour vous aider.</p>
-            <Link href="/rendez-vous" className="inline-block mt-6 bg-accent text-white px-8 py-3 rounded-md font-semibold hover:bg-accent-hover transition-colors">
+            <Link href="/rendez-vous" className="inline-block mt-6 bg-accent text-[#1b1b1b] px-8 py-3 rounded-md font-semibold hover:bg-accent-hover transition-colors">
               Prendre un rendez-vous
             </Link>
           </div>

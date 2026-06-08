@@ -34,7 +34,7 @@ const allImages = [
 ];
 
 export default function GaleriePage() {
-  usePageMeta("Galerie photos — Détailing automobile", "Découvrez nos réalisations en esthétique automobile. Photos avant/après de nos services de lavage, PPF, polissage et nano-céramique à La Malbaie.");
+  usePageMeta("Galerie photos — Détailing automobile", "Découvrez nos réalisations en esthétique automobile. Photos avant/après de nos services de lavage, PPF, polissage et nano-céramique à Sainte-Claire.");
   const [lightboxImage, setLightboxImage] = useState<string | null>(null);
   const closeLightbox = useCallback(() => setLightboxImage(null), []);
 
@@ -52,7 +52,7 @@ export default function GaleriePage() {
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-extrabold text-white uppercase leading-tight">
-              <span className="text-blue-400">GALERIE</span> PHOTO
+              <span className="text-[#D4AF37]">GALERIE</span> PHOTO
             </h1>
             <p className="text-base sm:text-lg md:text-xl text-gray-100 mt-4 max-w-xl">
               Découvrez nos réalisations et la qualité de notre travail en images.
@@ -120,24 +120,24 @@ export default function GaleriePage() {
 
       <section className="relative h-[320px] sm:h-[380px] md:h-[440px] flex items-center overflow-hidden">
         <div className="absolute inset-0">
-          <img loading="lazy" decoding="async" src={ctaImg} alt="Atelier d'esthétique automobile Pascal Pilote" className="w-full h-full object-cover" />
+          <img loading="lazy" decoding="async" src={ctaImg} alt="Atelier d'esthétique automobile Esthétique Auto A.V" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/30" />
         </div>
         <div className="max-w-7xl mx-auto px-6 relative z-10 w-full">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
             <SectionTagline text="Votre véhicule" light center={false} />
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-white mb-4 leading-tight max-w-2xl">
-              PRÊT À FAIRE PARTIE DE <span className="text-blue-400">NOTRE GALERIE</span> ?
+              PRÊT À FAIRE PARTIE DE <span className="text-[#D4AF37]">NOTRE GALERIE</span> ?
             </h2>
             <p className="text-base sm:text-lg md:text-xl text-gray-100 max-w-xl mb-6 md:mb-8">
               Confiez-nous votre véhicule et obtenez le même niveau de fini que vous voyez ci-dessus.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
-              <Link href="/rendez-vous" className="inline-flex items-center justify-center bg-accent text-white px-8 py-4 rounded-md font-semibold hover:bg-accent-hover transition-colors">
+              <Link href="/rendez-vous" className="inline-flex items-center justify-center bg-accent text-[#1b1b1b] px-8 py-4 rounded-md font-semibold hover:bg-accent-hover transition-colors">
                 Obtenir une soumission
               </Link>
-              <a href="tel:+14186655871" className="inline-flex items-center justify-center bg-white/10 backdrop-blur-sm border border-white/30 text-white px-8 py-4 rounded-md font-semibold hover:bg-white/20 transition-colors">
-                (418) 665-5871
+              <a href="tel:+14189578168" className="inline-flex items-center justify-center bg-white/10 backdrop-blur-sm border border-white/30 text-white px-8 py-4 rounded-md font-semibold hover:bg-white/20 transition-colors">
+                (418) 957-8168
               </a>
             </div>
           </motion.div>
@@ -164,7 +164,7 @@ export default function GaleriePage() {
               className="max-w-full max-h-[90vh] object-contain"
             />
             <button
-              className="absolute top-4 right-4 sm:top-8 sm:right-8 text-white hover:text-blue-400 transition-colors p-2"
+              className="absolute top-4 right-4 sm:top-8 sm:right-8 text-white hover:text-[#D4AF37] transition-colors p-2"
               onClick={(e) => { e.stopPropagation(); closeLightbox(); }}
             >
               <X size={32} strokeWidth={2} />

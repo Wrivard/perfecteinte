@@ -15,27 +15,27 @@ export function CTA() {
           <div className="flex-1">
             <SectionTagline text="Passez à l'action" light center={false} />
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-white leading-tight mb-4">
-              VOTRE VÉHICULE MÉRITE<br className="hidden sm:block" /> L'EXCELLENCE
+              VOTRE VÉHICULE MÉRITE<br className="hidden sm:block" /> LE MEILLEUR TRAITEMENT
             </h2>
             <p className="text-base sm:text-lg md:text-xl text-gray-100 leading-relaxed max-w-2xl">
-              Transformez l'apparence et la protection de votre automobile avec un service sur mesure et professionnel.
+              Contactez Esthétique Auto A.V dès aujourd'hui pour obtenir une estimation personnalisée.
             </p>
           </div>
           <div className="flex flex-col sm:flex-row gap-4 shrink-0 w-full sm:w-auto">
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Link
                 href="/rendez-vous"
-                className="inline-flex items-center justify-center bg-accent hover:bg-accent-hover text-white px-8 py-4 rounded-md font-semibold text-lg transition-colors w-full sm:w-auto"
+                className="inline-flex items-center justify-center bg-accent hover:bg-accent-hover text-[#1b1b1b] px-8 py-4 rounded-md font-semibold text-lg transition-colors w-full sm:w-auto"
               >
-                Prendre un rendez-vous
+                Demander une soumission
               </Link>
             </motion.div>
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <a
-                href="tel:4186655871"
+                href="tel:4189578168"
                 className="inline-flex items-center justify-center bg-transparent border-2 border-white text-white px-8 py-4 rounded-md font-semibold text-lg hover:bg-white/10 transition-all w-full sm:w-auto"
               >
-                (418) 665-5871
+                (418) 957-8168
               </a>
             </motion.div>
           </div>
