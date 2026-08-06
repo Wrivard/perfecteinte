@@ -4,29 +4,7 @@ import { Link } from "wouter";
 import { X } from "lucide-react";
 import { SectionTagline } from "@/components/ui/SectionTagline";
 
-import newImg1 from "@assets/485077445_642811888504503_325527761917987874_n_1780951111840.jpg";
-import newImg2 from "@assets/484579202_642806558505036_4164192967183294918_n_1780951111839.jpg";
-import newImg3 from "@assets/484813297_644287891690236_147594783183215853_n_1780951111839.jpg";
-import newImg4 from "@assets/485150908_644297641689261_4715788982551897010_n_1780951111841.jpg";
-import newImg5 from "@assets/485158474_644297581689267_3518560219241088530_n_1780951111841.jpg";
-import newImg6 from "@assets/484978617_644417801677245_5709279693467673838_n_1780951111840.jpg";
-import newImg7 from "@assets/485012542_644422901676735_3255584034753389984_n_1780951111840.jpg";
-import newImg8 from "@assets/485174268_642679441851081_2024101051486167124_n_1780951111841.jpg";
-
-import img1 from "@/assets/optimized-photos/IMG_5278.webp";
-import img2 from "@/assets/optimized-photos/IMG_2992.webp";
-import img3 from "@/assets/optimized-photos/IMG_8023.webp";
-import img4 from "@/assets/optimized-photos/IMG_8781.webp";
-import img5 from "@/assets/optimized-photos/IMG_7854.webp";
-import img6 from "@/assets/optimized-photos/IMG_5134.webp";
-import img7 from "@/assets/optimized-photos/IMG_1647.webp";
-import img8 from "@/assets/optimized-photos/IMG_9142.webp";
-import img9 from "@/assets/optimized-photos/IMG_3898.webp";
-
-const images = [
-  newImg1, newImg2, newImg3, newImg4, newImg5, newImg6, newImg7, newImg8,
-  img1, img2, img3, img4, img5, img6, img7, img8, img9,
-];
+import { perfecteinteImageAlts, perfecteinteImages } from "@/assets/perfecteinteGallery";
 
 export function Gallery() {
   const [lightboxImage, setLightboxImage] = useState<string | null>(null);
@@ -55,7 +33,7 @@ export function Gallery() {
           </motion.div>
 
           <div className="masonry-grid">
-            {images.map((src, index) => (
+            {perfecteinteImages.map((src, index) => (
               <motion.div
                 key={index}
                 className="masonry-item relative overflow-hidden rounded-md group cursor-pointer"
@@ -68,7 +46,7 @@ export function Gallery() {
               >
                 <img
                   src={src}
-                  alt={`Réalisation ${index + 1}`}
+                   alt={perfecteinteImageAlts[index]}
                   className="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-500"
                   loading="lazy"
                   decoding="async"

@@ -9,13 +9,15 @@ import { Droplets, Check, Brush, Sparkles, ShieldCheck } from "lucide-react";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { useState } from "react";
 import { AccordionItem } from "@/components/ui/accordion-custom";
-import heroImg from "@/assets/optimized-photos/IMG_5191.webp";
-import img1 from "@/assets/optimized-photos/IMG_3255.webp";
-import img2 from "@/assets/optimized-photos/IMG_9345.webp";
-import imgInt from "@/assets/optimized-photos/IMG_3255.webp";
-import imgExt from "@/assets/optimized-photos/IMG_5246.webp";
-import imgComplet from "@/assets/optimized-photos/IMG_8023.webp";
-import imgDecont from "@/assets/optimized-photos/IMG_3308.webp";
+import { perfecteinteImages } from "@/assets/perfecteinteGallery";
+
+const heroImg = perfecteinteImages[5];
+const img1 = perfecteinteImages[6];
+const img2 = perfecteinteImages[4];
+const imgInt = perfecteinteImages[6];
+const imgExt = perfecteinteImages[1];
+const imgComplet = perfecteinteImages[3];
+const imgDecont = perfecteinteImages[2];
 
 const subServices = [
   {

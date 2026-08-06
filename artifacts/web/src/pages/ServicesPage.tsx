@@ -6,10 +6,12 @@ import { Partners } from "@/components/sections/Partners";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { SectionTagline } from "@/components/ui/SectionTagline";
 import { Droplets, Sparkles, Shield, ArrowRight } from "lucide-react";
-import heroImg from "@/assets/optimized-photos/IMG_5278.webp";
-import img1 from "@/assets/optimized-photos/IMG_9370.webp";
-import img2 from "@/assets/optimized-photos/IMG_7930.webp";
-import img3 from "@/assets/optimized-photos/IMG_4953.webp";
+import { perfecteinteImages } from "@/assets/perfecteinteGallery";
+
+const heroImg = perfecteinteImages[4];
+const img1 = perfecteinteImages[2];
+const img2 = perfecteinteImages[3];
+const img3 = perfecteinteImages[1];
 
 const services = [
   {

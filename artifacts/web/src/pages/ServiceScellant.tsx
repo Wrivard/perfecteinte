@@ -9,11 +9,13 @@ import { Sparkles, Check, Layers, Disc3 } from "lucide-react";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { useState } from "react";
 import { AccordionItem } from "@/components/ui/accordion-custom";
-import heroImg from "@/assets/optimized-photos/IMG_7930.webp";
-import img1 from "@assets/img-1647-01_1778252857606.webp";
-import img2 from "@/assets/optimized-photos/IMG_5258.webp";
-import imgCires from "@/assets/perfecteinte-detail.png";
-import imgPolissage from "@/assets/optimized-photos/IMG_3303.webp";
+import { perfecteinteImages } from "@/assets/perfecteinteGallery";
+
+const heroImg = perfecteinteImages[2];
+const img1 = perfecteinteImages[3];
+const img2 = perfecteinteImages[4];
+const imgCires = perfecteinteImages[6];
+const imgPolissage = perfecteinteImages[5];
 
 const subServices = [
   {

@@ -1,51 +1,46 @@
 import { motion } from "framer-motion";
 import { Link } from "wouter";
 import { SectionTagline } from "@/components/ui/SectionTagline";
-import img1 from "@/assets/optimized-photos/IMG_9370.webp";
-import img2 from "@/assets/optimized-photos/IMG_7930.webp";
-import img3 from "@/assets/optimized-photos/IMG_4953.webp";
-import img4 from "@/assets/optimized-photos/IMG_5278.webp";
-import img5 from "@/assets/optimized-photos/IMG_9584.webp";
-import img6 from "@/assets/optimized-photos/IMG_8023.webp";
+import { perfecteinteImages } from "@/assets/perfecteinteGallery";
 
 const services = [
   {
-    image: img1,
+    image: perfecteinteImages[2],
     label: "Protection",
     title: "PELLICULE PARE-PIERRE",
     description: "Une pellicule protectrice transparente qui préserve la peinture originale contre les impacts et les éclats.",
     href: "/services/nano-ceramique",
   },
   {
-    image: img2,
+    image: perfecteinteImages[3],
     label: "Personnalisation",
     title: "TEINTAGE AUTOMOBILE",
     description: "Réduction de la chaleur, protection UV et allure sportive grâce à une installation professionnelle.",
     href: "/services/scellant",
   },
   {
-    image: img3,
+    image: perfecteinteImages[4],
     label: "Excellence",
     title: "PROTECTION PREMIUM",
     description: "Des solutions adaptées aux véhicules de prestige pour préserver leur valeur et leur apparence.",
     href: "/services/nano-ceramique",
   },
   {
-    image: img4,
+    image: perfecteinteImages[1],
     label: "Sur mesure",
     title: "VÉHICULES DE PRESTIGE",
     description: "Un travail spécialisé et minutieux pour les voitures sport, exotiques et véhicules haut de gamme.",
     href: "/services/nano-ceramique",
   },
   {
-    image: img5,
+    image: perfecteinteImages[5],
     label: "Applications nautiques",
     title: "BATEAUX & VÉHICULES RÉCRÉATIFS",
     description: "Protection adaptée aux surfaces nautiques et aux conditions extérieures exigeantes.",
     href: "/services/lavage",
   },
   {
-    image: img6,
+    image: perfecteinteImages[6],
     label: "Expertise spécialisée",
     title: "AVIONS & APPLICATIONS SPÉCIALES",
     description: "Des solutions professionnelles pour protéger les surfaces de différents types de véhicules.",

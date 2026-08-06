@@ -7,7 +7,9 @@ import { SectionTagline } from "@/components/ui/SectionTagline";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { Contact } from "@/components/sections/Contact";
 import { Phone, Mail, MapPin, Clock, Check, ChevronRight, ChevronLeft } from "lucide-react";
-import heroImg from "@/assets/optimized-photos/IMG_1647.webp";
+import { perfecteinteImages } from "@/assets/perfecteinteGallery";
+
+const heroImg = perfecteinteImages[5];
 
 function formatPhone(value: string): string {
   const digits = value.replace(/\D/g, "").slice(0, 10);

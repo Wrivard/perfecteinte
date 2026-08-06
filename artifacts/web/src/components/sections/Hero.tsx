@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 import { Link } from "wouter";
-import bgImage from "@/assets/hero-perfecteinte.jpg";
+import { perfecteinteImages } from "@/assets/perfecteinteGallery";
+
+const bgImage = perfecteinteImages[4];
 
 export function Hero() {
   return (
