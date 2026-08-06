@@ -12,7 +12,7 @@ import { AccordionItem } from "@/components/ui/accordion-custom";
 import heroImg from "@/assets/optimized-photos/IMG_7930.webp";
 import img1 from "@assets/img-1647-01_1778252857606.webp";
 import img2 from "@/assets/optimized-photos/IMG_5258.webp";
-import imgCires from "@assets/eau-perler-pascal_1778270597032.PNG";
+import imgCires from "@/assets/perfecteinte-detail.png";
 import imgPolissage from "@/assets/optimized-photos/IMG_3303.webp";
 
 const subServices = [
@@ -60,7 +60,7 @@ const faqs = [
 ];
 
 export default function ServiceScellant() {
-  usePageMeta("Scellant", "Service de cires, scellant peinture et polissage professionnel à Sainte-Claire. Correction des imperfections et protection durable de votre peinture.");
+  usePageMeta("Teintage automobile", "Teintage de vitres automobile professionnel à Alma, Québec. Réduction de chaleur, protection UV et finition sportive avec Perfecteinte.");
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
@@ -75,14 +75,14 @@ export default function ServiceScellant() {
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
             <div className="flex items-center gap-3 mb-4">
               <div className="w-10 h-10 md:w-12 md:h-12 bg-accent/20 rounded-md flex items-center justify-center">
-                <Sparkles className="w-5 h-5 md:w-6 md:h-6 text-[#D4AF37]" />
+                <Sparkles className="w-5 h-5 md:w-6 md:h-6 text-accent" />
               </div>
             </div>
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-extrabold text-white uppercase leading-tight">
-              SCELLANT &<br /><span className="text-[#D4AF37]">POLISSAGE</span>
+              TEINTAGE<br /><span className="text-accent">AUTOMOBILE</span>
             </h1>
             <p className="text-base sm:text-lg md:text-xl text-gray-100 mt-4 max-w-xl">
-              Protection et correction de peinture pour un éclat incomparable.
+              Confort, protection UV et allure distinctive avec une installation professionnelle.
             </p>
           </motion.div>
         </div>
@@ -94,15 +94,15 @@ export default function ServiceScellant() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
             <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
-              <SectionTagline text="Protection" center={false} />
+              <SectionTagline text="Personnalisation" center={false} />
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-gray-900 mb-4 md:mb-6 leading-tight">
-                UNE FINITION <span className="text-accent">PARFAITE</span>
+                UN STYLE <span className="text-accent">PARFAIT</span>
               </h2>
               <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-4">
-                Nos services de scellant et polissage combinent protection et embellissement de votre peinture. Que votre véhicule ait besoin d'être protégé ou que vous vouliez corriger des années d'imperfections, nous avons la solution.
+                Le teintage automobile réduit la chaleur dans l'habitacle, filtre les rayons UV et donne à votre véhicule une allure plus sportive et élégante.
               </p>
               <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-8">
-                Nous utilisons exclusivement des produits professionnels haut de gamme — Labocosmetica, CarPro, MaxShine — pour des résultats qui se voient et se sentent.
+                Chaque installation est réalisée avec précision et avec des pellicules de qualité supérieure adaptées à votre véhicule.
               </p>
               <Link href="/rendez-vous" className="inline-flex items-center bg-accent text-[#1b1b1b] px-6 py-3 rounded-md font-semibold hover:bg-accent-hover transition-colors">
                 Obtenir une soumission
@@ -188,7 +188,7 @@ export default function ServiceScellant() {
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
             <SectionTagline text="Résultat" light center={false} />
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-white mb-4 leading-tight">
-              VOTRE PEINTURE <span className="text-[#D4AF37]">SUBLIMÉE</span>
+              VOTRE PEINTURE <span className="text-accent">SUBLIMÉE</span>
             </h2>
             <p className="text-base sm:text-lg md:text-xl text-gray-100 max-w-xl mb-6">
               Un éclat incomparable et une protection durable — c'est notre promesse pour chaque véhicule.

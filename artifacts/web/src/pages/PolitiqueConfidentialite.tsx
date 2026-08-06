@@ -4,7 +4,7 @@ import { PageLayout } from "@/components/layout/PageLayout";
 import { Testimonials } from "@/components/sections/Testimonials";
 
 export default function PolitiqueConfidentialite() {
-  usePageMeta("Politique de confidentialité", "Politique de confidentialité et de témoins (cookies) d'Esthétique Auto A.V, conforme à la Loi 25 du Québec.");
+  usePageMeta("Politique de confidentialité", "Politique de confidentialité et de témoins (cookies) de Perfecteinte, conforme à la Loi 25 du Québec.");
   return (
     <PageLayout showContact={false}>
       <section className="pt-32 md:pt-40 pb-16 md:pb-20 bg-white">
@@ -26,7 +26,7 @@ export default function PolitiqueConfidentialite() {
               <section>
                 <h2 className="text-xl md:text-2xl font-display font-bold text-gray-900 mb-3">1. Introduction</h2>
                 <p>
-                  Esthétique Auto A.V (ci-après « nous », « notre » ou « l'entreprise »), située au 20 Rue de la Montagne, porte 2, Sainte-Claire, QC, s'engage à protéger la vie privée et les renseignements personnels de ses clients et visiteurs conformément à la <strong>Loi 25 — Loi modernisant des dispositions législatives en matière de protection des renseignements personnels</strong> du Québec, ainsi qu'à la <strong>Loi sur la protection des renseignements personnels dans le secteur privé</strong> (RLRQ, c. P-39.1).
+                  Perfecteinte (ci-après « nous », « notre » ou « l'entreprise »), située au 1950 Boulevard St-Jude, Alma, QC, s'engage à protéger la vie privée et les renseignements personnels de ses clients et visiteurs conformément à la <strong>Loi 25 — Loi modernisant des dispositions législatives en matière de protection des renseignements personnels</strong> du Québec, ainsi qu'à la <strong>Loi sur la protection des renseignements personnels dans le secteur privé</strong> (RLRQ, c. P-39.1).
                 </p>
                 <p>
                   La présente politique de confidentialité décrit les renseignements personnels que nous recueillons, les fins auxquelles nous les utilisons, les mesures de protection que nous appliquons et vos droits en vertu de la loi.
@@ -39,9 +39,9 @@ export default function PolitiqueConfidentialite() {
                   Le responsable de la protection des renseignements personnels au sein de notre entreprise est :
                 </p>
                 <ul className="list-disc pl-6 space-y-1">
-                  <li><strong>Nom</strong> : Esthétique Auto A.V</li>
-                  <li><strong>Courriel</strong> : <a href="mailto:esthetiquea.v@gmail.com" className="text-accent hover:underline">esthetiquea.v@gmail.com</a></li>
-                  <li><strong>Téléphone</strong> : <a href="tel:4189578168" className="text-accent hover:underline">(418) 957-8168</a></li>
+                   <li><strong>Nom</strong> : Perfecteinte</li>
+                   <li><strong>Courriel</strong> : Soumissions sur demande</li>
+                   <li><strong>Téléphone</strong> : <a href="tel:4184503990" className="text-accent hover:underline">(418) 450-3990</a></li>
                 </ul>
               </section>
 
@@ -143,7 +143,7 @@ export default function PolitiqueConfidentialite() {
                   <li><strong>Droit de déposer une plainte</strong> : Auprès de la Commission d'accès à l'information du Québec (CAI) si vous estimez que vos droits n'ont pas été respectés.</li>
                 </ul>
                 <p className="mt-3">
-                  Pour exercer l'un de ces droits, veuillez nous contacter à <a href="mailto:esthetiquea.v@gmail.com" className="text-accent hover:underline">esthetiquea.v@gmail.com</a> ou au <a href="tel:4189578168" className="text-accent hover:underline">(418) 957-8168</a>.
+                   Pour exercer l'un de ces droits, veuillez nous contacter par téléphone au <a href="tel:4184503990" className="text-accent hover:underline">(418) 450-3990</a>.
                 </p>
               </section>
 
@@ -167,10 +167,10 @@ export default function PolitiqueConfidentialite() {
                   Pour toute question concernant cette politique de confidentialité, la gestion de vos renseignements personnels ou l'utilisation des témoins sur notre site, veuillez communiquer avec nous :
                 </p>
                 <div className="bg-[#f9fafb] rounded-md p-6 mt-4 border border-gray-200">
-                  <p className="font-semibold text-gray-900 mb-2">Esthétique Auto A.V</p>
-                  <p>20 Rue de la Montagne, porte 2, Sainte-Claire, QC</p>
-                  <p>Téléphone : <a href="tel:4189578168" className="text-accent hover:underline">(418) 957-8168</a></p>
-                  <p>Courriel : <a href="mailto:esthetiquea.v@gmail.com" className="text-accent hover:underline">esthetiquea.v@gmail.com</a></p>
+                   <p className="font-semibold text-gray-900 mb-2">Perfecteinte</p>
+                   <p>1950 Boulevard St-Jude, Alma, QC</p>
+                   <p>Téléphone : <a href="tel:4184503990" className="text-accent hover:underline">(418) 450-3990</a></p>
+                   <p>Courriel : Soumissions sur demande</p>
                 </div>
               </section>
 

@@ -75,7 +75,7 @@ const faqs = [
 ];
 
 export default function ServiceNanoceramique() {
-  usePageMeta("Nanocéramique & PPF", "Polissage, nano-céramique et installation de pare-pierre (PPF) à Sainte-Claire. Protection maximale et durable pour la peinture de votre véhicule.");
+  usePageMeta("Pellicule pare-pierre (PPF)", "Installation professionnelle de pellicules protectrices pare-pierre à Alma. Préservez la peinture originale de votre véhicule avec Perfecteinte.");
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
@@ -90,14 +90,14 @@ export default function ServiceNanoceramique() {
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
             <div className="flex items-center gap-3 mb-4">
               <div className="w-10 h-10 md:w-12 md:h-12 bg-accent/20 rounded-md flex items-center justify-center">
-                <Shield className="w-5 h-5 md:w-6 md:h-6 text-[#D4AF37]" />
+                <Shield className="w-5 h-5 md:w-6 md:h-6 text-accent" />
               </div>
             </div>
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-extrabold text-white uppercase leading-tight">
-              NANOCÉRAMIQUE<br /><span className="text-[#D4AF37]">& PARE-PIERRE</span>
+               PELLICULE<br /><span className="text-accent">PARE-PIERRE</span>
             </h1>
             <p className="text-base sm:text-lg md:text-xl text-gray-100 mt-4 max-w-xl">
-              La protection la plus avancée pour votre véhicule — par une équipe expérimentée.
+              Une protection transparente et durable contre les impacts et les éclats — avec plus de 30 ans d'expertise.
             </p>
           </motion.div>
         </div>
@@ -114,7 +114,7 @@ export default function ServiceNanoceramique() {
                 LA PROTECTION <span className="text-accent">ULTIME</span>
               </h2>
               <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-8">
-                La nanocéramique et le pare-pierre (PPF) représentent le sommet de la protection automobile. Ensemble, ils offrent une barrière complète contre les éclats, les rayures, les UV, la pollution et les contaminants chimiques.
+                La pellicule pare-pierre protège la peinture originale contre les impacts, les éclats et les débris routiers. Sa finition transparente préserve l'apparence de votre véhicule tout en protégeant sa valeur.
               </p>
               <Link href="/rendez-vous" className="inline-flex items-center bg-accent text-[#1b1b1b] px-6 py-3 rounded-md font-semibold hover:bg-accent-hover transition-colors">
                 Obtenir une soumission
@@ -222,7 +222,7 @@ export default function ServiceNanoceramique() {
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
             <SectionTagline text="Investissement" light center={false} />
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-white mb-4 leading-tight">
-              PROTÉGEZ VOTRE <span className="text-[#D4AF37]">INVESTISSEMENT</span>
+              PROTÉGEZ VOTRE <span className="text-accent">INVESTISSEMENT</span>
             </h2>
             <p className="text-base sm:text-lg md:text-xl text-gray-100 max-w-xl mb-6">
               Un film invisible et une céramique durable qui préservent la beauté et la valeur de votre véhicule pour des années à venir.

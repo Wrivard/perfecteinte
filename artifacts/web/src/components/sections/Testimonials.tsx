@@ -14,7 +14,7 @@ const allTestimonials = [
   { quote: "Un service qui transforme littéralement l'apparence de mon véhicule.", author: "Caroline Tremblay", image: img2 },
   { quote: "La précision et le professionnalisme sont au cœur de leur travail.", author: "Michel Bouchard", image: img3 },
   { quote: "Résultats impeccables à chaque visite. Mon véhicule n'a jamais été aussi beau.", author: "Sophie Dubois", image: img4 },
-  { quote: "Le meilleur service de détailing de la région. Hautement recommandé!", author: "Martin Côté", image: img5 },
+  { quote: "Le meilleur service de protection automobile de la région. Hautement recommandé!", author: "Martin Côté", image: img5 },
   { quote: "L'équipe a un œil exceptionnel pour la finition. Résultat au-delà de mes attentes.", author: "Julie Gagnon", image: img6 },
   { quote: "Le PPF a complètement protégé mon capot d'un gros éclat de pierre. Investissement rentabilisé!", author: "Jean-Philippe Roy", image: img1 },
   { quote: "Le forfait de luxe en vaut chaque dollar. Mon auto brille comme au jour 1!", author: "Nathalie Bergeron", image: img3 },
@@ -96,7 +96,7 @@ export function Testimonials({ compact = false }: { compact?: boolean }) {
                   <img loading="lazy" decoding="async" src={t.image} alt={t.author} className="absolute inset-0 w-full h-full object-cover" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/60 to-black/20"></div>
                   <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8">
-                    <div className="flex gap-1 text-[#D4AF37] mb-3 md:mb-4">
+                    <div className="flex gap-1 text-accent mb-3 md:mb-4">
                       {[...Array(5)].map((_, j) => (
                         <Star key={j} className="w-4 h-4 md:w-5 md:h-5 fill-current" />
                       ))}

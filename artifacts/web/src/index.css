@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@500;600;700;800;900&display=swap');
 @import "tailwindcss";
 
 @theme inline {
@@ -8,12 +8,12 @@
   --color-primary: hsl(216 60% 10%);
   --color-primary-foreground: hsl(0 0% 100%);
   
-  --color-accent: hsl(46 65% 52%);
-  --color-accent-hover: hsl(43 74% 42%);
+  --color-accent: hsl(30 100% 48%);
+  --color-accent-hover: hsl(27 100% 40%);
   --color-accent-foreground: hsl(0 0% 11%);
 
-  --color-navy: hsl(216 60% 10%);
-  --color-navy-dark: hsl(0 0% 6%);
+  --color-navy: hsl(0 0% 3%);
+  --color-navy-dark: hsl(0 0% 2%);
   
   --color-light: hsl(210 20% 98%);
   --color-dark: hsl(0 0% 10%);
@@ -28,11 +28,17 @@
 @layer base {
   body {
     @apply bg-background text-foreground antialiased font-sans overflow-x-hidden;
+    min-width: 320px;
   }
 
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-display);
     @apply font-bold tracking-tight;
+  }
+
+  :focus-visible {
+    outline: 3px solid var(--color-accent);
+    outline-offset: 3px;
   }
 }
 
@@ -59,4 +65,28 @@
 
 html {
   scroll-behavior: smooth;
+}
+
+/* Fluid sizing keeps the existing template comfortable from compact phones to wide displays. */
+@layer utilities {
+  .site-container {
+    width: min(100% - 2rem, 80rem);
+    margin-inline: auto;
+  }
+
+  .fluid-heading {
+    font-size: clamp(2rem, 4vw + 1rem, 5.5rem);
+  }
+
+  .fluid-section {
+    padding-block: clamp(4rem, 7vw, 7rem);
+  }
+}
+
+@media (min-width: 640px) {
+  .site-container { width: min(100% - 3rem, 80rem); }
+}
+
+@media (min-width: 1024px) {
+  .site-container { width: min(100% - 4rem, 80rem); }
 }

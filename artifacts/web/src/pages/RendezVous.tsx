@@ -18,14 +18,12 @@ function formatPhone(value: string): string {
 }
 
 const SERVICES = [
-  { id: "lavage-int", label: "Lavage intérieur", duration: "2h", category: "Lavage" },
-  { id: "lavage-ext", label: "Lavage extérieur", duration: "1h", category: "Lavage" },
-  { id: "lavage-complet", label: "Lavage intérieur & extérieur", duration: "3h", category: "Lavage" },
-  { id: "decontamination", label: "Décontamination", duration: "1h (ajouter au lavage extérieur)", category: "Lavage" },
-  { id: "cires", label: "Cires (scellant peinture)", duration: "3h", category: "Scellant" },
-  { id: "polissage", label: "Polissage", duration: "Journée complète", category: "Scellant" },
-  { id: "nano-ceramique", label: "Polissage & Nano Céramique", duration: "2 jours", category: "Nanocéramique" },
-  { id: "ppf", label: "Installation de pare-pierre (PPF)", duration: "Selon le véhicule", category: "Nanocéramique" },
+  { id: "ppf", label: "Pellicule protectrice pare-pierre (PPF)", duration: "Selon le véhicule", category: "Protection" },
+  { id: "teintage", label: "Teintage de vitres automobile", duration: "Selon le véhicule", category: "Personnalisation" },
+  { id: "protection", label: "Protection automobile premium", duration: "Selon le véhicule", category: "Protection" },
+  { id: "prestige", label: "Véhicule de prestige ou exotique", duration: "Sur mesure", category: "Applications spécialisées" },
+  { id: "bateau", label: "Bateau ou véhicule récréatif", duration: "Sur mesure", category: "Applications spécialisées" },
+  { id: "avion", label: "Avion ou application spécialisée", duration: "Sur mesure", category: "Applications spécialisées" },
 ];
 
 const STEPS = [
@@ -359,14 +357,14 @@ function SuccessState() {
       </p>
       <p className="text-gray-500 text-sm">
         Des questions ? Appelez-nous au{" "}
-        <a href="tel:4189578168" className="text-accent font-semibold hover:underline">(418) 957-8168</a>
+        <a href="tel:4184503990" className="text-accent font-semibold hover:underline">(418) 450-3990</a>
       </p>
     </motion.div>
   );
 }
 
 export default function RendezVous() {
-  usePageMeta("Prendre un rendez-vous", "Obtenez une soumission pour votre esthétique automobile chez Esthétique Auto A.V à Sainte-Claire. Remplissez notre formulaire en ligne.");
+  usePageMeta("Obtenir une soumission", "Obtenez une soumission pour votre projet de protection automobile chez Perfecteinte à Alma.");
   const [step, setStep] = useState(1);
   const [form, setForm] = useState<FormData>(EMPTY_FORM);
   const [submitted, setSubmitted] = useState(false);
@@ -419,13 +417,13 @@ export default function RendezVous() {
       });
       if (!res.ok) {
         const data = (await res.json().catch(() => ({}))) as { error?: string };
-        setErrors([data.error || "Échec de l'envoi. Veuillez réessayer ou nous appeler au (418) 957-8168."]);
+        setErrors([data.error || "Échec de l'envoi. Veuillez réessayer ou nous appeler au (418) 450-3990."]);
         setSubmitting(false);
         return;
       }
       setSubmitted(true);
     } catch {
-      setErrors(["Erreur réseau. Veuillez vérifier votre connexion ou nous appeler au (418) 957-8168."]);
+      setErrors(["Erreur réseau. Veuillez vérifier votre connexion ou nous appeler au (418) 450-3990."]);
       setSubmitting(false);
     }
   }
@@ -444,7 +442,7 @@ export default function RendezVous() {
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-display font-extrabold text-white uppercase leading-tight">
-              OBTENIR UNE <span className="text-[#D4AF37]">SOUMISSION</span>
+              OBTENIR UNE <span className="text-accent">SOUMISSION</span>
             </h1>
             <p className="text-base sm:text-lg md:text-xl text-gray-100 mt-4 max-w-xl">
               Remplissez le formulaire ci-dessous et nous vous contacterons rapidement.
@@ -559,43 +557,41 @@ export default function RendezVous() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
               >
-                <h3 className="text-lg md:text-xl font-display font-bold mb-4 md:mb-6">
-                  PRÊT À <span className="text-[#D4AF37]">BRILLER</span> ?
+              <h3 className="text-lg md:text-xl font-display font-bold mb-4 md:mb-6">
+                  PRÊT À <span className="text-accent">PROTÉGER</span> ?
                 </h3>
 
                 <div className="space-y-5 md:space-y-6">
                   <div className="flex items-start gap-3 md:gap-4">
-                    <Phone className="w-5 h-5 text-[#D4AF37] shrink-0 mt-1" />
+                    <Phone className="w-5 h-5 text-accent shrink-0 mt-1" />
                     <div>
-                      <span className="text-[#D4AF37] text-xs uppercase tracking-widest font-semibold block mb-1">Téléphone</span>
-                      <a href="tel:4189578168" className="text-white font-medium hover:text-[#D4AF37] transition-colors text-sm md:text-base">
-                        (418) 957-8168
+                      <span className="text-accent text-xs uppercase tracking-widest font-semibold block mb-1">Téléphone</span>
+                    <a href="tel:4184503990" className="text-white font-medium hover:text-accent transition-colors text-sm md:text-base">
+                        (418) 450-3990
                       </a>
                     </div>
                   </div>
 
                   <div className="flex items-start gap-3 md:gap-4">
-                    <Mail className="w-5 h-5 text-[#D4AF37] shrink-0 mt-1" />
+                    <Mail className="w-5 h-5 text-accent shrink-0 mt-1" />
                     <div>
-                      <span className="text-[#D4AF37] text-xs uppercase tracking-widest font-semibold block mb-1">Courriel</span>
-                      <a href="mailto:esthetiquea.v@gmail.com" className="text-white font-medium hover:text-[#D4AF37] transition-colors text-sm md:text-base break-all">
-                        esthetiquea.v@gmail.com
-                      </a>
+                      <span className="text-accent text-xs uppercase tracking-widest font-semibold block mb-1">Courriel</span>
+                      <p className="text-white font-medium text-sm md:text-base">Soumissions sur demande</p>
                     </div>
                   </div>
 
                   <div className="flex items-start gap-3 md:gap-4">
-                    <MapPin className="w-5 h-5 text-[#D4AF37] shrink-0 mt-1" />
+                    <MapPin className="w-5 h-5 text-accent shrink-0 mt-1" />
                     <div>
-                      <span className="text-[#D4AF37] text-xs uppercase tracking-widest font-semibold block mb-1">Adresse</span>
-                      <p className="text-white font-medium text-sm md:text-base">20 Rue de la Montagne, porte 2,<br />Sainte-Claire, QC G0R 2V0</p>
+                      <span className="text-accent text-xs uppercase tracking-widest font-semibold block mb-1">Adresse</span>
+                      <p className="text-white font-medium text-sm md:text-base">1950 Boulevard St-Jude,<br />Alma, QC</p>
                     </div>
                   </div>
 
                   <div className="flex items-start gap-3 md:gap-4">
-                    <Clock className="w-5 h-5 text-[#D4AF37] shrink-0 mt-1" />
+                    <Clock className="w-5 h-5 text-accent shrink-0 mt-1" />
                     <div>
-                      <span className="text-[#D4AF37] text-xs uppercase tracking-widest font-semibold block mb-1">Horaires</span>
+                      <span className="text-accent text-xs uppercase tracking-widest font-semibold block mb-1">Horaires</span>
                       <p className="text-white font-medium text-sm md:text-base">Lun - Ven: 8h - 17h</p>
                       <p className="text-gray-300 text-xs md:text-sm">Sam: Sur rendez-vous</p>
                     </div>
@@ -615,7 +611,7 @@ export default function RendezVous() {
                   Si vous préférez nous parler directement, n'hésitez pas à nous contacter par téléphone.
                 </p>
                 <a
-                  href="tel:4189578168"
+                  href="tel:4184503990"
                   className="inline-flex items-center gap-2 bg-accent text-[#1b1b1b] px-6 py-3 rounded-md font-semibold text-sm hover:bg-accent-hover transition-colors w-full justify-center"
                 >
                   <Phone className="w-4 h-4" />

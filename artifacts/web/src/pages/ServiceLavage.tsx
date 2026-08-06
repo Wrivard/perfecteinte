@@ -62,13 +62,13 @@ const features = [
 const faqs = [
   { q: "Quelle est la différence entre lavage intérieur et extérieur ?", a: "Le lavage intérieur comprend l'aspiration, le nettoyage des surfaces, cuirs, plastiques et vitres intérieures. Le lavage extérieur comprend le lavage à la main, les jantes, pneus et carrosserie. Vous pouvez choisir l'un ou l'autre, ou les deux ensemble." },
   { q: "Qu'est-ce que la décontamination ?", a: "La décontamination élimine les particules ferreuses (poussières de frein, rouille) et contaminants organiques incrustés dans la peinture que le lavage normal ne peut pas enlever. C'est une étape recommandée régulièrement pour préserver la santé de votre peinture." },
-  { q: "Dois-je prendre rendez-vous ?", a: "Oui, nous recommandons fortement de prendre rendez-vous à l'avance pour vous garantir un créneau et un service optimal. Appelez-nous au (418) 957-8168 ou remplissez notre formulaire en ligne." },
+  { q: "Dois-je prendre rendez-vous ?", a: "Oui, nous recommandons fortement de prendre rendez-vous à l'avance pour garantir un créneau et une installation adaptée. Appelez-nous au (418) 450-3990 ou remplissez notre formulaire en ligne." },
   { q: "Quels produits utilisez-vous ?", a: "Nous utilisons exclusivement des produits professionnels haut de gamme, notamment de la gamme Labocosmetica et CarPro, respectueux de l'environnement et adaptés à chaque type de surface." },
   { q: "Est-ce que vous lavez aussi les VUS et camions ?", a: "Absolument ! Nous traitons tous types de véhicules : berlines, VUS, camions, véhicules de luxe et exotiques." },
 ];
 
 export default function ServiceLavage() {
-  usePageMeta("Lavage", "Service de lavage automobile intérieur, extérieur et décontamination à Sainte-Claire. Lavage à la main avec produits professionnels haut de gamme.");
+  usePageMeta("Protection premium", "Solutions de protection automobile premium pour les véhicules de prestige, voitures sport, bateaux et véhicules récréatifs à Alma.");
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
@@ -83,14 +83,14 @@ export default function ServiceLavage() {
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
             <div className="flex items-center gap-3 mb-4">
               <div className="w-10 h-10 md:w-12 md:h-12 bg-accent/20 rounded-md flex items-center justify-center">
-                <Droplets className="w-5 h-5 md:w-6 md:h-6 text-[#D4AF37]" />
+                <Droplets className="w-5 h-5 md:w-6 md:h-6 text-accent" />
               </div>
             </div>
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-extrabold text-white uppercase leading-tight">
-              LAVAGE<br /><span className="text-[#D4AF37]">AUTOMOBILE</span>
+              PROTECTION<br /><span className="text-accent">PREMIUM</span>
             </h1>
             <p className="text-base sm:text-lg md:text-xl text-gray-100 mt-4 max-w-xl">
-              Un nettoyage complet qui va bien au-delà du simple lavage pour un résultat impeccable.
+              Des solutions adaptées aux véhicules qui méritent une protection et une finition exceptionnelles.
             </p>
           </motion.div>
         </div>
@@ -107,7 +107,7 @@ export default function ServiceLavage() {
                 UN LAVAGE <span className="text-accent">D'EXCEPTION</span>
               </h2>
               <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-6">
-                Chez Esthétique Auto A.V, le lavage automobile est un art. Nous traitons chaque surface avec des produits professionnels haut de gamme pour un résultat qui dépasse vos attentes. Que ce soit pour un entretien régulier ou un nettoyage en profondeur, votre véhicule retrouvera son éclat d'origine.
+                Perfecteinte accompagne les propriétaires de véhicules de prestige avec des solutions de protection et de personnalisation pensées pour préserver leur investissement. Chaque projet est étudié avec soin afin d'offrir une finition durable et impeccable.
               </p>
               <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
                 {features.map((f, i) => (
@@ -182,7 +182,7 @@ export default function ServiceLavage() {
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
             <SectionTagline text="Garantie" light center={false} />
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-white mb-4 leading-tight">
-              UN RÉSULTAT <span className="text-[#D4AF37]">GARANTI</span>
+              UN RÉSULTAT <span className="text-accent">GARANTI</span>
             </h2>
             <p className="text-base sm:text-lg md:text-xl text-gray-100 max-w-xl mb-6">
               Chaque véhicule est traité avec la même passion et le même souci du détail. Votre satisfaction est notre priorité.

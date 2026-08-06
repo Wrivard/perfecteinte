@@ -14,3 +14,5 @@ When rebranding an existing/cloned site to a new client (content-only swap), a `
 **Why:** a code review caught old domain in public/ files and a fabricated count after a clean-looking src/ grep — those files and hardcoded vendor IDs are outside the usual edit path.
 
 **How to apply:** after the src/ swap, run one grep over `src public index.html` for the old name, domain, phone, city, fabricated numbers, and `blue-[0-9]` tokens before declaring done.
+
+For a supplied horizontal client logo, keep the original file as a workspace asset and create app-local copies for both the imported UI logo and the public SEO/logo path. Use width-based sizing with `height: auto`; fixed-height sizing can distort unusually wide marks.

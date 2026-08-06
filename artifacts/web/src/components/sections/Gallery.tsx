@@ -46,7 +46,7 @@ export function Gallery() {
           >
             <SectionTagline text="Galerie" light />
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-4 md:mb-6 leading-tight">
-              <span className="text-[#D4AF37]">TRANSFORMATION </span>
+              <span className="text-accent">TRANSFORMATION </span>
               <span className="text-white">VISUELLE</span>
             </h2>
             <p className="text-lg md:text-xl lg:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
@@ -106,7 +106,7 @@ export function Gallery() {
               className="max-w-full max-h-[90vh] object-contain"
             />
             <button
-              className="absolute top-4 right-4 sm:top-8 sm:right-8 text-white hover:text-[#D4AF37] transition-colors p-2"
+              className="absolute top-4 right-4 sm:top-8 sm:right-8 text-white hover:text-accent transition-colors p-2"
               onClick={(e) => { e.stopPropagation(); closeLightbox(); }}
             >
               <X size={32} strokeWidth={2} />

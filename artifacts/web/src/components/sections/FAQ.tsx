@@ -6,24 +6,24 @@ import { SectionTagline } from "@/components/ui/SectionTagline";
 
 const faqs = [
   {
-    q: "Combien de temps dure un traitement nano-céramique ?",
-    a: "Un traitement nano-céramique professionnel peut durer de 2 à 5 ans selon le produit utilisé et l'entretien régulier du véhicule. Nous recommandons un entretien périodique pour maximiser la durabilité de la protection."
+    q: "Pourquoi choisir une pellicule pare-pierre (PPF) ?",
+    a: "La pellicule pare-pierre protège la peinture originale contre les impacts, les éclats et les débris routiers tout en conservant une finition transparente et haut de gamme."
   },
   {
-    q: "Est-ce que la pellicule pare-pierre change l'apparence de la peinture ?",
-    a: "Non, la pellicule de protection de peinture (PPF) est pratiquement invisible une fois appliquée. Elle protège contre les éclats de pierre, les débris et les rayures légères tout en préservant l'apparence originale de votre véhicule."
+    q: "Le PPF est-il visible une fois installé ?",
+    a: "Non, la pellicule de protection est pratiquement invisible une fois installée. Elle préserve l'apparence originale du véhicule et peut même rehausser sa brillance."
   },
   {
-    q: "Dois-je prendre rendez-vous pour un lavage ?",
-    a: "Oui, nous vous recommandons de prendre rendez-vous à l'avance pour assurer un service optimal. Vous pouvez réserver directement en ligne via notre formulaire de rendez-vous, ou nous contacter par téléphone au (418) 957-8168."
+    q: "Quels types de véhicules protégez-vous ?",
+    a: "Perfecteinte travaille sur les voitures sport, les véhicules exotiques et haut de gamme, ainsi que sur les bateaux, véhicules récréatifs, avions et applications spécialisées."
   },
   {
-    q: "Le polissage peut-il enlever toutes les égratignures ?",
-    a: "Le polissage peut éliminer la majorité des micro-rayures, swirls et défauts de surface. Cependant, les rayures profondes qui ont pénétré au-delà de la couche de vernis nécessitent parfois des traitements complémentaires. Nous évaluons chaque véhicule individuellement."
+    q: "Depuis combien de temps Perfecteinte offre-t-elle ses services ?",
+    a: "Perfecteinte s'appuie sur plus de 30 ans d'expérience dans le domaine des pellicules teintées et de la protection pare-pierre."
   },
   {
-    q: "Offrez-vous un service mobile à domicile ?",
-    a: "Actuellement, nos services sont offerts exclusivement dans notre atelier situé au 20 Rue de la Montagne, porte 2 à Sainte-Claire. Notre environnement contrôlé nous permet de garantir les meilleurs résultats possibles."
+    q: "Comment obtenir une soumission ?",
+    a: "Remplissez notre formulaire en ligne ou appelez-nous au (418) 450-3990. Nous discuterons de votre véhicule et de la protection qui correspond le mieux à vos besoins."
   },
 ];
 

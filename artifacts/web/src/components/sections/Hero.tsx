@@ -1,14 +1,14 @@
 import { motion } from "framer-motion";
 import { Link } from "wouter";
-import bgImage from "@assets/adobe_1780950309806.JPG";
+import bgImage from "@/assets/hero-perfecteinte.jpg";
 
 export function Hero() {
   return (
-    <section id="home" className="relative min-h-[600px] h-[calc(100svh-40px)] flex items-center overflow-hidden">
+    <section id="home" className="relative min-h-[600px] h-[calc(100svh-40px)] flex items-center overflow-hidden bg-black">
       <div className="absolute inset-0 z-0">
-        <img
+          <img
           src={bgImage}
-          alt="Audi R8 blanche – nano-céramique"
+          alt="Véhicule haut de gamme protégé par Perfecteinte"
           className="w-full h-full object-cover object-[center_50%]"
           fetchPriority="high"
           decoding="async"
@@ -23,12 +23,12 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-display font-extrabold text-white leading-[1.05] uppercase tracking-[-1px] md:tracking-[-2px]">
-            REDONNEZ À VOTRE VÉHICULE SON APPARENCE D'ORIGINE
+          <h1 className="text-[clamp(2.25rem,6vw,5.75rem)] font-display font-extrabold text-white leading-[1.02] uppercase tracking-[-1px] md:tracking-[-2px]">
+             PROTECTION AUTOMOBILE HAUT DE GAMME
           </h1>
 
           <p className="text-base sm:text-lg md:text-xl text-gray-100 mt-6 max-w-[550px] font-light leading-relaxed">
-            Spécialistes en esthétique automobile, correction de peinture et protection nano-céramique à Sainte-Claire et dans la région de Bellechasse.
+            Plus de 30 ans d'expertise en pellicules teintées et protection pare-pierre pour préserver l'apparence de vos véhicules.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 mt-8">

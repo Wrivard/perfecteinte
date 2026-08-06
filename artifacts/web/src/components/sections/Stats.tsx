@@ -5,23 +5,23 @@ import { SectionTagline } from "@/components/ui/SectionTagline";
 const reasons = [
   {
     icon: ShieldCheck,
-    title: "PROTECTION NANO-CÉRAMIQUE",
-    description: "Une protection durable et un éclat qui dure dans le temps.",
+    title: "PLUS DE 30 ANS",
+    description: "Une expertise bâtie sur trois décennies dans la protection automobile.",
   },
   {
     icon: Sparkles,
-    title: "PRODUITS PROFESSIONNELS",
-    description: "Des produits haut de gamme pour des résultats supérieurs.",
+    title: "EXPERTISE SPÉCIALISÉE",
+    description: "Des techniques précises pour les voitures, bateaux, avions et véhicules récréatifs.",
   },
   {
     icon: Award,
-    title: "RÉSULTATS HAUT DE GAMME",
-    description: "Une finition impeccable, jusque dans les moindres détails.",
+    title: "FINITION HAUT DE GAMME",
+    description: "Un travail minutieux qui améliore et protège l'apparence de votre investissement.",
   },
   {
     icon: UserCheck,
-    title: "SERVICE PERSONNALISÉ",
-    description: "Une attention particulière portée à chaque véhicule.",
+    title: "PROTECTION DURABLE",
+    description: "Des solutions choisies pour résister aux impacts, aux UV et aux conditions extérieures.",
   },
 ];
 
@@ -38,7 +38,7 @@ export function Stats() {
         >
           <SectionTagline text="Pourquoi nous choisir" />
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-bold text-gray-900 mb-4 md:mb-6 leading-tight">
-            L'EXCELLENCE EN ESTHÉTIQUE<br className="hidden sm:block" /> AUTOMOBILE
+            L'EXCELLENCE EN PROTECTION<br className="hidden sm:block" /> AUTOMOBILE
           </h2>
         </motion.div>
 

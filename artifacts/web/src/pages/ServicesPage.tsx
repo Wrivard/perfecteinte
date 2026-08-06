@@ -61,12 +61,12 @@ const itemVariants = {
 };
 
 export default function ServicesPage() {
-  usePageMeta("Nos services", "Lavage, scellant, polissage, nano-céramique et installation de pare-pierre (PPF). Découvrez tous nos services d'esthétique automobile à Sainte-Claire.");
+  usePageMeta("Nos services", "Pellicule pare-pierre, teintage automobile et protection premium pour véhicules de prestige à Alma, Québec.");
   return (
     <PageLayout>
       <section className="relative h-[40vh] sm:h-[45vh] md:h-[50vh] min-h-[280px] sm:min-h-[350px] flex items-center overflow-hidden -mt-[120px] pt-[120px]">
         <div className="absolute inset-0">
-          <img src={heroImg} alt="Services d'esthétique automobile professionnels à Sainte-Claire" className="w-full h-full object-cover" fetchPriority="high" decoding="async" />
+          <img src={heroImg} alt="Services de protection automobile Perfecteinte à Alma" className="w-full h-full object-cover" fetchPriority="high" decoding="async" />
           <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/30" />
         </div>
         <div className="max-w-7xl mx-auto px-6 relative z-10 w-full">
@@ -76,10 +76,10 @@ export default function ServicesPage() {
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-extrabold text-white uppercase leading-tight">
-              NOS <span className="text-[#D4AF37]">SERVICES</span>
+              NOS <span className="text-accent">SERVICES</span>
             </h1>
             <p className="text-base sm:text-lg md:text-xl text-gray-100 mt-4 max-w-xl">
-              Des solutions professionnelles pour chaque besoin automobile.
+              Des solutions de protection et de personnalisation pour chaque véhicule.
             </p>
           </motion.div>
         </div>

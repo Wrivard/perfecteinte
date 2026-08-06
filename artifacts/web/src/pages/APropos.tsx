@@ -45,12 +45,12 @@ const itemVariants = {
 };
 
 export default function APropos() {
-  usePageMeta("À propos", "Découvrez l'histoire et les valeurs d'Esthétique Auto A.V, spécialiste du détailing automobile à Sainte-Claire et dans la région de Bellechasse.");
+  usePageMeta("À propos", "Découvrez Perfecteinte, spécialiste des pellicules teintées et protectrices avec plus de 30 ans d'expérience à Alma, Québec.");
   return (
     <PageLayout>
       <section className="relative h-[40vh] sm:h-[45vh] md:h-[50vh] min-h-[280px] sm:min-h-[350px] flex items-center overflow-hidden -mt-[120px] pt-[120px]">
         <div className="absolute inset-0">
-          <img src={heroImg} alt="L'équipe d'Esthétique Auto A.V à Sainte-Claire" className="w-full h-full object-cover" fetchPriority="high" decoding="async" />
+          <img src={heroImg} alt="L'équipe Perfecteinte à Alma" className="w-full h-full object-cover" fetchPriority="high" decoding="async" />
           <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30" />
         </div>
         <div className="max-w-7xl mx-auto px-6 relative z-10 w-full">
@@ -60,10 +60,10 @@ export default function APropos() {
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-extrabold text-white uppercase leading-tight">
-              À <span className="text-[#D4AF37]">Propos</span>
+              À <span className="text-accent">Propos</span>
             </h1>
             <p className="text-base sm:text-lg md:text-xl text-gray-100 mt-4 max-w-xl">
-              Découvrez l'histoire et les valeurs qui animent Esthétique Auto A.V.
+              Découvrez l'expertise et les valeurs qui animent Perfecteinte.
             </p>
           </motion.div>
         </div>
@@ -83,19 +83,19 @@ export default function APropos() {
                 NOTRE <span className="text-accent">HISTOIRE</span>
               </h2>
               <p className="text-lg md:text-xl lg:text-2xl text-gray-700 leading-relaxed mb-4 md:mb-6">
-                Passionnée par l'automobile et le souci du détail, l'équipe d'Esthétique Auto A.V offre des services professionnels de remise à neuf esthétique pour tous types de véhicules.
+                Perfecteinte est spécialisée dans la pose de pellicules teintées automobiles et de pellicules protectrices pare-pierre. Avec plus de 30 ans d'expérience, notre équipe offre des solutions haut de gamme pour protéger et améliorer l'apparence de vos véhicules.
               </p>
               <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-4 md:mb-6">
-                Chaque intervention est réalisée avec précision afin de restaurer, protéger et mettre en valeur votre investissement. De la correction de peinture à la protection nano-céramique, nous traitons chaque automobile avec une attention méticuleuse.
+                Chaque intervention est réalisée avec précision et minutie. Nous travaillons sur des voitures sport, des véhicules exotiques et haut de gamme, mais aussi sur des bateaux, véhicules récréatifs, avions et applications spécialisées.
               </p>
               <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-6 md:mb-8">
-                Située au 20 Rue de la Montagne, porte 2 à Sainte-Claire, notre équipe dessert les régions de Bellechasse, Lévis, Québec, la Beauce et Montmagny.
+                Située au 1950 Boulevard St-Jude à Alma, Perfecteinte dessert le Québec avec une approche professionnelle, des produits de qualité supérieure et une protection conçue pour durer.
               </p>
               <Link
                 href="/rendez-vous"
                 className="inline-flex items-center bg-accent text-[#1b1b1b] px-6 py-3 rounded-md font-semibold hover:bg-accent-hover transition-colors"
               >
-                Prendre un rendez-vous
+                Obtenir une soumission
               </Link>
             </motion.div>
             <motion.div
@@ -105,7 +105,7 @@ export default function APropos() {
               transition={{ duration: 0.6 }}
               className="relative"
             >
-              <img loading="lazy" decoding="async" src={img1} alt="Atelier d'Esthétique Auto A.V" className="w-full h-[300px] sm:h-[350px] md:h-[400px] object-cover rounded-md" />
+              <img loading="lazy" decoding="async" src={img1} alt="Travail de protection automobile Perfecteinte" className="w-full h-[300px] sm:h-[350px] md:h-[400px] object-cover rounded-md" />
               <img loading="lazy" decoding="async"
                 src={img2}
                 alt="Travail en détail"
@@ -198,24 +198,24 @@ export default function APropos() {
 
       <section className="relative h-[320px] sm:h-[380px] md:h-[440px] flex items-center overflow-hidden">
         <div className="absolute inset-0">
-          <img loading="lazy" decoding="async" src={ctaImg} alt="Service d'esthétique automobile à Sainte-Claire" className="w-full h-full object-cover" />
+          <img loading="lazy" decoding="async" src={ctaImg} alt="Service de protection automobile à Alma" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/30" />
         </div>
         <div className="max-w-7xl mx-auto px-6 relative z-10 w-full">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
             <SectionTagline text="Confiez-nous votre véhicule" light center={false} />
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-white mb-4 leading-tight max-w-2xl">
-              VIVEZ L'EXPÉRIENCE <span className="text-[#D4AF37]">A.V</span>
+              VIVEZ L'EXPÉRIENCE <span className="text-accent">PERFECTEINTE</span>
             </h2>
             <p className="text-base sm:text-lg md:text-xl text-gray-100 max-w-xl mb-6 md:mb-8">
-              La même passion, la même précision et le même souci du détail pour chaque véhicule qui passe entre nos mains.
+              Plus de 30 ans de passion, de précision et de souci du détail pour chaque véhicule qui passe entre nos mains.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
               <Link href="/rendez-vous" className="inline-flex items-center justify-center bg-accent text-[#1b1b1b] px-8 py-4 rounded-md font-semibold hover:bg-accent-hover transition-colors">
-                Prendre un rendez-vous
+                Obtenir une soumission
               </Link>
-              <a href="tel:+14189578168" className="inline-flex items-center justify-center bg-white/10 backdrop-blur-sm border border-white/30 text-white px-8 py-4 rounded-md font-semibold hover:bg-white/20 transition-colors">
-                (418) 957-8168
+              <a href="tel:+14184503990" className="inline-flex items-center justify-center bg-white/10 backdrop-blur-sm border border-white/30 text-white px-8 py-4 rounded-md font-semibold hover:bg-white/20 transition-colors">
+                (418) 450-3990
               </a>
             </div>
           </motion.div>

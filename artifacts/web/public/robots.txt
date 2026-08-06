@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://esthetiqueautoav.ca/sitemap.xml
+Sitemap: https://perfecteinte.ca/sitemap.xml

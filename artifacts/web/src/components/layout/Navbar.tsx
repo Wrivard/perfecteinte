@@ -3,7 +3,7 @@ import { Link, useLocation } from "wouter";
 import { Menu, X, Phone, MapPin, ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
-import logo from "@/assets/logo-av.png";
+import logo from "@/assets/perfecteinte-logo.png";
 
 const navLinks = [
   { name: "Accueil", href: "/" },
@@ -13,9 +13,9 @@ const navLinks = [
 ];
 
 const serviceLinks = [
-  { name: "Lavage", href: "/services/lavage" },
-  { name: "Scellant", href: "/services/scellant" },
-  { name: "Nanocéramique", href: "/services/nano-ceramique" },
+  { name: "Pellicule pare-pierre (PPF)", href: "/services/nano-ceramique" },
+  { name: "Teintage automobile", href: "/services/scellant" },
+  { name: "Protection premium", href: "/services/nano-ceramique" },
 ];
 
 export function Navbar() {
@@ -52,13 +52,13 @@ export function Navbar() {
       <div className="bg-[#1b1b1b] h-10 hidden md:block border-b border-white/5">
         <div className="max-w-7xl mx-auto px-6 h-full flex items-center justify-between">
           <div className="flex items-center gap-6 text-white text-sm">
-            <a href="tel:4189578168" className="flex items-center gap-2 hover:text-accent transition-colors">
+            <a href="tel:4184503990" className="flex items-center gap-2 hover:text-accent transition-colors">
               <Phone className="w-4 h-4" />
-              <span>(418) 957-8168</span>
+              <span>(418) 450-3990</span>
             </a>
             <span className="flex items-center gap-2">
               <MapPin className="w-4 h-4" />
-              <span>20 Rue de la Montagne, porte 2, Sainte-Claire</span>
+              <span>1950 Boulevard St-Jude, Alma, QC</span>
             </span>
           </div>
           <div className="flex items-center gap-4">
@@ -82,12 +82,13 @@ export function Navbar() {
             <Link href="/" className="flex items-center gap-2">
               <img
                 src={logo}
-                alt="Esthétique Auto A.V"
+                alt="Perfecteinte — Vitres teintées et pare-pierre"
                 decoding="async"
                 className={cn(
                   "transition-all duration-300",
-                  isScrolled ? "h-10 sm:h-12 md:h-14" : "h-12 sm:h-14 md:h-16"
+                  isScrolled ? "w-[190px] sm:w-[235px] md:w-[285px]" : "w-[215px] sm:w-[270px] md:w-[320px]"
                 )}
+                style={{ height: "auto" }}
               />
             </Link>
 
@@ -127,7 +128,7 @@ export function Navbar() {
                 href="/rendez-vous"
                 className="bg-accent text-[#1b1b1b] px-6 py-3 rounded-md font-semibold text-sm hover:bg-accent-hover transition-colors"
               >
-                Prendre un rendez-vous
+                Obtenir une soumission
               </Link>
             </nav>
 
@@ -256,21 +257,21 @@ export function Navbar() {
                   className="block w-full text-center bg-accent text-[#1b1b1b] py-3.5 rounded-md font-semibold text-base hover:bg-accent-hover transition-colors"
                   onClick={() => setMobileMenuOpen(false)}
                 >
-                  Prendre un rendez-vous
+                  Obtenir une soumission
                 </Link>
               </div>
 
               <div className="mt-8 pt-6 border-t border-white/10 space-y-4">
                 <a
-                  href="tel:4189578168"
+                  href="tel:4184503990"
                   className="flex items-center gap-3 text-gray-200 hover:text-accent transition-colors"
                 >
                   <Phone className="w-5 h-5 text-accent" />
-                  <span className="text-[15px] font-medium">(418) 957-8168</span>
+                  <span className="text-[15px] font-medium">(418) 450-3990</span>
                 </a>
                 <div className="flex items-center gap-3 text-gray-200">
                   <MapPin className="w-5 h-5 text-accent shrink-0" />
-                  <span className="text-[15px]">20 Rue de la Montagne, porte 2, Sainte-Claire</span>
+                  <span className="text-[15px]">1950 Boulevard St-Jude, Alma, QC</span>
                 </div>
               </div>
 

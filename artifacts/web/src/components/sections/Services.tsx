@@ -4,27 +4,51 @@ import { SectionTagline } from "@/components/ui/SectionTagline";
 import img1 from "@/assets/optimized-photos/IMG_9370.webp";
 import img2 from "@/assets/optimized-photos/IMG_7930.webp";
 import img3 from "@/assets/optimized-photos/IMG_4953.webp";
+import img4 from "@/assets/optimized-photos/IMG_5278.webp";
+import img5 from "@/assets/optimized-photos/IMG_9584.webp";
+import img6 from "@/assets/optimized-photos/IMG_8023.webp";
 
 const services = [
   {
     image: img1,
-    label: "Entretien",
-    title: "LAVAGE",
-    description: "Lavage intérieur et extérieur, décontamination complète et finition impeccable de votre véhicule.",
-    href: "/services/lavage",
+    label: "Protection",
+    title: "PELLICULE PARE-PIERRE",
+    description: "Une pellicule protectrice transparente qui préserve la peinture originale contre les impacts et les éclats.",
+    href: "/services/nano-ceramique",
   },
   {
     image: img2,
-    label: "Protection",
-    title: "SCELLANT",
-    description: "Protection longue durée de la peinture grâce à un scellant qui repousse l'eau et la saleté.",
+    label: "Personnalisation",
+    title: "TEINTAGE AUTOMOBILE",
+    description: "Réduction de la chaleur, protection UV et allure sportive grâce à une installation professionnelle.",
     href: "/services/scellant",
   },
   {
     image: img3,
-    label: "Premium",
-    title: "NANOCÉRAMIQUE",
-    description: "Revêtement céramique haut de gamme et pare-pierre PPF pour une protection maximale.",
+    label: "Excellence",
+    title: "PROTECTION PREMIUM",
+    description: "Des solutions adaptées aux véhicules de prestige pour préserver leur valeur et leur apparence.",
+    href: "/services/nano-ceramique",
+  },
+  {
+    image: img4,
+    label: "Sur mesure",
+    title: "VÉHICULES DE PRESTIGE",
+    description: "Un travail spécialisé et minutieux pour les voitures sport, exotiques et véhicules haut de gamme.",
+    href: "/services/nano-ceramique",
+  },
+  {
+    image: img5,
+    label: "Applications nautiques",
+    title: "BATEAUX & VÉHICULES RÉCRÉATIFS",
+    description: "Protection adaptée aux surfaces nautiques et aux conditions extérieures exigeantes.",
+    href: "/services/lavage",
+  },
+  {
+    image: img6,
+    label: "Expertise spécialisée",
+    title: "AVIONS & APPLICATIONS SPÉCIALES",
+    description: "Des solutions professionnelles pour protéger les surfaces de différents types de véhicules.",
     href: "/services/nano-ceramique",
   },
 ];
@@ -42,7 +66,7 @@ const itemVariants = {
 export function Services() {
   return (
     <section className="py-20 md:py-24 bg-[#1a1a1a]">
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <motion.div
           className="text-center mb-12 md:mb-16"
           initial={{ opacity: 0, y: 30 }}
@@ -53,7 +77,7 @@ export function Services() {
           <SectionTagline text="Services" light />
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-4 md:mb-6 leading-tight">
             <span className="text-white">NOS </span>
-            <span className="text-[#D4AF37]">SOLUTIONS</span>
+            <span className="text-accent">SOLUTIONS</span>
           </h2>
           <p className="text-lg md:text-xl lg:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
             Des solutions techniques qui transforment et préservent l'intégrité de votre automobile.
@@ -61,7 +85,7 @@ export function Services() {
         </motion.div>
 
         <motion.div
-          className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -72,7 +96,7 @@ export function Services() {
               <motion.div
                 variants={itemVariants}
                 whileHover={{ y: -12, scale: 1.02, transition: { duration: 0.4, ease: "easeOut" } }}
-                className="relative h-[380px] sm:h-[420px] md:h-[520px] rounded-md overflow-hidden cursor-pointer group"
+                className="relative h-[360px] sm:h-[400px] md:h-[460px] rounded-md overflow-hidden cursor-pointer group"
               >
                 <div className="absolute inset-0">
                   <img loading="lazy" decoding="async"
@@ -83,7 +107,7 @@ export function Services() {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent group-hover:from-black/95 transition-colors duration-300"></div>
                 </div>
                 <div className="relative h-full flex flex-col justify-end p-6 md:p-8">
-                  <p className="text-sm uppercase tracking-wider text-[#D4AF37] mb-3 font-semibold">
+                  <p className="text-sm uppercase tracking-wider text-accent mb-3 font-semibold">
                     {service.label}
                   </p>
                   <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white leading-tight mb-3">

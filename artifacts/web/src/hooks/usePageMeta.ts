@@ -1,11 +1,11 @@
 import { useEffect } from "react";
 
-const BASE_TITLE = "Esthétique Auto A.V";
-const BASE_URL = "https://esthetiqueautoav.ca";
+const BASE_TITLE = "Perfecteinte";
+const BASE_URL = "https://perfecteinte.ca";
 
 export function usePageMeta(title?: string, description?: string, path?: string) {
   useEffect(() => {
-    const fullTitle = title ? `${title} | ${BASE_TITLE}` : `${BASE_TITLE} | Détailing automobile à Sainte-Claire, QC`;
+    const fullTitle = title ? `${title} | ${BASE_TITLE}` : `${BASE_TITLE} | Vitres teintées et pare-pierre à Alma, QC`;
     document.title = fullTitle;
 
     if (description) {
@@ -37,7 +37,7 @@ export function usePageMeta(title?: string, description?: string, path?: string)
     if (twDesc && description) twDesc.content = description;
 
     return () => {
-      document.title = `${BASE_TITLE} | Détailing automobile à Sainte-Claire, QC`;
+      document.title = `${BASE_TITLE} | Vitres teintées et pare-pierre à Alma, QC`;
       if (canonical) canonical.href = `${BASE_URL}/`;
       const resetOgUrl = document.querySelector('meta[property="og:url"]') as HTMLMetaElement | null;
       if (resetOgUrl) resetOgUrl.content = `${BASE_URL}/`;
