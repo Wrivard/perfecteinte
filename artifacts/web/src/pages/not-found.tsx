@@ -7,7 +7,7 @@ export default function NotFound() {
   usePageMeta("Page introuvable", "La page que vous cherchez n'existe pas ou a été déplacée.");
 
   return (
-    <PageLayout showContact={false}>
+    <PageLayout>
       <section className="py-20 md:py-32 bg-[#f9fafb]">
         <div className="max-w-2xl mx-auto px-6 text-center">
           <span className="text-[120px] sm:text-[160px] font-display font-extrabold text-accent/15 leading-none select-none">

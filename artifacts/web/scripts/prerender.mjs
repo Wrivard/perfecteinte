@@ -91,7 +91,7 @@ const pages = [
     path: "/politique-de-confidentialite",
     title: `Politique de confidentialité | ${BASE_TITLE}`,
     description:
-      "Politique de confidentialité et de témoins (cookies) de Perfecteinte, conforme à la Loi 25 du Québec.",
+      "Découvrez quels renseignements Perfecteinte recueille par son formulaire de soumission, comment ils sont utilisés et les droits prévus par la loi québécoise.",
     breadcrumb: [
       { name: "Accueil", path: "/" },
       { name: "Politique de confidentialité", path: "/politique-de-confidentialite" },
@@ -232,6 +232,56 @@ async function main() {
     writeFileSync(filePath, html, "utf-8");
     total += 1;
   }
+
+  const notFoundHtml = render("/__not-found");
+  let notFoundDocument = baseHtml;
+  notFoundDocument = notFoundDocument.replace(
+    /<title>[^<]*<\/title>/,
+    `<title>404 — Page introuvable | ${BASE_TITLE}</title>`,
+  );
+  notFoundDocument = replaceMetaContent(
+    notFoundDocument,
+    'name="description"',
+    "La page recherchée est introuvable. Retournez à l’accueil de Perfecteinte ou consultez nos services.",
+  );
+  notFoundDocument = replaceMetaContent(
+    notFoundDocument,
+    'name="robots"',
+    "noindex, nofollow",
+  );
+  notFoundDocument = replaceMetaContent(
+    notFoundDocument,
+    'property="og:title"',
+    `404 — Page introuvable | ${BASE_TITLE}`,
+  );
+  notFoundDocument = replaceMetaContent(
+    notFoundDocument,
+    'property="og:description"',
+    "La page recherchée est introuvable. Retournez à l’accueil de Perfecteinte ou consultez nos services.",
+  );
+  notFoundDocument = replaceMetaContent(
+    notFoundDocument,
+    'name="twitter:title"',
+    `404 — Page introuvable | ${BASE_TITLE}`,
+  );
+  notFoundDocument = replaceMetaContent(
+    notFoundDocument,
+    'name="twitter:description"',
+    "La page recherchée est introuvable. Retournez à l’accueil de Perfecteinte ou consultez nos services.",
+  );
+  notFoundDocument = notFoundDocument.replace(/\s*<link rel="canonical"[^>]*\/?>/g, "");
+  notFoundDocument = notFoundDocument.replace(/\s*<link rel="alternate"[^>]*\/?>/g, "");
+  notFoundDocument = notFoundDocument.replace(/\s*<meta property="og:url"[^>]*\/?>/g, "");
+  notFoundDocument = notFoundDocument.replace(
+    /<script type="application\/ld\+json">[\s\S]*?<\/script>/g,
+    "",
+  );
+  notFoundDocument = notFoundDocument.replace(
+    /<div id="root"><\/div>/,
+    `<div id="root">${notFoundHtml}</div>`,
+  );
+  writeFileSync(join(outDir, "404.html"), notFoundDocument, "utf-8");
+  total += 1;
 
   console.log(`[prerender] Wrote ${total} pre-rendered HTML files (full SSG with React content + per-page meta + schemas)`);
 

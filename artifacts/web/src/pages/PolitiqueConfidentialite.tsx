@@ -1,184 +1,239 @@
 import { motion } from "framer-motion";
+import type { ReactNode } from "react";
 import { usePageMeta } from "@/hooks/usePageMeta";
 import { PageLayout } from "@/components/layout/PageLayout";
-import { Testimonials } from "@/components/sections/Testimonials";
+
+const internalLinkClass = "font-semibold text-accent underline underline-offset-4 hover:text-accent-hover";
+const externalLinkClass = "font-semibold text-accent underline underline-offset-4 hover:text-accent-hover";
+
+function PolicySection({ title, children }: { title: string; children: ReactNode }) {
+  return (
+    <section className="border-b border-gray-200 pb-8 last:border-0">
+      <h2 className="mb-3 font-display text-xl font-bold text-gray-900 md:text-2xl">{title}</h2>
+      <div className="space-y-3 text-base leading-relaxed text-gray-700">{children}</div>
+    </section>
+  );
+}
 
 export default function PolitiqueConfidentialite() {
-  usePageMeta("Politique de confidentialité", "Politique de confidentialité et de témoins (cookies) de Perfecteinte, conforme à la Loi 25 du Québec.");
+  usePageMeta(
+    "Politique de confidentialité",
+    "Découvrez quels renseignements Perfecteinte recueille par son formulaire de soumission, comment ils sont utilisés et les droits prévus par la loi québécoise.",
+    "/politique-de-confidentialite",
+  );
+
   return (
-    <PageLayout showContact={false}>
-      <section className="pt-32 md:pt-40 pb-16 md:pb-20 bg-white">
-        <div className="max-w-4xl mx-auto px-6">
+    <PageLayout>
+      <section className="bg-white pb-16 pt-32 md:pb-20 md:pt-40">
+        <div className="mx-auto max-w-4xl px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.5 }}
           >
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-display font-extrabold text-gray-900 mb-4 leading-tight">
+            <p className="mb-3 text-xs font-bold uppercase tracking-[0.22em] text-accent">
+              Protection de vos renseignements
+            </p>
+            <h1 className="mb-4 font-display text-3xl font-extrabold leading-tight text-gray-900 sm:text-4xl md:text-5xl">
               POLITIQUE DE <span className="text-accent">CONFIDENTIALITÉ</span>
             </h1>
-            <p className="text-gray-500 text-sm mb-10">
-              Dernière mise à jour : 31 mars 2025
+            <p className="mb-8 text-sm text-gray-500">Dernière mise à jour : 6 octobre 2026</p>
+            <p className="mb-6 text-base leading-relaxed text-gray-700">
+              Cette politique explique comment Perfecteinte recueille, utilise, communique et conserve les
+              renseignements personnels dans le cadre de son site et de ses demandes de soumission. Elle est
+              établie en tenant compte de la Loi sur la protection des renseignements personnels dans le secteur
+              privé du Québec, telle que modifiée notamment par la Loi 25.
             </p>
+            <div className="mb-10 rounded-md border border-amber-200 bg-amber-50 px-4 py-3 text-sm leading-relaxed text-amber-950">
+              Cette politique présente les pratiques de Perfecteinte à titre informatif et ne constitue pas un avis
+              juridique. Pour une question juridique propre à votre situation, consultez un professionnel qualifié.
+            </div>
 
-            <div className="prose prose-gray max-w-none space-y-8 text-gray-700 text-base leading-relaxed">
-
-              <section>
-                <h2 className="text-xl md:text-2xl font-display font-bold text-gray-900 mb-3">1. Introduction</h2>
+            <div className="space-y-8">
+              <PolicySection title="1. Responsable de la protection des renseignements personnels">
                 <p>
-                  Perfecteinte (ci-après « nous », « notre » ou « l'entreprise »), située au 1950 Boulevard St-Jude, Alma, QC, s'engage à protéger la vie privée et les renseignements personnels de ses clients et visiteurs conformément à la <strong>Loi 25 — Loi modernisant des dispositions législatives en matière de protection des renseignements personnels</strong> du Québec, ainsi qu'à la <strong>Loi sur la protection des renseignements personnels dans le secteur privé</strong> (RLRQ, c. P-39.1).
+                  <strong>Perfecteinte</strong>, située au 1950 Boulevard St-Jude, Alma (Québec), est responsable
+                  des renseignements personnels qu’elle détient.
                 </p>
-                <p>
-                  La présente politique de confidentialité décrit les renseignements personnels que nous recueillons, les fins auxquelles nous les utilisons, les mesures de protection que nous appliquons et vos droits en vertu de la loi.
-                </p>
-              </section>
-
-              <section>
-                <h2 className="text-xl md:text-2xl font-display font-bold text-gray-900 mb-3">2. Responsable de la protection des renseignements personnels</h2>
-                <p>
-                  Le responsable de la protection des renseignements personnels au sein de notre entreprise est :
-                </p>
-                <ul className="list-disc pl-6 space-y-1">
-                   <li><strong>Nom</strong> : Perfecteinte</li>
-                   <li><strong>Courriel</strong> : <a href="mailto:Perfecteinte@hotmail.com" className="text-accent hover:underline">Perfecteinte@hotmail.com</a></li>
-                   <li><strong>Téléphone</strong> : <a href="tel:4184503990" className="text-accent hover:underline">(418) 450-3990</a></li>
-                </ul>
-              </section>
-
-              <section>
-                <h2 className="text-xl md:text-2xl font-display font-bold text-gray-900 mb-3">3. Renseignements personnels recueillis</h2>
-                <p>Nous pouvons recueillir les renseignements suivants :</p>
-                <ul className="list-disc pl-6 space-y-1">
-                  <li>Nom et prénom</li>
-                  <li>Adresse courriel</li>
-                  <li>Numéro de téléphone</li>
-                  <li>Informations relatives à votre véhicule (marque, modèle, année)</li>
-                  <li>Historique des services effectués</li>
-                  <li>Données de navigation sur notre site Web (via les témoins / cookies)</li>
-                </ul>
-              </section>
-
-              <section>
-                <h2 className="text-xl md:text-2xl font-display font-bold text-gray-900 mb-3">4. Fins de la collecte</h2>
-                <p>Vos renseignements personnels sont recueillis et utilisés aux fins suivantes :</p>
-                <ul className="list-disc pl-6 space-y-1">
-                  <li>Fournir et gérer nos services d'esthétique automobile</li>
-                  <li>Communiquer avec vous concernant vos rendez-vous et suivis</li>
-                  <li>Vous envoyer des promotions ou informations (avec votre consentement)</li>
-                  <li>Améliorer notre site Web et l'expérience utilisateur</li>
-                  <li>Respecter nos obligations légales et réglementaires</li>
-                </ul>
-              </section>
-
-              <section>
-                <h2 className="text-xl md:text-2xl font-display font-bold text-gray-900 mb-3">5. Consentement</h2>
-                <p>
-                  Conformément à la Loi 25, nous recueillons vos renseignements personnels uniquement avec votre consentement libre, éclairé et spécifique. Vous pouvez retirer votre consentement à tout moment en nous contactant. Le retrait du consentement n'affecte pas la légalité du traitement effectué avant ce retrait.
-                </p>
-              </section>
-
-              <section>
-                <h2 className="text-xl md:text-2xl font-display font-bold text-gray-900 mb-3">6. Politique sur les témoins (cookies)</h2>
-                <p>
-                  Notre site Web utilise des témoins (cookies) pour améliorer votre expérience de navigation. Les témoins sont de petits fichiers texte stockés sur votre appareil lorsque vous visitez notre site.
-                </p>
-                <h3 className="text-lg font-display font-bold text-gray-900 mt-4 mb-2">Types de témoins utilisés :</h3>
-                <ul className="list-disc pl-6 space-y-2">
+                <ul className="list-disc space-y-1 pl-6">
+                  <li>Responsable : Frederic Goderre</li>
                   <li>
-                    <strong>Témoins essentiels</strong> : Nécessaires au fonctionnement du site. Ils permettent la navigation et l'utilisation des fonctionnalités de base. Ces témoins ne requièrent pas votre consentement.
+                    Courriel :{" "}
+                    <a className={internalLinkClass} href="mailto:Perfecteinte@hotmail.com">
+                      Perfecteinte@hotmail.com
+                    </a>
                   </li>
                   <li>
-                    <strong>Témoins analytiques</strong> : Nous aident à comprendre comment les visiteurs interagissent avec notre site (pages visitées, temps passé, etc.) afin d'améliorer nos services. Ces données sont anonymisées.
+                    Téléphone :{" "}
+                    <a className={internalLinkClass} href="tel:4184503990">
+                      (418) 450-3990
+                    </a>
+                  </li>
+                </ul>
+              </PolicySection>
+
+              <PolicySection title="2. Renseignements recueillis">
+                <p>Lorsque vous présentez une demande de soumission, le formulaire peut recueillir :</p>
+                <ul className="list-disc space-y-1 pl-6">
+                  <li>Votre prénom, votre nom, votre adresse courriel et votre numéro de téléphone;</li>
+                  <li>Le service demandé : PPF et/ou vitres teintées;</li>
+                  <li>La marque, le modèle, l’année et, si vous la fournissez, la couleur du véhicule;</li>
+                  <li>Le message facultatif que vous inscrivez.</li>
+                </ul>
+                <p>
+                  Lors du chargement du site et de ressources externes, des renseignements techniques comme
+                  l’adresse IP, le type de navigateur, l’appareil utilisé et l’heure de la demande peuvent aussi être
+                  traités par les fournisseurs techniques concernés.
+                </p>
+              </PolicySection>
+
+              <PolicySection title="3. Pourquoi nous utilisons ces renseignements">
+                <p>Nous utilisons les renseignements nécessaires pour :</p>
+                <ul className="list-disc space-y-1 pl-6">
+                  <li>Préparer et transmettre la soumission demandée;</li>
+                  <li>Vous contacter au sujet de cette demande et répondre à vos questions;</li>
+                  <li>Fournir le service que vous demandez et assurer le suivi lié à celui-ci;</li>
+                  <li>Faire fonctionner et protéger le site et respecter nos obligations légales.</li>
+                </ul>
+                <p>
+                  Le formulaire n’est pas une inscription à une liste promotionnelle. Nous n’utilisons pas les
+                  renseignements transmis pour vous envoyer des promotions non sollicitées.
+                </p>
+              </PolicySection>
+
+              <PolicySection title="4. Transmission et fournisseurs de services">
+                <p>
+                  Le site ne conserve pas actuellement les demandes de soumission dans une base de données qui lui
+                  est propre. Lorsque vous envoyez le formulaire, les renseignements sont transmis au moyen de
+                  l’API du site et de Resend afin d’envoyer une notification à Perfecteinte et une confirmation à
+                  l’adresse courriel que vous avez fournie. Les courriels peuvent ensuite rester dans les boîtes de
+                  réception de leurs destinataires.
+                </p>
+                <ul className="list-disc space-y-2 pl-6">
+                  <li>
+                    <strong>Vercel</strong> fournit l’hébergement et l’exécution technique du site et de son
+                    formulaire.
                   </li>
                   <li>
-                    <strong>Témoins de fonctionnalité</strong> : Permettent de mémoriser vos préférences (langue, région) pour une expérience personnalisée.
+                    <strong>Resend</strong> transmet les courriels de demande de soumission et de confirmation.
+                  </li>
+                  <li>
+                    <strong>Google</strong> fournit la carte Google Maps intégrée à la section Contact et les
+                    polices Google Fonts utilisées sur le site. La carte est affichée automatiquement; son
+                    chargement peut transmettre à Google des renseignements techniques sur votre connexion et
+                    l’utilisation de la carte.
                   </li>
                 </ul>
-                <h3 className="text-lg font-display font-bold text-gray-900 mt-4 mb-2">Gestion des témoins :</h3>
                 <p>
-                  Vous pouvez à tout moment modifier vos préférences en matière de témoins ou les désactiver via les paramètres de votre navigateur. Veuillez noter que la désactivation de certains témoins peut affecter le fonctionnement du site.
+                  Selon leur infrastructure, ces fournisseurs peuvent traiter ou héberger des renseignements à
+                  l’extérieur du Québec. Toute communication de renseignements hors Québec est assujettie aux
+                  exigences applicables de la loi québécoise, notamment à l’évaluation requise du niveau de
+                  protection et aux garanties contractuelles applicables. Les fournisseurs traitent aussi les
+                  renseignements selon leurs propres politiques :
                 </p>
-              </section>
-
-              <section>
-                <h2 className="text-xl md:text-2xl font-display font-bold text-gray-900 mb-3">7. Communication et partage des renseignements</h2>
-                <p>
-                  Nous ne vendons, ne louons et ne partageons pas vos renseignements personnels avec des tiers, sauf dans les cas suivants :
-                </p>
-                <ul className="list-disc pl-6 space-y-1">
-                  <li>Avec votre consentement explicite</li>
-                  <li>Lorsqu'exigé par la loi ou une ordonnance judiciaire</li>
-                  <li>Avec nos fournisseurs de services qui nous aident à exploiter notre entreprise (hébergement Web, outils de prise de rendez-vous et d'envoi de courriels), sous réserve d'ententes de confidentialité</li>
+                <ul className="list-disc space-y-1 pl-6">
+                  <li>
+                    <a className={externalLinkClass} href="https://vercel.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer">
+                      Politique de confidentialité de Vercel
+                    </a>
+                  </li>
+                  <li>
+                    <a className={externalLinkClass} href="https://resend.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer">
+                      Politique de confidentialité de Resend
+                    </a>
+                  </li>
+                  <li>
+                    <a className={externalLinkClass} href="https://policies.google.com/privacy?hl=fr" target="_blank" rel="noopener noreferrer">
+                      Politique de confidentialité de Google
+                    </a>
+                  </li>
                 </ul>
-              </section>
+              </PolicySection>
 
-              <section>
-                <h2 className="text-xl md:text-2xl font-display font-bold text-gray-900 mb-3">8. Conservation des renseignements</h2>
+              <PolicySection title="5. Témoins, carte et mesures d’audience">
                 <p>
-                  Vos renseignements personnels sont conservés uniquement pour la durée nécessaire aux fins pour lesquelles ils ont été recueillis, ou conformément aux exigences légales applicables. Une fois cette période écoulée, vos renseignements sont détruits de manière sécurisée.
+                  Le site n’intègre actuellement aucun outil d’analyse d’audience ni pixel publicitaire. La carte
+                  Google Maps et les polices Google Fonts sont des services externes chargés depuis Google; leur
+                  fournisseur peut utiliser des témoins ou des identifiants selon ses propres paramètres et
+                  politiques. La carte demeure intégrée à la section Contact et n’est pas masquée par un écran de
+                  consentement.
                 </p>
-              </section>
+                <p>
+                  Vous pouvez gérer les témoins à partir des paramètres de votre navigateur. Le blocage de
+                  ressources tierces peut modifier l’affichage de la carte ou des polices.
+                </p>
+              </PolicySection>
 
-              <section>
-                <h2 className="text-xl md:text-2xl font-display font-bold text-gray-900 mb-3">9. Mesures de sécurité</h2>
+              <PolicySection title="6. Communication et conservation">
                 <p>
-                  Nous mettons en place des mesures de sécurité raisonnables pour protéger vos renseignements personnels contre la perte, le vol, l'accès non autorisé, la divulgation, la copie, l'utilisation ou la modification, notamment :
+                  Nous ne vendons pas vos renseignements personnels. Nous les communiquons aux fournisseurs
+                  indiqués ci-dessus lorsque cela est nécessaire au fonctionnement du site ou au traitement de votre
+                  demande, ou lorsque la loi l’exige.
                 </p>
-                <ul className="list-disc pl-6 space-y-1">
-                  <li>Connexion sécurisée (HTTPS / SSL)</li>
-                  <li>Accès restreint aux renseignements personnels</li>
-                  <li>Procédures de gestion des incidents de confidentialité</li>
+                <p>
+                  Nous conservons nos copies des renseignements uniquement aussi longtemps que nécessaire pour
+                  traiter votre demande, fournir le service demandé et respecter les obligations légales
+                  applicables. Lorsque ces fins sont accomplies, les renseignements sont détruits de façon
+                  sécuritaire ou anonymisés lorsque la loi le permet.
+                </p>
+              </PolicySection>
+
+              <PolicySection title="7. Protection des renseignements">
+                <p>
+                  Nous appliquons des mesures de sécurité adaptées à la nature des renseignements, notamment en
+                  limitant leur accès aux personnes qui en ont besoin pour traiter la demande et en utilisant des
+                  moyens de transmission sécurisés lorsque disponibles. Aucun moyen de transmission ou de stockage
+                  ne peut toutefois garantir une sécurité absolue.
+                </p>
+              </PolicySection>
+
+              <PolicySection title="8. Vos droits et demandes">
+                <p>Vous pouvez communiquer avec le responsable pour demander, selon les conditions prévues par la loi :</p>
+                <ul className="list-disc space-y-1 pl-6">
+                  <li>L’accès aux renseignements personnels détenus à votre sujet et leur rectification;</li>
+                  <li>Le retrait de votre consentement pour les utilisations qui reposent sur celui-ci;</li>
+                  <li>
+                    La portabilité des renseignements informatisés que vous avez fournis, dans un format
+                    technologique structuré et couramment utilisé, lorsque ce droit s’applique;
+                  </li>
+                  <li>
+                    La cessation de la diffusion ou la désindexation d’un renseignement, dans les circonstances
+                    prévues par la loi.
+                  </li>
                 </ul>
-              </section>
-
-              <section>
-                <h2 className="text-xl md:text-2xl font-display font-bold text-gray-900 mb-3">10. Vos droits</h2>
-                <p>Conformément à la Loi 25, vous disposez des droits suivants :</p>
-                <ul className="list-disc pl-6 space-y-1">
-                  <li><strong>Droit d'accès</strong> : Vous pouvez demander l'accès aux renseignements personnels que nous détenons à votre sujet.</li>
-                  <li><strong>Droit de rectification</strong> : Vous pouvez demander la correction de renseignements inexacts ou incomplets.</li>
-                  <li><strong>Droit de suppression</strong> : Vous pouvez demander la suppression de vos renseignements personnels lorsqu'ils ne sont plus nécessaires.</li>
-                  <li><strong>Droit à la portabilité</strong> : Vous pouvez demander une copie de vos renseignements dans un format technologique structuré et couramment utilisé.</li>
-                  <li><strong>Droit de retirer votre consentement</strong> : À tout moment, sans motif.</li>
-                  <li><strong>Droit de déposer une plainte</strong> : Auprès de la Commission d'accès à l'information du Québec (CAI) si vous estimez que vos droits n'ont pas été respectés.</li>
-                </ul>
-                <p className="mt-3">
-                   Pour exercer l'un de ces droits, veuillez nous contacter par téléphone au <a href="tel:4184503990" className="text-accent hover:underline">(418) 450-3990</a>.
-                </p>
-              </section>
-
-              <section>
-                <h2 className="text-xl md:text-2xl font-display font-bold text-gray-900 mb-3">11. Incident de confidentialité</h2>
                 <p>
-                  En cas d'incident de confidentialité présentant un risque sérieux de préjudice, nous nous engageons à aviser les personnes concernées et la Commission d'accès à l'information du Québec conformément aux exigences de la Loi 25.
+                  Pour présenter une demande, écrivez à{" "}
+                  <a className={internalLinkClass} href="mailto:Perfecteinte@hotmail.com">
+                    Perfecteinte@hotmail.com
+                  </a>{" "}
+                  en indiquant votre nom, un moyen de vous joindre et la nature de votre demande. Nous pourrions
+                  demander des renseignements raisonnables pour vérifier votre identité. Si vous estimez que votre
+                  demande n’a pas été traitée adéquatement, vous pouvez porter plainte auprès de la{" "}
+                  <a className={externalLinkClass} href="https://www.cai.gouv.qc.ca/" target="_blank" rel="noopener noreferrer">
+                    Commission d’accès à l’information du Québec
+                  </a>
+                  .
                 </p>
-              </section>
+              </PolicySection>
 
-              <section>
-                <h2 className="text-xl md:text-2xl font-display font-bold text-gray-900 mb-3">12. Modifications à la politique</h2>
+              <PolicySection title="9. Incident de confidentialité">
                 <p>
-                  Nous nous réservons le droit de modifier cette politique de confidentialité à tout moment. Toute modification sera publiée sur cette page avec la date de mise à jour. Nous vous encourageons à consulter cette page régulièrement.
+                  Si un incident de confidentialité présente un risque de préjudice sérieux, les personnes
+                  concernées et la Commission d’accès à l’information seront avisées conformément aux exigences
+                  applicables.
                 </p>
-              </section>
+              </PolicySection>
 
-              <section>
-                <h2 className="text-xl md:text-2xl font-display font-bold text-gray-900 mb-3">13. Nous contacter</h2>
+              <PolicySection title="10. Modifications à cette politique">
                 <p>
-                  Pour toute question concernant cette politique de confidentialité, la gestion de vos renseignements personnels ou l'utilisation des témoins sur notre site, veuillez communiquer avec nous :
+                  Cette politique peut être mise à jour pour refléter l’évolution de nos pratiques ou des exigences
+                  légales. La date de la dernière mise à jour est indiquée au début de la page.
                 </p>
-                <div className="bg-[#f9fafb] rounded-md p-6 mt-4 border border-gray-200">
-                   <p className="font-semibold text-gray-900 mb-2">Perfecteinte</p>
-                   <p>1950 Boulevard St-Jude, Alma, QC</p>
-                   <p>Téléphone : <a href="tel:4184503990" className="text-accent hover:underline">(418) 450-3990</a></p>
-                   <p>Courriel : <a href="mailto:Perfecteinte@hotmail.com" className="text-accent hover:underline">Perfecteinte@hotmail.com</a></p>
-                </div>
-              </section>
-
+              </PolicySection>
             </div>
           </motion.div>
         </div>
       </section>
-      <Testimonials />
     </PageLayout>
   );
 }

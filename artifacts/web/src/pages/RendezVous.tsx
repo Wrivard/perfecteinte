@@ -327,7 +327,7 @@ function Step4({ form }: { form: FormData }) {
         ))}
       </div>
       <p className="text-xs text-gray-500">
-        En soumettant ce formulaire, vous acceptez d'être contacté par notre équipe pour discuter de votre demande.
+        En envoyant ce formulaire, vous demandez une soumission et nous autorisez à vous contacter à ce sujet.
       </p>
     </div>
   );
@@ -473,6 +473,17 @@ export default function RendezVous() {
                 transition={{ delay: 0.1 }}
               >
                 <div className="px-6 sm:px-8 pt-8 pb-6">
+                  <p className="mb-6 rounded-md border border-gray-200 bg-gray-50 px-4 py-3 text-sm leading-relaxed text-gray-600">
+                    Les renseignements fournis servent à préparer votre soumission et à vous répondre.{" "}
+                    <a
+                      href="/politique-de-confidentialite"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-semibold text-accent underline underline-offset-4 hover:text-accent-hover"
+                    >
+                      Lire la politique de confidentialité.
+                    </a>
+                  </p>
                   {submitted ? (
                     <SuccessState />
                   ) : (
