@@ -84,7 +84,7 @@ const pages = [
       "Demandez une soumission pour le PPF ou les vitres teintées chez Perfecteinte à Alma. Tous les types de véhicules sont acceptés.",
     breadcrumb: [
       { name: "Accueil", path: "/" },
-      { name: "Rendez-vous", path: "/rendez-vous" },
+      { name: "Obtenir une soumission", path: "/rendez-vous" },
     ],
   },
   {

@@ -155,7 +155,7 @@ export default function ServicesPage() {
                       href="/rendez-vous"
                       className="inline-flex items-center gap-2 border-2 border-accent text-accent px-6 py-3 rounded-md font-semibold hover:bg-accent hover:text-[#1b1b1b] transition-colors"
                     >
-                      Prendre un rendez-vous
+                      Obtenir une soumission
                     </Link>
                   </div>
                 </div>

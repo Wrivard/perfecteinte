@@ -27,7 +27,7 @@ export function CTA() {
                 href="/rendez-vous"
                 className="inline-flex items-center justify-center bg-accent hover:bg-accent-hover text-[#1b1b1b] px-8 py-4 rounded-md font-semibold text-lg transition-colors w-full sm:w-auto"
               >
-                Demander une soumission
+                Obtenir une soumission
               </Link>
             </motion.div>
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>

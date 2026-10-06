@@ -78,7 +78,7 @@ export function Gallery() {
               href="/rendez-vous"
               className="inline-flex items-center justify-center bg-accent hover:bg-accent-hover text-[#1b1b1b] px-8 py-4 rounded-md font-semibold text-base transition-colors"
             >
-              Prendre un rendez-vous
+              Obtenir une soumission
             </Link>
         </div>
       </section>

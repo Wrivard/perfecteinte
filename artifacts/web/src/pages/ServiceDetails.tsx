@@ -27,7 +27,7 @@ const serviceDetails = {
     questions: [
       { q: "Qu'est-ce que le PPF ?", a: "Le PPF (Paint Protection Film), aussi appelé pellicule pare-pierre, est un film transparent appliqué sur la carrosserie pour aider à protéger la peinture contre les impacts et les débris routiers." },
       { q: "Quelles parties du véhicule peuvent être protégées ?", a: "Les zones à couvrir sont déterminées avec vous selon votre véhicule et les endroits que vous souhaitez protéger." },
-      { q: "Le PPF est-il offert sur les voitures ordinaires, sportives et exotiques ?", a: "Oui, nous accueillons tous les types de véhicules automobiles, de la voiture du quotidien à la sportive ou à l'exotique." },
+      { q: "Le PPF est-il offert pour tous les types de véhicules ?", a: "Oui, nous accueillons tous les types de véhicules automobiles, des voitures du quotidien aux sportives et exotiques." },
       { q: "Le PPF est-il visible une fois installé ?", a: "La pellicule est transparente et conçue pour préserver l'apparence de la peinture." },
       { q: "Comment obtenir une soumission ?", a: "Appelez-nous au (418) 450-3990 ou remplissez le formulaire de soumission en ligne." },
     ],
@@ -48,7 +48,7 @@ const serviceDetails = {
     ],
     questions: [
       { q: "Quels sont les avantages des vitres teintées ?", a: "Le teintage peut améliorer le confort en réduisant la chaleur et les rayons UV dans l'habitacle, tout en ajoutant de l'intimité et du style." },
-      { q: "Teintez-vous les voitures ordinaires, sportives et exotiques ?", a: "Oui, nous accueillons tous les types de véhicules automobiles, de la voiture du quotidien à la sportive ou à l'exotique." },
+      { q: "Teignez-vous tous les types de véhicules ?", a: "Oui, nous accueillons tous les types de véhicules automobiles, des voitures du quotidien aux sportives et exotiques." },
       { q: "Puis-je choisir le niveau de teinte ?", a: "Nous discutons des options avec vous et tenons compte de votre véhicule et des exigences applicables." },
       { q: "Combien de temps prend l'installation ?", a: "La durée dépend du véhicule et du nombre de vitres à teinter. Contactez-nous pour une estimation adaptée." },
       { q: "Comment obtenir une soumission ?", a: "Appelez-nous au (418) 450-3990 ou remplissez le formulaire de soumission en ligne." },
@@ -141,7 +141,7 @@ export function ServiceDetails({ service }: { service: ServiceKey }) {
           ))}
           <div className="text-center mt-10">
             <Link href="/rendez-vous" className="inline-flex items-center bg-accent text-[#1b1b1b] px-8 py-3 rounded-md font-semibold hover:bg-accent-hover transition-colors">
-              Demander une soumission
+              Obtenir une soumission
             </Link>
           </div>
         </div>

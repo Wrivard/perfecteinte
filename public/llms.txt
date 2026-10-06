@@ -31,5 +31,5 @@ Frédéric Goderre compte 31 ans d’expérience et plus de 50 000 jobs réalis�
 - /services/ppf — PPF pare-pierre
 - /services/vitres-teintees — Vitres teintées
 - /galerie — Galerie photo
-- /rendez-vous — Prendre un rendez-vous
+- /rendez-vous — Obtenir une soumission
 - /politique-de-confidentialite — Politique de confidentialité et cookies

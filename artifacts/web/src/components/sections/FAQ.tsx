@@ -14,7 +14,7 @@ const faqs = [
     a: "Non, la pellicule de protection est pratiquement invisible une fois installée. Elle préserve l'apparence originale du véhicule et peut même rehausser sa brillance."
   },
   {
-    q: "Acceptez-vous les voitures du quotidien, sportives et exotiques ?",
+    q: "Acceptez-vous tous les types de véhicules ?",
     a: "Oui. Nous prenons en charge tous les types de véhicules automobiles, des voitures du quotidien aux sportives et exotiques, pour le PPF comme pour les vitres teintées."
   },
   {
@@ -72,7 +72,7 @@ export function FAQ() {
             href="/rendez-vous"
             className="inline-block mt-6 bg-accent text-[#1b1b1b] px-8 py-3 rounded-md font-semibold hover:bg-accent-hover transition-colors"
           >
-            Prendre un rendez-vous
+            Obtenir une soumission
           </Link>
         </div>
       </div>
