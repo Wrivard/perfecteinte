@@ -25,7 +25,7 @@ export function Gallery() {
             tabIndex={isDuplicate ? -1 : 0}
             aria-label={`Agrandir : ${alt}`}
             onClick={() => setLightboxImage(src)}
-            className="group relative h-36 w-[78vw] max-w-[320px] shrink-0 overflow-hidden rounded-md sm:h-40 sm:w-[300px] md:h-44 md:w-[340px] lg:h-48 lg:w-[380px]"
+            className="group relative h-48 w-[82vw] shrink-0 overflow-hidden rounded-md sm:h-[clamp(190px,20vw,300px)] sm:w-[max(220px,27vw)]"
           >
             <img
               src={src}

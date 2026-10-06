@@ -63,7 +63,7 @@
   }
 
   .gallery-marquee-track {
-    animation: gallery-marquee 72s linear infinite;
+    animation: gallery-marquee 150s linear infinite;
   }
 
   .gallery-marquee-viewport:hover .gallery-marquee-track,
