@@ -1,2 +1,3 @@
 - [Rebrand scrub checklist](rebrand-scrub.md) — when reskinning a cloned site for a new client, hunt beyond src/: public SEO files and hardcoded third-party IDs.
 - [Véhicules pris en charge](vehicle-fit.md) — Perfecteinte accueille tous les véhicules, des voitures du quotidien aux sportives et exotiques, pour ses services PPF et vitres teintées.
+- [Heures d’ouverture](business-hours.md) — l’atelier est ouvert du lundi au jeudi, de 8 h à 17 h, et fermé du vendredi au dimanche.

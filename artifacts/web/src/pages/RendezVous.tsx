@@ -585,8 +585,8 @@ export default function RendezVous() {
                     <Clock className="w-5 h-5 text-accent shrink-0 mt-1" />
                     <div>
                       <span className="text-accent text-xs uppercase tracking-widest font-semibold block mb-1">Horaires</span>
-                      <p className="text-white font-medium text-sm md:text-base">Lun - Ven: 8h - 17h</p>
-                      <p className="text-gray-300 text-xs md:text-sm">Sam: Sur rendez-vous</p>
+                      <p className="text-white font-medium text-sm md:text-base">Lun - Jeu : 8 h - 17 h</p>
+                      <p className="text-gray-300 text-xs md:text-sm">Ven - Dim : Fermé</p>
                     </div>
                   </div>
                 </div>
