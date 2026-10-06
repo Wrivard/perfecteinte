@@ -1,4 +1,4 @@
-import { Switch, Route, Router as WouterRouter } from "wouter";
+import { Switch, Route, Redirect, Router as WouterRouter } from "wouter";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -7,9 +7,7 @@ import { BackToTop } from "@/components/ui/BackToTop";
 import Home from "./pages/Home";
 import APropos from "./pages/APropos";
 import ServicesPage from "./pages/ServicesPage";
-import ServiceLavage from "./pages/ServiceLavage";
-import ServiceScellant from "./pages/ServiceScellant";
-import ServiceNanoceramique from "./pages/ServiceNanoceramique";
+import { ServiceDetails } from "./pages/ServiceDetails";
 import GaleriePage from "./pages/GaleriePage";
 import RendezVous from "./pages/RendezVous";
 import PolitiqueConfidentialite from "./pages/PolitiqueConfidentialite";
@@ -23,9 +21,11 @@ function Router() {
       <Route path="/" component={Home} />
       <Route path="/a-propos" component={APropos} />
       <Route path="/services" component={ServicesPage} />
-      <Route path="/services/lavage" component={ServiceLavage} />
-      <Route path="/services/scellant" component={ServiceScellant} />
-      <Route path="/services/nano-ceramique" component={ServiceNanoceramique} />
+      <Route path="/services/ppf">{() => <ServiceDetails service="ppf" />}</Route>
+      <Route path="/services/vitres-teintees">{() => <ServiceDetails service="tint" />}</Route>
+      <Route path="/services/lavage"><Redirect to="/services" /></Route>
+      <Route path="/services/scellant"><Redirect to="/services/vitres-teintees" /></Route>
+      <Route path="/services/nano-ceramique"><Redirect to="/services/ppf" /></Route>
       <Route path="/galerie" component={GaleriePage} />
       <Route path="/rendez-vous" component={RendezVous} />
       <Route path="/politique-de-confidentialite" component={PolitiqueConfidentialite} />

@@ -5,49 +5,36 @@ import { PageLayout } from "@/components/layout/PageLayout";
 import { Partners } from "@/components/sections/Partners";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { SectionTagline } from "@/components/ui/SectionTagline";
-import { Droplets, Sparkles, Shield, ArrowRight } from "lucide-react";
+import { Shield, Sun, ArrowRight } from "lucide-react";
 import { perfecteinteImages } from "@/assets/perfecteinteGallery";
 
 const heroImg = perfecteinteImages[4];
-const img1 = perfecteinteImages[2];
 const img2 = perfecteinteImages[3];
 const img3 = perfecteinteImages[1];
 
 const services = [
   {
-    icon: Droplets,
-    image: img1,
-    title: "Lavage",
-    description: "Un nettoyage complet qui va bien au-delà du simple lavage. Lavage intérieur, extérieur, complet et décontamination — traités avec des produits professionnels pour un résultat impeccable.",
-    href: "/services/lavage",
-    features: [
-      "Lavage intérieur",
-      "Lavage extérieur",
-      "Lavage intérieur & extérieur",
-      "Décontamination de la carrosserie",
-    ],
-  },
-  {
-    icon: Sparkles,
-    image: img2,
-    title: "Scellant",
-    description: "Protégez et sublimez votre peinture avec nos services de cires et polissage. Une finition brillante qui préserve la beauté de votre véhicule.",
-    href: "/services/scellant",
-    features: [
-      "Cires (scellant peinture)",
-      "Polissage",
-    ],
-  },
-  {
     icon: Shield,
     image: img3,
-    title: "Nanocéramique",
-    description: "La protection ultime : polissage combiné à la nano-céramique et installation de pare-pierre (PPF) pour une protection maximale.",
-    href: "/services/nano-ceramique",
+    title: "PPF — Pellicule pare-pierre",
+    description: "Une pellicule transparente qui aide à protéger la peinture de votre véhicule contre les éclats et les débris routiers.",
+    href: "/services/ppf",
     features: [
-      "Polissage & Nano Céramique",
-      "Installation de pare-pierre (PPF)",
-      "Produits professionnels haut de gamme",
+      "Protection contre les éclats de pierre",
+      "Finition transparente",
+      "Zones à protéger déterminées selon votre véhicule",
+    ],
+  },
+  {
+    icon: Sun,
+    image: img2,
+    title: "Vitres teintées",
+    description: "Le teintage des vitres contribue au confort de l'habitacle et ajoute une touche de style à votre véhicule.",
+    href: "/services/vitres-teintees",
+    features: [
+      "Réduction de la chaleur et des rayons UV",
+      "Plus d'intimité dans l'habitacle",
+      "Finition soignée adaptée au véhicule",
     ],
   },
 ];
@@ -63,7 +50,7 @@ const itemVariants = {
 };
 
 export default function ServicesPage() {
-  usePageMeta("Nos services", "Pellicule pare-pierre, teintage automobile et protection premium pour véhicules de prestige à Alma, Québec.");
+  usePageMeta("Nos services", "PPF pare-pierre et vitres teintées à Alma, Québec. Découvrez les deux services offerts par Perfecteinte.");
   return (
     <PageLayout>
       <section className="relative h-[40vh] sm:h-[45vh] md:h-[50vh] min-h-[280px] sm:min-h-[350px] flex items-center overflow-hidden -mt-[120px] pt-[120px]">
@@ -81,7 +68,7 @@ export default function ServicesPage() {
               NOS <span className="text-accent">SERVICES</span>
             </h1>
             <p className="text-base sm:text-lg md:text-xl text-gray-100 mt-4 max-w-xl">
-              Des solutions de protection et de personnalisation pour chaque véhicule.
+              PPF et vitres teintées, à Alma.
             </p>
           </motion.div>
         </div>
@@ -112,7 +99,7 @@ export default function ServicesPage() {
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
             >
-              Des solutions techniques qui transforment et préservent l'intégrité de votre automobile.
+              Découvrez nos deux services automobiles.
             </motion.p>
           </div>
 

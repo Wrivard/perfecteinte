@@ -85,10 +85,10 @@ export default function APropos() {
                 NOTRE <span className="text-accent">HISTOIRE</span>
               </h2>
               <p className="text-lg md:text-xl lg:text-2xl text-gray-700 leading-relaxed mb-4 md:mb-6">
-                Perfecteinte est spécialisée dans la pose de pellicules teintées automobiles et de pellicules protectrices pare-pierre. Avec plus de 30 ans d'expérience, notre équipe offre des solutions haut de gamme pour protéger et améliorer l'apparence de vos véhicules.
+                Perfecteinte se concentre sur deux services automobiles : la pose de pellicules teintées et de pellicules protectrices pare-pierre (PPF). Notre équipe met son expérience au service de ces installations.
               </p>
               <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-4 md:mb-6">
-                Chaque intervention est réalisée avec précision et minutie. Nous travaillons sur des voitures sport, des véhicules exotiques et haut de gamme, mais aussi sur des bateaux, véhicules récréatifs, avions et applications spécialisées.
+                Chaque pose de PPF ou de pellicule teintée est réalisée avec précision et minutie, selon le véhicule et les besoins du client.
               </p>
               <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-6 md:mb-8">
                 Située au 1950 Boulevard St-Jude à Alma, Perfecteinte dessert le Québec avec une approche professionnelle, des produits de qualité supérieure et une protection conçue pour durer.

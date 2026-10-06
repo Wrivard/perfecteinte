@@ -1,16 +1,15 @@
 # Perfecteinte
 
-> Protection et personnalisation automobile haut de gamme à Alma, Québec
+> PPF pare-pierre et vitres teintées à Alma, Québec
 
 ## À propos
 
-Perfecteinte est spécialisée dans la pose de pellicules teintées automobiles et de pellicules protectrices pare-pierre. Avec plus de 30 ans d'expérience, l'équipe offre des solutions haut de gamme pour protéger et améliorer l'apparence des véhicules de prestige, voitures sport, bateaux et avions.
+Perfecteinte offre deux services automobiles à Alma : la pose de pellicule pare-pierre (PPF) et le teintage des vitres.
 
 ## Services
 
-- **Lavage Auto & Entretien Esthétique de Luxe** : Nettoyage complet intérieur et extérieur avec produits professionnels haut de gamme.
-- **Scellant & Polissage** : Cires, scellant peinture et polissage professionnel pour corriger les imperfections et protéger durablement la peinture.
-- **Nano-Céramique & Pare-Pierre (PPF)** : Application de revêtement nano-céramique pour protection durable et installation de pellicule pare-pierre (PPF) auto-cicatrisante.
+- **PPF — Pellicule pare-pierre** : Pellicule transparente pour aider à protéger la peinture contre les éclats de pierre et les débris routiers.
+- **Vitres teintées** : Pose de pellicule teintée automobile pour le confort, l'intimité et le style.
 
 ## Coordonnées
 
@@ -22,10 +21,9 @@ Perfecteinte est spécialisée dans la pose de pellicules teintées automobiles 
 
 - / — Accueil
 - /a-propos — À propos de l'entreprise
-- /services — Tous les services
-- /services/lavage — Lavage Auto & Entretien de Luxe
-- /services/scellant — Scellant & Polissage
-- /services/nano-ceramique — Nano-Céramique & Pare-Pierre (PPF)
+- /services — Nos deux services
+- /services/ppf — PPF pare-pierre
+- /services/vitres-teintees — Vitres teintées
 - /galerie — Galerie photo
 - /rendez-vous — Prendre un rendez-vous
 - /politique-de-confidentialite — Politique de confidentialité et cookies

@@ -5,46 +5,18 @@ import { perfecteinteImages } from "@/assets/perfecteinteGallery";
 
 const services = [
   {
-    image: perfecteinteImages[2],
-    label: "Protection",
-    title: "PELLICULE PARE-PIERRE",
-    description: "Une pellicule protectrice transparente qui préserve la peinture originale contre les impacts et les éclats.",
-    href: "/services/nano-ceramique",
+    image: perfecteinteImages[1],
+    label: "Protection de la peinture",
+    title: "PPF — PARE-PIERRE",
+    description: "Une pellicule transparente qui protège la peinture contre les éclats de pierre et les débris de la route.",
+    href: "/services/ppf",
   },
   {
     image: perfecteinteImages[3],
-    label: "Personnalisation",
-    title: "TEINTAGE AUTOMOBILE",
+    label: "Confort et intimité",
+    title: "VITRES TEINTÉES",
     description: "Réduction de la chaleur, protection UV et allure sportive grâce à une installation professionnelle.",
-    href: "/services/scellant",
-  },
-  {
-    image: perfecteinteImages[4],
-    label: "Excellence",
-    title: "PROTECTION PREMIUM",
-    description: "Des solutions adaptées aux véhicules de prestige pour préserver leur valeur et leur apparence.",
-    href: "/services/nano-ceramique",
-  },
-  {
-    image: perfecteinteImages[1],
-    label: "Sur mesure",
-    title: "VÉHICULES DE PRESTIGE",
-    description: "Un travail spécialisé et minutieux pour les voitures sport, exotiques et véhicules haut de gamme.",
-    href: "/services/nano-ceramique",
-  },
-  {
-    image: perfecteinteImages[5],
-    label: "Applications nautiques",
-    title: "BATEAUX & VÉHICULES RÉCRÉATIFS",
-    description: "Protection adaptée aux surfaces nautiques et aux conditions extérieures exigeantes.",
-    href: "/services/lavage",
-  },
-  {
-    image: perfecteinteImages[6],
-    label: "Expertise spécialisée",
-    title: "AVIONS & APPLICATIONS SPÉCIALES",
-    description: "Des solutions professionnelles pour protéger les surfaces de différents types de véhicules.",
-    href: "/services/nano-ceramique",
+    href: "/services/vitres-teintees",
   },
 ];
 
@@ -80,7 +52,7 @@ export function Services() {
         </motion.div>
 
         <motion.div
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6"
+          className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 max-w-5xl mx-auto"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"

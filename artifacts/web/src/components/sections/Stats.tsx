@@ -20,7 +20,7 @@ const reasons = [
   },
   {
     icon: UserCheck,
-    title: "SOUmission PERSONNALISÉE",
+    title: "SOUMISSION PERSONNALISÉE",
     description: "Une recommandation adaptée à votre véhicule et au service que vous choisissez.",
   },
 ];
