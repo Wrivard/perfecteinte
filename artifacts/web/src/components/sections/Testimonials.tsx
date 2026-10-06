@@ -17,9 +17,6 @@ const allTestimonials = [
   { quote: "Le meilleur service de protection automobile de la région. Hautement recommandé!", author: "Martin Côté", image: img5 },
   { quote: "L'équipe a un œil exceptionnel pour la finition. Résultat au-delà de mes attentes.", author: "Julie Gagnon", image: img6 },
   { quote: "Le PPF a complètement protégé mon capot d'un gros éclat de pierre. Investissement rentabilisé!", author: "Jean-Philippe Roy", image: img1 },
-  { quote: "Le forfait de luxe en vaut chaque dollar. Mon auto brille comme au jour 1!", author: "Nathalie Bergeron", image: img3 },
-  { quote: "Après le polissage, les swirls ont disparu comme par magie. Travail de pro!", author: "François Lavoie", image: img5 },
-  { quote: "La nano-céramique est incroyable. L'eau perle comme sur une feuille de lotus!", author: "Isabelle Fortin", image: img2 },
   { quote: "Un service sur mesure, une attention aux détails incomparable. Je recommande à 100%.", author: "Patrick Simard", image: img4 },
   { quote: "Après 3 ans de PPF, la peinture est comme neuve. Extraordinaire.", author: "Marie-Ève Gagné", image: img6 },
 ];

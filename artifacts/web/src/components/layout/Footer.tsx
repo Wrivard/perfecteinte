@@ -37,9 +37,8 @@ export function Footer() {
           <div>
             <h3 className="text-sm font-semibold text-white mb-4 uppercase">Services</h3>
             <ul className="space-y-3">
-               <li><Link href="/services/nano-ceramique" className="text-sm text-gray-300 hover:text-accent transition-colors">Pare-pierre (PPF)</Link></li>
-               <li><Link href="/services/scellant" className="text-sm text-gray-300 hover:text-accent transition-colors">Teintage automobile</Link></li>
-               <li><Link href="/services/lavage" className="text-sm text-gray-300 hover:text-accent transition-colors">Protection premium</Link></li>
+               <li><Link href="/services/ppf" className="text-sm text-gray-300 hover:text-accent transition-colors">PPF — Pare-pierre</Link></li>
+               <li><Link href="/services/vitres-teintees" className="text-sm text-gray-300 hover:text-accent transition-colors">Vitres teintées</Link></li>
             </ul>
           </div>
         </div>

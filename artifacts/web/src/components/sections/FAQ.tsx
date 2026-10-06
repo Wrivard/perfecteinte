@@ -15,7 +15,7 @@ const faqs = [
   },
   {
     q: "Quels types de véhicules protégez-vous ?",
-    a: "Perfecteinte travaille sur les voitures sport, les véhicules exotiques et haut de gamme, ainsi que sur les bateaux, véhicules récréatifs, avions et applications spécialisées."
+    a: "Perfecteinte offre le PPF et les vitres teintées pour les véhicules automobiles."
   },
   {
     q: "Depuis combien de temps Perfecteinte offre-t-elle ses services ?",
@@ -46,7 +46,7 @@ export function FAQ() {
             <span className="text-accent">QUESTIONS</span>
           </h2>
           <p className="text-lg md:text-xl lg:text-2xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
-            Découvrez les réponses aux questions fréquentes sur nos services de rénovation.
+            Découvrez les réponses à vos questions sur le PPF et les vitres teintées.
           </p>
         </motion.div>
 

@@ -13,9 +13,8 @@ const navLinks = [
 ];
 
 const serviceLinks = [
-  { name: "Pellicule pare-pierre (PPF)", href: "/services/nano-ceramique" },
-  { name: "Teintage automobile", href: "/services/scellant" },
-  { name: "Protection premium", href: "/services/nano-ceramique" },
+  { name: "PPF — Pare-pierre", href: "/services/ppf" },
+  { name: "Vitres teintées", href: "/services/vitres-teintees" },
 ];
 
 export function Navbar() {

@@ -5,23 +5,23 @@ import { SectionTagline } from "@/components/ui/SectionTagline";
 const reasons = [
   {
     icon: ShieldCheck,
-    title: "PLUS DE 30 ANS",
-    description: "Une expertise bâtie sur trois décennies dans la protection automobile.",
+    title: "PPF",
+    description: "Une pellicule pare-pierre pour protéger la peinture des éclats et débris routiers.",
   },
   {
     icon: Sparkles,
-    title: "EXPERTISE SPÉCIALISÉE",
-    description: "Des techniques précises pour les voitures, bateaux, avions et véhicules récréatifs.",
+    title: "VITRES TEINTÉES",
+    description: "Une installation soignée qui ajoute confort, intimité et style à votre véhicule.",
   },
   {
     icon: Award,
-    title: "FINITION HAUT DE GAMME",
-    description: "Un travail minutieux qui améliore et protège l'apparence de votre investissement.",
+    title: "POSE PRÉCISE",
+    description: "Chaque pellicule est installée avec attention aux détails et aux contours du véhicule.",
   },
   {
     icon: UserCheck,
-    title: "PROTECTION DURABLE",
-    description: "Des solutions choisies pour résister aux impacts, aux UV et aux conditions extérieures.",
+    title: "SOUmission PERSONNALISÉE",
+    description: "Une recommandation adaptée à votre véhicule et au service que vous choisissez.",
   },
 ];
 

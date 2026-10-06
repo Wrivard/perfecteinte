@@ -20,12 +20,8 @@ function formatPhone(value: string): string {
 }
 
 const SERVICES = [
-  { id: "ppf", label: "Pellicule protectrice pare-pierre (PPF)", duration: "Selon le véhicule", category: "Protection" },
-  { id: "teintage", label: "Teintage de vitres automobile", duration: "Selon le véhicule", category: "Personnalisation" },
-  { id: "protection", label: "Protection automobile premium", duration: "Selon le véhicule", category: "Protection" },
-  { id: "prestige", label: "Véhicule de prestige ou exotique", duration: "Sur mesure", category: "Applications spécialisées" },
-  { id: "bateau", label: "Bateau ou véhicule récréatif", duration: "Sur mesure", category: "Applications spécialisées" },
-  { id: "avion", label: "Avion ou application spécialisée", duration: "Sur mesure", category: "Applications spécialisées" },
+  { id: "ppf", label: "PPF — Pellicule pare-pierre", duration: "Selon le véhicule", category: "Protection" },
+  { id: "teintage", label: "Vitres teintées", duration: "Selon le véhicule", category: "Teintage" },
 ];
 
 const STEPS = [
@@ -98,16 +94,11 @@ function Step1({ form, setForm }: { form: FormData; setForm: (f: FormData) => vo
     return acc;
   }, {});
 
-  const EXCLUSIVE_LAVAGE = ["lavage-int", "lavage-ext", "lavage-complet"];
-
   function toggle(id: string) {
     if (form.services.includes(id)) {
       setForm({ ...form, services: form.services.filter((s) => s !== id) });
     } else {
-      const next = EXCLUSIVE_LAVAGE.includes(id)
-        ? form.services.filter((s) => !EXCLUSIVE_LAVAGE.includes(s))
-        : form.services;
-      setForm({ ...form, services: [...next, id] });
+      setForm({ ...form, services: [...form.services, id] });
     }
   }
 
