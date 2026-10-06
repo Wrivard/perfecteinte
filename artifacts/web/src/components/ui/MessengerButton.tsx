@@ -3,7 +3,7 @@ import { MessageCircle } from "lucide-react";
 export function MessengerButton() {
   return (
     <a
-      href="https://m.me/"
+      href="https://m.me/fredperfecteinte"
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Nous contacter sur Messenger"
