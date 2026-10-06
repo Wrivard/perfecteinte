@@ -12,10 +12,10 @@ import { perfecteinteImages } from "@/assets/perfecteinteGallery";
 const serviceDetails = {
   ppf: {
     title: "PPF — Pare-pierre",
-    metaDescription: "Installation de pellicule pare-pierre PPF à Alma, Québec. Demandez une soumission à Perfecteinte.",
+    metaDescription: "PPF pare-pierre à Alma pour tous les véhicules, des voitures du quotidien aux sportives et exotiques. Soumission chez Perfecteinte.",
     eyebrow: "Protection de la peinture",
     heading: <>PELLICULE <span className="text-accent">PARE-PIERRE</span></>,
-    description: "La pellicule pare-pierre (PPF) est une pellicule transparente appliquée sur la carrosserie pour aider à protéger la peinture contre les éclats de pierre et les débris routiers.",
+    description: "La pellicule pare-pierre (PPF) est une pellicule transparente appliquée sur la carrosserie pour aider à protéger la peinture contre les éclats de pierre et les débris routiers. Elle convient à tous les types de véhicules, des voitures du quotidien aux sportives et exotiques.",
     image: perfecteinteImages[3],
     imageAlt: "Toyota Supra rouge dans l'atelier Perfecteinte",
     icon: Shield,
@@ -27,16 +27,17 @@ const serviceDetails = {
     questions: [
       { q: "Qu'est-ce que le PPF ?", a: "Le PPF (Paint Protection Film), aussi appelé pellicule pare-pierre, est un film transparent appliqué sur la carrosserie pour aider à protéger la peinture contre les impacts et les débris routiers." },
       { q: "Quelles parties du véhicule peuvent être protégées ?", a: "Les zones à couvrir sont déterminées avec vous selon votre véhicule et les endroits que vous souhaitez protéger." },
+      { q: "Le PPF est-il offert sur les voitures ordinaires, sportives et exotiques ?", a: "Oui, nous accueillons tous les types de véhicules automobiles, de la voiture du quotidien à la sportive ou à l'exotique." },
       { q: "Le PPF est-il visible une fois installé ?", a: "La pellicule est transparente et conçue pour préserver l'apparence de la peinture." },
       { q: "Comment obtenir une soumission ?", a: "Appelez-nous au (418) 450-3990 ou remplissez le formulaire de soumission en ligne." },
     ],
   },
   tint: {
     title: "Vitres teintées",
-    metaDescription: "Teintage de vitres automobiles à Alma, Québec. Demandez une soumission à Perfecteinte.",
+    metaDescription: "Vitres teintées à Alma pour tous les véhicules, des voitures du quotidien aux sportives et exotiques. Soumission chez Perfecteinte.",
     eyebrow: "Confort et intimité",
     heading: <>VITRES <span className="text-accent">TEINTÉES</span></>,
-    description: "La pose de pellicule teintée contribue au confort et à l'intimité dans l'habitacle, tout en ajoutant une finition soignée à votre véhicule.",
+    description: "La pose de pellicule teintée contribue au confort et à l'intimité dans l'habitacle, tout en ajoutant une finition soignée. Le service est offert sur tous les types de véhicules, des voitures du quotidien aux sportives et exotiques.",
     image: perfecteinteImages[3],
     imageAlt: "Vitres teintées sur une voiture sport",
     icon: Sun,
@@ -47,6 +48,7 @@ const serviceDetails = {
     ],
     questions: [
       { q: "Quels sont les avantages des vitres teintées ?", a: "Le teintage peut améliorer le confort en réduisant la chaleur et les rayons UV dans l'habitacle, tout en ajoutant de l'intimité et du style." },
+      { q: "Teintez-vous les voitures ordinaires, sportives et exotiques ?", a: "Oui, nous accueillons tous les types de véhicules automobiles, de la voiture du quotidien à la sportive ou à l'exotique." },
       { q: "Puis-je choisir le niveau de teinte ?", a: "Nous discutons des options avec vous et tenons compte de votre véhicule et des exigences applicables." },
       { q: "Combien de temps prend l'installation ?", a: "La durée dépend du véhicule et du nombre de vitres à teinter. Contactez-nous pour une estimation adaptée." },
       { q: "Comment obtenir une soumission ?", a: "Appelez-nous au (418) 450-3990 ou remplissez le formulaire de soumission en ligne." },

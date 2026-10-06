@@ -14,8 +14,8 @@ const faqs = [
     a: "Non, la pellicule de protection est pratiquement invisible une fois installée. Elle préserve l'apparence originale du véhicule et peut même rehausser sa brillance."
   },
   {
-    q: "Quels types de véhicules protégez-vous ?",
-    a: "Perfecteinte offre le PPF et les vitres teintées pour les véhicules automobiles."
+    q: "Acceptez-vous les voitures du quotidien, sportives et exotiques ?",
+    a: "Oui. Nous prenons en charge tous les types de véhicules automobiles, des voitures du quotidien aux sportives et exotiques, pour le PPF comme pour les vitres teintées."
   },
   {
     q: "Depuis combien de temps Perfecteinte offre-t-elle ses services ?",

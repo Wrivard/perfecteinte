@@ -21,7 +21,7 @@ const reasons = [
   {
     icon: UserCheck,
     title: "SOUMISSION PERSONNALISÉE",
-    description: "Une recommandation adaptée à votre véhicule et au service que vous choisissez.",
+    description: "Nous accueillons tous les véhicules, des voitures du quotidien aux sportives et exotiques.",
   },
 ];
 

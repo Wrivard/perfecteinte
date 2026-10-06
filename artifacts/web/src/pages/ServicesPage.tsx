@@ -17,24 +17,24 @@ const services = [
     icon: Shield,
     image: img3,
     title: "PPF — Pellicule pare-pierre",
-    description: "Une pellicule transparente qui aide à protéger la peinture de votre véhicule contre les éclats et les débris routiers.",
+    description: "Une pellicule transparente qui aide à protéger la peinture contre les éclats et les débris routiers, sur les véhicules du quotidien comme sur les sportives et exotiques.",
     href: "/services/ppf",
     features: [
       "Protection contre les éclats de pierre",
       "Finition transparente",
-      "Zones à protéger déterminées selon votre véhicule",
+      "Convient aux voitures du quotidien, sportives et exotiques",
     ],
   },
   {
     icon: Sun,
     image: img2,
     title: "Vitres teintées",
-    description: "Le teintage des vitres contribue au confort de l'habitacle et ajoute une touche de style à votre véhicule.",
+    description: "Le teintage des vitres contribue au confort de l'habitacle et ajoute une touche de style aux voitures du quotidien comme aux sportives et exotiques.",
     href: "/services/vitres-teintees",
     features: [
       "Réduction de la chaleur et des rayons UV",
       "Plus d'intimité dans l'habitacle",
-      "Finition soignée adaptée au véhicule",
+      "Pose pour les voitures du quotidien, sportives et exotiques",
     ],
   },
 ];
@@ -50,7 +50,7 @@ const itemVariants = {
 };
 
 export default function ServicesPage() {
-  usePageMeta("Nos services", "PPF pare-pierre et vitres teintées à Alma, Québec. Découvrez les deux services offerts par Perfecteinte.");
+  usePageMeta("Nos services", "PPF pare-pierre et vitres teintées à Alma pour tous les véhicules, des voitures du quotidien aux sportives et exotiques.");
   return (
     <PageLayout>
       <section className="relative h-[40vh] sm:h-[45vh] md:h-[50vh] min-h-[280px] sm:min-h-[350px] flex items-center overflow-hidden -mt-[120px] pt-[120px]">
@@ -68,7 +68,7 @@ export default function ServicesPage() {
               NOS <span className="text-accent">SERVICES</span>
             </h1>
             <p className="text-base sm:text-lg md:text-xl text-gray-100 mt-4 max-w-xl">
-              PPF et vitres teintées, à Alma.
+              PPF et vitres teintées pour tous les types de véhicules, à Alma.
             </p>
           </motion.div>
         </div>
@@ -99,7 +99,7 @@ export default function ServicesPage() {
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
             >
-              Découvrez nos deux services automobiles.
+              Des voitures du quotidien aux sportives et exotiques, tous les véhicules sont les bienvenus.
             </motion.p>
           </div>
 

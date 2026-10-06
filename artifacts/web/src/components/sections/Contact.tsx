@@ -19,7 +19,7 @@ export function Contact() {
               PRÊT À <span className="text-accent">PROTÉGER</span>
             </h2>
             <p className="text-base md:text-lg text-gray-200 leading-relaxed max-w-lg">
-              Perfecteinte protège et personnalise les véhicules qui exigent une finition irréprochable.
+              Du véhicule du quotidien aux sportives et exotiques, nous accueillons tous les véhicules pour le PPF et les vitres teintées.
             </p>
 
             <div className="space-y-6 md:space-y-8 mt-8 md:mt-12">

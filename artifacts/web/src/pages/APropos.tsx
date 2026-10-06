@@ -47,7 +47,7 @@ const itemVariants = {
 };
 
 export default function APropos() {
-  usePageMeta("À propos", "Découvrez Perfecteinte, spécialiste des pellicules teintées et protectrices avec plus de 30 ans d'expérience à Alma, Québec.");
+  usePageMeta("À propos", "Découvrez Perfecteinte : PPF et vitres teintées pour tous les véhicules, des voitures du quotidien aux sportives et exotiques, à Alma.");
   return (
     <PageLayout>
       <section className="relative h-[40vh] sm:h-[45vh] md:h-[50vh] min-h-[280px] sm:min-h-[350px] flex items-center overflow-hidden -mt-[120px] pt-[120px]">
@@ -88,7 +88,7 @@ export default function APropos() {
                 Perfecteinte se concentre sur deux services automobiles : la pose de pellicules teintées et de pellicules protectrices pare-pierre (PPF). Notre équipe met son expérience au service de ces installations.
               </p>
               <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-4 md:mb-6">
-                Chaque pose de PPF ou de pellicule teintée est réalisée avec précision et minutie, selon le véhicule et les besoins du client.
+                Nos services s'adressent à tous les types de véhicules, des voitures du quotidien aux sportives et exotiques. Chaque pose de PPF ou de pellicule teintée est réalisée avec précision et minutie, selon le véhicule et les besoins du client.
               </p>
               <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-6 md:mb-8">
                 Située au 1950 Boulevard St-Jude à Alma, Perfecteinte dessert le Québec avec une approche professionnelle, des produits de qualité supérieure et une protection conçue pour durer.

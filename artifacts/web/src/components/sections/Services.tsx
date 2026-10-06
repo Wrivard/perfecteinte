@@ -47,7 +47,7 @@ export function Services() {
             <span className="text-accent">SOLUTIONS</span>
           </h2>
           <p className="text-lg md:text-xl lg:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Des solutions techniques qui transforment et préservent l'intégrité de votre automobile.
+            Tous les véhicules sont les bienvenus, des voitures du quotidien aux sportives et exotiques. Choisissez le PPF ou les vitres teintées.
           </p>
         </motion.div>
 

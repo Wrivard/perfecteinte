@@ -105,7 +105,7 @@ function Step1({ form, setForm }: { form: FormData; setForm: (f: FormData) => vo
   return (
     <fieldset aria-describedby="rdv-step1-error" aria-required="true">
       <legend className="text-xl sm:text-2xl font-display font-bold text-gray-900 mb-2">Quels services vous intéressent ?</legend>
-      <p className="text-gray-600 text-sm mb-6">Sélectionnez un ou plusieurs services pour votre soumission. Vous pouvez combiner ce qui fait du sens pour vous.</p>
+      <p className="text-gray-600 text-sm mb-6">Sélectionnez le PPF, les vitres teintées ou les deux. Nous accueillons tous les véhicules, des voitures du quotidien aux sportives et exotiques.</p>
       <div className="space-y-5">
         {Object.entries(grouped).map(([category, services]) => (
           <div key={category}>
@@ -166,7 +166,7 @@ function Step2({ form, setForm }: { form: FormData; setForm: (f: FormData) => vo
   return (
     <div>
       <h3 className="text-xl sm:text-2xl font-display font-bold text-gray-900 mb-2">Votre véhicule</h3>
-      <p className="text-gray-600 text-sm mb-6">Ces informations nous permettent de préparer une soumission précise.</p>
+      <p className="text-gray-600 text-sm mb-6">Nous prenons en charge tous les véhicules, des modèles du quotidien aux sportives et exotiques. Ces informations nous permettent de préparer une soumission précise.</p>
       <div className="space-y-4">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
@@ -357,7 +357,7 @@ function SuccessState() {
 }
 
 export default function RendezVous() {
-  usePageMeta("Obtenir une soumission", "Obtenez une soumission pour votre projet de protection automobile chez Perfecteinte à Alma.");
+  usePageMeta("Obtenir une soumission", "Demandez un PPF ou des vitres teintées pour votre voiture du quotidien, sportive ou exotique chez Perfecteinte à Alma.");
   const [step, setStep] = useState(1);
   const [form, setForm] = useState<FormData>(EMPTY_FORM);
   const [submitted, setSubmitted] = useState(false);

@@ -10,7 +10,7 @@ export function Hero() {
       <div className="absolute inset-0 z-0">
           <img
           src={bgImage}
-          alt="Véhicule haut de gamme protégé par Perfecteinte"
+          alt="Automobile accueillie chez Perfecteinte"
           className="w-full h-full object-cover object-[center_50%]"
           fetchPriority="high"
           decoding="async"
@@ -26,11 +26,11 @@ export function Hero() {
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
           <h1 className="text-[clamp(2.25rem,6vw,5.75rem)] font-display font-extrabold text-white leading-[1.02] uppercase tracking-[-1px] md:tracking-[-2px]">
-             PROTECTION AUTOMOBILE HAUT DE GAMME
+             PPF & VITRES TEINTÉES
           </h1>
 
           <p className="text-base sm:text-lg md:text-xl text-gray-100 mt-6 max-w-[550px] font-light leading-relaxed">
-            Plus de 30 ans d'expertise en pellicules teintées et protection pare-pierre pour préserver l'apparence de vos véhicules.
+            PPF et vitres teintées pour tous les types de véhicules, de la voiture du quotidien aux sportives et exotiques.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 mt-8">
