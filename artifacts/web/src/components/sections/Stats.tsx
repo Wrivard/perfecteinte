@@ -4,24 +4,24 @@ import { SectionTagline } from "@/components/ui/SectionTagline";
 
 const reasons = [
   {
-    icon: ShieldCheck,
-    title: "PPF",
-    description: "Une pellicule pare-pierre pour protéger la peinture des éclats et débris routiers.",
+    icon: Award,
+    title: "31 ANS D'EXPÉRIENCE",
+    description: "Un savoir-faire spécialisé en protection automobile, pare-pierre et vitres teintées.",
   },
   {
     icon: Sparkles,
-    title: "VITRES TEINTÉES",
-    description: "Une installation soignée qui ajoute confort, intimité et style à votre véhicule.",
+    title: "50 000+ TRAVAUX",
+    description: "Plus de 50 000 travaux réalisés sur des véhicules de tous types.",
   },
   {
-    icon: Award,
-    title: "POSE PRÉCISE",
-    description: "Chaque pellicule est installée avec attention aux détails et aux contours du véhicule.",
+    icon: ShieldCheck,
+    title: "EXPERTISE PARE-PIERRE",
+    description: "Le PPF aide à protéger la peinture contre les éclats et les débris routiers.",
   },
   {
     icon: UserCheck,
-    title: "SOUMISSION PERSONNALISÉE",
-    description: "Nous accueillons tous les véhicules, des voitures du quotidien aux sportives et exotiques.",
+    title: "EXPERTISE VITRES TEINTÉES",
+    description: "Une installation soignée pour le confort, l'intimité et le style de votre véhicule.",
   },
 ];
 

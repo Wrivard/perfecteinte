@@ -85,10 +85,10 @@ export default function APropos() {
                 NOTRE <span className="text-accent">HISTOIRE</span>
               </h2>
               <p className="text-lg md:text-xl lg:text-2xl text-gray-700 leading-relaxed mb-4 md:mb-6">
-                Perfecteinte se concentre sur deux services automobiles : la pose de pellicules teintées et de pellicules protectrices pare-pierre (PPF). Notre équipe met son expérience au service de ces installations.
+                Avec 31 ans d'expérience et plus de 50 000 travaux réalisés, Frederic Goderre met son savoir-faire au service de deux spécialités : le PPF pare-pierre et les vitres teintées.
               </p>
               <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-4 md:mb-6">
-                Nos services s'adressent à tous les types de véhicules, des voitures du quotidien aux sportives et exotiques. Chaque pose de PPF ou de pellicule teintée est réalisée avec précision et minutie, selon le véhicule et les besoins du client.
+                Cette expertise s'adresse à tous les types de véhicules, de la voiture du quotidien aux sportives et exotiques. Chaque pose est réalisée avec précision, selon le véhicule et les besoins du client.
               </p>
               <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-6 md:mb-8">
                 Située au 1950 Boulevard St-Jude à Alma, Perfecteinte dessert le Québec avec une approche professionnelle, des produits de qualité supérieure et une protection conçue pour durer.
@@ -122,11 +122,11 @@ export default function APropos() {
 
       <section className="py-16 md:py-20 lg:py-24 bg-[#1a1a1a]">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-3 gap-4 md:gap-12 text-center">
+          <div className="grid grid-cols-1 gap-6 text-center sm:grid-cols-3 sm:gap-4 md:gap-12">
             {[
-              { value: "Précision", label: "Un travail méticuleux à chaque étape" },
-              { value: "Protection", label: "Des traitements durables et performants" },
-              { value: "Passion", label: "L'amour du détail dans chaque véhicule" },
+              { value: "31", label: "ANS D'EXPÉRIENCE" },
+              { value: "50 000+", label: "TRAVAUX RÉALISÉS" },
+              { value: "2", label: "EXPERTISES : PPF & VITRES TEINTÉES" },
             ].map((stat, i) => (
               <motion.div
                 key={i}
@@ -210,7 +210,7 @@ export default function APropos() {
               VIVEZ L'EXPÉRIENCE <span className="text-accent">PERFECTEINTE</span>
             </h2>
             <p className="text-base sm:text-lg md:text-xl text-gray-100 max-w-xl mb-6 md:mb-8">
-              Plus de 30 ans de passion, de précision et de souci du détail pour chaque véhicule qui passe entre nos mains.
+              31 ans d'expérience, plus de 50 000 travaux réalisés et le souci du détail pour chaque véhicule.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
               <Link href="/rendez-vous" className="inline-flex items-center justify-center bg-accent text-[#1b1b1b] px-8 py-4 rounded-md font-semibold hover:bg-accent-hover transition-colors">
