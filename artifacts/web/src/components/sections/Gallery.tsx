@@ -10,13 +10,42 @@ export function Gallery() {
   const [lightboxImage, setLightboxImage] = useState<string | null>(null);
 
   const closeLightbox = useCallback(() => setLightboxImage(null), []);
+  const renderGalleryImages = (isDuplicate: boolean) => (
+    <div
+      className="gallery-marquee-group flex shrink-0 gap-3 pr-3 md:gap-4 md:pr-4"
+      aria-hidden={isDuplicate}
+    >
+      {perfecteinteImages.map((src, index) => {
+        const alt = perfecteinteImageAlts[index];
+
+        return (
+          <button
+            key={`${isDuplicate ? "duplicate" : "original"}-${index}`}
+            type="button"
+            tabIndex={isDuplicate ? -1 : 0}
+            aria-label={`Agrandir : ${alt}`}
+            onClick={() => setLightboxImage(src)}
+            className="group relative h-36 w-[78vw] max-w-[320px] shrink-0 overflow-hidden rounded-md sm:h-40 sm:w-[300px] md:h-44 md:w-[340px] lg:h-48 lg:w-[380px]"
+          >
+            <img
+              src={src}
+              alt=""
+              className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+              loading={!isDuplicate && index < 5 ? "eager" : "lazy"}
+              decoding="async"
+            />
+          </button>
+        );
+      })}
+    </div>
+  );
 
   return (
     <>
-      <section className="py-20 md:py-24 bg-[#1a1a1a]">
-        <div className="max-w-7xl mx-auto px-6">
+      <section className="overflow-hidden bg-[#1a1a1a] py-12 md:py-16">
+        <div className="mx-auto max-w-7xl px-6">
           <motion.div
-            className="text-center mb-12 md:mb-16"
+            className="mb-8 text-center md:mb-10"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
@@ -31,38 +60,26 @@ export function Gallery() {
               Chaque véhicule raconte une histoire de renaissance et de précision
             </p>
           </motion.div>
+        </div>
 
-          <div className="masonry-grid">
-            {perfecteinteImages.map((src, index) => (
-              <motion.div
-                key={index}
-                className="masonry-item relative overflow-hidden rounded-md group cursor-pointer"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.05 }}
-                whileHover={{ scale: 1.02 }}
-                onClick={() => setLightboxImage(src)}
-              >
-                <img
-                  src={src}
-                   alt={perfecteinteImageAlts[index]}
-                  className="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-500"
-                  loading="lazy"
-                  decoding="async"
-                />
-              </motion.div>
-            ))}
+        <div
+          className="gallery-marquee-viewport relative left-1/2 w-screen -translate-x-1/2 overflow-hidden"
+          role="region"
+          aria-label="Réalisations photographiques"
+        >
+          <div className="gallery-marquee-track flex w-max">
+            {renderGalleryImages(false)}
+            {renderGalleryImages(true)}
           </div>
+        </div>
 
-          <div className="text-center mt-12">
+        <div className="mt-8 text-center md:mt-10">
             <Link
               href="/rendez-vous"
               className="inline-flex items-center justify-center bg-accent hover:bg-accent-hover text-[#1b1b1b] px-8 py-4 rounded-md font-semibold text-base transition-colors"
             >
               Prendre un rendez-vous
             </Link>
-          </div>
         </div>
       </section>
 

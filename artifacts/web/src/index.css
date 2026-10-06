@@ -61,6 +61,35 @@
     break-inside: avoid;
     margin-bottom: 1rem;
   }
+
+  .gallery-marquee-track {
+    animation: gallery-marquee 72s linear infinite;
+  }
+
+  .gallery-marquee-viewport:hover .gallery-marquee-track,
+  .gallery-marquee-viewport:focus-within .gallery-marquee-track {
+    animation-play-state: paused;
+  }
+
+  @keyframes gallery-marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .gallery-marquee-viewport {
+      overflow-x: auto;
+      scrollbar-width: thin;
+    }
+
+    .gallery-marquee-track {
+      animation: none;
+    }
+  }
 }
 
 html {
