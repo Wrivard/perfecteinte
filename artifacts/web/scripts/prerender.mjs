@@ -2,22 +2,22 @@ import { readFileSync, writeFileSync, mkdirSync, existsSync } from "node:fs";
 import { join, dirname } from "node:path";
 import { pathToFileURL } from "node:url";
 
-const BASE_URL = "https://esthetiqueautopascalpilote.com";
-const BASE_TITLE = "Esthétique Auto Pascal Pilote";
+const BASE_URL = "https://perfecteinte.ca";
+const BASE_TITLE = "Perfecteinte";
 
 const pages = [
   {
     path: "/",
-    title: `${BASE_TITLE} | Détailing à La Malbaie`,
+    title: `${BASE_TITLE} | PPF et vitres teintées à Alma`,
     description:
-      "Services professionnels d'esthétique automobile à La Malbaie, Charlevoix. Lavage de luxe, PPF, polissage, nano-céramique. Prenez rendez-vous au (418) 665-5871.",
+      "PPF pare-pierre et vitres teintées à Alma pour tous les véhicules, des voitures du quotidien aux sportives et exotiques. Appelez le (418) 450-3990.",
     breadcrumb: [{ name: "Accueil", path: "/" }],
   },
   {
     path: "/a-propos",
     title: `À propos | ${BASE_TITLE}`,
     description:
-      "Découvrez l'histoire et les valeurs d'Esthétique Auto Pascal Pilote, spécialiste du détailing automobile à La Malbaie depuis plus de 10 ans.",
+      "Découvrez Frédéric Goderre : 31 ans d’expérience et plus de 50 000 jobs réalisés en PPF et vitres teintées chez Perfecteinte à Alma.",
     breadcrumb: [
       { name: "Accueil", path: "/" },
       { name: "À propos", path: "/a-propos" },
@@ -27,68 +27,51 @@ const pages = [
     path: "/services",
     title: `Nos services | ${BASE_TITLE}`,
     description:
-      "Lavage, scellant, polissage, nano-céramique et installation de pare-pierre (PPF). Découvrez tous nos services d'esthétique automobile à La Malbaie.",
+      "Deux services de protection automobile à Alma : PPF (pellicule pare-pierre) et vitres teintées. Tous les types de véhicules sont les bienvenus.",
     breadcrumb: [
       { name: "Accueil", path: "/" },
       { name: "Services", path: "/services" },
     ],
   },
   {
-    path: "/services/lavage",
-    title: `Lavage automobile & entretien de luxe | ${BASE_TITLE}`,
+    path: "/services/ppf",
+    title: `PPF — Pellicule pare-pierre | ${BASE_TITLE}`,
     description:
-      "Service de lavage automobile intérieur, extérieur et décontamination à La Malbaie. Lavage à la main avec produits professionnels haut de gamme.",
+      "Pose de pellicule pare-pierre (PPF) à Alma pour tous les véhicules, des voitures du quotidien aux sportives et exotiques.",
     service: {
-      name: "Lavage automobile & entretien de luxe",
+      name: "PPF — Pellicule pare-pierre",
       description:
-        "Lavage intérieur, extérieur et décontamination automobile haut de gamme à La Malbaie.",
-      serviceType: "Lavage automobile",
+        "Pellicule pare-pierre installée pour aider à protéger la peinture contre les éclats et les débris routiers.",
+      serviceType: "Protection de peinture PPF",
     },
     breadcrumb: [
       { name: "Accueil", path: "/" },
       { name: "Services", path: "/services" },
-      { name: "Lavage", path: "/services/lavage" },
+      { name: "PPF — Pare-pierre", path: "/services/ppf" },
     ],
   },
   {
-    path: "/services/scellant",
-    title: `Scellant & polissage | ${BASE_TITLE}`,
+    path: "/services/vitres-teintees",
+    title: `Vitres teintées | ${BASE_TITLE}`,
     description:
-      "Cires, scellant peinture et polissage professionnel à La Malbaie. Correction des imperfections et protection durable de la peinture de votre véhicule.",
+      "Service de vitres teintées à Alma pour tous les véhicules, des voitures du quotidien aux sportives et exotiques.",
     service: {
-      name: "Scellant & polissage automobile",
+      name: "Vitres teintées",
       description:
-        "Polissage professionnel et application de scellant pour protéger et raviver la peinture.",
-      serviceType: "Polissage et scellant peinture",
+        "Installation de pellicule teintée automobile pour le confort, l’intimité et le style.",
+      serviceType: "Vitres teintées automobiles",
     },
     breadcrumb: [
       { name: "Accueil", path: "/" },
       { name: "Services", path: "/services" },
-      { name: "Scellant", path: "/services/scellant" },
-    ],
-  },
-  {
-    path: "/services/nano-ceramique",
-    title: `Nanocéramique & PPF | ${BASE_TITLE}`,
-    description:
-      "Polissage, nano-céramique et installation de pare-pierre (PPF) à La Malbaie. Protection maximale et durable pour la peinture de votre véhicule.",
-    service: {
-      name: "Nano-céramique & pare-pierre (PPF)",
-      description:
-        "Application de revêtement nano-céramique et installation de pare-pierre PPF pour une protection ultime de la peinture.",
-      serviceType: "Protection de peinture (céramique et PPF)",
-    },
-    breadcrumb: [
-      { name: "Accueil", path: "/" },
-      { name: "Services", path: "/services" },
-      { name: "Nano-céramique & PPF", path: "/services/nano-ceramique" },
+      { name: "Vitres teintées", path: "/services/vitres-teintees" },
     ],
   },
   {
     path: "/galerie",
-    title: `Galerie photos — Détailing | ${BASE_TITLE}`,
+    title: `Réalisations PPF et vitres teintées | ${BASE_TITLE}`,
     description:
-      "Découvrez nos réalisations en esthétique automobile. Photos avant/après de nos services de lavage, PPF, polissage et nano-céramique à La Malbaie.",
+      "Découvrez les réalisations Perfecteinte en PPF pare-pierre et en vitres teintées à Alma.",
     breadcrumb: [
       { name: "Accueil", path: "/" },
       { name: "Galerie", path: "/galerie" },
@@ -96,9 +79,9 @@ const pages = [
   },
   {
     path: "/rendez-vous",
-    title: `Prendre un rendez-vous | ${BASE_TITLE}`,
+    title: `Soumission PPF et vitres teintées | ${BASE_TITLE}`,
     description:
-      "Obtenez une soumission pour votre esthétique automobile chez Esthétique Auto Pascal Pilote à La Malbaie. Remplissez notre formulaire en ligne.",
+      "Demandez une soumission pour le PPF ou les vitres teintées chez Perfecteinte à Alma. Tous les types de véhicules sont acceptés.",
     breadcrumb: [
       { name: "Accueil", path: "/" },
       { name: "Rendez-vous", path: "/rendez-vous" },
@@ -108,7 +91,7 @@ const pages = [
     path: "/politique-de-confidentialite",
     title: `Politique de confidentialité | ${BASE_TITLE}`,
     description:
-      "Politique de confidentialité et de témoins (cookies) d'Esthétique Auto Pascal Pilote, conforme à la Loi 25 du Québec.",
+      "Politique de confidentialité et de témoins (cookies) de Perfecteinte, conforme à la Loi 25 du Québec.",
     breadcrumb: [
       { name: "Accueil", path: "/" },
       { name: "Politique de confidentialité", path: "/politique-de-confidentialite" },
@@ -159,23 +142,20 @@ function buildSchemas(page) {
       serviceType: page.service.serviceType,
       url: canonicalUrl(page.path),
       provider: {
-        "@type": "AutoRepair",
-        name: "Esthétique Auto Pascal Pilote Inc.",
+        "@type": "AutoBodyShop",
+        name: BASE_TITLE,
         url: BASE_URL,
-        telephone: "+1-418-665-5871",
+        telephone: "+1-418-450-3990",
+        email: "Perfecteinte@hotmail.com",
         address: {
           "@type": "PostalAddress",
-          streetAddress: "2535 boulevard Comporté",
-          addressLocality: "La Malbaie",
+          streetAddress: "1950 Boulevard St-Jude",
+          addressLocality: "Alma",
           addressRegion: "QC",
-          postalCode: "G4A 1C1",
           addressCountry: "CA",
         },
       },
-      areaServed: {
-        "@type": "AdministrativeArea",
-        name: "Charlevoix, Québec",
-      },
+      areaServed: "Alma, Québec",
     });
   }
 

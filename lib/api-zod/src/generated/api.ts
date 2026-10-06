@@ -14,3 +14,54 @@ import * as zod from "zod";
 export const HealthCheckResponse = zod.object({
   status: zod.string(),
 });
+
+/**
+ * Sends the quote request to Perfecteinte and confirms receipt to the customer.
+ * @summary Submit a quote request
+ */
+export const submitQuoteRequestBodyServicesMax = 2;
+
+export const submitQuoteRequestBodyVehicleMakeMax = 100;
+
+export const submitQuoteRequestBodyVehicleModelMax = 100;
+
+export const submitQuoteRequestBodyVehicleYearRegExp = new RegExp("^\\d{4}$");
+export const submitQuoteRequestBodyVehicleColorMax = 100;
+
+export const submitQuoteRequestBodyFirstNameMax = 100;
+
+export const submitQuoteRequestBodyLastNameMax = 100;
+
+export const submitQuoteRequestBodyPhoneMin = 10;
+export const submitQuoteRequestBodyPhoneMax = 30;
+
+export const submitQuoteRequestBodyEmailMax = 254;
+
+export const submitQuoteRequestBodyMessageMax = 3000;
+
+export const SubmitQuoteRequestBody = zod.object({
+  services: zod
+    .array(zod.enum(["ppf", "teintage"]))
+    .min(1)
+    .max(submitQuoteRequestBodyServicesMax),
+  vehicleMake: zod.string().min(1).max(submitQuoteRequestBodyVehicleMakeMax),
+  vehicleModel: zod.string().min(1).max(submitQuoteRequestBodyVehicleModelMax),
+  vehicleYear: zod.string().regex(submitQuoteRequestBodyVehicleYearRegExp),
+  vehicleColor: zod
+    .string()
+    .max(submitQuoteRequestBodyVehicleColorMax)
+    .optional(),
+  firstName: zod.string().min(1).max(submitQuoteRequestBodyFirstNameMax),
+  lastName: zod.string().min(1).max(submitQuoteRequestBodyLastNameMax),
+  phone: zod
+    .string()
+    .min(submitQuoteRequestBodyPhoneMin)
+    .max(submitQuoteRequestBodyPhoneMax),
+  email: zod.string().email().max(submitQuoteRequestBodyEmailMax),
+  message: zod.string().max(submitQuoteRequestBodyMessageMax).optional(),
+});
+
+export const SubmitQuoteRequestResponse = zod.object({
+  ok: zod.boolean(),
+  message: zod.string(),
+});

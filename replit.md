@@ -93,32 +93,20 @@ Generated React Query hooks and fetch client from the OpenAPI spec (e.g. `useHea
 
 ### `artifacts/web` (`@workspace/web`)
 
-Frontend-only React + Vite website for **Esthétique Auto Pascal Pilote Inc.**, a premium auto detailing business in La Malbaie, Québec. Single-page site with all content in French.
+Frontend React + Vite website for **Perfecteinte**, an automotive protection shop in Alma, Québec. All customer-facing content is in French.
 
 - **Stack**: React, Vite, Tailwind CSS v4, Framer Motion, Lucide Icons
-- **Brand Colors**: Blue accent (#3b82f6), Dark (#1a1a1a), White (#ffffff), Light (#f9fafb)
-- **Fonts**: Inter (body), Montserrat (headings)
-- **Routing**: wouter — multi-page SPA (`/`, `/a-propos`, `/services`, `/services/lavage`, `/services/ppf`, `/services/par-pierre`, `/services/polissage`, `/galerie`, `/rendez-vous`, `/politique-de-confidentialite`)
-- **Partners strip**: White bg with 4 dark logos (Labocosmetica, Legend PPF, CarPro, MaxShine) via CSS `brightness-0 opacity-40 hover:opacity-70`. Placed per-page individually (NOT in PageLayout)
-- **Testimonials**: Shared `Testimonials` component with 12 testimonials in a slider (3 per page, auto-advance every 6s, animated transitions). Used on homepage, all 4 service pages, and rendez-vous
-- **Tone**: Team/company voice — "notre équipe", "nos valeurs", "Prendre un rendez-vous" (not personal "ses valeurs", "réserver avec Pierre")
-- **Home Sections**: Double-bar Sticky Navbar (top info bar + main nav with dropdown), Hero (H1 text-5xl to text-8xl responsive), Partners, Stats (react-countup animated counting), Services (4 image-background cards linking to individual pages), Testimonials (slider), Gallery (masonry + lightbox), CTA, FAQ (5 accordion items), Contact ("PRÊT À BRILLER" + Google Maps embed, shared on all pages via PageLayout), Footer (white, 4-column)
-- **Services** (4 services, each with dedicated page):
-  - Lavage Auto & Entretien Esthétique de Luxe (`/services/lavage`) — hero, features, 3 forfaits (Essentiel/Premium/Luxe), CTA banner, partners, testimonials slider, FAQ
-  - Protection de Peinture PPF (`/services/ppf`) — hero, description, 6 benefit cards, CTA banner, partners, testimonials slider, FAQ
-  - Par Pierre (`/services/par-pierre`) — hero, expertise description, 4 values cards ("NOS VALEURS"), CTA banner, partners, testimonials slider, FAQ
-  - Polissage & Nano-Céramique (`/services/polissage`) — hero, features, 4-step process, CTA banner, partners, testimonials slider, FAQ
-- **Other Pages**: À Propos (history + partners + values + stats), Services overview (partners + 4-service detailed layout with "En savoir plus" + "Prendre un rendez-vous"), Galerie (partners + all 17 photos on white background + lightbox), Rendez-vous (partners + Google Calendar embed placeholder + contact sidebar + testimonials slider + Google Maps "NOUS TROUVER", Contact section excluded)
-- **Accessibility**: WCAG AA contrast audit applied — text-blue-400 on dark backgrounds, text-gray-700+ on light backgrounds, proper overlay opacities on images
-- **Phone**: (418) 665-5871
-- **Email**: Pascal.1993@live.ca / info@esthetiqueautopascalpilote.ca
-- **Address**: 2535 boulevard Comporté, La Malbaie, Québec
-- **Social**: Facebook, Instagram (only — X, LinkedIn, YouTube removed)
-- **Design rules**: border-radius 6px, no gradients on backgrounds (only on image overlays), max-width 1280px container, consistent visual hierarchy (H2: 60px, taglines: 24px, mb-16 section headers)
-- **Images**: All imported from `attached_assets/` via `@assets/` alias
-- **SEO**: Per-page `<title>`, meta description, canonical URL, OG tags, Twitter Cards — all dynamically updated via `usePageMeta` hook. JSON-LD structured data: `WebSite` + `Organization` graph, `AutoRepair` local business schema, `FAQPage` schema on all 4 service pages (injected via `FAQSchema` component). Static assets: `robots.txt`, `sitemap.xml` (with `<lastmod>`), `llms.txt`, `opengraph.jpg` (1200x630). Google Fonts loaded asynchronously (non-render-blocking). Build-time SEO prerendering via custom `vite-plugin-seo-prerender` generates per-route HTML files with unique meta tags for crawler visibility. `<meta name="theme-color">` set.
-- **Legal**: Politique de confidentialité page at `/politique-de-confidentialite` — Loi 25 compliant, includes cookie policy (13 sections)
-- **No backend**: All content is static/hardcoded
+- **Visual identity**: Dark, white, and orange; Inter body font and Montserrat headings
+- **Routing**: Wouter pages at `/`, `/a-propos`, `/services`, `/services/ppf`, `/services/vitres-teintees`, `/galerie`, `/rendez-vous`, and `/politique-de-confidentialite`. Legacy service URLs redirect to the two current services.
+- **Services**: Only PPF (pellicule pare-pierre) and vitres teintées. Accueillir tous les véhicules, du quotidien aux sportives et exotiques; ne pas laisser entendre que Perfecteinte sert uniquement les voitures haut de gamme.
+- **Expertise**: Frédéric Goderre, 31 ans d’expérience et plus de 50 000 jobs réalisés.
+- **Hours**: Monday–Thursday, 8:00–17:00; closed Friday–Sunday.
+- **Contact**: (418) 450-3990; Perfecteinte@hotmail.com; 1950 Boulevard St-Jude, Alma, QC. Facebook: `https://www.facebook.com/fredperfecteinte`.
+- **Site sections**: Home, À propos, Services, Réalisations/Galerie, quote form, FAQ, testimonials, and privacy policy. No partner or warranty sections.
+- **Quote form**: only PPF and vitres teintées; `POST /api/contact` sends an owner notification and customer confirmation through Resend. Vercel variables: `RESEND_API_KEY` and `RESEND_FROM_EMAIL` (verified sender).
+- **SEO**: Per-page metadata and JSON-LD are generated by `artifacts/web/scripts/prerender.mjs`; maintain the `perfecteinte.ca` canonical domain and keep `sitemap.xml`, `robots.txt`, and `llms.txt` accurate.
+- **Images**: Use the vehicle photos supplied in `attached_assets/` through the shared asset catalog.
+- **Legal**: Privacy policy at `/politique-de-confidentialite`, including cookie policy and Loi 25 information.
 
 ### `scripts` (`@workspace/scripts`)
 

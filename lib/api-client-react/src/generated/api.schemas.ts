@@ -8,3 +8,61 @@
 export interface HealthStatus {
   status: string;
 }
+
+export type QuoteRequestInputServicesItem =
+  (typeof QuoteRequestInputServicesItem)[keyof typeof QuoteRequestInputServicesItem];
+
+export const QuoteRequestInputServicesItem = {
+  ppf: "ppf",
+  teintage: "teintage",
+} as const;
+
+export interface QuoteRequestInput {
+  /**
+   * @minItems 1
+   * @maxItems 2
+   */
+  services: QuoteRequestInputServicesItem[];
+  /**
+   * @minLength 1
+   * @maxLength 100
+   */
+  vehicleMake: string;
+  /**
+   * @minLength 1
+   * @maxLength 100
+   */
+  vehicleModel: string;
+  /** @pattern ^\d{4}$ */
+  vehicleYear: string;
+  /** @maxLength 100 */
+  vehicleColor?: string;
+  /**
+   * @minLength 1
+   * @maxLength 100
+   */
+  firstName: string;
+  /**
+   * @minLength 1
+   * @maxLength 100
+   */
+  lastName: string;
+  /**
+   * @minLength 10
+   * @maxLength 30
+   */
+  phone: string;
+  /** @maxLength 254 */
+  email: string;
+  /** @maxLength 3000 */
+  message?: string;
+}
+
+export interface QuoteRequestAccepted {
+  ok: boolean;
+  message: string;
+}
+
+export interface QuoteRequestError {
+  error: string;
+}

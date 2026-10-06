@@ -40,7 +40,7 @@ export default function PolitiqueConfidentialite() {
                 </p>
                 <ul className="list-disc pl-6 space-y-1">
                    <li><strong>Nom</strong> : Perfecteinte</li>
-                   <li><strong>Courriel</strong> : Soumissions sur demande</li>
+                   <li><strong>Courriel</strong> : <a href="mailto:Perfecteinte@hotmail.com" className="text-accent hover:underline">Perfecteinte@hotmail.com</a></li>
                    <li><strong>Téléphone</strong> : <a href="tel:4184503990" className="text-accent hover:underline">(418) 450-3990</a></li>
                 </ul>
               </section>
@@ -108,7 +108,7 @@ export default function PolitiqueConfidentialite() {
                 <ul className="list-disc pl-6 space-y-1">
                   <li>Avec votre consentement explicite</li>
                   <li>Lorsqu'exigé par la loi ou une ordonnance judiciaire</li>
-                  <li>Avec nos fournisseurs de services qui nous aident à exploiter notre entreprise (hébergement Web, outils de prise de rendez-vous), sous réserve d'ententes de confidentialité</li>
+                  <li>Avec nos fournisseurs de services qui nous aident à exploiter notre entreprise (hébergement Web, outils de prise de rendez-vous et d'envoi de courriels), sous réserve d'ententes de confidentialité</li>
                 </ul>
               </section>
 
@@ -170,7 +170,7 @@ export default function PolitiqueConfidentialite() {
                    <p className="font-semibold text-gray-900 mb-2">Perfecteinte</p>
                    <p>1950 Boulevard St-Jude, Alma, QC</p>
                    <p>Téléphone : <a href="tel:4184503990" className="text-accent hover:underline">(418) 450-3990</a></p>
-                   <p>Courriel : Soumissions sur demande</p>
+                   <p>Courriel : <a href="mailto:Perfecteinte@hotmail.com" className="text-accent hover:underline">Perfecteinte@hotmail.com</a></p>
                 </div>
               </section>
 

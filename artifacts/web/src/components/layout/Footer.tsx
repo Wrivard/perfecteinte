@@ -17,7 +17,9 @@ export function Footer() {
             <div>
               <h4 className="text-sm font-semibold text-white mb-1">Contact</h4>
               <p className="text-sm text-gray-300">(418) 450-3990</p>
-              <p className="text-sm text-gray-300">Soumissions sur demande</p>
+              <a href="mailto:Perfecteinte@hotmail.com" className="text-sm text-gray-300 hover:text-accent">
+                Perfecteinte@hotmail.com
+              </a>
             </div>
             <div className="flex gap-4 pt-2">
               <a href="https://www.facebook.com/fredperfecteinte" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-gray-400 hover:text-accent transition-colors"><Facebook className="w-5 h-5" /></a>

@@ -1,36 +1,35 @@
-# Esthétique Auto Pascal Pilote Inc.
+# Perfecteinte
 
-> Service professionnel d'esthétique automobile à La Malbaie, Québec (Charlevoix)
+> PPF pare-pierre et vitres teintées à Alma, Québec
 
 ## À propos
 
-Esthétique Auto Pascal Pilote est une entreprise spécialisée en détailing automobile haut de gamme, fondée il y a plus de 4 ans à La Malbaie, dans la région de Charlevoix. Avec plus de 10 ans d'expérience dans le milieu automobile et plus de 1 500 lavages complétés, notre équipe offre des services de qualité supérieure.
+Perfecteinte, dirigée par Frédéric Goderre, offre deux services automobiles à Alma : la pose de pellicule pare-pierre (PPF) et le teintage des vitres. Tous les types de véhicules sont acceptés, des voitures du quotidien aux sportives et exotiques.
+
+## Expertise
+
+Frédéric Goderre compte 31 ans d’expérience et plus de 50 000 jobs réalisés en protection pare-pierre et vitres teintées.
 
 ## Services
 
-- **Lavage Auto & Entretien Esthétique de Luxe** : Nettoyage complet intérieur et extérieur avec produits professionnels haut de gamme. Trois forfaits disponibles : Essentiel, Premium et Luxe.
-- **Scellant & Polissage** : Cires, scellant peinture et polissage professionnel pour corriger les imperfections et protéger durablement la peinture.
-- **Nano-Céramique & Pare-Pierre (PPF)** : Application de revêtement nano-céramique pour protection durable et installation de pellicule pare-pierre (PPF) auto-cicatrisante.
+- **PPF — Pellicule pare-pierre** : Pellicule transparente pour aider à protéger la peinture contre les éclats de pierre et les débris routiers.
+- **Vitres teintées** : Pose de pellicule teintée automobile pour le confort, l'intimité et le style.
 
 ## Coordonnées
 
-- **Adresse** : 2535 boulevard Comporté, La Malbaie, Québec
-- **Téléphone** : (418) 665-5871
-- **Courriel** : Pascal.1993@live.ca
-- **Horaires** : Lundi au vendredi, 8h à 17h | Samedi sur rendez-vous
-
-## Partenaires
-
-Labocosmetica, Legend PPF, CarPro, MaxShine
+- **Adresse** : 1950 Boulevard St-Jude, Alma, QC
+- **Téléphone** : (418) 450-3990
+- **Courriel** : Perfecteinte@hotmail.com
+- **Zone desservie** : Québec
+- **Heures** : lundi au jeudi, 8 h à 17 h; fermé du vendredi au dimanche
 
 ## Pages du site
 
 - / — Accueil
 - /a-propos — À propos de l'entreprise
-- /services — Tous les services
-- /services/lavage — Lavage Auto & Entretien de Luxe
-- /services/scellant — Scellant & Polissage
-- /services/nano-ceramique — Nano-Céramique & Pare-Pierre (PPF)
+- /services — Nos deux services
+- /services/ppf — PPF pare-pierre
+- /services/vitres-teintees — Vitres teintées
 - /galerie — Galerie photo
 - /rendez-vous — Prendre un rendez-vous
 - /politique-de-confidentialite — Politique de confidentialité et cookies

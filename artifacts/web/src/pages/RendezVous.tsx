@@ -345,7 +345,10 @@ function SuccessState() {
       </div>
       <h3 className="text-xl sm:text-2xl font-display font-bold text-gray-900 mb-3">Demande envoyée !</h3>
       <p className="text-gray-600 text-sm sm:text-base max-w-sm mx-auto leading-relaxed mb-2">
-        Merci pour votre soumission. Notre équipe vous contactera dans les meilleurs délais pour confirmer votre rendez-vous.
+        Merci pour votre soumission. Nous avons bien reçu votre demande.
+      </p>
+      <p className="text-gray-600 text-sm sm:text-base max-w-sm mx-auto leading-relaxed mb-4">
+        Notre équipe vous répondra dans un délai de 24 à 48 heures.
       </p>
       <p className="text-gray-500 text-sm">
         Des questions ? Appelez-nous au{" "}
@@ -566,7 +569,9 @@ export default function RendezVous() {
                     <Mail className="w-5 h-5 text-accent shrink-0 mt-1" />
                     <div>
                       <span className="text-accent text-xs uppercase tracking-widest font-semibold block mb-1">Courriel</span>
-                      <p className="text-white font-medium text-sm md:text-base">Soumissions sur demande</p>
+                      <a href="mailto:Perfecteinte@hotmail.com" className="text-white font-medium text-sm md:text-base hover:text-accent">
+                        Perfecteinte@hotmail.com
+                      </a>
                     </div>
                   </div>
 
