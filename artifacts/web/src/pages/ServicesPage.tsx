@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import { Link } from "wouter";
 import { usePageMeta } from "@/hooks/usePageMeta";
 import { PageLayout } from "@/components/layout/PageLayout";
-import { Partners } from "@/components/sections/Partners";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { SectionTagline } from "@/components/ui/SectionTagline";
 import { Shield, Sun, ArrowRight } from "lucide-react";
@@ -166,7 +165,6 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <Partners />
       <Testimonials />
     </PageLayout>
   );

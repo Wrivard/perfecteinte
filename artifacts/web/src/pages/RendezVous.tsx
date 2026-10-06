@@ -2,7 +2,6 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { usePageMeta } from "@/hooks/usePageMeta";
 import { PageLayout } from "@/components/layout/PageLayout";
-import { Partners } from "@/components/sections/Partners";
 import { SectionTagline } from "@/components/ui/SectionTagline";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { Contact } from "@/components/sections/Contact";
@@ -443,8 +442,6 @@ export default function RendezVous() {
           </motion.div>
         </div>
       </section>
-
-      <Partners />
 
       <section className="py-16 md:py-20 lg:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6">

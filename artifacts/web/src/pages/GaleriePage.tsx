@@ -4,7 +4,6 @@ import { Link } from "wouter";
 import { X } from "lucide-react";
 import { usePageMeta } from "@/hooks/usePageMeta";
 import { PageLayout } from "@/components/layout/PageLayout";
-import { Partners } from "@/components/sections/Partners";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { SectionTagline } from "@/components/ui/SectionTagline";
 import { perfecteinteImageAlts, perfecteinteImages } from "@/assets/perfecteinteGallery";
@@ -39,8 +38,6 @@ export default function GaleriePage() {
           </motion.div>
         </div>
       </section>
-
-      <Partners />
 
       <section className="py-16 md:py-20 lg:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6">

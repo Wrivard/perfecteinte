@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import { Link } from "wouter";
 import { usePageMeta } from "@/hooks/usePageMeta";
 import { PageLayout } from "@/components/layout/PageLayout";
-import { Partners } from "@/components/sections/Partners";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { SectionTagline } from "@/components/ui/SectionTagline";
 import { Shield, Award, Heart, Wrench } from "lucide-react";
@@ -117,8 +116,6 @@ export default function APropos() {
           </div>
         </div>
       </section>
-
-      <Partners />
 
       <section className="py-16 md:py-20 lg:py-24 bg-[#1a1a1a]">
         <div className="max-w-7xl mx-auto px-6">
