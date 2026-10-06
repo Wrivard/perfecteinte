@@ -2,23 +2,17 @@ import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Star, ChevronLeft, ChevronRight } from "lucide-react";
 import { SectionTagline } from "@/components/ui/SectionTagline";
-import img1 from "@/assets/optimized-photos/IMG_7529.webp";
-import img2 from "@/assets/optimized-photos/IMG_8048.webp";
-import img3 from "@/assets/optimized-photos/IMG_4627.webp";
-import img4 from "@/assets/optimized-photos/IMG_8779.webp";
-import img5 from "@/assets/optimized-photos/IMG_7859.webp";
-import img6 from "@/assets/optimized-photos/IMG_5258.webp";
 
 const allTestimonials = [
-  { quote: "Chaque détail compte, et l'équipe le comprend parfaitement.", author: "Éric Laforce", image: img1 },
-  { quote: "Un service qui transforme littéralement l'apparence de mon véhicule.", author: "Caroline Tremblay", image: img2 },
-  { quote: "La précision et le professionnalisme sont au cœur de leur travail.", author: "Michel Bouchard", image: img3 },
-  { quote: "Résultats impeccables à chaque visite. Mon véhicule n'a jamais été aussi beau.", author: "Sophie Dubois", image: img4 },
-  { quote: "Le meilleur service de protection automobile de la région. Hautement recommandé!", author: "Martin Côté", image: img5 },
-  { quote: "L'équipe a un œil exceptionnel pour la finition. Résultat au-delà de mes attentes.", author: "Julie Gagnon", image: img6 },
-  { quote: "Le PPF a complètement protégé mon capot d'un gros éclat de pierre. Investissement rentabilisé!", author: "Jean-Philippe Roy", image: img1 },
-  { quote: "Un service sur mesure, une attention aux détails incomparable. Je recommande à 100%.", author: "Patrick Simard", image: img4 },
-  { quote: "Après 3 ans de PPF, la peinture est comme neuve. Extraordinaire.", author: "Marie-Ève Gagné", image: img6 },
+  { quote: "Chaque détail compte, et l'équipe le comprend parfaitement.", author: "Éric Laforce" },
+  { quote: "Un service qui transforme littéralement l'apparence de mon véhicule.", author: "Caroline Tremblay" },
+  { quote: "La précision et le professionnalisme sont au cœur de leur travail.", author: "Michel Bouchard" },
+  { quote: "Résultats impeccables à chaque visite. Mon véhicule n'a jamais été aussi beau.", author: "Sophie Dubois" },
+  { quote: "Le meilleur service de protection automobile de la région. Hautement recommandé!", author: "Martin Côté" },
+  { quote: "L'équipe a un œil exceptionnel pour la finition. Résultat au-delà de mes attentes.", author: "Julie Gagnon" },
+  { quote: "Le PPF a complètement protégé mon capot d'un gros éclat de pierre. Investissement rentabilisé!", author: "Jean-Philippe Roy" },
+  { quote: "Un service sur mesure, une attention aux détails incomparable. Je recommande à 100%.", author: "Patrick Simard" },
+  { quote: "Après 3 ans de PPF, la peinture est comme neuve. Extraordinaire.", author: "Marie-Ève Gagné" },
 ];
 
 export function Testimonials({ compact = false }: { compact?: boolean }) {
@@ -88,19 +82,15 @@ export function Testimonials({ compact = false }: { compact?: boolean }) {
               {currentItems.map((t, i) => (
                 <div
                   key={`${page}-${i}`}
-                  className="relative h-[350px] sm:h-[380px] md:h-[420px] rounded-md overflow-hidden group"
+                  className="flex min-h-[260px] h-full flex-col rounded-md border border-gray-200 bg-white p-6 shadow-sm sm:min-h-[290px] md:p-8"
                 >
-                  <img loading="lazy" decoding="async" src={t.image} alt={t.author} className="absolute inset-0 w-full h-full object-cover" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/60 to-black/20"></div>
-                  <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8">
-                    <div className="flex gap-1 text-accent mb-3 md:mb-4">
-                      {[...Array(5)].map((_, j) => (
-                        <Star key={j} className="w-4 h-4 md:w-5 md:h-5 fill-current" />
-                      ))}
-                    </div>
-                    <p className="text-white text-base md:text-lg leading-relaxed mb-4 md:mb-6">"{t.quote}"</p>
-                    <p className="text-white font-semibold text-sm md:text-base">{t.author}</p>
+                  <div className="mb-5 flex gap-1 text-accent" aria-label="5 étoiles sur 5">
+                    {[...Array(5)].map((_, j) => (
+                      <Star key={j} className="h-4 w-4 fill-current md:h-5 md:w-5" />
+                    ))}
                   </div>
+                  <p className="mb-6 flex-1 text-base leading-relaxed text-gray-800 md:text-lg">"{t.quote}"</p>
+                  <p className="border-t border-gray-100 pt-4 text-sm font-semibold text-gray-900 md:text-base">{t.author}</p>
                 </div>
               ))}
             </motion.div>
