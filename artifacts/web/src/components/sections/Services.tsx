@@ -32,7 +32,7 @@ const itemVariants = {
 
 export function Services() {
   return (
-    <section className="py-20 md:py-24 bg-[#1a1a1a]">
+    <section id="services" className="scroll-mt-24 md:scroll-mt-32 py-20 md:py-24 bg-[#1a1a1a]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <motion.div
           className="text-center mb-12 md:mb-16"

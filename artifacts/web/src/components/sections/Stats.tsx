@@ -27,7 +27,7 @@ const reasons = [
 
 export function Stats() {
   return (
-    <section className="py-16 md:py-20 lg:py-24 bg-[#f9fafb]">
+    <section id="a-propos" className="scroll-mt-24 md:scroll-mt-32 py-16 md:py-20 lg:py-24 bg-[#f9fafb]">
       <div className="max-w-7xl mx-auto px-6">
         <motion.div
           className="text-center mb-12 md:mb-16"

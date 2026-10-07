@@ -7,7 +7,9 @@ import logo from "@/assets/perfecteinte-logo.png";
 
 const navLinks = [
   { name: "Accueil", href: "/" },
-  { name: "Confidentialité", href: "/politique-de-confidentialite" },
+  { name: "À Propos", href: "/#a-propos", sectionId: "a-propos" },
+  { name: "Services", href: "/#services", sectionId: "services" },
+  { name: "Galerie", href: "/#galerie", sectionId: "galerie" },
 ];
 
 export function Navbar() {
@@ -25,7 +27,14 @@ export function Navbar() {
 
   useEffect(() => {
     setMobileMenuOpen(false);
-    window.scrollTo(0, 0);
+    const sectionId = window.location.hash.slice(1);
+    if (sectionId) {
+      requestAnimationFrame(() => {
+        document.getElementById(sectionId)?.scrollIntoView({ behavior: "smooth", block: "start" });
+      });
+    } else {
+      window.scrollTo(0, 0);
+    }
   }, [location]);
 
   useEffect(() => {
@@ -85,17 +94,26 @@ export function Navbar() {
             <nav className="hidden lg:flex items-center gap-8">
               {navLinks.map((link) => (
                 <div key={link.name} className="relative group">
-                  <Link
-                    href={link.href}
-                    className={cn(
-                      "text-[15px] font-medium transition-colors flex items-center gap-1 relative",
-                      location === link.href ? "text-accent" : "text-white hover:text-accent",
-                      "after:content-[''] after:absolute after:-bottom-1 after:left-0 after:h-[2px] after:bg-accent after:transition-all after:duration-300",
-                      location === link.href ? "after:w-full" : "after:w-0 hover:after:w-full"
-                    )}
-                  >
-                    {link.name}
-                  </Link>
+                  {link.sectionId ? (
+                    <a
+                      href={link.href}
+                      className="text-[15px] font-medium transition-colors flex items-center gap-1 relative text-white hover:text-accent after:content-[''] after:absolute after:-bottom-1 after:left-0 after:h-[2px] after:bg-accent after:transition-all after:duration-300 after:w-0 hover:after:w-full"
+                    >
+                      {link.name}
+                    </a>
+                  ) : (
+                    <Link
+                      href={link.href}
+                      className={cn(
+                        "text-[15px] font-medium transition-colors flex items-center gap-1 relative",
+                        location === link.href ? "text-accent" : "text-white hover:text-accent",
+                        "after:content-[''] after:absolute after:-bottom-1 after:left-0 after:h-[2px] after:bg-accent after:transition-all after:duration-300",
+                        location === link.href ? "after:w-full" : "after:w-0 hover:after:w-full"
+                      )}
+                    >
+                      {link.name}
+                    </Link>
+                  )}
                 </div>
               ))}
               <Link
@@ -165,16 +183,26 @@ export function Navbar() {
               <ul className="space-y-1">
                 {navLinks.map((link) => (
                   <li key={link.name}>
-                    <Link
-                      href={link.href}
-                      className={cn(
-                        "block py-3.5 text-lg font-semibold transition-colors border-b border-white/10",
-                        location === link.href ? "text-accent" : "text-white hover:text-accent"
-                      )}
-                      onClick={() => setMobileMenuOpen(false)}
-                    >
-                      {link.name}
-                    </Link>
+                    {link.sectionId ? (
+                      <a
+                        href={link.href}
+                        className="block py-3.5 text-lg font-semibold transition-colors border-b border-white/10 text-white hover:text-accent"
+                        onClick={() => setMobileMenuOpen(false)}
+                      >
+                        {link.name}
+                      </a>
+                    ) : (
+                      <Link
+                        href={link.href}
+                        className={cn(
+                          "block py-3.5 text-lg font-semibold transition-colors border-b border-white/10",
+                          location === link.href ? "text-accent" : "text-white hover:text-accent"
+                        )}
+                        onClick={() => setMobileMenuOpen(false)}
+                      >
+                        {link.name}
+                      </Link>
+                    )}
                   </li>
                 ))}
               </ul>
