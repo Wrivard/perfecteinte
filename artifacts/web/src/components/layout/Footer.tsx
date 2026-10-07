@@ -17,8 +17,8 @@ export function Footer() {
             <div>
               <h4 className="text-sm font-semibold text-white mb-1">Contact</h4>
               <p className="text-sm text-gray-300">(418) 450-3990</p>
-              <a href="mailto:Perfecteinte@hotmail.com" className="text-sm text-gray-300 hover:text-accent">
-                Perfecteinte@hotmail.com
+              <a href="mailto:Perfecteinte@hotmail.ca" className="text-sm text-gray-300 hover:text-accent">
+                Perfecteinte@hotmail.ca
               </a>
             </div>
             <div className="flex gap-4 pt-2">

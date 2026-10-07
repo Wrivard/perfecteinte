@@ -59,8 +59,8 @@ export default function PolitiqueConfidentialite() {
                   <li>Responsable : Frederic Goderre</li>
                   <li>
                     Courriel :{" "}
-                    <a className={internalLinkClass} href="mailto:Perfecteinte@hotmail.com">
-                      Perfecteinte@hotmail.com
+                    <a className={internalLinkClass} href="mailto:Perfecteinte@hotmail.ca">
+                      Perfecteinte@hotmail.ca
                     </a>
                   </li>
                   <li>
@@ -203,8 +203,8 @@ export default function PolitiqueConfidentialite() {
                 </ul>
                 <p>
                   Pour présenter une demande, écrivez à{" "}
-                  <a className={internalLinkClass} href="mailto:Perfecteinte@hotmail.com">
-                    Perfecteinte@hotmail.com
+                  <a className={internalLinkClass} href="mailto:Perfecteinte@hotmail.ca">
+                    Perfecteinte@hotmail.ca
                   </a>{" "}
                   en indiquant votre nom, un moyen de vous joindre et la nature de votre demande. Nous pourrions
                   demander des renseignements raisonnables pour vérifier votre identité. Si vous estimez que votre

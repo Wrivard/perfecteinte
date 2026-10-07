@@ -146,7 +146,7 @@ function buildSchemas(page) {
         name: BASE_TITLE,
         url: BASE_URL,
         telephone: "+1-418-450-3990",
-        email: "Perfecteinte@hotmail.com",
+        email: "Perfecteinte@hotmail.ca",
         address: {
           "@type": "PostalAddress",
           streetAddress: "1950 Boulevard St-Jude",

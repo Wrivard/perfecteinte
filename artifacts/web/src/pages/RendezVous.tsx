@@ -580,8 +580,8 @@ export default function RendezVous() {
                     <Mail className="w-5 h-5 text-accent shrink-0 mt-1" />
                     <div>
                       <span className="text-accent text-xs uppercase tracking-widest font-semibold block mb-1">Courriel</span>
-                      <a href="mailto:Perfecteinte@hotmail.com" className="text-white font-medium text-sm md:text-base hover:text-accent">
-                        Perfecteinte@hotmail.com
+                      <a href="mailto:Perfecteinte@hotmail.ca" className="text-white font-medium text-sm md:text-base hover:text-accent">
+                        Perfecteinte@hotmail.ca
                       </a>
                     </div>
                   </div>

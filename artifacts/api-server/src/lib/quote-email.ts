@@ -3,7 +3,7 @@ import {
   SubmitQuoteRequestResponse,
 } from "@workspace/api-zod";
 
-const OWNER_EMAIL = "Perfecteinte@hotmail.com";
+const OWNER_EMAIL = "Perfecteinte@hotmail.ca";
 const RESEND_EMAILS_URL = "https://api.resend.com/emails";
 
 const SERVICE_LABELS = {
@@ -177,7 +177,7 @@ async function sendEmail(
   if (!response.ok) {
     throw new QuoteEmailError(
       502,
-      "La demande n’a pas pu être envoyée. Réessayez ou écrivez-nous à Perfecteinte@hotmail.com.",
+      "La demande n’a pas pu être envoyée. Réessayez ou écrivez-nous à Perfecteinte@hotmail.ca.",
     );
   }
 }
@@ -204,7 +204,7 @@ export async function submitQuoteRequest(
   if (!apiKey || !fromEmail) {
     throw new QuoteEmailError(
       503,
-      "La soumission en ligne est temporairement indisponible. Écrivez-nous à Perfecteinte@hotmail.com ou appelez le (418) 450-3990.",
+      "La soumission en ligne est temporairement indisponible. Écrivez-nous à Perfecteinte@hotmail.ca ou appelez le (418) 450-3990.",
     );
   }
 
@@ -217,7 +217,7 @@ export async function submitQuoteRequest(
     }
     throw new QuoteEmailError(
       502,
-      "La demande n’a pas pu être envoyée. Réessayez ou écrivez-nous à Perfecteinte@hotmail.com.",
+      "La demande n’a pas pu être envoyée. Réessayez ou écrivez-nous à Perfecteinte@hotmail.ca.",
     );
   }
 
