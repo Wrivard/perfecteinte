@@ -7,8 +7,8 @@ export function Footer() {
   return (
     <footer className="bg-[#1b1b1b] pt-12 md:pt-16 pb-6 md:pb-8">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="grid grid-cols-2 md:grid-cols-2 gap-8 lg:gap-16 mb-10 md:mb-12">
-          <div className="col-span-2 md:col-span-1 space-y-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-16 mb-10 md:mb-12">
+          <div className="space-y-4">
             <img loading="lazy" decoding="async" src={logo} alt="Perfecteinte — Vitres teintées et pare-pierre" className="w-[230px] md:w-[290px] h-auto" />
             <div>
               <h4 className="text-sm font-semibold text-white mb-1">Adresse</h4>

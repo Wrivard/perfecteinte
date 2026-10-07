@@ -14,70 +14,6 @@ const pages = [
     breadcrumb: [{ name: "Accueil", path: "/" }],
   },
   {
-    path: "/a-propos",
-    title: `À propos | ${BASE_TITLE}`,
-    description:
-      "Découvrez Frédéric Goderre : 31 ans d’expérience et plus de 50 000 jobs réalisés en PPF et vitres teintées chez Perfecteinte à Alma.",
-    breadcrumb: [
-      { name: "Accueil", path: "/" },
-      { name: "À propos", path: "/a-propos" },
-    ],
-  },
-  {
-    path: "/services",
-    title: `Nos services | ${BASE_TITLE}`,
-    description:
-      "Deux services de protection automobile à Alma : PPF (pellicule pare-pierre) et vitres teintées. Tous les types de véhicules sont les bienvenus.",
-    breadcrumb: [
-      { name: "Accueil", path: "/" },
-      { name: "Services", path: "/services" },
-    ],
-  },
-  {
-    path: "/services/ppf",
-    title: `PPF — Pellicule pare-pierre | ${BASE_TITLE}`,
-    description:
-      "Pose de pellicule pare-pierre (PPF) à Alma pour tous les véhicules, des voitures du quotidien aux sportives et exotiques.",
-    service: {
-      name: "PPF — Pellicule pare-pierre",
-      description:
-        "Pellicule pare-pierre installée pour aider à protéger la peinture contre les éclats et les débris routiers.",
-      serviceType: "Protection de peinture PPF",
-    },
-    breadcrumb: [
-      { name: "Accueil", path: "/" },
-      { name: "Services", path: "/services" },
-      { name: "PPF — Pare-pierre", path: "/services/ppf" },
-    ],
-  },
-  {
-    path: "/services/vitres-teintees",
-    title: `Vitres teintées | ${BASE_TITLE}`,
-    description:
-      "Service de vitres teintées à Alma pour tous les véhicules, des voitures du quotidien aux sportives et exotiques.",
-    service: {
-      name: "Vitres teintées",
-      description:
-        "Installation de pellicule teintée automobile pour le confort, l’intimité et le style.",
-      serviceType: "Vitres teintées automobiles",
-    },
-    breadcrumb: [
-      { name: "Accueil", path: "/" },
-      { name: "Services", path: "/services" },
-      { name: "Vitres teintées", path: "/services/vitres-teintees" },
-    ],
-  },
-  {
-    path: "/galerie",
-    title: `Réalisations PPF et vitres teintées | ${BASE_TITLE}`,
-    description:
-      "Découvrez les réalisations Perfecteinte en PPF pare-pierre et en vitres teintées à Alma.",
-    breadcrumb: [
-      { name: "Accueil", path: "/" },
-      { name: "Galerie", path: "/galerie" },
-    ],
-  },
-  {
     path: "/rendez-vous",
     title: `Soumission PPF et vitres teintées | ${BASE_TITLE}`,
     description:
@@ -242,7 +178,7 @@ async function main() {
   notFoundDocument = replaceMetaContent(
     notFoundDocument,
     'name="description"',
-    "La page recherchée est introuvable. Retournez à l’accueil de Perfecteinte ou consultez nos services.",
+    "La page recherchée est introuvable. Retournez à l’accueil de Perfecteinte ou demandez une soumission.",
   );
   notFoundDocument = replaceMetaContent(
     notFoundDocument,
@@ -257,7 +193,7 @@ async function main() {
   notFoundDocument = replaceMetaContent(
     notFoundDocument,
     'property="og:description"',
-    "La page recherchée est introuvable. Retournez à l’accueil de Perfecteinte ou consultez nos services.",
+    "La page recherchée est introuvable. Retournez à l’accueil de Perfecteinte ou demandez une soumission.",
   );
   notFoundDocument = replaceMetaContent(
     notFoundDocument,
@@ -267,7 +203,7 @@ async function main() {
   notFoundDocument = replaceMetaContent(
     notFoundDocument,
     'name="twitter:description"',
-    "La page recherchée est introuvable. Retournez à l’accueil de Perfecteinte ou consultez nos services.",
+    "La page recherchée est introuvable. Retournez à l’accueil de Perfecteinte ou demandez une soumission.",
   );
   notFoundDocument = notFoundDocument.replace(/\s*<link rel="canonical"[^>]*\/?>/g, "");
   notFoundDocument = notFoundDocument.replace(/\s*<link rel="alternate"[^>]*\/?>/g, "");
@@ -289,7 +225,7 @@ async function main() {
   const sitemapEntries = pages
     .map((p) => {
       const loc = canonicalUrl(p.path);
-      const priority = p.path === "/" ? "1.0" : p.path.startsWith("/services") ? "0.9" : p.path === "/rendez-vous" ? "0.9" : p.path === "/politique-de-confidentialite" ? "0.3" : "0.8";
+      const priority = p.path === "/" ? "1.0" : p.path === "/rendez-vous" ? "0.9" : "0.3";
       const changefreq = p.path === "/" ? "weekly" : p.path === "/politique-de-confidentialite" ? "yearly" : "monthly";
       return `  <url>\n    <loc>${loc}</loc>\n    <lastmod>${today}</lastmod>\n    <changefreq>${changefreq}</changefreq>\n    <priority>${priority}</priority>\n  </url>`;
     })
