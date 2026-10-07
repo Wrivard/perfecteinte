@@ -18,12 +18,6 @@ import image17 from "./perfecteinte-gallery/17-vehicle.webp";
 import image18 from "./perfecteinte-gallery/18-vehicle.webp";
 import image19 from "./perfecteinte-gallery/19-vehicle.webp";
 import image20 from "./perfecteinte-gallery/20-vehicle.webp";
-import image21 from "./optimized-photos/IMG_7529.webp";
-import image22 from "./optimized-photos/IMG_8048.webp";
-import image23 from "./optimized-photos/IMG_4627.webp";
-import image24 from "./optimized-photos/IMG_8779.webp";
-import image25 from "./optimized-photos/IMG_7859.webp";
-import image26 from "./optimized-photos/IMG_5258.webp";
 
 export const perfecteinteImages = [
   image01,
@@ -46,22 +40,16 @@ export const perfecteinteImages = [
   image18,
   image19,
   image20,
-  image21,
-  image22,
-  image23,
-  image24,
-  image25,
-  image26,
 ] as const;
 
 export const perfecteinteImageAlts = [
-  "Toyota sport gris photographiée de l'arrière",
+  "Voiture sportive grise photographiée de l'arrière",
   "Camionnette GMC dans l'atelier Perfecteinte",
-  "Voiture sport blanche avec finition brillante",
-  "Toyota Supra rouge avec traitement de protection",
+  "Voiture de sport blanche photographiée dans l'atelier",
+  "Toyota Supra rouge photographiée de l'arrière",
   "Mercedes noire devant l'atelier Perfecteinte",
-  "Véhicule en préparation dans l'atelier",
-  "Détail de finition automobile",
+  "Coupé gris photographié devant l'atelier",
+  "VUS vert photographié dans l'atelier",
   "Réalisation automobile Perfecteinte",
   "Réalisation automobile Perfecteinte",
   "Réalisation automobile Perfecteinte",
@@ -75,10 +63,4 @@ export const perfecteinteImageAlts = [
   "Réalisation automobile Perfecteinte",
   "Réalisation automobile Perfecteinte",
   "Réalisation automobile Perfecteinte",
-  "Camionnette noire photographiée dans un atelier automobile",
-  "Volkswagen Coccinelle classique photographiée dans un atelier",
-  "Porsche blanche photographiée dans un atelier automobile",
-  "Coupé sport rouge photographié à l'extérieur",
-  "Moto noire photographiée dans un atelier automobile",
-  "Voiture sport noire photographiée dans un atelier",
 ] as const;

@@ -1,7 +1,6 @@
 import { Link } from "wouter";
 import { Facebook } from "lucide-react";
 import logo from "@/assets/perfecteinte-logo.png";
-import kuaLogo from "@assets/black-letter-kua-logo_1775680036268.png";
 
 export function Footer() {
   return (
@@ -42,10 +41,6 @@ export function Footer() {
           <p className="text-xs md:text-sm text-gray-400 text-center md:text-left">
             &copy; {new Date().getFullYear()} Perfecteinte. Tous droits réservés
           </p>
-          <a href="https://kua.quebec" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-xs md:text-sm text-gray-500 hover:text-gray-300 transition-colors">
-            <span>Fait localement par</span>
-            <img loading="lazy" decoding="async" src={kuaLogo} alt="Küa" className="h-4 md:h-5 brightness-0 invert opacity-70" />
-          </a>
           <div className="text-xs md:text-sm text-gray-400">
             <Link href="/politique-de-confidentialite" className="hover:text-accent transition-colors">Politique de confidentialité</Link>
           </div>

@@ -1,13 +1,15 @@
 import { motion } from "framer-motion";
 import { Link } from "wouter";
 import { SectionTagline } from "@/components/ui/SectionTagline";
-import img from "@/assets/optimized-photos/IMG_3002.webp";
+import { perfecteinteImages } from "@/assets/perfecteinteGallery";
+
+const img = perfecteinteImages[2];
 
 export function CTA() {
   return (
     <section className="relative h-[350px] sm:h-[400px] md:h-[450px] flex items-center overflow-hidden">
       <div className="absolute inset-0">
-        <img loading="lazy" decoding="async" src={img} alt="GMC Yukon détaillé" className="w-full h-full object-cover object-[center_40%]" />
+        <img loading="lazy" decoding="async" src={img} alt="Voiture de sport blanche photographiée dans l’atelier" className="w-full h-full object-cover object-[center_40%]" />
         <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/55 to-black/30"></div>
       </div>
       <div className="max-w-7xl mx-auto px-6 relative z-10 w-full">

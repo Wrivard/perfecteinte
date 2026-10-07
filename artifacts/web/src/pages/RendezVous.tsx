@@ -599,7 +599,8 @@ export default function RendezVous() {
                     <div>
                       <span className="text-accent text-xs uppercase tracking-widest font-semibold block mb-1">Horaires</span>
                       <p className="text-white font-medium text-sm md:text-base">Lun - Jeu : 8 h - 17 h</p>
-                      <p className="text-gray-300 text-xs md:text-sm">Ven - Dim : Fermé</p>
+                      <p className="text-gray-300 text-xs md:text-sm">Vendredi : 8 h - 12 h</p>
+                      <p className="text-gray-300 text-xs md:text-sm">Samedi - Dimanche : Fermé</p>
                     </div>
                   </div>
                 </div>

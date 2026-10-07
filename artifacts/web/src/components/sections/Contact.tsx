@@ -56,7 +56,8 @@ export function Contact() {
                 <div>
                   <span className="text-accent text-xs uppercase tracking-widest font-semibold block mb-1">Heures d’ouverture</span>
                   <p className="text-white text-base md:text-lg font-medium">Lundi au jeudi : 8 h à 17 h</p>
-                  <p className="text-gray-300 text-sm md:text-base">Vendredi au dimanche : fermé</p>
+                  <p className="text-gray-300 text-sm md:text-base">Vendredi : 8 h à 12 h</p>
+                  <p className="text-gray-300 text-sm md:text-base">Samedi et dimanche : fermé</p>
                 </div>
               </div>
             </div>
