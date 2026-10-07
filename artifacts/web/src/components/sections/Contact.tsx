@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "wouter";
-import { Phone, MapPin, Shield } from "lucide-react";
+import { Phone, MapPin, Shield, Clock } from "lucide-react";
 import { SectionTagline } from "@/components/ui/SectionTagline";
 
 export function Contact() {
@@ -48,6 +48,15 @@ export function Contact() {
                   <p className="text-white text-base md:text-lg font-medium">
                     1950 Boulevard St-Jude,<br />Alma, QC
                   </p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-4">
+                <Clock className="w-5 h-5 md:w-6 md:h-6 text-accent shrink-0 mt-1" />
+                <div>
+                  <span className="text-accent text-xs uppercase tracking-widest font-semibold block mb-1">Heures d’ouverture</span>
+                  <p className="text-white text-base md:text-lg font-medium">Lundi au jeudi : 8 h à 17 h</p>
+                  <p className="text-gray-300 text-sm md:text-base">Vendredi au dimanche : fermé</p>
                 </div>
               </div>
             </div>

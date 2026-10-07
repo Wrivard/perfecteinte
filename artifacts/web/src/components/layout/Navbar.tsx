@@ -1,26 +1,18 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "wouter";
-import { Menu, X, Phone, MapPin, ChevronDown } from "lucide-react";
+import { Phone, MapPin } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
 import logo from "@/assets/perfecteinte-logo.png";
 
 const navLinks = [
   { name: "Accueil", href: "/" },
-  { name: "À Propos", href: "/a-propos" },
-  { name: "Services", href: "/services", hasDropdown: true },
-  { name: "Galerie", href: "/galerie" },
-];
-
-const serviceLinks = [
-  { name: "PPF — Pare-pierre", href: "/services/ppf" },
-  { name: "Vitres teintées", href: "/services/vitres-teintees" },
+  { name: "Confidentialité", href: "/politique-de-confidentialite" },
 ];
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [servicesOpen, setServicesOpen] = useState(false);
   const [location] = useLocation();
 
   useEffect(() => {
@@ -33,7 +25,6 @@ export function Navbar() {
 
   useEffect(() => {
     setMobileMenuOpen(false);
-    setServicesOpen(false);
     window.scrollTo(0, 0);
   }, [location]);
 
@@ -98,29 +89,13 @@ export function Navbar() {
                     href={link.href}
                     className={cn(
                       "text-[15px] font-medium transition-colors flex items-center gap-1 relative",
-                      location === link.href || (link.hasDropdown && location.startsWith("/services")) ? "text-accent" : "text-white hover:text-accent",
+                      location === link.href ? "text-accent" : "text-white hover:text-accent",
                       "after:content-[''] after:absolute after:-bottom-1 after:left-0 after:h-[2px] after:bg-accent after:transition-all after:duration-300",
                       location === link.href ? "after:w-full" : "after:w-0 hover:after:w-full"
                     )}
                   >
                     {link.name}
-                    {link.hasDropdown && <ChevronDown className="w-4 h-4" />}
                   </Link>
-                  {link.hasDropdown && (
-                    <div className="absolute top-full left-0 mt-2 w-52 bg-[#1b1b1b] rounded-md shadow-lg border border-white/10 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                      <div className="py-2">
-                        {serviceLinks.map((sl) => (
-                          <Link
-                            key={sl.name}
-                            href={sl.href}
-                            className="block px-4 py-3 text-sm text-gray-200 hover:bg-white/5 hover:text-accent transition-colors"
-                          >
-                            {sl.name}
-                          </Link>
-                        ))}
-                      </div>
-                    </div>
-                  )}
                 </div>
               ))}
               <Link
@@ -190,62 +165,16 @@ export function Navbar() {
               <ul className="space-y-1">
                 {navLinks.map((link) => (
                   <li key={link.name}>
-                    {link.hasDropdown ? (
-                      <>
-                        <button
-                          onClick={() => setServicesOpen(!servicesOpen)}
-                          className={cn(
-                            "w-full flex items-center justify-between py-3.5 text-lg font-semibold transition-colors border-b border-white/10",
-                            location.startsWith("/services") ? "text-accent" : "text-white"
-                          )}
-                        >
-                          {link.name}
-                          <ChevronDown
-                            className={cn(
-                              "w-5 h-5 text-gray-400 transition-transform duration-200",
-                              servicesOpen && "rotate-180"
-                            )}
-                          />
-                        </button>
-                        <AnimatePresence initial={false}>
-                          {servicesOpen && (
-                            <motion.ul
-                              initial={{ height: 0, opacity: 0 }}
-                              animate={{ height: "auto", opacity: 1 }}
-                              exit={{ height: 0, opacity: 0 }}
-                              transition={{ duration: 0.2 }}
-                              className="overflow-hidden"
-                            >
-                              {serviceLinks.map((sl) => (
-                                <li key={sl.name}>
-                                  <Link
-                                    href={sl.href}
-                                    className={cn(
-                                      "block py-3 pl-4 text-[15px] transition-colors border-b border-white/5",
-                                      location === sl.href ? "text-accent font-medium" : "text-gray-300 hover:text-accent"
-                                    )}
-                                    onClick={() => setMobileMenuOpen(false)}
-                                  >
-                                    {sl.name}
-                                  </Link>
-                                </li>
-                              ))}
-                            </motion.ul>
-                          )}
-                        </AnimatePresence>
-                      </>
-                    ) : (
-                      <Link
-                        href={link.href}
-                        className={cn(
-                          "block py-3.5 text-lg font-semibold transition-colors border-b border-white/10",
-                          location === link.href ? "text-accent" : "text-white hover:text-accent"
-                        )}
-                        onClick={() => setMobileMenuOpen(false)}
-                      >
-                        {link.name}
-                      </Link>
-                    )}
+                    <Link
+                      href={link.href}
+                      className={cn(
+                        "block py-3.5 text-lg font-semibold transition-colors border-b border-white/10",
+                        location === link.href ? "text-accent" : "text-white hover:text-accent"
+                      )}
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      {link.name}
+                    </Link>
                   </li>
                 ))}
               </ul>

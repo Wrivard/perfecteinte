@@ -7,7 +7,7 @@ export function Footer() {
   return (
     <footer className="bg-[#1b1b1b] pt-12 md:pt-16 pb-6 md:pb-8">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-8 lg:gap-16 mb-10 md:mb-12">
+        <div className="grid grid-cols-2 md:grid-cols-2 gap-8 lg:gap-16 mb-10 md:mb-12">
           <div className="col-span-2 md:col-span-1 space-y-4">
             <img loading="lazy" decoding="async" src={logo} alt="Perfecteinte — Vitres teintées et pare-pierre" className="w-[230px] md:w-[290px] h-auto" />
             <div>
@@ -30,17 +30,7 @@ export function Footer() {
             <h3 className="text-sm font-semibold text-white mb-4 uppercase">Navigation</h3>
             <ul className="space-y-3">
               <li><Link href="/" className="text-sm text-gray-300 hover:text-accent transition-colors">Accueil</Link></li>
-              <li><Link href="/a-propos" className="text-sm text-gray-300 hover:text-accent transition-colors">À Propos</Link></li>
-              <li><Link href="/galerie" className="text-sm text-gray-300 hover:text-accent transition-colors">Galerie</Link></li>
               <li><Link href="/rendez-vous" className="text-sm text-gray-300 hover:text-accent transition-colors">Obtenir une soumission</Link></li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="text-sm font-semibold text-white mb-4 uppercase">Services</h3>
-            <ul className="space-y-3">
-               <li><Link href="/services/ppf" className="text-sm text-gray-300 hover:text-accent transition-colors">PPF — Pare-pierre</Link></li>
-               <li><Link href="/services/vitres-teintees" className="text-sm text-gray-300 hover:text-accent transition-colors">Vitres teintées</Link></li>
             </ul>
           </div>
         </div>

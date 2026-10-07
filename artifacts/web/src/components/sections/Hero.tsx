@@ -43,12 +43,12 @@ export function Hero() {
               </Link>
             </motion.div>
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-              <Link
-                href="/galerie"
+              <a
+                href="#galerie"
                 className="inline-flex items-center justify-center bg-transparent border-2 border-white text-white px-8 py-4 rounded-md font-semibold text-base hover:bg-white/10 transition-all w-full sm:w-auto"
               >
                 Voir nos réalisations
-              </Link>
+              </a>
             </motion.div>
           </div>
         </motion.div>

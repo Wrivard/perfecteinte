@@ -9,14 +9,14 @@ const services = [
     label: "Protection de la peinture",
     title: "PPF — PARE-PIERRE",
     description: "Une pellicule transparente qui protège la peinture contre les éclats de pierre et les débris de la route.",
-    href: "/services/ppf",
+    href: "/rendez-vous",
   },
   {
     image: perfecteinteImages[3],
     label: "Confort et intimité",
     title: "VITRES TEINTÉES",
     description: "Réduction de la chaleur, protection UV et allure sportive grâce à une installation professionnelle.",
-    href: "/services/vitres-teintees",
+    href: "/rendez-vous",
   },
 ];
 

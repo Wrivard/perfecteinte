@@ -1,7 +1,7 @@
 import { Link } from "wouter";
 import { usePageMeta } from "@/hooks/usePageMeta";
 import { PageLayout } from "@/components/layout/PageLayout";
-import { ArrowLeft, Home } from "lucide-react";
+import { FileText, Home } from "lucide-react";
 
 export default function NotFound() {
   usePageMeta("Page introuvable", "La page que vous cherchez n'existe pas ou a été déplacée.");
@@ -28,11 +28,11 @@ export default function NotFound() {
               Retour à l'accueil
             </Link>
             <Link
-              href="/services"
+              href="/rendez-vous"
               className="inline-flex items-center gap-2 border-2 border-gray-300 text-gray-700 px-8 py-3.5 rounded-md font-semibold hover:border-accent hover:text-accent transition-colors"
             >
-              <ArrowLeft className="w-4 h-4" />
-              Voir nos services
+              <FileText className="w-4 h-4" />
+              Obtenir une soumission
             </Link>
           </div>
         </div>
