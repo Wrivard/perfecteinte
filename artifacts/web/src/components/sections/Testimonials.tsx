@@ -4,15 +4,19 @@ import { Star, ChevronLeft, ChevronRight } from "lucide-react";
 import { SectionTagline } from "@/components/ui/SectionTagline";
 
 const allTestimonials = [
-  { quote: "Chaque détail compte, et l'équipe le comprend parfaitement.", author: "Éric Laforce" },
-  { quote: "Un service qui transforme littéralement l'apparence de mon véhicule.", author: "Caroline Tremblay" },
-  { quote: "La précision et le professionnalisme sont au cœur de leur travail.", author: "Michel Bouchard" },
-  { quote: "Résultats impeccables à chaque visite. Mon véhicule n'a jamais été aussi beau.", author: "Sophie Dubois" },
-  { quote: "Le meilleur service de protection automobile de la région. Hautement recommandé!", author: "Martin Côté" },
-  { quote: "L'équipe a un œil exceptionnel pour la finition. Résultat au-delà de mes attentes.", author: "Julie Gagnon" },
-  { quote: "Le PPF a complètement protégé mon capot d'un gros éclat de pierre. Investissement rentabilisé!", author: "Jean-Philippe Roy" },
-  { quote: "Un service sur mesure, une attention aux détails incomparable. Je recommande à 100%.", author: "Patrick Simard" },
-  { quote: "Après 3 ans de PPF, la peinture est comme neuve. Extraordinaire.", author: "Marie-Ève Gagné" },
+  { quote: "Pare-pierre et vitres teintées sur mon Jeep Wrangler. Travail et service parfait.", author: "Marc Villeneuve" },
+  { quote: "Merci encore pour ton excellent service !", author: "vitro plus" },
+  { quote: "Jean Frédéric est un artiste du wrap, il est imbattable. Bonne qualité au juste prix. J'ai fait poser une pellicule plastique sur ma moto, très satisfait !!!", author: "Marc Fortin" },
+  { quote: "Produit et service de qualité avec excellent prix. Très bon service rapide et professionnel. Employé avec beaucoup d'expérience dans le domaine.", author: "Maxime Gauthier" },
+  { quote: "Il m'a fait à plusieurs reprises mes vitres teintées et mes pare-pierres.", author: "Mike T" },
+  { quote: "Travail impeccable depuis des années! L'endroit où aller au Lac-Saint-Jean pour les vitres teintées et Pare-Pierre. A+++", author: "GT20000QUEBEC" },
+  { quote: "Rien à redire sur la qualité du travail accompli. J'ai fait teinter mes fenêtres, protéger le capot et les seuils de portes.", author: "Steve Tremblay" },
+  { quote: "Mes vitres sont impeccable 🔥 Je recommande à 100%…", author: "R Racine" },
+  { quote: "Excellent service, travail impeccable!", author: "David Bouchard" },
+  { quote: "Communication rapide et professionnelle. Service courtois.", author: "Isabelle Nadeau" },
+  { quote: "Service rapide et excellent.", author: "Edith Ouellet" },
+  { quote: "Service et qualité irréprochable!…", author: "Jim-Alex Gagnon" },
+  { quote: "Travail sur la coche 👌…", author: "Pier-andre Laforest" },
 ];
 
 export function Testimonials({ compact = false }: { compact?: boolean }) {
@@ -48,22 +52,22 @@ export function Testimonials({ compact = false }: { compact?: boolean }) {
   };
 
   return (
-    <section className="py-20 md:py-24 bg-[#f9fafb]">
-      <div className="max-w-7xl mx-auto px-6">
+      <section className="bg-[#f9fafb] py-14 sm:py-16 md:py-24">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <motion.div
-          className="text-center mb-12 md:mb-16"
+          className="mb-10 text-center md:mb-16"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.6 }}
         >
-          <SectionTagline text="Témoignages" />
+          <SectionTagline text="Avis Google" />
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-4 md:mb-6 leading-tight">
             <span className="text-accent">TÉMOIGNAGES </span>
             <span className="text-gray-900">DE NOS CLIENTS</span>
           </h2>
           <p className="text-lg md:text-xl lg:text-2xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
-            L'excellence de notre travail racontée par ceux qui nous font confiance
+            Les commentaires de clients qui nous font confiance
           </p>
         </motion.div>
 
@@ -82,15 +86,18 @@ export function Testimonials({ compact = false }: { compact?: boolean }) {
               {currentItems.map((t, i) => (
                 <div
                   key={`${page}-${i}`}
-                  className="flex min-h-[260px] h-full flex-col rounded-md border border-gray-200 bg-white p-6 shadow-sm sm:min-h-[290px] md:p-8"
+                  className="flex h-full min-h-[220px] flex-col rounded-md border border-gray-200 bg-white p-5 shadow-sm sm:min-h-[260px] sm:p-6 md:min-h-[290px] md:p-8"
                 >
                   <div className="mb-5 flex gap-1 text-accent" aria-label="5 étoiles sur 5">
                     {[...Array(5)].map((_, j) => (
                       <Star key={j} className="h-4 w-4 fill-current md:h-5 md:w-5" />
                     ))}
                   </div>
-                  <p className="mb-6 flex-1 text-base leading-relaxed text-gray-800 md:text-lg">"{t.quote}"</p>
-                  <p className="border-t border-gray-100 pt-4 text-sm font-semibold text-gray-900 md:text-base">{t.author}</p>
+                  <p className="mb-6 flex-1 text-[15px] leading-relaxed text-gray-800 md:text-lg">“{t.quote}”</p>
+                  <div className="flex items-center justify-between gap-3 border-t border-gray-100 pt-4">
+                    <p className="min-w-0 text-sm font-semibold text-gray-900 md:text-base">{t.author}</p>
+                    <span className="shrink-0 text-xs text-gray-500">Avis Google</span>
+                  </div>
                 </div>
               ))}
             </motion.div>

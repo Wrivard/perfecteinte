@@ -24,7 +24,7 @@ export default function PolitiqueConfidentialite() {
 
   return (
     <PageLayout>
-      <section className="bg-white pb-16 pt-32 md:pb-20 md:pt-40">
+      <section className="bg-white pb-16 pt-10 md:pb-20 md:pt-14">
         <div className="mx-auto max-w-4xl px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

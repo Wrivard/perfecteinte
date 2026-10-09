@@ -6,7 +6,7 @@ const bgImage = perfecteinteImages[4];
 
 export function Hero() {
   return (
-    <section id="home" className="relative min-h-[600px] h-[calc(100svh-40px)] flex items-center overflow-hidden bg-black">
+    <section id="home" className="relative min-h-[600px] h-[100svh] md:h-[calc(100svh-40px)] flex items-center overflow-hidden bg-black">
       <div className="absolute inset-0 z-0">
           <img
           src={bgImage}
