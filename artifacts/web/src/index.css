@@ -90,6 +90,14 @@
       animation: none;
     }
   }
+
+  @media (max-width: 639px) {
+    .quote-form input:not([type="checkbox"]),
+    .quote-form select,
+    .quote-form textarea {
+      font-size: 1rem;
+    }
+  }
 }
 
 html {

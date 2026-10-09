@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Star, ChevronLeft, ChevronRight } from "lucide-react";
 import { SectionTagline } from "@/components/ui/SectionTagline";
 
+// Only visible excerpts from the owner's Google review screenshots; no missing text is reconstructed.
 const allTestimonials = [
   { quote: "Pare-pierre et vitres teintées sur mon Jeep Wrangler. Travail et service parfait.", author: "Marc Villeneuve" },
   { quote: "Merci encore pour ton excellent service !", author: "vitro plus" },
@@ -52,7 +53,7 @@ export function Testimonials({ compact = false }: { compact?: boolean }) {
   };
 
   return (
-      <section className="bg-[#f9fafb] py-14 sm:py-16 md:py-24">
+    <section className="bg-[#f9fafb] py-14 sm:py-16 md:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <motion.div
           className="mb-10 text-center md:mb-16"
@@ -67,7 +68,7 @@ export function Testimonials({ compact = false }: { compact?: boolean }) {
             <span className="text-gray-900">DE NOS CLIENTS</span>
           </h2>
           <p className="text-lg md:text-xl lg:text-2xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
-            Les commentaires de clients qui nous font confiance
+            Extraits des avis Google de nos clients
           </p>
         </motion.div>
 

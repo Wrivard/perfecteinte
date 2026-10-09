@@ -102,6 +102,7 @@ export function Gallery() {
             />
             <button
               className="absolute top-4 right-4 sm:top-8 sm:right-8 text-white hover:text-accent transition-colors p-2"
+              aria-label="Fermer la photo"
               onClick={(e) => { e.stopPropagation(); closeLightbox(); }}
             >
               <X size={32} strokeWidth={2} />

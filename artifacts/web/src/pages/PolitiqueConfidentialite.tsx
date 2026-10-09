@@ -34,7 +34,7 @@ export default function PolitiqueConfidentialite() {
             <p className="mb-3 text-xs font-bold uppercase tracking-[0.22em] text-accent">
               Protection de vos renseignements
             </p>
-            <h1 className="mb-4 font-display text-3xl font-extrabold leading-tight text-gray-900 sm:text-4xl md:text-5xl">
+            <h1 className="mb-4 font-display text-[clamp(1.625rem,7.5vw,1.875rem)] font-extrabold leading-tight text-gray-900 sm:text-4xl md:text-5xl">
               POLITIQUE DE <span className="text-accent">CONFIDENTIALITÉ</span>
             </h1>
             <p className="mb-8 text-sm text-gray-500">Dernière mise à jour : 6 octobre 2026</p>

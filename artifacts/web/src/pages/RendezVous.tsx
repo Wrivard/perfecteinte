@@ -58,9 +58,9 @@ const EMPTY_FORM: FormData = {
 
 function StepIndicator({ current }: { current: number }) {
   return (
-    <div className="flex items-center justify-center gap-2 mb-8 md:mb-10">
+    <div className="mb-8 flex items-center justify-center gap-1 sm:gap-2 md:mb-10">
       {STEPS.map((step, i) => (
-        <div key={step.num} className="flex items-center gap-2">
+        <div key={step.num} className="flex items-center gap-1 sm:gap-2">
           <div className="flex flex-col items-center gap-1">
             <div
               className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold transition-all duration-300 ${
@@ -78,7 +78,7 @@ function StepIndicator({ current }: { current: number }) {
             </span>
           </div>
           {i < STEPS.length - 1 && (
-            <div className={`w-8 sm:w-12 h-[2px] mb-4 transition-colors duration-300 ${current > step.num ? "bg-accent" : "bg-gray-200"}`} />
+            <div className={`h-[2px] w-4 transition-colors duration-300 sm:mb-4 sm:w-12 ${current > step.num ? "bg-accent" : "bg-gray-200"}`} />
           )}
         </div>
       ))}
@@ -307,7 +307,7 @@ function Step4({ form }: { form: FormData }) {
         </p>
         <div className="bg-[#f9fafb] rounded-md border border-gray-200 overflow-hidden">
           {selectedServices.map((svc, i) => (
-            <div key={svc.id} className={`flex items-center justify-between gap-3 px-4 py-3 ${i < selectedServices.length - 1 ? "border-b border-gray-200" : ""}`}>
+            <div key={svc.id} className={`flex flex-col items-start gap-2 px-4 py-3 sm:flex-row sm:items-center sm:justify-between sm:gap-3 ${i < selectedServices.length - 1 ? "border-b border-gray-200" : ""}`}>
               <span className="text-sm text-gray-800 font-medium">{svc.label}</span>
               <span className="inline-flex items-center gap-1 text-xs font-semibold text-gray-500 bg-white border border-gray-200 rounded-full px-2.5 py-0.5 shrink-0">
                 <Clock className="w-3 h-3" />
@@ -320,9 +320,9 @@ function Step4({ form }: { form: FormData }) {
 
       <div className="bg-[#f9fafb] rounded-md border border-gray-200 overflow-hidden mb-6">
         {rows.map((row, i) => (
-          <div key={i} className={`flex gap-4 px-4 py-3 ${i < rows.length - 1 ? "border-b border-gray-200" : ""}`}>
-            <span className="text-xs font-semibold text-gray-500 uppercase tracking-wide w-24 shrink-0 pt-0.5">{row.label}</span>
-            <span className="text-sm text-gray-800 font-medium">{row.value}</span>
+          <div key={i} className={`flex flex-col gap-1 px-4 py-3 sm:flex-row sm:gap-4 ${i < rows.length - 1 ? "border-b border-gray-200" : ""}`}>
+            <span className="shrink-0 pt-0.5 text-xs font-semibold uppercase tracking-wide text-gray-500 sm:w-24">{row.label}</span>
+            <span className="min-w-0 text-sm font-medium text-gray-800 [overflow-wrap:anywhere]">{row.value}</span>
           </div>
         ))}
       </div>
@@ -466,13 +466,13 @@ export default function RendezVous() {
               </motion.div>
 
               <motion.div
-                className="bg-white rounded-md border border-gray-200 overflow-hidden shadow-sm"
+                className="quote-form overflow-hidden rounded-md border border-gray-200 bg-white shadow-sm"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.1 }}
               >
-                <div className="px-6 sm:px-8 pt-8 pb-6">
+                <div className="px-4 pb-6 pt-6 sm:px-8 sm:pt-8">
                   <p className="mb-6 rounded-md border border-gray-200 bg-gray-50 px-4 py-3 text-sm leading-relaxed text-gray-600">
                     Les renseignements fournis servent à préparer votre soumission et à vous répondre.{" "}
                     <a
@@ -520,21 +520,21 @@ export default function RendezVous() {
                         </motion.div>
                       )}
 
-                      <div className="flex items-center justify-between mt-8 pt-6 border-t border-gray-100">
+                      <div className="mt-8 flex flex-col-reverse items-stretch gap-3 border-t border-gray-100 pt-6 sm:flex-row sm:items-center sm:justify-between">
                         {step > 1 ? (
                           <button
                             onClick={handleBack}
-                            className="inline-flex items-center gap-2 text-gray-600 hover:text-gray-900 font-medium text-sm transition-colors"
+                            className="inline-flex w-full items-center justify-center gap-2 py-2 text-sm font-medium text-gray-600 transition-colors hover:text-gray-900 sm:w-auto sm:justify-start"
                           >
                             <ChevronLeft className="w-4 h-4" /> Retour
                           </button>
                         ) : (
-                          <div />
+                          <div className="hidden sm:block" />
                         )}
                         {step < 4 ? (
                           <button
                             onClick={handleNext}
-                            className="inline-flex items-center gap-2 bg-accent text-[#1b1b1b] px-6 py-3 rounded-md font-semibold text-sm hover:bg-accent-hover transition-colors"
+                            className="inline-flex w-full items-center justify-center gap-2 rounded-md bg-accent px-6 py-3 text-sm font-semibold text-[#1b1b1b] transition-colors hover:bg-accent-hover sm:w-auto"
                           >
                             Suivant <ChevronRight className="w-4 h-4" />
                           </button>
@@ -542,9 +542,9 @@ export default function RendezVous() {
                           <button
                             onClick={handleSubmit}
                             disabled={submitting}
-                            className="inline-flex items-center gap-2 bg-accent text-[#1b1b1b] px-8 py-3 rounded-md font-semibold text-sm hover:bg-accent-hover transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
+                            className="inline-flex w-full items-center justify-center gap-2 rounded-md bg-accent px-6 py-3 text-sm font-semibold text-[#1b1b1b] transition-colors hover:bg-accent-hover disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto sm:px-8"
                           >
-                            {submitting ? "Envoi en cours…" : <>Envoyer ma demande <Check className="w-4 h-4" /></>}
+                            {submitting ? "Envoi en cours…" : <>Envoyer ma demande <Check className="h-4 w-4 shrink-0" /></>}
                           </button>
                         )}
                       </div>
