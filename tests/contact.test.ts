@@ -63,6 +63,9 @@ test("Resend quote integration (mocked network, no emails sent)", async (t) => {
       assert.match(String(email.html), /#f57b00/);
       assert.match(String(email.html), /Récapitulatif de la demande/);
       assert.match(String(email.html), /href="https:\/\/perfecteinte\.ca\/"/);
+      assert.match(String(email.html), /<img src="https:\/\/perfecteinte-lac\.vercel\.app\/perfecteinte-logo-email\.png"/);
+      assert.match(String(email.html), /alt="Perfecteinte — Vitres teintées et pare-pierre"/);
+      assert.doesNotMatch(String(email.html), /Perfec<span/);
       assert.match(String(email.text), /https:\/\/perfecteinte\.ca\//);
       assert.match(String(email.text), /Toyota Corolla/);
       assert.match(String(email.text), /delivered@resend.dev/);

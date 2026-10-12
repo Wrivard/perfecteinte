@@ -11,6 +11,8 @@ export type EmailDraft = {
 };
 
 const ORANGE = "#f57b00";
+// Public production alias: unlike deployment-hash URLs, this follows new builds.
+const EMAIL_LOGO_URL = "https://perfecteinte-lac.vercel.app/perfecteinte-logo-email.png";
 const SERVICE_LABELS = {
   ppf: "PPF — Pellicule pare-pierre",
   teintage: "Vitres teintées",
@@ -113,8 +115,9 @@ function brandedEmail(preheader: string, label: string, content: string, footerN
       <!--[if mso]><table role="presentation" width="600" cellpadding="0" cellspacing="0"><tr><td><![endif]-->
       <table role="presentation" width="100%" cellpadding="0" cellspacing="0" bgcolor="#ffffff" style="max-width:600px;border-collapse:collapse;table-layout:fixed;background:#ffffff">
         <tr><td bgcolor="#1b1b1b" class="brand-pad" style="padding:28px 36px;border-bottom:4px solid ${ORANGE}">
-          <p style="margin:0;font-family:Arial,Helvetica,sans-serif;font-size:32px;line-height:38px;font-weight:800;font-style:italic;letter-spacing:-1.2px;color:#ffffff">Perfec<span style="color:${ORANGE}">Teinte</span></p>
-          <p style="margin:6px 0 0;font-size:10px;line-height:16px;letter-spacing:1.5px;color:#cccccc">VITRES TEINTÉES &amp; PARE-PIERRE</p>
+          <a href="https://perfecteinte.ca/" style="display:inline-block;text-decoration:none">
+            <img src="${EMAIL_LOGO_URL}" width="300" height="63" alt="Perfecteinte — Vitres teintées et pare-pierre" border="0" style="display:block;width:300px;max-width:100%;height:auto;border:0;color:#ffffff;font-size:18px">
+          </a>
         </td></tr>
         <tr><td class="content-pad" style="padding:36px">
           <p style="margin:0 0 14px;font-size:10px;line-height:16px;letter-spacing:1.8px;font-weight:bold;color:#ad5100">${escapeHtml(label)}</p>
