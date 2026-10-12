@@ -2,7 +2,7 @@
 
 > PPF pare-pierre et vitres teintées à Alma, Québec
 
-Site officiel : https://perfecteinte.ca/
+Site officiel : https://www.perfecteinte.ca/
 
 ## À propos
 
@@ -27,6 +27,6 @@ Frédéric Goderre compte 31 ans d’expérience et plus de 50 000 jobs réalis�
 
 ## Pages du site
 
-- [Accueil](https://perfecteinte.ca/)
-- [Obtenir une soumission](https://perfecteinte.ca/rendez-vous)
-- [Politique de confidentialité et cookies](https://perfecteinte.ca/politique-de-confidentialite)
+- [Accueil](https://www.perfecteinte.ca/)
+- [Obtenir une soumission](https://www.perfecteinte.ca/rendez-vous)
+- [Politique de confidentialité et cookies](https://www.perfecteinte.ca/politique-de-confidentialite)

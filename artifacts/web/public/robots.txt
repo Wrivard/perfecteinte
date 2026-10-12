@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /api/
 
-Sitemap: https://perfecteinte.ca/sitemap.xml
+Sitemap: https://www.perfecteinte.ca/sitemap.xml

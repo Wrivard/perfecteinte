@@ -2,7 +2,7 @@ import { readFileSync, writeFileSync, mkdirSync, existsSync } from "node:fs";
 import { join, dirname } from "node:path";
 import { pathToFileURL } from "node:url";
 
-const BASE_URL = "https://perfecteinte.ca";
+const BASE_URL = "https://www.perfecteinte.ca";
 const BASE_TITLE = "Perfecteinte";
 
 const pages = [

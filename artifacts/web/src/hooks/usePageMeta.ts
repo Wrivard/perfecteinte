@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 
 const BASE_TITLE = "Perfecteinte";
-const BASE_URL = "https://perfecteinte.ca";
+const BASE_URL = "https://www.perfecteinte.ca";
 
 export function usePageMeta(title?: string, description?: string, path?: string) {
   useEffect(() => {
