@@ -6,6 +6,14 @@
   "outputDirectory": "public",
   "trailingSlash": false,
   "cleanUrls": true,
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "www.perfecteinte.ca" }],
+      "destination": "https://perfecteinte.ca/:path*",
+      "permanent": true
+    }
+  ],
   "functions": {
     "api/*.ts": {
       "runtime": "@vercel/node@5.1.0"

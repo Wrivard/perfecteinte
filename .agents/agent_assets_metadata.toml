@@ -6,3 +6,32 @@ id = "zta1O_e0C2XDxs0wGOUP6"
 uri = "file://artifacts/web/SEO_AUDIT.md"
 type = "text"
 title = "Rapport d'audit SEO complet"
+logical_id = "5dbc7564-1d45-45f5-ba29-2cdf2c0399a1"
+
+[[outputs]]
+id = "IFTSScXeDcjiiM-1s1vJt"
+uri = "file://generated-artifacts/email-previews/confirmation-client.html"
+type = "html"
+title = "Courriel client — Perfecteinte"
+description = "Aperçu avec données fictives : confirmation de prise en charge, récapitulatif complet et délai de réponse de 24 à 48 heures. Modèle intégré à Resend."
+logical_id = "9d7d9fa9-17a8-4c37-aee6-7b399b731fd1"
+content_hash = "sha256:7c8ac29aea853fd28a72fea278365bf998d10f6158ab6267198d4b4260ed5c3b"
+size = 8358
+mtime_ms = 1791764505844
+storage_uri = "gcs://replit-rams-assets-janeway/rams/assets/repl:3f333b85-909a-4ca1-b394-2c9fd401928e/9d7d9fa9-17a8-4c37-aee6-7b399b731fd1/c024dc74-223c-4b17-9e6f-194e740675b8"
+storage_version_token = "1791764600095199"
+content_type = "text/html"
+
+[[outputs]]
+id = "I8EkjHBfQmFSsPk_O0IKz"
+uri = "file://generated-artifacts/email-previews/notification-proprietaire.html"
+type = "html"
+title = "Courriel propriétaire — Perfecteinte"
+description = "Aperçu avec données fictives : récapitulatif complet de la soumission et boutons pour répondre au client ou l’appeler. Modèle intégré à Resend."
+logical_id = "2f653dac-d649-41fc-a08b-8e6f76167985"
+content_hash = "sha256:89ab85e67cd678c48d13e899347d38a643abc134d923f7c132a7dcb65c6be988"
+size = 8528
+mtime_ms = 1791764505844
+storage_uri = "gcs://replit-rams-assets-janeway/rams/assets/repl:3f333b85-909a-4ca1-b394-2c9fd401928e/2f653dac-d649-41fc-a08b-8e6f76167985/297632b2-f745-43b6-9099-98c13e0847f2"
+storage_version_token = "1791764600675300"
+content_type = "text/html"

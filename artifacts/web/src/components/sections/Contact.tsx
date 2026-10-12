@@ -80,6 +80,7 @@ export function Contact() {
             transition={{ duration: 0.6, delay: 0.1 }}
           >
             <iframe
+              data-cookieconsent="ignore"
               src="https://www.google.com/maps?q=1950+Boulevard+St-Jude,+Alma,+QC&hl=fr&z=15&output=embed"
               width="100%"
               height="100%"

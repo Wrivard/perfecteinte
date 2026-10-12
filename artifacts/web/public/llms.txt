@@ -2,6 +2,8 @@
 
 > PPF pare-pierre et vitres teintées à Alma, Québec
 
+Site officiel : https://perfecteinte.ca/
+
 ## À propos
 
 Perfecteinte, dirigée par Frédéric Goderre, offre deux services automobiles à Alma : la pose de pellicule pare-pierre (PPF) et le teintage des vitres. Tous les types de véhicules sont acceptés, des voitures du quotidien aux sportives et exotiques.
@@ -25,6 +27,6 @@ Frédéric Goderre compte 31 ans d’expérience et plus de 50 000 jobs réalis�
 
 ## Pages du site
 
-- / — Accueil
-- /rendez-vous — Obtenir une soumission
-- /politique-de-confidentialite — Politique de confidentialité et cookies
+- [Accueil](https://perfecteinte.ca/)
+- [Obtenir une soumission](https://perfecteinte.ca/rendez-vous)
+- [Politique de confidentialité et cookies](https://perfecteinte.ca/politique-de-confidentialite)

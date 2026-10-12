@@ -120,7 +120,11 @@ async function main() {
     throw new Error(`Client build not found at ${indexPath}. Run \`vite build\` first.`);
   }
 
-  const baseHtml = readFileSync(indexPath, "utf-8");
+  // Keep the no-JavaScript fallback out of Replit/local dev HTML.
+  const baseHtml = readFileSync(indexPath, "utf-8").replace(
+    "<!-- GTM_NOSCRIPT_PRODUCTION -->",
+    '<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TVBSB2PS" height="0" width="0" style="display:none;visibility:hidden" title="Google Tag Manager"></iframe></noscript>',
+  );
   const render = await loadRender();
 
   let total = 0;

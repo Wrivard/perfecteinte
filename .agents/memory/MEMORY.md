@@ -2,3 +2,5 @@
 - [Véhicules pris en charge](vehicle-fit.md) — Perfecteinte accueille tous les véhicules, des voitures du quotidien aux sportives et exotiques, pour ses services PPF et vitres teintées.
 - [Heures d’ouverture](business-hours.md) — l’atelier est ouvert du lundi au jeudi de 8 h à 17 h et le vendredi de 8 h à 12 h.
 - [Avis clients authentiques](customer-reviews.md) — utiliser des avis réels vérifiables; ne pas associer une voiture à un client sans confirmation.
+- [Redirections Vercel](vercel-redirects.md) — les conditions de domaine ne se vérifient pas dans le serveur local; contrôler leur effet après un déploiement Vercel.
+- [Carte et consentement](map-consent.md) — la carte doit rester affichée en permanence; ce choix explicite doit être conservé lors des changements Cookiebot.

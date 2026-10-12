@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import type { ReactNode } from "react";
 import { usePageMeta } from "@/hooks/usePageMeta";
 import { PageLayout } from "@/components/layout/PageLayout";
+import { CookieDeclaration } from "@/components/privacy/CookieDeclaration";
 
 const internalLinkClass = "font-semibold text-accent underline underline-offset-4 hover:text-accent-hover";
 const externalLinkClass = "font-semibold text-accent underline underline-offset-4 hover:text-accent-hover";
@@ -99,6 +100,16 @@ export default function PolitiqueConfidentialite() {
                   Le formulaire n’est pas une inscription à une liste promotionnelle. Nous n’utilisons pas les
                   renseignements transmis pour vous envoyer des promotions non sollicitées.
                 </p>
+              </PolicySection>
+
+              <PolicySection title="Déclaration et préférences des témoins">
+                <p>
+                  Cookiebot gère vos préférences relatives aux témoins. Google Tag Manager permet de gérer
+                  les balises de mesure et de marketing; le consentement correspondant est refusé par défaut.
+                  Vous pouvez consulter la déclaration ci-dessous et modifier ou retirer votre consentement
+                  grâce au panneau Cookiebot.
+                </p>
+                <CookieDeclaration />
               </PolicySection>
 
               <PolicySection title="4. Transmission et fournisseurs de services">

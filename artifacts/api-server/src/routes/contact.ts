@@ -8,6 +8,7 @@ router.post("/contact", async (req, res): Promise<void> => {
     const response = await submitQuoteRequest(req.body, {
       apiKey: process.env.RESEND_API_KEY,
       fromEmail: process.env.RESEND_FROM_EMAIL,
+      recipientEmail: process.env.RECIPIENT_EMAIL,
     });
     res.status(200).json(response);
   } catch (error) {

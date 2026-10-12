@@ -21,6 +21,7 @@ function resendConfig() {
   return {
     apiKey: runtime.process?.env?.RESEND_API_KEY,
     fromEmail: runtime.process?.env?.RESEND_FROM_EMAIL,
+    recipientEmail: runtime.process?.env?.RECIPIENT_EMAIL,
   };
 }
 
