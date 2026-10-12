@@ -14,3 +14,9 @@ Les imports exécutés par Node doivent résoudre des fichiers JavaScript. Un ex
 **Why:** le chargement du handler packagé a échoué pour cette raison après une compilation réussie. Le service de soumission utilise donc directement les schémas générés, sans modifier leur code généré ni le contrat de validation.
 
 **How to apply:** conserver ce choix tant que le déploiement utilise le tracing natif de Vercel. Si le packaging est remplacé par un bundling complet, réévaluer cette contrainte plutôt que la maintenir aveuglément.
+
+Déclarer explicitement le format ESM du package qui contient le handler compilé; ne pas compter sur la détection automatique du runtime.
+
+**Why:** le premier test de chargement réussissait sous Node avec détection automatique, mais le même handler échouait lorsque cette détection était désactivée. Tester uniquement un import local permissif masquait donc un risque de démarrage.
+
+**How to apply:** conserver un test strict du handler packagé et y inclure une requête valide avec fournisseur simulé. Distinguer une validation locale de la confirmation du fonctionnement d’un déploiement réel.

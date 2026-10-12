@@ -2,6 +2,7 @@
   "name": "workspace",
   "version": "0.0.0",
   "license": "MIT",
+  "type": "module",
   "engines": {
     "node": "22.x"
   },
@@ -11,7 +12,7 @@
     "typecheck:libs": "tsc --build",
     "typecheck:vercel": "tsc -p api/tsconfig.json --noEmit",
     "test:contact": "pnpm --filter @workspace/scripts exec tsx --test ../tests/contact.test.ts",
-    "test:vercel-package": "node --test tests/vercel-package.test.mjs",
+    "test:vercel-package": "node --no-experimental-detect-module --test tests/vercel-package.test.mjs",
     "test:consent": "node --test tests/consent.test.mjs",
     "typecheck": "pnpm run typecheck:libs && pnpm -r --filter \"./artifacts/**\" --filter \"./scripts\" --if-present run typecheck && pnpm run typecheck:vercel"
   },

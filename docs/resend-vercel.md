@@ -57,11 +57,22 @@ des extensions `.js`. Le service lit directement le fichier des schémas génér
 les exports de packages workspace visant des fichiers `.ts` ne sont pas réécrits
 par le packaging Vercel.
 
+Le package racine déclare `"type": "module"` : le handler émis en ES modules ne
+doit pas dépendre de la détection automatique du runtime Node. Le test de
+packaging désactive cette détection et vérifie une soumission complète avec
+Resend simulé dans un processus isolé, ainsi que les erreurs de configuration
+et de fournisseur. Aucun courriel réel n’est envoyé par ces tests.
+
+Le handler charge le service à l’intérieur d’un bloc protégé. Les échecs de
+chargement ou erreurs inattendues produisent une réponse JSON et un événement
+dans les logs Vercel, sans contenu de demande ni valeur de secret.
+
 Vérifications locales :
 - `pnpm run typecheck:vercel`
 - `pnpm test:contact` (envois Resend simulés)
 - `pnpm test:vercel-package` (packaging et chargement du handler avec le builder
-  installé, puis vérification des réponses 405/400, sans courriels ni accès cloud)
+  installé, vérification des réponses 405/400/200/502/503 et des deux courriels
+  simulés, sans courriels réels ni accès cloud)
 
 Après configuration, envoyer une soumission de test avec une adresse de client
 que vous contrôlez. Vérifier :

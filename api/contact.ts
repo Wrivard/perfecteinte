@@ -1,8 +1,3 @@
-import {
-  QuoteEmailError,
-  submitQuoteRequest,
-} from "../artifacts/api-server/src/lib/quote-email.js";
-
 type VercelRequest = {
   method?: string;
   body?: unknown;
@@ -25,6 +20,13 @@ function resendConfig() {
   };
 }
 
+function logFailure(event: string, code: string): void {
+  const runtime = globalThis as typeof globalThis & {
+    console: { error(message: string): void };
+  };
+  runtime.console.error(JSON.stringify({ event, code }));
+}
+
 export default async function handler(
   req: VercelRequest,
   res: VercelResponse,
@@ -35,17 +37,34 @@ export default async function handler(
     return;
   }
 
+  let service: typeof import("../artifacts/api-server/src/lib/quote-email.js");
   try {
-    const response = await submitQuoteRequest(req.body, resendConfig());
+    service = await import("../artifacts/api-server/src/lib/quote-email.js");
+  } catch (error) {
+    // Never log submitted data, credentials, or provider response bodies.
+    const code = error && typeof error === "object" && "code" in error
+      ? String(error.code) : "UNKNOWN";
+    logFailure("quote_service_load_failed", code);
+    res.status(500).json({
+      error: "Le service de soumission est temporairement indisponible. Appelez-nous au (418) 450-3990.",
+      code: "QUOTE_SERVICE_LOAD_FAILED",
+    });
+    return;
+  }
+
+  try {
+    const response = await service.submitQuoteRequest(req.body, resendConfig());
     res.status(200).json(response);
   } catch (error) {
-    if (error instanceof QuoteEmailError) {
+    if (error instanceof service.QuoteEmailError) {
       res.status(error.status).json({ error: error.message });
       return;
     }
 
+    logFailure("quote_request_failed", "UNEXPECTED_ERROR");
     res.status(500).json({
       error: "Une erreur est survenue. Réessayez ou appelez le (418) 450-3990.",
+      code: "QUOTE_REQUEST_FAILED",
     });
   }
 }
