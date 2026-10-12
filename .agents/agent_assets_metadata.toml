@@ -35,3 +35,17 @@ mtime_ms = 1791764505844
 storage_uri = "gcs://replit-rams-assets-janeway/rams/assets/repl:3f333b85-909a-4ca1-b394-2c9fd401928e/2f653dac-d649-41fc-a08b-8e6f76167985/297632b2-f745-43b6-9099-98c13e0847f2"
 storage_version_token = "1791764600675300"
 content_type = "text/html"
+
+[[outputs]]
+id = "txP9gKZlwZhfeal3Tg6DZ"
+uri = "file://artifacts/web/public/perfecteinte-logo-email.png"
+type = "image"
+title = "Le vrai logo intégré aux courriels"
+description = "Le logo du site, avec l’écusson PP, remplace l’ancien texte dans les deux modèles."
+logical_id = "81de2a05-ee57-4968-bec1-1a358e25eeb9"
+content_hash = "sha256:22eb8746e9642db63aab5fc77c34768f1580ab4b02dabb82faed2c02b55f4eea"
+size = 65818
+mtime_ms = 1791770805868
+storage_uri = "gcs://replit-rams-assets-janeway/rams/assets/repl:3f333b85-909a-4ca1-b394-2c9fd401928e/81de2a05-ee57-4968-bec1-1a358e25eeb9/b7656ffb-56ed-4a47-be16-3951aa39edd7"
+storage_version_token = "1791771208504825"
+content_type = "image/png"
