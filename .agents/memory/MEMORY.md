@@ -6,3 +6,4 @@
 - [Carte et consentement](map-consent.md) — la carte doit rester affichée en permanence; ce choix explicite doit être conservé lors des changements Cookiebot.
 - [Builder Node Vercel](vercel-node-builder.md) — un ancien builder épinglé peut refuser une version Node pourtant supportée par Vercel.
 - [TypeScript Vercel](vercel-typescript.md) — vérifier le handler packagé : les options héritées et les exports visant des sources .ts peuvent casser le déploiement.
+- [Versions déployées Vercel](vercel-deployment-versions.md) — une URL de déploiement avec hash ne suit pas les nouveaux commits; vérifier la version testée avant de modifier le code.
