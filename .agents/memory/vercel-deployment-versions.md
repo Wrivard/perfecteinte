@@ -10,3 +10,9 @@ Avant de modifier encore le code après une erreur persistante sur Vercel, véri
 **How to apply:** comparer les URLs des requêtes visibles dans les captures. Ouvrir le dernier déploiement Ready correspondant au commit attendu depuis Vercel → Deployments → Visit. Rafraîchir une ancienne URL ne change pas la version servie.
 
 Référence : https://vercel.com/docs/deployments/generated-urls
+
+Ne pas utiliser la liste d’alias d’un ancien déploiement pour conclure que ces alias servent encore cette version.
+
+**Why:** l’API Vercel peut présenter les mêmes alias de projet sur les détails d’un ancien déploiement et du plus récent. Les URLs uniques et les commits source permettent de distinguer les versions.
+
+**How to apply:** comparer les métadonnées du déploiement précis avec le déploiement actuel du projet. Pour vérifier l’API publique sans envoyer de courriel, utiliser GET et un POST vide : ils doivent renvoyer une erreur de méthode ou de validation, pas un échec de démarrage.
