@@ -5,13 +5,5 @@
   "installCommand": "pnpm install --frozen-lockfile",
   "outputDirectory": "public",
   "trailingSlash": false,
-  "cleanUrls": true,
-  "redirects": [
-    {
-      "source": "/:path*",
-      "has": [{ "type": "host", "value": "www.perfecteinte.ca" }],
-      "destination": "https://perfecteinte.ca/:path*",
-      "permanent": true
-    }
-  ]
+  "cleanUrls": true
 }
