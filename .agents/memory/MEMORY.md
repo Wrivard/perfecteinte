@@ -5,3 +5,4 @@
 - [Redirections Vercel](vercel-redirects.md) — les conditions de domaine ne se vérifient pas dans le serveur local; contrôler leur effet après un déploiement Vercel.
 - [Carte et consentement](map-consent.md) — la carte doit rester affichée en permanence; ce choix explicite doit être conservé lors des changements Cookiebot.
 - [Builder Node Vercel](vercel-node-builder.md) — un ancien builder épinglé peut refuser une version Node pourtant supportée par Vercel.
+- [TypeScript Vercel](vercel-typescript.md) — vérifier le handler packagé : les options héritées et les exports visant des sources .ts peuvent casser le déploiement.

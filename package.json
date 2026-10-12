@@ -9,9 +9,11 @@
     "preinstall": "sh -c 'rm -f package-lock.json yarn.lock; case \"$npm_config_user_agent\" in pnpm/*) ;; *) echo \"Use pnpm instead\" >&2; exit 1 ;; esac'",
     "build": "pnpm run typecheck && pnpm -r --if-present run build",
     "typecheck:libs": "tsc --build",
+    "typecheck:vercel": "tsc -p api/tsconfig.json --noEmit",
     "test:contact": "pnpm --filter @workspace/scripts exec tsx --test ../tests/contact.test.ts",
+    "test:vercel-package": "node --test tests/vercel-package.test.mjs",
     "test:consent": "node --test tests/consent.test.mjs",
-    "typecheck": "pnpm run typecheck:libs && pnpm -r --filter \"./artifacts/**\" --filter \"./scripts\" --if-present run typecheck"
+    "typecheck": "pnpm run typecheck:libs && pnpm -r --filter \"./artifacts/**\" --filter \"./scripts\" --if-present run typecheck && pnpm run typecheck:vercel"
   },
   "private": true,
   "devDependencies": {

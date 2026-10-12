@@ -1,13 +1,15 @@
+// Vercel emits traced TypeScript files as .js without rewriting workspace
+// package exports that point at .ts. Use the generated schema's JS path.
 import {
   SubmitQuoteRequestBody,
   SubmitQuoteRequestResponse,
-} from "@workspace/api-zod";
+} from "../../../../lib/api-zod/src/generated/api.js";
 import { Resend } from "resend";
 import {
   buildCustomerConfirmationEmail,
   buildOwnerNotificationEmail,
   type EmailDraft,
-} from "./email-templates";
+} from "./email-templates.js";
 
 const REQUIRED_FROM_EMAIL = "bonjour@kua.quebec";
 

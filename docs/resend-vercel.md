@@ -50,6 +50,19 @@ le `package.json` racine. Choisir également **22.x** dans les paramètres Verce
 utilisent le builder Node natif de Vercel : ne pas réintroduire l’ancien override
 `runtime: "@vercel/node@5.1.0"`, qui peut refuser les versions Node plus récentes.
 
+`api/tsconfig.json` déclare explicitement les options `ESNext` et `Bundler`
+pour que le builder Vercel n’impose pas ses valeurs par défaut `NodeNext` à la
+place des options héritées du workspace. Les imports exécutés par Node utilisent
+des extensions `.js`. Le service lit directement le fichier des schémas générés :
+les exports de packages workspace visant des fichiers `.ts` ne sont pas réécrits
+par le packaging Vercel.
+
+Vérifications locales :
+- `pnpm run typecheck:vercel`
+- `pnpm test:contact` (envois Resend simulés)
+- `pnpm test:vercel-package` (packaging et chargement du handler avec le builder
+  installé, puis vérification des réponses 405/400, sans courriels ni accès cloud)
+
 Après configuration, envoyer une soumission de test avec une adresse de client
 que vous contrôlez. Vérifier :
 

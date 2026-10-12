@@ -1,7 +1,7 @@
 import {
   QuoteEmailError,
   submitQuoteRequest,
-} from "../artifacts/api-server/src/lib/quote-email";
+} from "../artifacts/api-server/src/lib/quote-email.js";
 
 type VercelRequest = {
   method?: string;
