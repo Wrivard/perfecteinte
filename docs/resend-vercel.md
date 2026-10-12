@@ -44,6 +44,12 @@ Le projet Vercel doit utiliser la **racine du dépôt**, où se trouvent
 `vercel.json` et `api/contact.ts`. Le fichier `vercel.json` existant ne contient
 pas de réécriture SPA qui pourrait intercepter `/api/contact`.
 
+La version de production est fixée à **Node.js 22.x** par `engines.node` dans
+le `package.json` racine. Choisir également **22.x** dans les paramètres Vercel
+« Settings → Build and Deployment → Node.js Version ». Les fonctions TypeScript
+utilisent le builder Node natif de Vercel : ne pas réintroduire l’ancien override
+`runtime: "@vercel/node@5.1.0"`, qui peut refuser les versions Node plus récentes.
+
 Après configuration, envoyer une soumission de test avec une adresse de client
 que vous contrôlez. Vérifier :
 

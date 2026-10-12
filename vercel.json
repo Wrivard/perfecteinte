@@ -13,10 +13,5 @@
       "destination": "https://perfecteinte.ca/:path*",
       "permanent": true
     }
-  ],
-  "functions": {
-    "api/*.ts": {
-      "runtime": "@vercel/node@5.1.0"
-    }
-  }
+  ]
 }

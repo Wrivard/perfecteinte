@@ -4,3 +4,4 @@
 - [Avis clients authentiques](customer-reviews.md) — utiliser des avis réels vérifiables; ne pas associer une voiture à un client sans confirmation.
 - [Redirections Vercel](vercel-redirects.md) — les conditions de domaine ne se vérifient pas dans le serveur local; contrôler leur effet après un déploiement Vercel.
 - [Carte et consentement](map-consent.md) — la carte doit rester affichée en permanence; ce choix explicite doit être conservé lors des changements Cookiebot.
+- [Builder Node Vercel](vercel-node-builder.md) — un ancien builder épinglé peut refuser une version Node pourtant supportée par Vercel.
